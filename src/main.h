@@ -19,6 +19,7 @@
 #include "sync.h"
 #include "txmempool.h"
 #include "uint256.h"
+#include "scrypt.h"
 
 #include <algorithm>
 #include <exception>
@@ -55,7 +56,7 @@ static const unsigned int BLOCKFILE_CHUNK_SIZE = 0x1000000; // 16 MiB
 /** The pre-allocation chunk size for rev?????.dat files (since 0.8) */
 static const unsigned int UNDOFILE_CHUNK_SIZE = 0x100000; // 1 MiB
 /** Coinbase transaction outputs can only be spent after this number of new blocks (network rule) */
-static const int COINBASE_MATURITY = 100;
+static const int COINBASE_MATURITY = 70;
 /** Threshold for nLockTime: below this value it is interpreted as block number, otherwise as UNIX timestamp. */
 static const unsigned int LOCKTIME_THRESHOLD = 500000000; // Tue Nov  5 00:53:20 1985 UTC
 /** Maximum number of script-checking threads allowed */
@@ -163,7 +164,7 @@ std::string GetWarnings(std::string strFor);
 bool GetTransaction(const uint256 &hash, CTransaction &tx, uint256 &hashBlock, bool fAllowSlow = false);
 /** Find the best known block, and make it the tip of the block chain */
 bool ActivateBestChain(CValidationState &state);
-int64_t GetBlockValue(int nHeight, int64_t nFees);
+int64_t GetBlockValue(int nHeight, int64_t nFees, uint256 prevHash);
 unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHeader *pblock);
 
 void UpdateTime(CBlockHeader& block, const CBlockIndex* pindexPrev);
@@ -292,7 +293,7 @@ inline bool AllowFree(double dPriority)
 {
     // Large (in bytes) low-priority (new, small-coin) transactions
     // need a fee.
-    return dPriority > COIN * 144 / 250;
+    return dPriority > COIN * 1440 / 250;
 }
 
 // Check whether all inputs of this transaction are valid (no double spends, scripts & sigs, amounts)
@@ -814,7 +815,7 @@ public:
 
     bool CheckIndex() const
     {
-        return CheckProofOfWork(GetBlockHash(), nBits);
+        return true;
     }
 
     enum { nMedianTimeSpan=11 };

@@ -9,13 +9,14 @@
 #include "script.h"
 #include "serialize.h"
 #include "uint256.h"
+#include "scrypt.h"
 
 #include <stdint.h>
 
 class CTransaction;
 
 /** No amount larger than this (in satoshi) is valid */
-static const int64_t MAX_MONEY = 21000000 * COIN;
+static const int64_t MAX_MONEY = 16000000000 * COIN;
 inline bool MoneyRange(int64_t nValue) { return (nValue >= 0 && nValue <= MAX_MONEY); }
 
 /** An outpoint - a combination of a transaction hash and an index n into its vout */
@@ -158,7 +159,7 @@ public:
         // need a CTxIn of at least 148 bytes to spend,
         // so dust is a txout less than 546 satoshis 
         // with default nMinRelayTxFee.
-        return ((nValue*1000)/(3*((int)GetSerializeSize(SER_DISK,0)+148)) < nMinRelayTxFee);
+        return false;
     }
 
     friend bool operator==(const CTxOut& a, const CTxOut& b)
@@ -438,6 +439,7 @@ public:
         return block;
     }
 
+    uint256 GetPoWHash() const;
     uint256 BuildMerkleTree() const;
 
     const uint256 &GetTxHash(unsigned int nIndex) const {
