@@ -159,7 +159,7 @@ public:
         // need a CTxIn of at least 148 bytes to spend,
         // so dust is a txout less than 546 satoshis 
         // with default nMinRelayTxFee.
-        return false;
+        return ((nValue*1000)/(3*((int)GetSerializeSize(SER_DISK,0)+148)) < nMinRelayTxFee);
     }
 
     friend bool operator==(const CTxOut& a, const CTxOut& b)

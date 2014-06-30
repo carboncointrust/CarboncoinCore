@@ -1,11 +1,11 @@
 *.tar.gz
 
 *.exe
-src/bitcoin
-src/bitcoind
-src/bitcoin-cli
-src/test/test_bitcoin
-src/qt/test/test_bitcoin-qt
+src/carboncoin
+src/carboncoind
+src/carboncoin-cli
+src/test/test_carboncoin
+src/qt/test/test_carboncoin-qt
 
 Makefile.in
 aclocal.m4
@@ -35,7 +35,7 @@ src/qt/test/moc*.cpp
 *.orig
 *.o
 *.patch
-.bitcoin
+.carboncoin
 *.a
 *.pb.cc
 *.pb.h
@@ -50,12 +50,12 @@ src/qt/test/moc*.cpp
 # Compilation and Qt preprocessor part
 *.qm
 Makefile
-bitcoin-qt
-Bitcoin-Qt.app
+carboncoin-qt
+Carboncoin-Qt.app
 
 # Unit-tests
 Makefile.test
-bitcoin-qt_test
+carboncoin-qt_test
 
 # Resources cpp
 qrc_*.cpp
@@ -70,7 +70,7 @@ build
 #lcov
 *.gcno
 /*.info
-test_bitcoin.coverage/
+test_carboncoin.coverage/
 total.coverage/
 coverage_percent.txt
 

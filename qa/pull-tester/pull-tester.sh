@@ -4,7 +4,7 @@
 #Param ...: arguments for build-test.sh
 
 if [ $# -lt 1 ]; then
-  echo "usage: $0 [bitcoin srcroot] build-test arguments..."
+  echo "usage: $0 [carboncoin srcroot] build-test arguments..."
 fi
 
 cd $1

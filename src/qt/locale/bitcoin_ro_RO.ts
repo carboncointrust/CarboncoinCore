@@ -3,13 +3,13 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About Bitcoin Core</source>
-        <translation>Despre Nucleul Bitcoin</translation>
+        <source>About Carboncoin Core</source>
+        <translation>Despre Nucleul Carboncoin</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;Bitcoin Core&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;Nucleul Bitcoin &lt;/b&gt; versiune</translation>
+        <source>&lt;b&gt;Carboncoin Core&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;Nucleul Carboncoin &lt;/b&gt; versiune</translation>
     </message>
     <message>
         <location line="+57"/>
@@ -33,8 +33,8 @@ Acest produs include programe dezvoltate de către OpenSSL Project pentru a fi f
     </message>
     <message>
         <location line="+0"/>
-        <source>The Bitcoin Core developers</source>
-        <translation>Dezvoltatorii Bitcoin Core</translation>
+        <source>The Carboncoin Core developers</source>
+        <translation>Dezvoltatorii Carboncoin Core</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -127,13 +127,13 @@ Acest produs include programe dezvoltate de către OpenSSL Project pentru a fi f
     </message>
     <message>
         <location line="+7"/>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Acestea sunt adresele dumneavoastra Bitcoin care pot fi folosite la trimiterea platilor. Verificati totdeauna cantitatea si adresa de primire inainte de a trimite monezi.</translation>
+        <source>These are your Carboncoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Acestea sunt adresele dumneavoastra Carboncoin care pot fi folosite la trimiterea platilor. Verificati totdeauna cantitatea si adresa de primire inainte de a trimite monezi.</translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>These are your Bitcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Acestea sunt adresele dumneavoastra Bitcoin folosite pentru a primi plati. Este recomandat sa folositi cate o adresa noua de primire pentru fiecare tranzactie in parte.</translation>
+        <source>These are your Carboncoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Acestea sunt adresele dumneavoastra Carboncoin folosite pentru a primi plati. Este recomandat sa folositi cate o adresa noua de primire pentru fiecare tranzactie in parte.</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -280,8 +280,8 @@ Acest produs include programe dezvoltate de către OpenSSL Project pentru a fi f
     </message>
     <message>
         <location line="-56"/>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>Bitcoin se va închide acum pentru a termina procesul de criptare. Ține minte că criptarea portofelului nu te poate proteja în totalitate de furtul monedelor de către programe dăunătoare care îți infectează calculatorul.</translation>
+        <source>Carboncoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your carboncoins from being stolen by malware infecting your computer.</source>
+        <translation>Carboncoin se va închide acum pentru a termina procesul de criptare. Ține minte că criptarea portofelului nu te poate proteja în totalitate de furtul monedelor de către programe dăunătoare care îți infectează calculatorul.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -326,7 +326,7 @@ Acest produs include programe dezvoltate de către OpenSSL Project pentru a fi f
     </message>
 </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>CarboncoinGUI</name>
     <message>
         <location filename="../bitcoingui.cpp" line="+295"/>
         <source>Sign &amp;message...</source>
@@ -374,8 +374,8 @@ Acest produs include programe dezvoltate de către OpenSSL Project pentru a fi f
     </message>
     <message>
         <location line="+7"/>
-        <source>Show information about Bitcoin</source>
-        <translation>Arată informații despre Bitcoin</translation>
+        <source>Show information about Carboncoin</source>
+        <translation>Arată informații despre Carboncoin</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -435,13 +435,13 @@ Acest produs include programe dezvoltate de către OpenSSL Project pentru a fi f
     </message>
     <message>
         <location line="-405"/>
-        <source>Send coins to a Bitcoin address</source>
-        <translation>Trimite monede către o adresă Bitcoin</translation>
+        <source>Send coins to a Carboncoin address</source>
+        <translation>Trimite monede către o adresă Carboncoin</translation>
     </message>
     <message>
         <location line="+49"/>
-        <source>Modify configuration options for Bitcoin</source>
-        <translation>Modifică opțiunile de configurare pentru Bitcoin</translation>
+        <source>Modify configuration options for Carboncoin</source>
+        <translation>Modifică opțiunile de configurare pentru Carboncoin</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -470,8 +470,8 @@ Acest produs include programe dezvoltate de către OpenSSL Project pentru a fi f
     </message>
     <message>
         <location line="+430"/>
-        <source>Bitcoin</source>
-        <translation>Bitcoin</translation>
+        <source>Carboncoin</source>
+        <translation>Carboncoin</translation>
     </message>
     <message>
         <location line="-643"/>
@@ -506,13 +506,13 @@ Acest produs include programe dezvoltate de către OpenSSL Project pentru a fi f
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign messages with your Bitcoin addresses to prove you own them</source>
-        <translation>Semnează mesaje cu adresa ta Bitcoin pentru a dovedi că îți aparțin</translation>
+        <source>Sign messages with your Carboncoin addresses to prove you own them</source>
+        <translation>Semnează mesaje cu adresa ta Carboncoin pentru a dovedi că îți aparțin</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified Bitcoin addresses</source>
-        <translation>Verifică mesaje pentru a te asigura că au fost semnate cu adresa Bitcoin specificată</translation>
+        <source>Verify messages to ensure they were signed with specified Carboncoin addresses</source>
+        <translation>Verifică mesaje pentru a te asigura că au fost semnate cu adresa Carboncoin specificată</translation>
     </message>
     <message>
         <location line="+48"/>
@@ -542,19 +542,19 @@ Acest produs include programe dezvoltate de către OpenSSL Project pentru a fi f
     </message>
     <message>
         <location line="-401"/>
-        <source>Bitcoin Core</source>
-        <translation>Bitcoin Core</translation>
+        <source>Carboncoin Core</source>
+        <translation>Carboncoin Core</translation>
     </message>
     <message>
         <location line="+163"/>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation>Cereti plati (genereaza coduri QR si bitcoin-uri: URls)</translation>
+        <source>Request payments (generates QR codes and carboncoin: URIs)</source>
+        <translation>Cereti plati (genereaza coduri QR si carboncoin-uri: URls)</translation>
     </message>
     <message>
         <location line="+29"/>
         <location line="+2"/>
-        <source>&amp;About Bitcoin Core</source>
-        <translation>&amp;Despre Nucleul Bitcoin</translation>
+        <source>&amp;About Carboncoin Core</source>
+        <translation>&amp;Despre Nucleul Carboncoin</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -568,8 +568,8 @@ Acest produs include programe dezvoltate de către OpenSSL Project pentru a fi f
     </message>
     <message>
         <location line="+3"/>
-        <source>Open a bitcoin: URI or payment request</source>
-        <translation>Deschideti un bitcoin: o adresa URI sau o cerere de plata</translation>
+        <source>Open a carboncoin: URI or payment request</source>
+        <translation>Deschideti un carboncoin: o adresa URI sau o cerere de plata</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -578,19 +578,19 @@ Acest produs include programe dezvoltate de către OpenSSL Project pentru a fi f
     </message>
     <message>
         <location line="+1"/>
-        <source>Show the Bitcoin Core help message to get a list with possible Bitcoin command-line options</source>
+        <source>Show the Carboncoin Core help message to get a list with possible Carboncoin command-line options</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+159"/>
         <location line="+5"/>
-        <source>Bitcoin client</source>
-        <translation>Client Bitcoin</translation>
+        <source>Carboncoin client</source>
+        <translation>Client Carboncoin</translation>
     </message>
     <message numerus="yes">
         <location line="+142"/>
-        <source>%n active connection(s) to Bitcoin network</source>
-        <translation><numerusform>%n conexiune activă către rețeaua Bitcoin</numerusform><numerusform>%n conexiuni active către rețeaua Bitcoin</numerusform><numerusform>%n de conexiuni active către rețeaua Bitcoin</numerusform></translation>
+        <source>%n active connection(s) to Carboncoin network</source>
+        <translation><numerusform>%n conexiune activă către rețeaua Carboncoin</numerusform><numerusform>%n conexiuni active către rețeaua Carboncoin</numerusform><numerusform>%n de conexiuni active către rețeaua Carboncoin</numerusform></translation>
     </message>
     <message>
         <location line="+22"/>
@@ -697,8 +697,8 @@ Adresa: %4
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+435"/>
-        <source>A fatal error occurred. Bitcoin can no longer continue safely and will quit.</source>
-        <translation>A survenit o eroare fatala. Bitcoin nu mai poate continua in siguranta si se va opri.</translation>
+        <source>A fatal error occurred. Carboncoin can no longer continue safely and will quit.</source>
+        <translation>A survenit o eroare fatala. Carboncoin nu mai poate continua in siguranta si se va opri.</translation>
     </message>
 </context>
 <context>
@@ -1055,8 +1055,8 @@ Adresa: %4
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid Bitcoin address.</source>
-        <translation>Adresa introdusă &quot;%1&quot; nu este o adresă bitcoin validă.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid Carboncoin address.</source>
+        <translation>Adresa introdusă &quot;%1&quot; nu este o adresă carboncoin validă.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1101,13 +1101,13 @@ Adresa: %4
     <name>HelpMessageDialog</name>
     <message>
         <location filename="../forms/helpmessagedialog.ui" line="+19"/>
-        <source>Bitcoin Core - Command-line options</source>
-        <translation>Bitcoin Core - Opţiuni Linie de comandă</translation>
+        <source>Carboncoin Core - Command-line options</source>
+        <translation>Carboncoin Core - Opţiuni Linie de comandă</translation>
     </message>
     <message>
         <location filename="../utilitydialog.cpp" line="+24"/>
-        <source>Bitcoin Core</source>
-        <translation>Bitcoin Core</translation>
+        <source>Carboncoin Core</source>
+        <translation>Carboncoin Core</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -1159,18 +1159,18 @@ Adresa: %4
     </message>
     <message>
         <location line="+9"/>
-        <source>Welcome to Bitcoin Core.</source>
-        <translation>Bine Aţi Venit la Nucleul Bitcoin.</translation>
+        <source>Welcome to Carboncoin Core.</source>
+        <translation>Bine Aţi Venit la Nucleul Carboncoin.</translation>
     </message>
     <message>
         <location line="+26"/>
-        <source>As this is the first time the program is launched, you can choose where Bitcoin Core will store its data.</source>
-        <translation>Dacă aceasta este prima dată când programul este lansat, puteţi alege unde Nucleul Bitcoin va stoca datele. </translation>
+        <source>As this is the first time the program is launched, you can choose where Carboncoin Core will store its data.</source>
+        <translation>Dacă aceasta este prima dată când programul este lansat, puteţi alege unde Nucleul Carboncoin va stoca datele. </translation>
     </message>
     <message>
         <location line="+10"/>
-        <source>Bitcoin Core will download and store a copy of the Bitcoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>Nucleul Bitcoin Core se va descărca şi va stoca o copie a lanţului blocului Bitcoin. Cel puţin 1GB de date vor fi stocate in acest dosar şi se va dezvolta în timp. Portofelul va fi, de asemenea, stocat în acest dosar.</translation>
+        <source>Carboncoin Core will download and store a copy of the Carboncoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>Nucleul Carboncoin Core se va descărca şi va stoca o copie a lanţului blocului Carboncoin. Cel puţin 1GB de date vor fi stocate in acest dosar şi se va dezvolta în timp. Portofelul va fi, de asemenea, stocat în acest dosar.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1184,8 +1184,8 @@ Adresa: %4
     </message>
     <message>
         <location filename="../intro.cpp" line="+85"/>
-        <source>Bitcoin</source>
-        <translation>Bitcoin</translation>
+        <source>Carboncoin</source>
+        <translation>Carboncoin</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1260,13 +1260,13 @@ Adresa: %4
     </message>
     <message>
         <location line="-131"/>
-        <source>Automatically start Bitcoin after logging in to the system.</source>
-        <translation>Porneşte automat programul Bitcoin la pornirea computerului.</translation>
+        <source>Automatically start Carboncoin after logging in to the system.</source>
+        <translation>Porneşte automat programul Carboncoin la pornirea computerului.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Bitcoin on system login</source>
-        <translation>&amp;S Porneşte Bitcoin la pornirea sistemului</translation>
+        <source>&amp;Start Carboncoin on system login</source>
+        <translation>&amp;S Porneşte Carboncoin la pornirea sistemului</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -1295,7 +1295,7 @@ Adresa: %4
     </message>
     <message>
         <location line="+37"/>
-        <source>Connect to the Bitcoin network through a SOCKS proxy.</source>
+        <source>Connect to the Carboncoin network through a SOCKS proxy.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1340,8 +1340,8 @@ Adresa: %4
     </message>
     <message>
         <location line="+40"/>
-        <source>Automatically open the Bitcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Deschide automat în router portul aferent clientului Bitcoin. Funcţionează doar în cazul în care routerul e compatibil UPnP şi opţiunea e activată.</translation>
+        <source>Automatically open the Carboncoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Deschide automat în router portul aferent clientului Carboncoin. Funcţionează doar în cazul în care routerul e compatibil UPnP şi opţiunea e activată.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1410,8 +1410,8 @@ Adresa: %4
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Bitcoin.</source>
-        <translation>Limba interfeței utilizatorului poate fi setat aici. Această setare va avea efect după repornirea Bitcoin.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Carboncoin.</source>
+        <translation>Limba interfeței utilizatorului poate fi setat aici. Această setare va avea efect după repornirea Carboncoin.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1421,12 +1421,12 @@ Adresa: %4
     <message>
         <location line="+13"/>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Alege subdiviziunea folosită la afişarea interfeţei şi la trimiterea de bitcoin.</translation>
+        <translation>Alege subdiviziunea folosită la afişarea interfeţei şi la trimiterea de carboncoin.</translation>
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show Bitcoin addresses in the transaction list or not.</source>
-        <translation>Vezi dacă adresele Bitcoin sunt în lista de tranzacție sau nu</translation>
+        <source>Whether to show Carboncoin addresses in the transaction list or not.</source>
+        <translation>Vezi dacă adresele Carboncoin sunt în lista de tranzacție sau nu</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1487,7 +1487,7 @@ Adresa: %4
     <message>
         <location line="+34"/>
         <source>The supplied proxy address is invalid.</source>
-        <translation>Adresa bitcoin pe care a-ti specificat-o este invalida</translation>
+        <translation>Adresa carboncoin pe care a-ti specificat-o este invalida</translation>
     </message>
 </context>
 <context>
@@ -1500,8 +1500,8 @@ Adresa: %4
     <message>
         <location line="+50"/>
         <location line="+231"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Bitcoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Informațiile afișate pot neactualizate. Portofelul tău se sincronizează automat cu rețeaua Bitcoin după ce o conexiune este stabilită, dar acest proces nu a fost finalizat încă.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Carboncoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>Informațiile afișate pot neactualizate. Portofelul tău se sincronizează automat cu rețeaua Carboncoin după ce o conexiune este stabilită, dar acest proces nu a fost finalizat încă.</translation>
     </message>
     <message>
         <location line="-238"/>
@@ -1570,8 +1570,8 @@ Adresa: %4
     </message>
     <message>
         <location line="+1"/>
-        <source>URI can not be parsed! This can be caused by an invalid Bitcoin address or malformed URI parameters.</source>
-        <translation>URI nu poate fi analizat! Acest lucru poate fi cauzat de o adresa Bitcoin invalida sau parametri deformati URI.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid Carboncoin address or malformed URI parameters.</source>
+        <translation>URI nu poate fi analizat! Acest lucru poate fi cauzat de o adresa Carboncoin invalida sau parametri deformati URI.</translation>
     </message>
     <message>
         <location line="+96"/>
@@ -1590,8 +1590,8 @@ Adresa: %4
     </message>
     <message>
         <location line="-353"/>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
-        <translation>Nu poate porni bitcoin: regula clic-pentru-plata</translation>
+        <source>Cannot start carboncoin: click-to-pay handler</source>
+        <translation>Nu poate porni carboncoin: regula clic-pentru-plata</translation>
     </message>
     <message>
         <location line="+58"/>
@@ -1659,8 +1659,8 @@ Adresa: %4
     <message>
         <location filename="../bitcoin.cpp" line="+71"/>
         <location line="+11"/>
-        <source>Bitcoin</source>
-        <translation>Bitcoin</translation>
+        <source>Carboncoin</source>
+        <translation>Carboncoin</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1674,8 +1674,8 @@ Adresa: %4
     </message>
     <message>
         <location filename="../guiutil.cpp" line="+82"/>
-        <source>Enter a Bitcoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>Introdu o adresă Bitcoin (de exemplu: 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <source>Enter a Carboncoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
+        <translation>Introdu o adresă Carboncoin (de exemplu: 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
     </message>
 </context>
 <context>
@@ -1835,7 +1835,7 @@ Adresa: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the Bitcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <source>Open the Carboncoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
         <translation>Deschide logurile debug din directorul curent. Aceasta poate dura cateva secunde pentru fisierele mai mari</translation>
     </message>
     <message>
@@ -1845,8 +1845,8 @@ Adresa: %4
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-30"/>
-        <source>Welcome to the Bitcoin RPC console.</source>
-        <translation>Bun venit la consola bitcoin RPC</translation>
+        <source>Welcome to the Carboncoin RPC console.</source>
+        <translation>Bun venit la consola carboncoin RPC</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1924,7 +1924,7 @@ Adresa: %4
     <message>
         <location line="+14"/>
         <location line="+23"/>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Bitcoin network.</source>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Carboncoin network.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2320,7 +2320,7 @@ Adresa: %4
     </message>
     <message>
         <location line="+113"/>
-        <source>Warning: Invalid Bitcoin address</source>
+        <source>Warning: Invalid Carboncoin address</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2432,7 +2432,7 @@ Adresa: %4
     </message>
     <message>
         <location line="+33"/>
-        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
+        <source>A message that was attached to the carboncoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Carboncoin network.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2457,8 +2457,8 @@ Adresa: %4
     <name>ShutdownWindow</name>
     <message>
         <location filename="../utilitydialog.cpp" line="+48"/>
-        <source>Bitcoin Core is shutting down...</source>
-        <translation>Bitcoin Core se închide...</translation>
+        <source>Carboncoin Core is shutting down...</source>
+        <translation>Carboncoin Core se închide...</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2486,7 +2486,7 @@ Adresa: %4
     <message>
         <location line="+18"/>
         <source>The address to sign the message with (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>Introduceţi o adresă Bitcoin (de exemplu: 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <translation>Introduceţi o adresă Carboncoin (de exemplu: 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -2527,8 +2527,8 @@ Adresa: %4
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Bitcoin address</source>
-        <translation>Semneaza mesajul pentru a dovedi ca detii acesta adresa Bitcoin</translation>
+        <source>Sign the message to prove you own this Carboncoin address</source>
+        <translation>Semneaza mesajul pentru a dovedi ca detii acesta adresa Carboncoin</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2559,12 +2559,12 @@ Adresa: %4
     <message>
         <location line="+21"/>
         <source>The address the message was signed with (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>Introduceţi o adresă Bitcoin (de exemplu: 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <translation>Introduceţi o adresă Carboncoin (de exemplu: 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
     </message>
     <message>
         <location line="+37"/>
-        <source>Verify the message to ensure it was signed with the specified Bitcoin address</source>
-        <translation>Verifica mesajul pentru a fi sigur ca a fost semnat cu adresa Bitcoin specifica</translation>
+        <source>Verify the message to ensure it was signed with the specified Carboncoin address</source>
+        <translation>Verifica mesajul pentru a fi sigur ca a fost semnat cu adresa Carboncoin specifica</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2578,8 +2578,8 @@ Adresa: %4
     </message>
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+30"/>
-        <source>Enter a Bitcoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>Introduceţi o adresă Bitcoin (de exemplu: 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <source>Enter a Carboncoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
+        <translation>Introduceţi o adresă Carboncoin (de exemplu: 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -2657,13 +2657,13 @@ Adresa: %4
     <name>SplashScreen</name>
     <message>
         <location filename="../splashscreen.cpp" line="+28"/>
-        <source>Bitcoin Core</source>
-        <translation>Bitcoin Core</translation>
+        <source>Carboncoin Core</source>
+        <translation>Carboncoin Core</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>The Bitcoin Core developers</source>
-        <translation>Dezvoltatorii Bitcoin Core</translation>
+        <source>The Carboncoin Core developers</source>
+        <translation>Dezvoltatorii Carboncoin Core</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3197,7 +3197,7 @@ Adresa: %4
     <message>
         <location filename="../walletmodel.cpp" line="+245"/>
         <source>Send Coins</source>
-        <translation>Trimite Bitcoin</translation>
+        <translation>Trimite Carboncoin</translation>
     </message>
 </context>
 <context>
@@ -3244,7 +3244,7 @@ Adresa: %4
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>carboncoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+223"/>
         <source>Usage:</source>
@@ -3267,13 +3267,13 @@ Adresa: %4
     </message>
     <message>
         <location line="+22"/>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>Specifică fișierul de configurare (implicit: bitcoin.conf)</translation>
+        <source>Specify configuration file (default: carboncoin.conf)</source>
+        <translation>Specifică fișierul de configurare (implicit: carboncoin.conf)</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>Specifică fișierul pid (implicit bitcoind.pid)</translation>
+        <source>Specify pid file (default: carboncoind.pid)</source>
+        <translation>Specifică fișierul pid (implicit carboncoind.pid)</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -3350,13 +3350,13 @@ Adresa: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=carboncoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;Carboncoin Alert&quot; admin@foo.com
 </source>
         <translation type="unfinished"/>
     </message>
@@ -3377,8 +3377,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. Bitcoin is probably already running.</source>
-        <translation>Nu se poate obține o blocare a directorului de date %s. Bitcoin probabil rulează deja.</translation>
+        <source>Cannot obtain a lock on data directory %s. Carboncoin is probably already running.</source>
+        <translation>Nu se poate obține o blocare a directorului de date %s. Carboncoin probabil rulează deja.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3422,8 +3422,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+3"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Bitcoin will not work properly.</source>
-        <translation>Atentie: Va rugam verificati daca data/timpul computerului dumneavoastra sunt corecte! Daca ceasul computerului este decalat, Bitcoin nu va functiona corect.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Carboncoin will not work properly.</source>
+        <translation>Atentie: Va rugam verificati daca data/timpul computerului dumneavoastra sunt corecte! Daca ceasul computerului este decalat, Carboncoin nu va functiona corect.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3457,13 +3457,13 @@ for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+1"/>
-        <source>Bitcoin Core Daemon</source>
-        <translation>Daemon-ul Bitcoin Core</translation>
+        <source>Carboncoin Core Daemon</source>
+        <translation>Daemon-ul Carboncoin Core</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Bitcoin RPC client version</source>
-        <translation>Versiunea clientului Bitcoin RPC</translation>
+        <source>Carboncoin RPC client version</source>
+        <translation>Versiunea clientului Carboncoin RPC</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3667,8 +3667,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to Bitcoin server</source>
-        <translation>Trimite comanda la serverul Bitcoin</translation>
+        <source>Send command to Carboncoin server</source>
+        <translation>Trimite comanda la serverul Carboncoin</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -3692,8 +3692,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+1"/>
-        <source>Start Bitcoin server</source>
-        <translation>A porni serverul Bitcoin</translation>
+        <source>Start Carboncoin server</source>
+        <translation>A porni serverul Carboncoin</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3702,8 +3702,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+10"/>
-        <source>Usage (deprecated, use bitcoin-cli):</source>
-        <translation>Utilizare (învechită, folositi bitcoin-cli):</translation>
+        <source>Usage (deprecated, use carboncoin-cli):</source>
+        <translation>Utilizare (învechită, folositi carboncoin-cli):</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -3807,8 +3807,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+9"/>
-        <source>SSL options: (see the Bitcoin Wiki for SSL setup instructions)</source>
-        <translation>Optiuni SSl (vezi Bitcoin wiki pentru intructiunile de instalare)</translation>
+        <source>SSL options: (see the Carboncoin Wiki for SSL setup instructions)</source>
+        <translation>Optiuni SSl (vezi Carboncoin wiki pentru intructiunile de instalare)</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -3972,13 +3972,13 @@ for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Bitcoin</source>
-        <translation>Eroare la încărcarea wallet.dat: Portofelul are nevoie de o versiune Bitcoin mai nouă</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of Carboncoin</source>
+        <translation>Eroare la încărcarea wallet.dat: Portofelul are nevoie de o versiune Carboncoin mai nouă</translation>
     </message>
     <message>
         <location line="+99"/>
-        <source>Wallet needed to be rewritten: restart Bitcoin to complete</source>
-        <translation>Portofelul trebuie rescris: repornește Bitcoin pentru finalizare</translation>
+        <source>Wallet needed to be rewritten: restart Carboncoin to complete</source>
+        <translation>Portofelul trebuie rescris: repornește Carboncoin pentru finalizare</translation>
     </message>
     <message>
         <location line="-101"/>
@@ -4037,8 +4037,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="-32"/>
-        <source>Unable to bind to %s on this computer. Bitcoin is probably already running.</source>
-        <translation>Imposibilitatea de a lega la% s pe acest computer. Bitcoin este, probabil, deja în execuție.</translation>
+        <source>Unable to bind to %s on this computer. Carboncoin is probably already running.</source>
+        <translation>Imposibilitatea de a lega la% s pe acest computer. Carboncoin este, probabil, deja în execuție.</translation>
     </message>
     <message>
         <location line="+96"/>

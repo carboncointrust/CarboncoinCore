@@ -25,7 +25,7 @@ enum BlockSource {
     BLOCK_SOURCE_NETWORK
 };
 
-/** Model for Bitcoin network client. */
+/** Model for Carboncoin network client. */
 class ClientModel : public QObject
 {
     Q_OBJECT

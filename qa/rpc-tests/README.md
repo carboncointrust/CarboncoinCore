@@ -1,8 +1,8 @@
 Regression tests of RPC interface
 =================================
 
-python-bitcoinrpc: git subtree of https://github.com/jgarzik/python-bitcoinrpc
-Changes to python-bitcoinrpc should be made upstream, and then
+python-carboncoinrpc: git subtree of https://github.com/jgarzik/python-carboncoinrpc
+Changes to python-carboncoinrpc should be made upstream, and then
 pulled here using git subtree
 
 skeleton.py : Copy this to create new regression tests.
@@ -24,7 +24,7 @@ Notes
 A 200-block -regtest blockchain and wallets for four nodes
 is created the first time a regression test is run and
 is stored in the cache/ directory. Each node has 25 mature
-blocks (25*50=1250 BTC) in their wallet.
+blocks (25*50=1250 CARBON) in their wallet.
 
 After the first run, the cache/ blockchain and wallets are
 copied into a temporary directory and used as the initial
@@ -33,4 +33,4 @@ test state.
 If you get into a bad state, you should be able
 to recover with:
   rm -rf cache
-  killall bitcoind
+  killall carboncoind

@@ -1,26 +1,26 @@
-Bitcoin Core integration/staging tree
+Carboncoin Core integration/staging tree
 =====================================
 
 http://www.bitcoin.org
 
-Copyright (c) 2009-2013 Bitcoin Core Developers
+Copyright (c) 2009-2013 Carboncoin Core Developers
 
-What is Bitcoin?
+What is Carboncoin?
 ----------------
 
-Bitcoin is an experimental new digital currency that enables instant payments to
-anyone, anywhere in the world. Bitcoin uses peer-to-peer technology to operate
+Carboncoin is an experimental new digital currency that enables instant payments to
+anyone, anywhere in the world. Carboncoin uses peer-to-peer technology to operate
 with no central authority: managing transactions and issuing money are carried
-out collectively by the network. Bitcoin Core is the name of open source
+out collectively by the network. Carboncoin Core is the name of open source
 software which enables the use of this currency.
 
 For more information, as well as an immediately useable, binary version of
-the Bitcoin Core software, see http://www.bitcoin.org/en/download.
+the Carboncoin Core software, see http://www.bitcoin.org/en/download.
 
 License
 -------
 
-Bitcoin Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
+Carboncoin Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
 information or see http://opensource.org/licenses/MIT.
 
 Development process
@@ -29,7 +29,7 @@ Development process
 Developers work in their own trees, then submit pull requests when they think
 their feature or bug fix is ready.
 
-If it is a simple/trivial/non-controversial change, then one of the Bitcoin
+If it is a simple/trivial/non-controversial change, then one of the Carboncoin
 development team members simply pulls it.
 
 If it is a *more complicated or potentially controversial* change, then the patch
@@ -43,7 +43,7 @@ controversial.
 
 The `master` branch is regularly built and tested, but is not guaranteed to be
 completely stable. [Tags](https://github.com/bitcoin/bitcoin/tags) are created
-regularly to indicate new official, stable release versions of Bitcoin.
+regularly to indicate new official, stable release versions of Carboncoin.
 
 Testing
 -------

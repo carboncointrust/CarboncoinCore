@@ -1,5 +1,5 @@
 --- 
-name: bitcoin
+name: carboncoin
 urls:
 - http://bitcoin.org/bitcoin-latest-win32-gitian.zip
 rss:
