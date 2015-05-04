@@ -305,7 +305,7 @@ def deployFrameworks(frameworks, bundlePath, binaryPath, strip, verbose, deploym
         if deploymentInfo.qtPath is None and framework.isQtFramework():
             deploymentInfo.detectQtPath(framework.frameworkDirectory)
         
-        if framework.installName.startswith("@executable_path"):
+        if framework.installName.startswith("@executable_path") or framework.installName.startswith("@loader_path"):
             if verbose >= 2:
                 print framework.frameworkName, "already deployed, skipping."
             continue

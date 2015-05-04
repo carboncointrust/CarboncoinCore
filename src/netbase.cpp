@@ -388,7 +388,7 @@ bool static ConnectSocketDirectly(const CService &addrConnect, SOCKET& hSocketRe
             }
             if (nRet != 0)
             {
-                LogPrintf("connect() to %s failed after select(): %s\n", addrConnect.ToString(), strerror(nRet));
+                //LogPrintf("connect() to %s failed after select(): %s\n", addrConnect.ToString(), strerror(nRet));
                 closesocket(hSocket);
                 return false;
             }

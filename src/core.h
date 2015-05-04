@@ -7,9 +7,9 @@
 #define BITCOIN_CORE_H
 
 #include "script.h"
+#include "scrypt.h"
 #include "serialize.h"
 #include "uint256.h"
-#include "scrypt.h"
 
 #include <stdint.h>
 
@@ -387,6 +387,13 @@ public:
 
     uint256 GetHash() const;
 
+    uint256 GetPoWHash() const
+    {
+        uint256 thash;
+        scrypt_1024_1_1_256(BEGIN(nVersion), BEGIN(thash));
+        return thash;
+    }
+
     int64_t GetBlockTime() const
     {
         return (int64_t)nTime;
@@ -439,7 +446,6 @@ public:
         return block;
     }
 
-    uint256 GetPoWHash() const;
     uint256 BuildMerkleTree() const;
 
     const uint256 &GetTxHash(unsigned int nIndex) const {

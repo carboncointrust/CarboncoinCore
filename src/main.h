@@ -19,7 +19,7 @@
 #include "sync.h"
 #include "txmempool.h"
 #include "uint256.h"
-#include "scrypt.h"
+#include "base58.h"
 
 #include <algorithm>
 #include <exception>
@@ -1109,6 +1109,109 @@ protected:
     friend void ::RegisterWallet(CWalletInterface*);
     friend void ::UnregisterWallet(CWalletInterface*);
     friend void ::UnregisterAllWallets();
+};
+
+
+
+/** Synchronized checkpoints */
+
+extern uint256 hashSyncCheckpoint;
+bool SendSyncCheckpoint(uint256 hashCheckpoint);
+bool SetCheckpointPrivKey(std::string strPrivKey);
+bool IsSyncCheckpointEnforced();
+
+
+
+class CUnsignedSyncCheckpoint
+{
+public:
+    int nVersion;
+    uint256 hashCheckpoint;      // checkpoint block
+
+    IMPLEMENT_SERIALIZE
+    (
+     READWRITE(this->nVersion);
+     nVersion = this->nVersion;
+     READWRITE(hashCheckpoint);
+     )
+
+    void SetNull()
+    {
+        nVersion = 1;
+        hashCheckpoint = 0;
+    }
+
+    std::string ToString() const
+    {
+        return strprintf(
+                         "CSyncCheckpoint(\n"
+                         "    nVersion       = %d\n"
+                         "    hashCheckpoint = %s\n"
+                         ")\n",
+                         nVersion,
+                         hashCheckpoint.ToString().c_str());
+    }
+
+    void print() const
+    {
+        LogPrintf("%s", ToString());
+    }
+};
+
+class CSyncCheckpoint : public CUnsignedSyncCheckpoint
+{
+public:
+    static std::string strMasterPrivKey;
+
+    std::vector<unsigned char> vchMsg;
+    std::vector<unsigned char> vchSig;
+
+    CSyncCheckpoint()
+    {
+        SetNull();
+    }
+
+    IMPLEMENT_SERIALIZE
+    (
+     READWRITE(vchMsg);
+     READWRITE(vchSig);
+     )
+
+    void SetNull()
+    {
+        CUnsignedSyncCheckpoint::SetNull();
+        vchMsg.clear();
+        vchSig.clear();
+    }
+
+    bool IsNull() const
+    {
+        return (hashCheckpoint == 0);
+    }
+
+    uint256 GetHash() const
+    {
+        return Hash(this->vchMsg.begin(), this->vchMsg.end());
+    }
+
+    bool RelayTo(CNode* pnode) const
+    {
+        // returns true if wasn't already sent
+        if (pnode->hashCheckpointKnown != hashCheckpoint)
+        {
+            pnode->hashCheckpointKnown = hashCheckpoint;
+            pnode->PushMessage("checkpoint", *this);
+            return true;
+        }
+        return false;
+    }
+
+    // Verify signature of sync-checkpoint message
+    bool CheckSignature();
+
+    // Process synchronized checkpoint
+    bool ProcessSyncCheckpoint(CNode* pfrom);
+
 };
 
 #endif

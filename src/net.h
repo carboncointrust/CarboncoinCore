@@ -251,6 +251,7 @@ public:
     std::set<CAddress> setAddrKnown;
     bool fGetAddr;
     std::set<uint256> setKnown;
+    uint256 hashCheckpointKnown;
 
     // inventory based relay
     mruset<CInv> setInventoryKnown;
@@ -294,6 +295,7 @@ public:
         nStartingHeight = -1;
         fStartSync = false;
         fGetAddr = false;
+        hashCheckpointKnown = 0;
         fRelayTxes = false;
         setInventoryKnown.max_size(SendBufferSize() / 1000);
         pfilter = new CBloomFilter();
