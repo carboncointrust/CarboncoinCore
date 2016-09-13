@@ -44,6 +44,9 @@
 #include <boost/math/distributions/poisson.hpp>
 #include <boost/thread.hpp>
 
+#include <boost/random/mersenne_twister.hpp>
+#include <boost/random/uniform_int_distribution.hpp>
+
 using namespace std;
 
 #if defined(NDEBUG)
@@ -1548,7 +1551,7 @@ bool ReadBlockFromDisk(CBlock& block, const CDiskBlockPos& pos, const Consensus:
     }
 
     // Check the header
-    if (!CheckProofOfWork(block.GetHash(), block.nBits, consensusParams))
+    if (!CheckProofOfWork(block.GetPoWHash(), block.nBits, consensusParams))
         return error("ReadBlockFromDisk: Errors in block header at %s", pos.ToString());
 
     return true;
@@ -1564,6 +1567,13 @@ bool ReadBlockFromDisk(CBlock& block, const CBlockIndex* pindex, const Consensus
     return true;
 }
 
+int static generateMTRandom(unsigned int s, int range)
+{
+    boost::random::mt19937 gen(s);
+    boost::random::uniform_int_distribution<> dist(1, range);
+    return dist(gen);
+}
+
 CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams)
 {
     int halvings = nHeight / consensusParams.nSubsidyHalvingInterval;
@@ -1574,6 +1584,40 @@ CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams)
     CAmount nSubsidy = 50 * COIN;
     // Subsidy is cut in half every 210,000 blocks which will occur approximately every 4 years.
     nSubsidy >>= halvings;
+    return nSubsidy;
+}
+
+CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams, uint256 prevHash)
+{
+    int64_t nSubsidy = 1;
+
+    if(nHeight == 1)
+        return 144000000 * COIN;
+
+    std::string cseed_str = prevHash.ToString().substr(8,7);
+    const char* cseed = cseed_str.c_str();
+
+    long seed = hex2long(cseed);
+    int rand = generateMTRandom(seed, 300000);
+
+    nSubsidy = (1 + rand) * COIN;
+
+    // 0.1% chance for super block
+    long seedtwo = seed + 14;
+    int randtwo = generateMTRandom(seedtwo, 1000);
+
+    if (randtwo == 152)
+        nSubsidy = nSubsidy * 2;
+
+    // Bonus block rewards for first week
+    if (nHeight > 99 && nHeight < 964)
+        nSubsidy = nSubsidy * 1.5;
+    else if (nHeight > 963 && nHeight < 6912)
+        nSubsidy = nSubsidy * 1.25;
+ 
+    // Reward halves every 50112 blocks
+    nSubsidy >>= (nHeight / consensusParams.nSubsidyHalvingInterval);
+ 
     return nSubsidy;
 }
 
@@ -2384,7 +2428,11 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
     int64_t nTime3 = GetTimeMicros(); nTimeConnect += nTime3 - nTime2;
     LogPrint("bench", "      - Connect %u transactions: %.2fms (%.3fms/tx, %.3fms/txin) [%.2fs]\n", (unsigned)block.vtx.size(), 0.001 * (nTime3 - nTime2), 0.001 * (nTime3 - nTime2) / block.vtx.size(), nInputs <= 1 ? 0 : 0.001 * (nTime3 - nTime2) / (nInputs-1), nTimeConnect * 0.000001);
 
-    CAmount blockReward = nFees + GetBlockSubsidy(pindex->nHeight, chainparams.GetConsensus());
+   uint256 prevHash = ArithToUint256(arith_uint256(0));
+   if(pindex->pprev)
+       prevHash = pindex->pprev->GetBlockHash();
+
+    CAmount blockReward = nFees + GetBlockSubsidy(pindex->nHeight, chainparams.GetConsensus(), prevHash);
     if (block.vtx[0].GetValueOut() > blockReward)
         return state.DoS(100,
                          error("ConnectBlock(): coinbase pays too much (actual=%d vs limit=%d)",
@@ -3206,7 +3254,7 @@ bool FindUndoPos(CValidationState &state, int nFile, CDiskBlockPos &pos, unsigne
 bool CheckBlockHeader(const CBlockHeader& block, CValidationState& state, bool fCheckPOW)
 {
     // Check proof of work matches claimed amount
-    if (fCheckPOW && !CheckProofOfWork(block.GetHash(), block.nBits, Params().GetConsensus()))
+    if (fCheckPOW && !CheckProofOfWork(block.GetPoWHash(), block.nBits, Params().GetConsensus()))
         return state.DoS(50, error("CheckBlockHeader(): proof of work failed"),
                          REJECT_INVALID, "high-hash");
 

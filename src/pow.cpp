@@ -13,11 +13,16 @@
 
 unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHeader *pblock, const Consensus::Params& params)
 {
+    const arith_uint256 bnStartDiff = ~arith_uint256(0) >> 26;
     unsigned int nProofOfWorkLimit = UintToArith256(params.powLimit).GetCompact();
+    unsigned int nStartDiff = bnStartDiff.GetCompact();
 
     // Genesis block
     if (pindexLast == NULL)
         return nProofOfWorkLimit;
+
+   if (pindexLast->nHeight+1 == 30)
+       return nStartDiff;
 
     // Only change once per difficulty adjustment interval
     if ((pindexLast->nHeight+1) % params.DifficultyAdjustmentInterval() != 0)
@@ -41,10 +46,16 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHead
         return pindexLast->nBits;
     }
 
-    // Go back by what we want to be 14 days worth of blocks
-    int nHeightFirst = pindexLast->nHeight - (params.DifficultyAdjustmentInterval()-1);
-    assert(nHeightFirst >= 0);
-    const CBlockIndex* pindexFirst = pindexLast->GetAncestor(nHeightFirst);
+    // This fixes an issue where a 51% attack can change difficulty at will.
+    // Go back the full period unless it's the first retarget after genesis. Code courtesy of Art Forz
+    int blockstogoback = params.nMinerConfirmationWindow-1;
+    if ((pindexLast->nHeight+1) != params.nMinerConfirmationWindow)
+        blockstogoback = params.nMinerConfirmationWindow;
+
+     // Go back by what we want to be 14 days worth of blocks
+    const CBlockIndex* pindexFirst = pindexLast;
+    for (int i = 0; pindexFirst && i < blockstogoback; i++)
+        pindexFirst = pindexFirst->pprev;
     assert(pindexFirst);
 
     return CalculateNextWorkRequired(pindexLast, pindexFirst->GetBlockTime(), params);
@@ -58,10 +69,25 @@ unsigned int CalculateNextWorkRequired(const CBlockIndex* pindexLast, int64_t nF
     // Limit adjustment step
     int64_t nActualTimespan = pindexLast->GetBlockTime() - nFirstBlockTime;
     LogPrintf("  nActualTimespan = %d  before bounds\n", nActualTimespan);
-    if (nActualTimespan < params.nPowTargetTimespan/4)
-        nActualTimespan = params.nPowTargetTimespan/4;
-    if (nActualTimespan > params.nPowTargetTimespan*4)
-        nActualTimespan = params.nPowTargetTimespan*4;
+
+    int64_t nActualTimespanMax;
+    int64_t nActualTimespanMin;
+
+    if(pindexLast->nHeight+1 < 125)
+    {
+        nActualTimespanMax = ((params.nPowTargetTimespan*200)/108);
+        nActualTimespanMin = ((params.nPowTargetTimespan*108)/200);
+    }
+    else
+    {
+        nActualTimespanMax = ((params.nPowTargetTimespan*90)/74);
+        nActualTimespanMin = ((params.nPowTargetTimespan*74)/90);
+    }
+
+    if (nActualTimespan < nActualTimespanMin)
+        nActualTimespan = nActualTimespanMin;
+    if (nActualTimespan > nActualTimespanMax)
+        nActualTimespan = nActualTimespanMax;
 
     // Retarget
     const arith_uint256 bnPowLimit = UintToArith256(params.powLimit);

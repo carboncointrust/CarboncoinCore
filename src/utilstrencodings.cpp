@@ -51,6 +51,14 @@ const signed char p_util_hexdigit[256] =
   -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
   -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1, };
 
+long hex2long(const char* psz)
+{
+    long ret = 0;
+    while (*psz && ret >= 0)
+        ret = (ret << 4) | (long)p_util_hexdigit[(unsigned char)*psz++];
+    return ret;
+}
+
 signed char HexDigit(char c)
 {
     return p_util_hexdigit[(unsigned char)c];

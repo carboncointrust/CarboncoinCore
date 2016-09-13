@@ -130,4 +130,6 @@ bool TimingResistantEqual(const T& a, const T& b)
  */
 bool ParseFixedPoint(const std::string &val, int decimals, int64_t *amount_out);
 
+long hex2long(const char* psz);
+
 #endif // BITCOIN_UTILSTRENCODINGS_H
