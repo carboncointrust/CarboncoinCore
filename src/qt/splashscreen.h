@@ -1,31 +1,49 @@
-// Copyright (c) 2011-2014 The Bitcoin developers
-// Distributed under the MIT/X11 software license, see the accompanying
+// Copyright (c) 2011-2015 The Carboncoin Core developers
+// Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SPLASHSCREEN_H
-#define SPLASHSCREEN_H
+#ifndef CARBONCOIN_QT_SPLASHSCREEN_H
+#define CARBONCOIN_QT_SPLASHSCREEN_H
 
 #include <QSplashScreen>
 
-/** class for the splashscreen with information of the running client
+class NetworkStyle;
+
+/** Class for the splashscreen with information of the running client.
+ *
+ * @note this is intentionally not a QSplashScreen. Carboncoin Core initialization
+ * can take a long time, and in that case a progress window that cannot be
+ * moved around and minimized has turned out to be frustrating to the user.
  */
-class SplashScreen : public QSplashScreen
+class SplashScreen : public QWidget
 {
     Q_OBJECT
 
 public:
-    explicit SplashScreen(const QPixmap &pixmap, Qt::WindowFlags f, bool isTestNet);
+    explicit SplashScreen(Qt::WindowFlags f, const NetworkStyle *networkStyle);
     ~SplashScreen();
+
+protected:
+    void paintEvent(QPaintEvent *event);
+    void closeEvent(QCloseEvent *event);
 
 public Q_SLOTS:
     /** Slot to call finish() method as it's not defined as slot */
     void slotFinish(QWidget *mainWin);
+
+    /** Show message and progress */
+    void showMessage(const QString &message, int alignment, const QColor &color);
 
 private:
     /** Connect core signals to splash screen */
     void subscribeToCoreSignals();
     /** Disconnect core signals to splash screen */
     void unsubscribeFromCoreSignals();
+
+    QPixmap pixmap;
+    QString curMessage;
+    QColor curColor;
+    int curAlignment;
 };
 
-#endif // SPLASHSCREEN_H
+#endif // CARBONCOIN_QT_SPLASHSCREEN_H
