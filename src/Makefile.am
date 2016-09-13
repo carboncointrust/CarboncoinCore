@@ -408,7 +408,6 @@ libcarboncoinconsensus_la_SOURCES = \
   crypto/sha1.cpp \
   crypto/sha256.cpp \
   crypto/sha512.cpp \
-  crypto/scrypt.cpp \
   hash.cpp \
   primitives/transaction.cpp \
   pubkey.cpp \
