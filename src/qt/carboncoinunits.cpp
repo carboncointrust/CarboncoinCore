@@ -20,6 +20,8 @@ QList<CarboncoinUnits::Unit> CarboncoinUnits::availableUnits()
     unitlist.append(CARBON);
     unitlist.append(mCARBON);
     unitlist.append(uCARBON);
+    unitlist.append(KCARBON);
+    unitlist.append(MCARBON);
     return unitlist;
 }
 
@@ -30,6 +32,8 @@ bool CarboncoinUnits::valid(int unit)
     case CARBON:
     case mCARBON:
     case uCARBON:
+    case KCARBON:
+    case MCARBON:
         return true;
     default:
         return false;
@@ -43,6 +47,8 @@ QString CarboncoinUnits::name(int unit)
     case CARBON: return QString("CARBON");
     case mCARBON: return QString("mCARBON");
     case uCARBON: return QString::fromUtf8("μCARBON");
+    case KCARBON: return QString("KCARBON");
+    case MCARBON: return QString("MCARBON");
     default: return QString("???");
     }
 }
@@ -54,6 +60,8 @@ QString CarboncoinUnits::description(int unit)
     case CARBON: return QString("Carboncoins");
     case mCARBON: return QString("Milli-Carboncoins (1 / 1" THIN_SP_UTF8 "000)");
     case uCARBON: return QString("Micro-Carboncoins (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+    case KCARBON: return QString("Kilo-Carboncoins (1" THIN_SP_UTF8 "000)");
+    case MCARBON: return QString("Mega-Carboncoins (1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
     default: return QString("???");
     }
 }
@@ -62,6 +70,8 @@ qint64 CarboncoinUnits::factor(int unit)
 {
     switch(unit)
     {
+    case MCARBON: return 100000000000000;
+    case KCARBON: return 100000000000;
     case CARBON:  return 100000000;
     case mCARBON: return 100000;
     case uCARBON: return 100;
@@ -73,6 +83,8 @@ int CarboncoinUnits::decimals(int unit)
 {
     switch(unit)
     {
+    case MCARBON: return 8;
+    case KCARBON: return 8;
     case CARBON: return 8;
     case mCARBON: return 5;
     case uCARBON: return 2;

@@ -58,7 +58,9 @@ public:
     {
         CARBON,
         mCARBON,
-        uCARBON
+        uCARBON,
+        KCARBON,
+        MCARBON
     };
 
     enum SeparatorStyle
