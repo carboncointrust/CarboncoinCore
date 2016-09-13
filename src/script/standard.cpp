@@ -52,6 +52,10 @@ bool Solver(const CScript& scriptPubKey, txnouttype& typeRet, vector<vector<unsi
 
         // Sender provides N pubkeys, receivers provides M signatures
         mTemplates.insert(make_pair(TX_MULTISIG, CScript() << OP_SMALLINTEGER << OP_PUBKEYS << OP_SMALLINTEGER << OP_CHECKMULTISIG));
+
+        // Sender provides time-lock and pubkey(s), receiver adds signature(s)
+        mTemplates.insert(make_pair(TX_PUBKEY, CScript() << OP_CHECKLOCKTIMEVERIFY << OP_DROP << OP_PUBKEY << OP_CHECKSIG));
+        mTemplates.insert(make_pair(TX_PUBKEY, CScript() << OP_CHECKLOCKTIMEVERIFY << OP_DROP << OP_SMALLINTEGER << OP_PUBKEYS << OP_SMALLINTEGER << OP_CHECKMULTISIG));
     }
 
     vSolutionsRet.clear();
@@ -146,6 +150,16 @@ bool Solver(const CScript& scriptPubKey, txnouttype& typeRet, vector<vector<unsi
                     vSolutionsRet.push_back(valtype(1, n));
                 }
                 else
+                    break;
+            }
+            else if (opcode2 == OP_CHECKLOCKTIMEVERIFY)
+            {
+                // OP_CHECKLOCKTIMEVERIFY parameter
+                if(vch1.size() < 2 || vch1.size() > 5)
+                    break;
+                if (!script1.GetOp(pc1, opcode1, vch1))
+                    break;
+                if (opcode1 != opcode2)
                     break;
             }
             else if (opcode1 != opcode2 || vch1 != vch2)

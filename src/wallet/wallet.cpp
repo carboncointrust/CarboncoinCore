@@ -2007,6 +2007,9 @@ bool CWallet::CreateTransaction(const vector<CRecipient>& vecSend, CWalletTx& wt
     assert(txNew.nLockTime <= (unsigned int)chainActive.Height());
     assert(txNew.nLockTime < LOCKTIME_THRESHOLD);
 
+    // For time locked transactions, must use a time rather than the block number
+    txNew.nLockTime = chainActive.Tip()->GetMedianTimePast() - 1 - GetRandInt(60*60*10);
+
     {
         LOCK2(cs_main, cs_wallet);
         {
