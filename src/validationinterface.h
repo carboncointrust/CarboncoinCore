@@ -1,10 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2015 The Bitcoin Core developers
+// Copyright (c) 2009-2015 The Carboncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_VALIDATIONINTERFACE_H
-#define BITCOIN_VALIDATIONINTERFACE_H
+#ifndef CARBONCOIN_VALIDATIONINTERFACE_H
+#define CARBONCOIN_VALIDATIONINTERFACE_H
 
 #include <boost/signals2/signal.hpp>
 #include <boost/shared_ptr.hpp>
@@ -68,4 +68,4 @@ struct CMainSignals {
 
 CMainSignals& GetMainSignals();
 
-#endif // BITCOIN_VALIDATIONINTERFACE_H
+#endif // CARBONCOIN_VALIDATIONINTERFACE_H

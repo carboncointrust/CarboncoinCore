@@ -1,10 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2015 The Bitcoin Core developers
+// Copyright (c) 2009-2015 The Carboncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_SCRIPT_SCRIPT_H
-#define BITCOIN_SCRIPT_SCRIPT_H
+#ifndef CARBONCOIN_SCRIPT_SCRIPT_H
+#define CARBONCOIN_SCRIPT_SCRIPT_H
 
 #include "crypto/common.h"
 #include "prevector.h"
@@ -594,7 +594,7 @@ public:
     }
 
     /**
-     * Pre-version-0.6, Bitcoin always counted CHECKMULTISIGs
+     * Pre-version-0.6, Carboncoin always counted CHECKMULTISIGs
      * as 20 sigops. With pay-to-script-hash, that changed:
      * CHECKMULTISIGs serialized in scriptSigs are
      * counted more accurately, assuming they are of the form
@@ -640,4 +640,4 @@ public:
     virtual ~CReserveScript() {}
 };
 
-#endif // BITCOIN_SCRIPT_SCRIPT_H
+#endif // CARBONCOIN_SCRIPT_SCRIPT_H

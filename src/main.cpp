@@ -1,5 +1,5 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2015 The Bitcoin Core developers
+// Copyright (c) 2009-2015 The Carboncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -52,7 +52,7 @@
 using namespace std;
 
 #if defined(NDEBUG)
-# error "Bitcoin cannot be compiled without assertions."
+# error "Carboncoin cannot be compiled without assertions."
 #endif
 
 /**
@@ -106,7 +106,7 @@ static void CheckBlockIndex(const Consensus::Params& consensusParams);
 /** Constant stuff for coinbase transactions we create: */
 CScript COINBASE_FLAGS;
 
-const string strMessageMagic = "Bitcoin Signed Message:\n";
+const string strMessageMagic = "Carboncoin Signed Message:\n";
 
 // Internal stuff
 namespace {
@@ -688,7 +688,7 @@ bool SetCheckpointPrivKey(std::string strPrivKey)
     sMsg << (CUnsignedSyncCheckpoint)checkpoint;
     checkpoint.vchMsg = std::vector<unsigned char>(sMsg.begin(), sMsg.end());
 
-    CBitcoinSecret vchSecret;
+    CCarboncoinSecret vchSecret;
     if (!vchSecret.SetString(strPrivKey))
         return error("SendSyncCheckpoint: Checkpoint master key invalid");
 
@@ -711,7 +711,7 @@ bool SendSyncCheckpoint(uint256 hashCheckpoint, const CChainParams& chainparams)
 
     if (CSyncCheckpoint::strMasterPrivKey.empty())
         return error("SendSyncCheckpoint: Checkpoint master key unavailable.");
-    CBitcoinSecret vchSecret;
+    CCarboncoinSecret vchSecret;
     if (!vchSecret.SetString(CSyncCheckpoint::strMasterPrivKey))
         return error("SendSyncCheckpoint: Checkpoint master key invalid");
     CKey key = vchSecret.GetKey();
@@ -1627,7 +1627,7 @@ bool AcceptToMemoryPoolWorker(CTxMemPool& pool, CValidationState &state, const C
         // Remove conflicting transactions from the mempool
         BOOST_FOREACH(const CTxMemPool::txiter it, allConflicting)
         {
-            LogPrint("mempool", "replacing tx %s with %s for %s BTC additional fees, %d delta bytes\n",
+            LogPrint("mempool", "replacing tx %s with %s for %s CARBON additional fees, %d delta bytes\n",
                     it->GetTx().GetHash().ToString(),
                     hash.ToString(),
                     FormatMoney(nModifiedFees - nConflictingFees),
@@ -2361,7 +2361,7 @@ bool FindUndoPos(CValidationState &state, int nFile, CDiskBlockPos &pos, unsigne
 static CCheckQueue<CScriptCheck> scriptcheckqueue(128);
 
 void ThreadScriptCheck() {
-    RenameThread("bitcoin-scriptch");
+    RenameThread("carboncoin-scriptch");
     scriptcheckqueue.Thread();
 }
 

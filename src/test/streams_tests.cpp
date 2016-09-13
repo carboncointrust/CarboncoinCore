@@ -1,10 +1,10 @@
-// Copyright (c) 2012-2015 The Bitcoin Core developers
+// Copyright (c) 2012-2015 The Carboncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include "streams.h"
 #include "support/allocators/zeroafterfree.h"
-#include "test/test_bitcoin.h"
+#include "test/test_carboncoin.h"
 
 #include <boost/assign/std/vector.hpp> // for 'operator+=()'
 #include <boost/assert.hpp>

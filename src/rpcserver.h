@@ -1,10 +1,10 @@
 // Copyright (c) 2010 Satoshi Nakamoto
-// Copyright (c) 2009-2015 The Bitcoin Core developers
+// Copyright (c) 2009-2015 The Carboncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_RPCSERVER_H
-#define BITCOIN_RPCSERVER_H
+#ifndef CARBONCOIN_RPCSERVER_H
+#define CARBONCOIN_RPCSERVER_H
 
 #include "amount.h"
 #include "rpcprotocol.h"
@@ -123,7 +123,7 @@ public:
 };
 
 /**
- * Bitcoin RPC command dispatcher.
+ * Carboncoin RPC command dispatcher.
  */
 class CRPCTable
 {
@@ -275,4 +275,4 @@ void InterruptRPC();
 void StopRPC();
 std::string JSONRPCExecBatch(const UniValue& vReq);
 
-#endif // BITCOIN_RPCSERVER_H
+#endif // CARBONCOIN_RPCSERVER_H

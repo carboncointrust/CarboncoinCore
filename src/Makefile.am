@@ -19,19 +19,19 @@ $(LIBLEVELDB) $(LIBMEMENV):
           OPT="$(AM_CXXFLAGS) $(PIE_FLAGS) $(CXXFLAGS) $(AM_CPPFLAGS) $(CPPFLAGS) -D__STDC_LIMIT_MACROS"
 endif
 
-BITCOIN_CONFIG_INCLUDES=-I$(builddir)/config
-BITCOIN_INCLUDES=-I$(builddir) -I$(builddir)/obj $(BOOST_CPPFLAGS) $(LEVELDB_CPPFLAGS) $(CRYPTO_CFLAGS) $(SSL_CFLAGS)
+CARBONCOIN_CONFIG_INCLUDES=-I$(builddir)/config
+CARBONCOIN_INCLUDES=-I$(builddir) -I$(builddir)/obj $(BOOST_CPPFLAGS) $(LEVELDB_CPPFLAGS) $(CRYPTO_CFLAGS) $(SSL_CFLAGS)
 
-BITCOIN_INCLUDES += -I$(srcdir)/secp256k1/include
-BITCOIN_INCLUDES += -I$(srcdir)/univalue/include
+CARBONCOIN_INCLUDES += -I$(srcdir)/secp256k1/include
+CARBONCOIN_INCLUDES += -I$(srcdir)/univalue/include
 
-LIBBITCOIN_SERVER=libbitcoin_server.a
-LIBBITCOIN_WALLET=libbitcoin_wallet.a
-LIBBITCOIN_COMMON=libbitcoin_common.a
-LIBBITCOIN_CLI=libbitcoin_cli.a
-LIBBITCOIN_UTIL=libbitcoin_util.a
-LIBBITCOIN_CRYPTO=crypto/libbitcoin_crypto.a
-LIBBITCOINQT=qt/libbitcoinqt.a
+LIBCARBONCOIN_SERVER=libcarboncoin_server.a
+LIBCARBONCOIN_WALLET=libcarboncoin_wallet.a
+LIBCARBONCOIN_COMMON=libcarboncoin_common.a
+LIBCARBONCOIN_CLI=libcarboncoin_cli.a
+LIBCARBONCOIN_UTIL=libcarboncoin_util.a
+LIBCARBONCOIN_CRYPTO=crypto/libcarboncoin_crypto.a
+LIBCARBONCOINQT=qt/libcarboncoinqt.a
 LIBSECP256K1=secp256k1/libsecp256k1.la
 LIBUNIVALUE=univalue/libunivalue.la
 
@@ -44,41 +44,41 @@ $(LIBUNIVALUE): $(wildcard univalue/lib/*) $(wildcard univalue/include/*)
 # Make is not made aware of per-object dependencies to avoid limiting building parallelization
 # But to build the less dependent modules first, we manually select their order here:
 EXTRA_LIBRARIES = \
-  crypto/libbitcoin_crypto.a \
-  libbitcoin_util.a \
-  libbitcoin_common.a \
-  libbitcoin_server.a \
-  libbitcoin_cli.a
+  crypto/libcarboncoin_crypto.a \
+  libcarboncoin_util.a \
+  libcarboncoin_common.a \
+  libcarboncoin_server.a \
+  libcarboncoin_cli.a
 if ENABLE_WALLET
-BITCOIN_INCLUDES += $(BDB_CPPFLAGS)
-EXTRA_LIBRARIES += libbitcoin_wallet.a
+CARBONCOIN_INCLUDES += $(BDB_CPPFLAGS)
+EXTRA_LIBRARIES += libcarboncoin_wallet.a
 endif
 if ENABLE_ZMQ
-EXTRA_LIBRARIES += libbitcoin_zmq.a
+EXTRA_LIBRARIES += libcarboncoin_zmq.a
 endif
 
-if BUILD_BITCOIN_LIBS
-lib_LTLIBRARIES = libbitcoinconsensus.la
-LIBBITCOIN_CONSENSUS=libbitcoinconsensus.la
+if BUILD_CARBONCOIN_LIBS
+lib_LTLIBRARIES = libcarboncoinconsensus.la
+LIBCARBONCOIN_CONSENSUS=libcarboncoinconsensus.la
 else
-LIBBITCOIN_CONSENSUS=
+LIBCARBONCOIN_CONSENSUS=
 endif
 
 bin_PROGRAMS =
 TESTS =
 BENCHMARKS =
 
-if BUILD_BITCOIND
-  bin_PROGRAMS += bitcoind
+if BUILD_CARBONCOIND
+  bin_PROGRAMS += carboncoind
 endif
 
-if BUILD_BITCOIN_UTILS
-  bin_PROGRAMS += bitcoin-cli bitcoin-tx
+if BUILD_CARBONCOIN_UTILS
+  bin_PROGRAMS += carboncoin-cli carboncoin-tx
 endif
 
 .PHONY: FORCE check-symbols check-security
-# bitcoin core #
-BITCOIN_CORE_H = \
+# carboncoin core #
+CARBONCOIN_CORE_H = \
   addrman.h \
   alert.h \
   amount.h \
@@ -179,12 +179,12 @@ obj/build.h: FORCE
 	@$(MKDIR_P) $(builddir)/obj
 	@$(top_srcdir)/share/genbuild.sh $(abs_top_builddir)/src/obj/build.h \
 	  $(abs_top_srcdir)
-libbitcoin_util_a-clientversion.$(OBJEXT): obj/build.h
+libcarboncoin_util_a-clientversion.$(OBJEXT): obj/build.h
 
-# server: shared between bitcoind and bitcoin-qt
-libbitcoin_server_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
-libbitcoin_server_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libbitcoin_server_a_SOURCES = \
+# server: shared between carboncoind and carboncoin-qt
+libcarboncoin_server_a_CPPFLAGS = $(AM_CPPFLAGS) $(CARBONCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
+libcarboncoin_server_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libcarboncoin_server_a_SOURCES = \
   addrman.cpp \
   alert.cpp \
   bloom.cpp \
@@ -216,25 +216,25 @@ libbitcoin_server_a_SOURCES = \
   txmempool.cpp \
   validationinterface.cpp \
   versionbits.cpp \
-  $(BITCOIN_CORE_H)
+  $(CARBONCOIN_CORE_H)
 
 if ENABLE_ZMQ
-LIBBITCOIN_ZMQ=libbitcoin_zmq.a
+LIBCARBONCOIN_ZMQ=libcarboncoin_zmq.a
 
-libbitcoin_zmq_a_CPPFLAGS = $(BITCOIN_INCLUDES) $(ZMQ_CFLAGS)
-libbitcoin_zmq_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libbitcoin_zmq_a_SOURCES = \
+libcarboncoin_zmq_a_CPPFLAGS = $(CARBONCOIN_INCLUDES) $(ZMQ_CFLAGS)
+libcarboncoin_zmq_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libcarboncoin_zmq_a_SOURCES = \
   zmq/zmqabstractnotifier.cpp \
   zmq/zmqnotificationinterface.cpp \
   zmq/zmqpublishnotifier.cpp
 endif
 
 
-# wallet: shared between bitcoind and bitcoin-qt, but only linked
+# wallet: shared between carboncoind and carboncoin-qt, but only linked
 # when wallet enabled
-libbitcoin_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libbitcoin_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libbitcoin_wallet_a_SOURCES = \
+libcarboncoin_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(CARBONCOIN_INCLUDES)
+libcarboncoin_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libcarboncoin_wallet_a_SOURCES = \
   wallet/crypter.cpp \
   wallet/db.cpp \
   wallet/rpcdump.cpp \
@@ -243,12 +243,12 @@ libbitcoin_wallet_a_SOURCES = \
   wallet/wallet_ismine.cpp \
   wallet/walletdb.cpp \
   policy/rbf.cpp \
-  $(BITCOIN_CORE_H)
+  $(CARBONCOIN_CORE_H)
 
 # crypto primitives library
-crypto_libbitcoin_crypto_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_CONFIG_INCLUDES)
-crypto_libbitcoin_crypto_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-crypto_libbitcoin_crypto_a_SOURCES = \
+crypto_libcarboncoin_crypto_a_CPPFLAGS = $(AM_CPPFLAGS) $(CARBONCOIN_CONFIG_INCLUDES)
+crypto_libcarboncoin_crypto_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+crypto_libcarboncoin_crypto_a_SOURCES = \
   crypto/common.h \
   crypto/hmac_sha256.cpp \
   crypto/hmac_sha256.h \
@@ -265,10 +265,10 @@ crypto_libbitcoin_crypto_a_SOURCES = \
   crypto/scrypt.cpp \
   crypto/scrypt.h
 
-# common: shared between bitcoind, and bitcoin-qt and non-server tools
-libbitcoin_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libbitcoin_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libbitcoin_common_a_SOURCES = \
+# common: shared between carboncoind, and carboncoin-qt and non-server tools
+libcarboncoin_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(CARBONCOIN_INCLUDES)
+libcarboncoin_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libcarboncoin_common_a_SOURCES = \
   amount.cpp \
   arith_uint256.cpp \
   base58.cpp \
@@ -292,14 +292,14 @@ libbitcoin_common_a_SOURCES = \
   script/script_error.cpp \
   script/sign.cpp \
   script/standard.cpp \
-  $(BITCOIN_CORE_H)
+  $(CARBONCOIN_CORE_H)
 
 # util: shared between all executables.
 # This library *must* be included to make sure that the glibc
 # backward-compatibility objects and their sanity checks are linked.
-libbitcoin_util_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libbitcoin_util_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libbitcoin_util_a_SOURCES = \
+libcarboncoin_util_a_CPPFLAGS = $(AM_CPPFLAGS) $(CARBONCOIN_INCLUDES)
+libcarboncoin_util_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libcarboncoin_util_a_SOURCES = \
   support/pagelocker.cpp \
   chainparamsbase.cpp \
   clientversion.cpp \
@@ -315,94 +315,94 @@ libbitcoin_util_a_SOURCES = \
   utilmoneystr.cpp \
   utilstrencodings.cpp \
   utiltime.cpp \
-  $(BITCOIN_CORE_H)
+  $(CARBONCOIN_CORE_H)
 
 if GLIBC_BACK_COMPAT
-libbitcoin_util_a_SOURCES += compat/glibc_compat.cpp
+libcarboncoin_util_a_SOURCES += compat/glibc_compat.cpp
 endif
 
-# cli: shared between bitcoin-cli and bitcoin-qt
-libbitcoin_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libbitcoin_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libbitcoin_cli_a_SOURCES = \
+# cli: shared between carboncoin-cli and carboncoin-qt
+libcarboncoin_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(CARBONCOIN_INCLUDES)
+libcarboncoin_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libcarboncoin_cli_a_SOURCES = \
   rpcclient.cpp \
-  $(BITCOIN_CORE_H)
+  $(CARBONCOIN_CORE_H)
 
-nodist_libbitcoin_util_a_SOURCES = $(srcdir)/obj/build.h
+nodist_libcarboncoin_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
-# bitcoind binary #
-bitcoind_SOURCES = bitcoind.cpp
-bitcoind_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-bitcoind_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-bitcoind_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# carboncoind binary #
+carboncoind_SOURCES = carboncoind.cpp
+carboncoind_CPPFLAGS = $(AM_CPPFLAGS) $(CARBONCOIN_INCLUDES)
+carboncoind_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+carboncoind_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-bitcoind_SOURCES += bitcoind-res.rc
+carboncoind_SOURCES += carboncoind-res.rc
 endif
 
-bitcoind_LDADD = \
-  $(LIBBITCOIN_SERVER) \
-  $(LIBBITCOIN_COMMON) \
+carboncoind_LDADD = \
+  $(LIBCARBONCOIN_SERVER) \
+  $(LIBCARBONCOIN_COMMON) \
   $(LIBUNIVALUE) \
-  $(LIBBITCOIN_UTIL) \
-  $(LIBBITCOIN_CRYPTO) \
+  $(LIBCARBONCOIN_UTIL) \
+  $(LIBCARBONCOIN_CRYPTO) \
   $(LIBLEVELDB) \
   $(LIBMEMENV) \
   $(LIBSECP256K1)
 
 if ENABLE_ZMQ
-bitcoind_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
+carboncoind_LDADD += $(LIBCARBONCOIN_ZMQ) $(ZMQ_LIBS)
 endif
 
 if ENABLE_WALLET
-bitcoind_LDADD += libbitcoin_wallet.a
+carboncoind_LDADD += libcarboncoin_wallet.a
 endif
 
-bitcoind_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
+carboncoind_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
 
-# bitcoin-cli binary #
-bitcoin_cli_SOURCES = bitcoin-cli.cpp
-bitcoin_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
-bitcoin_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-bitcoin_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# carboncoin-cli binary #
+carboncoin_cli_SOURCES = carboncoin-cli.cpp
+carboncoin_cli_CPPFLAGS = $(AM_CPPFLAGS) $(CARBONCOIN_INCLUDES) $(EVENT_CFLAGS)
+carboncoin_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+carboncoin_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-bitcoin_cli_SOURCES += bitcoin-cli-res.rc
+carboncoin_cli_SOURCES += carboncoin-cli-res.rc
 endif
 
-bitcoin_cli_LDADD = \
-  $(LIBBITCOIN_CLI) \
+carboncoin_cli_LDADD = \
+  $(LIBCARBONCOIN_CLI) \
   $(LIBUNIVALUE) \
-  $(LIBBITCOIN_UTIL)
+  $(LIBCARBONCOIN_UTIL)
 
-bitcoin_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
+carboncoin_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
 #
 
-# bitcoin-tx binary #
-bitcoin_tx_SOURCES = bitcoin-tx.cpp
-bitcoin_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-bitcoin_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-bitcoin_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# carboncoin-tx binary #
+carboncoin_tx_SOURCES = carboncoin-tx.cpp
+carboncoin_tx_CPPFLAGS = $(AM_CPPFLAGS) $(CARBONCOIN_INCLUDES)
+carboncoin_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+carboncoin_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-bitcoin_tx_SOURCES += bitcoin-tx-res.rc
+carboncoin_tx_SOURCES += carboncoin-tx-res.rc
 endif
 
-bitcoin_tx_LDADD = \
+carboncoin_tx_LDADD = \
   $(LIBUNIVALUE) \
-  $(LIBBITCOIN_COMMON) \
-  $(LIBBITCOIN_UTIL) \
-  $(LIBBITCOIN_CRYPTO) \
+  $(LIBCARBONCOIN_COMMON) \
+  $(LIBCARBONCOIN_UTIL) \
+  $(LIBCARBONCOIN_CRYPTO) \
   $(LIBSECP256K1)
 
-bitcoin_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
+carboncoin_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
 #
 
-# bitcoinconsensus library #
-if BUILD_BITCOIN_LIBS
-include_HEADERS = script/bitcoinconsensus.h
-libbitcoinconsensus_la_SOURCES = \
+# carboncoinconsensus library #
+if BUILD_CARBONCOIN_LIBS
+include_HEADERS = script/carboncoinconsensus.h
+libcarboncoinconsensus_la_SOURCES = \
   crypto/hmac_sha512.cpp \
   crypto/ripemd160.cpp \
   crypto/sha1.cpp \
@@ -412,20 +412,20 @@ libbitcoinconsensus_la_SOURCES = \
   hash.cpp \
   primitives/transaction.cpp \
   pubkey.cpp \
-  script/bitcoinconsensus.cpp \
+  script/carboncoinconsensus.cpp \
   script/interpreter.cpp \
   script/script.cpp \
   uint256.cpp \
   utilstrencodings.cpp
 
 if GLIBC_BACK_COMPAT
-  libbitcoinconsensus_la_SOURCES += compat/glibc_compat.cpp
+  libcarboncoinconsensus_la_SOURCES += compat/glibc_compat.cpp
 endif
 
-libbitcoinconsensus_la_LDFLAGS = $(AM_LDFLAGS) -no-undefined $(RELDFLAGS)
-libbitcoinconsensus_la_LIBADD = $(LIBSECP256K1)
-libbitcoinconsensus_la_CPPFLAGS = $(AM_CPPFLAGS) -I$(builddir)/obj -I$(srcdir)/secp256k1/include -DBUILD_BITCOIN_INTERNAL
-libbitcoinconsensus_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libcarboncoinconsensus_la_LDFLAGS = $(AM_LDFLAGS) -no-undefined $(RELDFLAGS)
+libcarboncoinconsensus_la_LIBADD = $(LIBSECP256K1)
+libcarboncoinconsensus_la_CPPFLAGS = $(AM_CPPFLAGS) -I$(builddir)/obj -I$(srcdir)/secp256k1/include -DBUILD_CARBONCOIN_INTERNAL
+libcarboncoinconsensus_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 
 endif
 #

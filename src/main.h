@@ -1,13 +1,13 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2015 The Bitcoin Core developers
+// Copyright (c) 2009-2015 The Carboncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_MAIN_H
-#define BITCOIN_MAIN_H
+#ifndef CARBONCOIN_MAIN_H
+#define CARBONCOIN_MAIN_H
 
 #if defined(HAVE_CONFIG_H)
-#include "config/bitcoin-config.h"
+#include "config/carboncoin-config.h"
 #endif
 
 #include "amount.h"
@@ -663,4 +663,4 @@ public:
 };
 
 
-#endif // BITCOIN_MAIN_H
+#endif // CARBONCOIN_MAIN_H

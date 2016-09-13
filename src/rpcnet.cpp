@@ -1,4 +1,4 @@
-// Copyright (c) 2009-2015 The Bitcoin Core developers
+// Copyright (c) 2009-2015 The Carboncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -264,7 +264,7 @@ UniValue getaddednodeinfo(const UniValue& params, bool fHelp)
             "    \"connected\" : true|false,          (boolean) If connected\n"
             "    \"addresses\" : [\n"
             "       {\n"
-            "         \"address\" : \"192.168.0.201:8333\",  (string) The bitcoin server host and port\n"
+            "         \"address\" : \"192.168.0.201:8333\",  (string) The carboncoin server host and port\n"
             "         \"connected\" : \"outbound\"           (string) connection, inbound or outbound\n"
             "       }\n"
             "       ,...\n"
@@ -639,7 +639,7 @@ UniValue sendalert(const UniValue& params, bool fHelp)
     alert.vchMsg = vector<unsigned char>(sMsg.begin(), sMsg.end());
 
     // Prepare master key and sign alert message
-    CBitcoinSecret vchSecret;
+    CCarboncoinSecret vchSecret;
     if (!vchSecret.SetString(params[1].get_str()))
         throw runtime_error("Invalid alert master key");
 
@@ -770,6 +770,6 @@ UniValue makekeypair(const UniValue& params, bool fHelp)
     UniValue result(UniValue::VOBJ);
 
     result.push_back(Pair("PublicKey", HexStr(key.GetPubKey())));
-    result.push_back(Pair("PrivateKey", CBitcoinSecret(key).ToString()));
+    result.push_back(Pair("PrivateKey", CCarboncoinSecret(key).ToString()));
     return result;
 }

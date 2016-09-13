@@ -1,13 +1,13 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2015 The Bitcoin Core developers
+// Copyright (c) 2009-2015 The Carboncoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 /**
  * Utilities for converting data from/to strings.
  */
-#ifndef BITCOIN_UTILSTRENCODINGS_H
-#define BITCOIN_UTILSTRENCODINGS_H
+#ifndef CARBONCOIN_UTILSTRENCODINGS_H
+#define CARBONCOIN_UTILSTRENCODINGS_H
 
 #include <stdint.h>
 #include <string>
@@ -132,4 +132,4 @@ bool ParseFixedPoint(const std::string &val, int decimals, int64_t *amount_out);
 
 long hex2long(const char* psz);
 
-#endif // BITCOIN_UTILSTRENCODINGS_H
+#endif // CARBONCOIN_UTILSTRENCODINGS_H

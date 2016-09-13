@@ -1,9 +1,9 @@
-// Copyright (c) 2011-2015 The Bitcoin developers
+// Copyright (c) 2011-2015 The Carboncoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_QT_PAYMENTREQUESTPLUS_H
-#define BITCOIN_QT_PAYMENTREQUESTPLUS_H
+#ifndef CARBONCOIN_QT_PAYMENTREQUESTPLUS_H
+#define CARBONCOIN_QT_PAYMENTREQUESTPLUS_H
 
 #include "paymentrequest.pb.h"
 
@@ -45,4 +45,4 @@ private:
     payments::PaymentDetails details;
 };
 
-#endif // BITCOIN_QT_PAYMENTREQUESTPLUS_H
+#endif // CARBONCOIN_QT_PAYMENTREQUESTPLUS_H

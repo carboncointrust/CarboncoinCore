@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Carboncoin
+Comment=Carboncoin P2P Cryptocurrency
+Comment[fr]=Carboncoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Carboncoin, eşten eşe kriptografik sanal para birimi
+Exec=carboncoin-qt %u
+Terminal=false
+Type=Application
+Icon=carboncoin128
+MimeType=x-scheme-handler/carboncoin;
+Categories=Office;Finance;

@@ -1,0 +1,33 @@
+# /etc/conf.d/carboncoind: config file for /etc/init.d/carboncoind
+
+# Config file location
+#CARBONCOIND_CONFIGFILE="/etc/carboncoin/carboncoin.conf"
+
+# What directory to write pidfile to?  (created and owned by $CARBONCOIND_USER)
+#CARBONCOIND_PIDDIR="/var/run/carboncoind"
+
+# What filename to give the pidfile
+#CARBONCOIND_PIDFILE="${CARBONCOIND_PIDDIR}/carboncoind.pid"
+
+# Where to write carboncoind data (be mindful that the blockchain is large)
+#CARBONCOIND_DATADIR="/var/lib/carboncoind"
+
+# User and group to own carboncoind process
+#CARBONCOIND_USER="carboncoin"
+#CARBONCOIND_GROUP="carboncoin"
+
+# Path to carboncoind executable
+#CARBONCOIND_BIN="/usr/bin/carboncoind"
+
+# Nice value to run carboncoind under
+#CARBONCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+CARBONCOIND_OPTS="-disablewallet"
+
+# The timeout in seconds OpenRC will wait for carboncoind to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+CARBONCOIND_SIGTERM_TIMEOUT=60
