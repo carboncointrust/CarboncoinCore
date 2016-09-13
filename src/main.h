@@ -17,6 +17,8 @@
 #include "script/script_error.h"
 #include "sync.h"
 #include "versionbits.h"
+#include "util.h"
+#include "hash.h"
 
 #include <algorithm>
 #include <exception>
@@ -552,5 +554,113 @@ static const unsigned int REJECT_HIGHFEE = 0x100;
 static const unsigned int REJECT_ALREADY_KNOWN = 0x101;
 /** Transaction conflicts with a transaction already known */
 static const unsigned int REJECT_CONFLICT = 0x102;
+
+/** Synchronized checkpoints */
+
+extern uint256 hashSyncCheckpoint;
+bool SendSyncCheckpoint(uint256 hashCheckpoint, const CChainParams& chainparams);
+bool SetCheckpointPrivKey(std::string strPrivKey);
+bool IsSyncCheckpointEnforced();
+
+
+
+class CUnsignedSyncCheckpoint
+{
+public:
+    int nVersion;
+    uint256 hashCheckpoint;      // checkpoint block
+
+    ADD_SERIALIZE_METHODS;
+
+    template <typename Stream, typename Operation>
+    inline void SerializationOp(Stream& s, Operation ser_action, int nType, int nVersion)
+    {
+        READWRITE(this->nVersion);
+        nVersion = this->nVersion;
+        READWRITE(hashCheckpoint);
+    }
+
+    void SetNull()
+    {
+        nVersion = 1;
+        hashCheckpoint = ArithToUint256(arith_uint256(0));
+    }
+
+    std::string ToString() const
+    {
+        return strprintf(
+                         "CSyncCheckpoint(\n"
+                         "    nVersion       = %d\n"
+                         "    hashCheckpoint = %s\n"
+                         ")\n",
+                         nVersion,
+                         hashCheckpoint.ToString().c_str());
+    }
+
+    void print() const
+    {
+        LogPrintf("%s", ToString());
+    }
+};
+
+class CSyncCheckpoint : public CUnsignedSyncCheckpoint
+{
+public:
+    static std::string strMasterPrivKey;
+
+    std::vector<unsigned char> vchMsg;
+    std::vector<unsigned char> vchSig;
+
+    CSyncCheckpoint()
+    {
+        SetNull();
+    }
+
+    ADD_SERIALIZE_METHODS;
+
+    template <typename Stream, typename Operation>
+    inline void SerializationOp(Stream& s, Operation ser_action, int nType, int nVersion)
+    {
+        READWRITE(vchMsg);
+        READWRITE(vchSig);
+    }
+
+    void SetNull()
+    {
+        CUnsignedSyncCheckpoint::SetNull();
+        vchMsg.clear();
+        vchSig.clear();
+    }
+
+    bool IsNull() const
+    {
+        return (hashCheckpoint == ArithToUint256(arith_uint256(0)));
+    }
+
+    uint256 GetHash() const
+    {
+        return Hash(this->vchMsg.begin(), this->vchMsg.end());
+    }
+
+    bool RelayTo(CNode* pnode) const
+    {
+        // returns true if wasn't already sent
+        if (pnode->hashCheckpointKnown != hashCheckpoint)
+        {
+            pnode->hashCheckpointKnown = hashCheckpoint;
+            pnode->PushMessage(NetMsgType::GETBLOCKS, *this);
+            return true;
+        }
+        return false;
+    }
+
+    // Verify signature of sync-checkpoint message
+    bool CheckSignature();
+
+    // Process synchronized checkpoint
+    bool ProcessSyncCheckpoint(CNode* pfrom, const CChainParams& chainparams);
+
+};
+
 
 #endif // BITCOIN_MAIN_H

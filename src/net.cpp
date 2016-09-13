@@ -19,6 +19,7 @@
 #include "scheduler.h"
 #include "ui_interface.h"
 #include "utilstrencodings.h"
+#include "arith_uint256.h"
 
 #ifdef WIN32
 #include <string.h>
@@ -2370,6 +2371,7 @@ CNode::CNode(SOCKET hSocketIn, const CAddress& addrIn, const std::string& addrNa
     nStartingHeight = -1;
     filterInventoryKnown.reset();
     fGetAddr = false;
+    hashCheckpointKnown = ArithToUint256(arith_uint256(0));
     nNextLocalAddrSend = 0;
     nNextAddrSend = 0;
     nNextInvSend = 0;

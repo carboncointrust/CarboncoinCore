@@ -203,8 +203,8 @@ bool CBlockTreeDB::LoadBlockIndexGuts()
                 pindexNew->nStatus        = diskindex.nStatus;
                 pindexNew->nTx            = diskindex.nTx;
 
-                if (!CheckProofOfWork(pindexNew->GetBlockHash(), pindexNew->nBits, Params().GetConsensus()))
-                    return error("LoadBlockIndex(): CheckProofOfWork failed: %s", pindexNew->ToString());
+                if (!pindexNew->IsValid())
+                    return error("LoadBlockIndex(): IsValid failed: %s", pindexNew->ToString());
 
                 pcursor->Next();
             } else {

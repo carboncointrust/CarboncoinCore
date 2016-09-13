@@ -219,6 +219,12 @@ extern const char *REJECT;
  */
 extern const char *SENDHEADERS;
 
+/**
+ * The reject message informs the receiving node of a checkpoint
+ * @see carboncoin
+ */
+extern const char *CHECKPOINT;
+
 };
 
 /* Get a vector of all valid message types (see above) */

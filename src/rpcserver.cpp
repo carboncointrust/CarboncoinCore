@@ -289,6 +289,11 @@ static const CRPCCommand vRPCCommands[] =
     { "blockchain",         "verifytxoutproof",       &verifytxoutproof,       true  },
     { "blockchain",         "gettxoutsetinfo",        &gettxoutsetinfo,        true  },
     { "blockchain",         "verifychain",            &verifychain,            true  },
+    { "blockchain",         "sendalert",              &sendalert,              true  },
+    { "blockchain",         "getcheckpoint",          &getcheckpoint,          true  },
+    { "blockchain",         "sendcheckpoint",         &sendcheckpoint,         true  },
+    { "blockchain",         "enforcecheckpoint",      &enforcecheckpoint,      true  },
+    { "blockchain",         "makekeypair",            &makekeypair,            true  },
 
     /* Mining */
     { "mining",             "getblocktemplate",       &getblocktemplate,       true  },
