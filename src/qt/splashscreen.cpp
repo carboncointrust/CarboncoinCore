@@ -25,6 +25,7 @@
 SplashScreen::SplashScreen(Qt::WindowFlags f, const NetworkStyle *networkStyle) :
     QWidget(0, f), curAlignment(0)
 {
+    setAutoFillBackground(true);
 
     // set reference point, paddings
     int paddingRight            = 5;
@@ -48,7 +49,7 @@ SplashScreen::SplashScreen(Qt::WindowFlags f, const NetworkStyle *networkStyle) 
 
     // create a bitmap according to device pixelratio
     QSize splashSize(480*devicePixelRatio,320*devicePixelRatio);
-    pixmap = QPixmap(splashSize);
+    pixmap = QPixmap(":/icons/splash");
 
 #if QT_VERSION > 0x050100
     // change to HiDPI if it makes sense
@@ -60,7 +61,7 @@ SplashScreen::SplashScreen(Qt::WindowFlags f, const NetworkStyle *networkStyle) 
     pixPaint.setPen(QColor(100,100,100));
 
     // draw a slightly radial gradient
-    QRadialGradient gradient(QPoint(0,0), splashSize.width()/devicePixelRatio);
+    /*QRadialGradient gradient(QPoint(0,0), splashSize.width()/devicePixelRatio);
     gradient.setColorAt(0, Qt::white);
     gradient.setColorAt(1, QColor(247,247,247));
     QRect rGradient(QPoint(0,0), splashSize);
@@ -72,7 +73,7 @@ SplashScreen::SplashScreen(Qt::WindowFlags f, const NetworkStyle *networkStyle) 
     const QSize requiredSize(1024,1024);
     QPixmap icon(networkStyle->getAppIcon().pixmap(requiredSize));
 
-    pixPaint.drawPixmap(rectIcon, icon);
+    pixPaint.drawPixmap(rectIcon, icon);*/
 
     // check font size and drawing with
     pixPaint.setFont(QFont(font, 33*fontFactor));

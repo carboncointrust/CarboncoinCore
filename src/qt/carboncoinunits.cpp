@@ -83,8 +83,8 @@ int CarboncoinUnits::decimals(int unit)
 {
     switch(unit)
     {
-    case MCARBON: return 8;
-    case KCARBON: return 8;
+    case MCARBON: return 14;
+    case KCARBON: return 11;
     case CARBON: return 8;
     case mCARBON: return 5;
     case uCARBON: return 2;
