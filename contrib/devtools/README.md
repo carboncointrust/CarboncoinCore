@@ -1,45 +1,9 @@
 Contents
-========
+===========
 This directory contains tools for developers working on this repository.
 
-clang-format.py
-===============
-
-A script to format cpp source code according to [.clang-format](../../src/.clang-format). This should only be applied to new files or files which are currently not actively developed on. Also, git subtrees are not subject to formatting.
-
-fix-copyright-headers.py
-========================
-
-Every year newly updated files need to have its copyright headers updated to reflect the current year.
-If you run this script from the root folder it will automatically update the year on the copyright header for all
-source files if these have a git commit from the current year.
-
-For example a file changed in 2015 (with 2015 being the current year):
-
-```// Copyright (c) 2009-2013 The Carboncoin Core developers```
-
-would be changed to:
-
-```// Copyright (c) 2009-2015 The Carboncoin Core developers```
-
-git-subtree-check.sh
-====================
-
-Run this script from the root of the repository to verify that a subtree matches the contents of
-the commit it claims to have been updated to.
-
-To use, make sure that you have fetched the upstream repository branch in which the subtree is
-maintained:
-* for `src/secp256k1`: https://github.com/carboncoin/secp256k1.git (branch master)
-* for `src/leveldb`: https://github.com/carboncoin/leveldb.git (branch carboncoin-fork)
-* for `src/univalue`: https://github.com/carboncoin/univalue.git (branch master)
-
-Usage: `git-subtree-check.sh DIR COMMIT`
-
-`COMMIT` may be omitted, in which case `HEAD` is used.
-
 github-merge.sh
-===============
+----------------
 
 A small script to automate merging pull-requests securely and sign them with GPG.
 
@@ -72,45 +36,14 @@ Configuring the github-merge tool for the carboncoin repository is done in the f
     git config githubmerge.testcmd "make -j4 check" (adapt to whatever you want to use for testing)
     git config --global user.signingkey mykeyid (if you want to GPG sign)
 
-optimize-pngs.py
-================
+## fix-copyright-headers.py
 
-A script to optimize png files in the carboncoin
-repository (requires pngcrush).
+Every year newly updated files need to have its copyright headers updated to reflect the current year.
+If you run this script from src/ it will automatically update the year on the copyright header for all
+.cpp and .h files if these have a git commit from the current year.
 
-security-check.py and test-security-check.py
-============================================
+For example a file changed in 2014 (with 2014 being the current year):
+```// Copyright (c) 2009-2013 The Carboncoin developers```
 
-Perform basic ELF security checks on a series of executables.
-
-symbol-check.py
-===============
-
-A script to check that the (Linux) executables produced by gitian only contain
-allowed gcc, glibc and libstdc++ version symbols. This makes sure they are
-still compatible with the minimum supported Linux distribution versions.
-
-Example usage after a gitian build:
-
-    find ../gitian-builder/build -type f -executable | xargs python contrib/devtools/symbol-check.py 
-
-If only supported symbols are used the return value will be 0 and the output will be empty.
-
-If there are 'unsupported' symbols, the return value will be 1 a list like this will be printed:
-
-    .../64/test_carboncoin: symbol memcpy from unsupported version GLIBC_2.14
-    .../64/test_carboncoin: symbol __fdelt_chk from unsupported version GLIBC_2.15
-    .../64/test_carboncoin: symbol std::out_of_range::~out_of_range() from unsupported version GLIBCXX_3.4.15
-    .../64/test_carboncoin: symbol _ZNSt8__detail15_List_nod from unsupported version GLIBCXX_3.4.15
-
-update-translations.py
-======================
-
-Run this script from the root of the repository to update all translations from transifex.
-It will do the following automatically:
-
-- fetch all translations
-- post-process them into valid and committable format
-- add missing translations to the build system (TODO)
-
-See doc/translation-process.md for more information.
+would be changed to:
+```// Copyright (c) 2009-2014 The Carboncoin developers```

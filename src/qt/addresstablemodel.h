@@ -1,9 +1,9 @@
-// Copyright (c) 2011-2015 The Carboncoin Core developers
-// Distributed under the MIT software license, see the accompanying
+// Copyright (c) 2011-2013 The Bitcoin developers
+// Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef CARBONCOIN_QT_ADDRESSTABLEMODEL_H
-#define CARBONCOIN_QT_ADDRESSTABLEMODEL_H
+#ifndef ADDRESSTABLEMODEL_H
+#define ADDRESSTABLEMODEL_H
 
 #include <QAbstractTableModel>
 #include <QStringList>
@@ -84,7 +84,7 @@ private:
     /** Notify listeners that data changed. */
     void emitDataChanged(int index);
 
-public Q_SLOTS:
+public slots:
     /* Update address list from core.
      */
     void updateEntry(const QString &address, const QString &label, bool isMine, const QString &purpose, int status);
@@ -92,4 +92,4 @@ public Q_SLOTS:
     friend class AddressTablePriv;
 };
 
-#endif // CARBONCOIN_QT_ADDRESSTABLEMODEL_H
+#endif // ADDRESSTABLEMODEL_H

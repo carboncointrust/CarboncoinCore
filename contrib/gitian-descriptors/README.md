@@ -1,7 +1,8 @@
-### Gavin's notes on getting gitian builds up and running using KVM
+### Gavin's notes on getting gitian builds up and running using KVM:###
 
-These instructions distilled from
-[https://help.ubuntu.com/community/KVM/Installation](https://help.ubuntu.com/community/KVM/Installation).
+These instructions distilled from:
+[  https://help.ubuntu.com/community/KVM/Installation](  https://help.ubuntu.com/community/KVM/Installation)
+... see there for complete details.
 
 You need the right hardware: you need a 64-bit-capable CPU with hardware virtualization support (Intel VT-x or AMD-V). Not all modern CPUs support hardware virtualization.
 
@@ -24,22 +25,36 @@ Once you've got the right hardware and software:
     mkdir gitian-builder/inputs
     cd gitian-builder/inputs
 
-    # Create base images
-    cd gitian-builder
-    bin/make-base-vm --suite trusty --arch amd64
-    cd ..
-
     # Get inputs (see doc/release-process.md for exact inputs needed and where to get them)
     ...
+    cd ../..
 
-    # For further build instructions see doc/release-process.md
-    ...
+    cd gitian-builder
+    bin/make-base-vm --arch i386
+    bin/make-base-vm --arch amd64
+    cd ..
+
+    # Build Linux release:
+    cd carboncoin
+    git pull
+    cd ../gitian-builder
+    git pull
+    ./bin/gbuild --commit carboncoin=HEAD ../carboncoin/contrib/gitian-descriptors/gitian-linux.yml
+
+    # Build Win32 dependencies: (only needs to be done once, or when dependency versions change)
+    ./bin/gbuild --commit carboncoin=HEAD ../carboncoin/contrib/gitian-descriptors/boost-win32.yml
+    ./bin/gbuild --commit carboncoin=HEAD ../carboncoin/contrib/gitian-descriptors/deps-win32.yml
+    ./bin/gbuild --commit carboncoin=HEAD ../carboncoin/contrib/gitian-descriptors/qt-win32.yml
+    ./bin/gbuild --commit carboncoin=HEAD ../carboncoin/contrib/gitian-descriptors/protobuf-win32.yml
+
+    # Build Win32 release:
+    ./bin/gbuild --commit carboncoin=HEAD ../carboncoin/contrib/gitian-descriptors/gitian-win32.yml
 
 ---------------------
 
 `gitian-builder` now also supports building using LXC. See
-[help.ubuntu.com](https://help.ubuntu.com/14.04/serverguide/lxc.html)
-for how to get LXC up and running under Ubuntu.
+[  https://help.ubuntu.com/12.04/serverguide/lxc.html](  https://help.ubuntu.com/12.04/serverguide/lxc.html)
+... for how to get LXC up and running under Ubuntu.
 
 If your main machine is a 64-bit Mac or PC with a few gigabytes of memory
 and at least 10 gigabytes of free disk space, you can `gitian-build` using

@@ -1,10 +1,9 @@
-// Copyright (c) 2011-2015 The Carboncoin Core developers
-// Distributed under the MIT software license, see the accompanying
+// Copyright (c) 2011-2014 The Bitcoin developers
+// Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef CARBONCOIN_QT_PAYMENTSERVER_H
-#define CARBONCOIN_QT_PAYMENTSERVER_H
-
+#ifndef PAYMENTSERVER_H
+#define PAYMENTSERVER_H
 // This class handles payment requests from clicking on
 // carboncoin: URIs
 //
@@ -40,8 +39,6 @@
 
 class OptionsModel;
 
-class CWallet;
-
 QT_BEGIN_NAMESPACE
 class QApplication;
 class QByteArray;
@@ -52,8 +49,7 @@ class QSslError;
 class QUrl;
 QT_END_NAMESPACE
 
-// BIP70 max payment request size in bytes (DoS protection)
-extern const qint64 BIP70_MAX_PAYMENTREQUEST_SIZE;
+class CWallet;
 
 class PaymentServer : public QObject
 {
@@ -62,7 +58,7 @@ class PaymentServer : public QObject
 public:
     // Parse URIs on command line
     // Returns false on error
-    static void ipcParseCommandLine(int argc, char *argv[]);
+    static bool ipcParseCommandLine(int argc, char *argv[]);
 
     // Returns true if there were URIs on the command line
     // which were successfully sent to an already-running
@@ -88,16 +84,7 @@ public:
     // OptionsModel is used for getting proxy settings and display unit
     void setOptionsModel(OptionsModel *optionsModel);
 
-    // Verify that the payment request network matches the client network
-    static bool verifyNetwork(const payments::PaymentDetails& requestDetails);
-    // Verify if the payment request is expired
-    static bool verifyExpired(const payments::PaymentDetails& requestDetails);
-    // Verify the payment request size is valid as per BIP70
-    static bool verifySize(qint64 requestSize);
-    // Verify the payment request amount is valid
-    static bool verifyAmount(const CAmount& requestAmount);
-
-Q_SIGNALS:
+signals:
     // Fired when a valid payment request is received
     void receivedPaymentRequest(SendCoinsRecipient);
 
@@ -107,7 +94,7 @@ Q_SIGNALS:
     // Fired when a message should be reported to the user
     void message(const QString &title, const QString &message, unsigned int style);
 
-public Q_SLOTS:
+public slots:
     // Signal this when the main window's UI is ready
     // to display payment requests to the user
     void uiReady();
@@ -118,7 +105,7 @@ public Q_SLOTS:
     // Handle an incoming URI, URI with local file scheme or file
     void handleURIOrFile(const QString& s);
 
-private Q_SLOTS:
+private slots:
     void handleURIConnection();
     void netRequestFinished(QNetworkReply*);
     void reportSslErrors(QNetworkReply*, const QList<QSslError> &);
@@ -130,8 +117,8 @@ protected:
     bool eventFilter(QObject *object, QEvent *event);
 
 private:
-    static bool readPaymentRequestFromFile(const QString& filename, PaymentRequestPlus& request);
-    bool processPaymentRequest(const PaymentRequestPlus& request, SendCoinsRecipient& recipient);
+    static bool readPaymentRequest(const QString& filename, PaymentRequestPlus& request);
+    bool processPaymentRequest(PaymentRequestPlus& request, SendCoinsRecipient& recipient);
     void fetchRequest(const QUrl& url);
 
     // Setup networking
@@ -148,4 +135,4 @@ private:
     OptionsModel *optionsModel;
 };
 
-#endif // CARBONCOIN_QT_PAYMENTSERVER_H
+#endif // PAYMENTSERVER_H

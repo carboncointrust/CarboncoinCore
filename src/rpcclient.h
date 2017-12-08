@@ -1,17 +1,25 @@
 // Copyright (c) 2010 Satoshi Nakamoto
-// Copyright (c) 2009-2015 The Carboncoin Core developers
-// Distributed under the MIT software license, see the accompanying
+// Copyright (c) 2009-2013 The Bitcoin developers
+// Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef CARBONCOIN_RPCCLIENT_H
-#define CARBONCOIN_RPCCLIENT_H
+#ifndef _BITCOINRPC_CLIENT_H_
+#define _BITCOINRPC_CLIENT_H_ 1
 
-#include <univalue.h>
+#include "json/json_spirit_reader_template.h"
+#include "json/json_spirit_utils.h"
+#include "json/json_spirit_writer_template.h"
 
-UniValue RPCConvertValues(const std::string& strMethod, const std::vector<std::string>& strParams);
-/** Non-RFC4627 JSON parser, accepts internal values (such as numbers, true, false, null)
- * as well as objects and arrays.
+int CommandLineRPC(int argc, char *argv[]);
+
+json_spirit::Array RPCConvertValues(const std::string &strMethod, const std::vector<std::string> &strParams);
+
+/** Show help message for carboncoin-cli.
+ * The mainProgram argument is used to determine whether to show this message as main program
+ * (and include some common options) or as sub-header of another help message.
+ *
+ * @note the argument can be removed once carboncoin-cli functionality is removed from carboncoind
  */
-UniValue ParseNonRFCJSONValue(const std::string& strVal);
+std::string HelpMessageCli(bool mainProgram);
 
-#endif // CARBONCOIN_RPCCLIENT_H
+#endif

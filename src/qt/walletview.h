@@ -1,28 +1,23 @@
-// Copyright (c) 2011-2015 The Carboncoin Core developers
-// Distributed under the MIT software license, see the accompanying
+// Copyright (c) 2011-2013 The Bitcoin developers
+// Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef CARBONCOIN_QT_WALLETVIEW_H
-#define CARBONCOIN_QT_WALLETVIEW_H
-
-#include "amount.h"
+#ifndef WALLETVIEW_H
+#define WALLETVIEW_H
 
 #include <QStackedWidget>
 
-class CarboncoinGUI;
+class BitcoinGUI;
 class ClientModel;
 class OverviewPage;
-class PlatformStyle;
 class ReceiveCoinsDialog;
 class SendCoinsDialog;
 class SendCoinsRecipient;
 class TransactionView;
 class WalletModel;
-class AddressBookPage;
 
 QT_BEGIN_NAMESPACE
 class QModelIndex;
-class QProgressDialog;
 QT_END_NAMESPACE
 
 /*
@@ -36,10 +31,10 @@ class WalletView : public QStackedWidget
     Q_OBJECT
 
 public:
-    explicit WalletView(const PlatformStyle *platformStyle, QWidget *parent);
+    explicit WalletView(QWidget *parent);
     ~WalletView();
 
-    void setCarboncoinGUI(CarboncoinGUI *gui);
+    void setBitcoinGUI(BitcoinGUI *gui);
     /** Set the client model.
         The client model represents the part of the core that communicates with the P2P network, and is wallet-agnostic.
     */
@@ -62,15 +57,10 @@ private:
     QWidget *transactionsPage;
     ReceiveCoinsDialog *receiveCoinsPage;
     SendCoinsDialog *sendCoinsPage;
-    AddressBookPage *usedSendingAddressesPage;
-    AddressBookPage *usedReceivingAddressesPage;
 
     TransactionView *transactionView;
 
-    QProgressDialog *progressDialog;
-    const PlatformStyle *platformStyle;
-
-public Q_SLOTS:
+public slots:
     /** Switch to overview (home) page */
     void gotoOverviewPage();
     /** Switch to history (transactions) page */
@@ -107,10 +97,7 @@ public Q_SLOTS:
     /** Re-emit encryption status signal */
     void updateEncryptionStatus();
 
-    /** Show progress dialog e.g. for rescan */
-    void showProgress(const QString &title, int nProgress);
-
-Q_SIGNALS:
+signals:
     /** Signal that we want to show the main window */
     void showNormalIfMinimized();
     /**  Fired when a message should be reported to the user */
@@ -118,7 +105,7 @@ Q_SIGNALS:
     /** Encryption status of wallet changed */
     void encryptionStatusChanged(int status);
     /** Notify that a new transaction appeared */
-    void incomingTransaction(const QString& date, int unit, const CAmount& amount, const QString& type, const QString& address, const QString& label);
+    void incomingTransaction(const QString& date, int unit, qint64 amount, const QString& type, const QString& address);
 };
 
-#endif // CARBONCOIN_QT_WALLETVIEW_H
+#endif // WALLETVIEW_H

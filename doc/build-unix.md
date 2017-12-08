@@ -1,119 +1,122 @@
 UNIX BUILD NOTES
 ====================
-Some notes on how to build Carboncoin Core in Unix.
-
-(for OpenBSD specific instructions, see [build-openbsd.md](build-openbsd.md))
-
-Note
----------------------
-Always use absolute paths to configure and compile carboncoin and the dependencies,
-for example, when specifying the the path of the dependency:
-
-	../dist/configure --enable-cxx --disable-shared --with-pic --prefix=$BDB_PREFIX
-
-Here BDB_PREFIX must absolute path - it is defined using $(pwd) which ensures
-the usage of the absolute path.
+Some notes on how to build Carboncoin in Unix. 
 
 To Build
 ---------------------
 
-```bash
-./autogen.sh
-./configure
-make
-make install # optional
-```
+	./autogen.sh
+	./configure
+	make
 
 This will build carboncoin-qt as well if the dependencies are met.
 
 Dependencies
 ---------------------
 
-These dependencies are required:
-
  Library     | Purpose          | Description
  ------------|------------------|----------------------
- libssl      | Crypto           | Random Number Generation, Elliptic Curve Cryptography
- libboost    | Utility          | Library for threading, data structures, etc
- libevent    | Networking       | OS independent asynchronous networking
+ libssl      | SSL Support      | Secure communications
+ libdb4.8    | Berkeley DB      | Wallet storage
+ libboost    | Boost            | C++ Library
+ miniupnpc   | UPnP Support     | Optional firewall-jumping support
+ qt          | GUI              | GUI toolkit
+ protobuf    | Payments in GUI  | Data interchange format used for payment protocol
+ libqrencode | QR codes in GUI  | Optional for generating QR codes
 
-Optional dependencies:
+[miniupnpc](http://miniupnp.free.fr/) may be used for UPnP port mapping.  It can be downloaded from [here](
+http://miniupnp.tuxfamily.org/files/).  UPnP support is compiled in and
+turned off by default.  See the configure options for upnp behavior desired:
 
- Library     | Purpose          | Description
- ------------|------------------|----------------------
- miniupnpc   | UPnP Support     | Firewall-jumping support
- libdb4.8    | Berkeley DB      | Wallet storage (only needed when wallet enabled)
- qt          | GUI              | GUI toolkit (only needed when GUI enabled)
- protobuf    | Payments in GUI  | Data interchange format used for payment protocol (only needed when GUI enabled)
- libqrencode | QR codes in GUI  | Optional for generating QR codes (only needed when GUI enabled)
- libzmq3     | ZMQ notification | Optional, allows generating ZMQ notifications (requires ZMQ version >= 4.x)
+	--without-miniupnpc      No UPnP support miniupnp not required
+	--disable-upnp-default   (the default) UPnP support turned off by default at runtime
+	--enable-upnp-default    UPnP support turned on by default at runtime
 
-For the versions used in the release, see [release-process.md](release-process.md) under *Fetch and build inputs*.
+IPv6 support may be disabled by setting:
 
-System requirements
---------------------
+	--disable-ipv6           Disable IPv6 support
 
-C++ compilers are memory-hungry. It is recommended to have at least 1 GB of
-memory available when compiling Carboncoin Core. With 512MB of memory or less
-compilation will take much longer due to swap thrashing.
+Licenses of statically linked libraries:
+ Berkeley DB   New BSD license with additional requirement that linked
+               software must be free open source
+ Boost         MIT-like license
+ miniupnpc     New (3-clause) BSD license
+
+- Versions used in this release:
+-  GCC           4.3.3
+-  OpenSSL       1.0.1c
+-  Berkeley DB   4.8.30.NC
+-  Boost         1.55
+-  miniupnpc     1.6
+-  qt            4.8.3
+-  protobuf      2.5.0
+-  libqrencode   3.2.0
 
 Dependency Build Instructions: Ubuntu & Debian
 ----------------------------------------------
 Build requirements:
 
-    sudo apt-get install build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils
+	sudo apt-get install build-essential
+	sudo apt-get install libtool autotools-dev autoconf
+	sudo apt-get install libssl-dev
 
-On at least Ubuntu 14.04+ and Debian 7+ there are generic names for the
-individual boost development packages, so the following can be used to only
-install necessary parts of boost:
+for Ubuntu 12.04 and later:
 
-    sudo apt-get install libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev
+	sudo apt-get install libboost-all-dev
 
-If that doesn't work, you can install all boost development packages with:
+ db4.8 packages are available [here](https://launchpad.net/~bitcoin/+archive/bitcoin).
+ You can add the repository using the following command:
 
-    sudo apt-get install libboost-all-dev
+        sudo add-apt-repository ppa:bitcoin/bitcoin
+        sudo apt-get update
 
-BerkeleyDB is required for the wallet. db4.8 packages are available [here](https://launchpad.net/~carboncoin/+archive/carboncoin).
-You can add the repository and install using the following commands:
+ Ubuntu 12.04 and later have packages for libdb5.1-dev and libdb5.1++-dev,
+ but using these will break binary wallet compatibility, and is not recommended.
 
-    sudo add-apt-repository ppa:carboncoin/carboncoin
-    sudo apt-get update
-    sudo apt-get install libdb4.8-dev libdb4.8++-dev
+for Ubuntu 13.10:
+	libboost1.54 will not work,
+	remove libboost1.54-all-dev and install libboost1.53-all-dev instead.
 
-Ubuntu and Debian have their own libdb-dev and libdb++-dev packages, but these will install
-BerkeleyDB 5.1 or later, which break binary wallet compatibility with the distributed executables which
-are based on BerkeleyDB 4.8. If you do not care about wallet compatibility,
-pass `--with-incompatible-bdb` to configure.
+for Debian 7 (Wheezy) and later:
+ The oldstable repository contains db4.8 packages.
+ Add the following line to /etc/apt/sources.list,
+ replacing [mirror] with any official debian mirror.
 
-See the section "Disable-wallet mode" to build Carboncoin Core without wallet.
+	deb http://[mirror]/debian/ oldstable main
+
+To enable the change run
+
+	sudo apt-get update
+
+for other Ubuntu & Debian:
+
+	sudo apt-get install libdb4.8-dev
+	sudo apt-get install libdb4.8++-dev
+	sudo apt-get install libboost1.55-all-dev
 
 Optional:
 
-    sudo apt-get install libminiupnpc-dev (see --with-miniupnpc and --enable-upnp-default)
-
-ZMQ dependencies:
-
-    sudo apt-get install libzmq3-dev (provides ZMQ API 4.x)
+	sudo apt-get install libminiupnpc-dev (see --with-miniupnpc and --enable-upnp-default)
 
 Dependencies for the GUI: Ubuntu & Debian
 -----------------------------------------
 
 If you want to build Carboncoin-Qt, make sure that the required packages for Qt development
-are installed. Either Qt 5 or Qt 4 are necessary to build the GUI.
-If both Qt 4 and Qt 5 are installed, Qt 5 will be used. Pass `--with-gui=qt4` to configure to choose Qt4.
+are installed. Either Qt 4 or Qt 5 are necessary to build the GUI.
+If both Qt 4 and Qt 5 are installed, Qt 4 will be used. Pass `--with-gui=qt5` to configure to choose Qt5.
 To build without GUI pass `--without-gui`.
 
-To build with Qt 5 (recommended) you need the following:
+To build with Qt 4 you need the following:
 
-    sudo apt-get install libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler
+    apt-get install libqt4-dev libprotobuf-dev protobuf-compiler
 
-Alternatively, to build with Qt 4 you need the following:
+For Qt 5 you need the following:
 
-    sudo apt-get install libqt4-dev libprotobuf-dev protobuf-compiler
+    apt-get install libqt5gui5 libqt5core5 libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev
 
 libqrencode (optional) can be installed with:
 
-    sudo apt-get install libqrencode-dev
+    apt-get install libqrencode-dev
 
 Once these are installed, they will be found by configure and a carboncoin-qt executable will be
 built by default.
@@ -126,46 +129,22 @@ symbols, which reduces the executable size by about 90%.
 
 miniupnpc
 ---------
-
-[miniupnpc](http://miniupnp.free.fr/) may be used for UPnP port mapping.  It can be downloaded from [here](
-http://miniupnp.tuxfamily.org/files/).  UPnP support is compiled in and
-turned off by default.  See the configure options for upnp behavior desired:
-
-	--without-miniupnpc      No UPnP support miniupnp not required
-	--disable-upnp-default   (the default) UPnP support turned off by default at runtime
-	--enable-upnp-default    UPnP support turned on by default at runtime
+	tar -xzvf miniupnpc-1.6.tar.gz
+	cd miniupnpc-1.6
+	make
+	sudo su
+	make install
 
 
 Berkeley DB
 -----------
-It is recommended to use Berkeley DB 4.8. If you have to build it yourself:
+You need Berkeley DB 4.8.  If you have to build Berkeley DB yourself:
 
-```bash
-CARBONCOIN_ROOT=$(pwd)
+	cd build_unix/
+	../dist/configure --enable-cxx
+	make
+	sudo make install
 
-# Pick some path to install BDB to, here we create a directory within the carboncoin directory
-BDB_PREFIX="${CARBONCOIN_ROOT}/db4"
-mkdir -p $BDB_PREFIX
-
-# Fetch the source and verify that it is not tampered with
-wget 'http://download.oracle.com/berkeley-db/db-4.8.30.NC.tar.gz'
-echo '12edc0df75bf9abd7f82f821795bcee50f42cb2e5f76a6a281b85732798364ef  db-4.8.30.NC.tar.gz' | sha256sum -c
-# -> db-4.8.30.NC.tar.gz: OK
-tar -xzvf db-4.8.30.NC.tar.gz
-
-# Build the library and install to our prefix
-cd db-4.8.30.NC/build_unix/
-#  Note: Do a static build so that it can be embedded into the executable, instead of having to find a .so at runtime
-../dist/configure --enable-cxx --disable-shared --with-pic --prefix=$BDB_PREFIX
-make install
-
-# Configure Carboncoin Core to use our own-built instance of BDB
-cd $CARBONCOIN_ROOT
-./autogen.sh
-./configure LDFLAGS="-L${BDB_PREFIX}/lib/" CPPFLAGS="-I${BDB_PREFIX}/include/" # (other args...)
-```
-
-**Note**: You only need Berkeley DB if the wallet is enabled (see the section *Disable-Wallet mode* below).
 
 Boost
 -----
@@ -192,12 +171,12 @@ Hardening enables the following features:
 
 * Position Independent Executable
     Build position independent code to take advantage of Address Space Layout Randomization
-    offered by some kernels. Attackers who can cause execution of code at an arbitrary memory
-    location are thwarted if they don't know where anything useful is located.
+    offered by some kernels. An attacker who is able to cause execution of code at an arbitrary
+    memory location is thwarted if he doesn't know where anything useful is located.
     The stack and heap are randomly located by default but this allows the code section to be
     randomly located as well.
 
-    On an AMD64 processor where a library was not compiled with -fPIC, this will cause an error
+    On an Amd64 processor where a library was not compiled with -fPIC, this will cause an error
     such as: "relocation R_X86_64_32 against `......' can not be used when making a shared object;"
 
     To test that you have built PIE executable, install scanelf, part of paxutils, and use:
@@ -205,7 +184,6 @@ Hardening enables the following features:
     	scanelf -e ./carboncoin
 
     The output should contain:
-
      TYPE
     ET_DYN
 
@@ -237,30 +215,3 @@ In this case there is no dependency on Berkeley DB 4.8.
 Mining is also possible in disable-wallet mode, but only using the `getblocktemplate` RPC
 call not `getwork`.
 
-Additional Configure Flags
---------------------------
-A list of additional configure flags can be displayed with:
-
-    ./configure --help
-
-ARM Cross-compilation
--------------------
-These steps can be performed on, for example, an Ubuntu VM. The depends system
-will also work on other Linux distributions, however the commands for
-installing the toolchain will be different.
-
-First install the toolchain:
-
-    sudo apt-get install g++-arm-linux-gnueabihf
-
-To build executables for ARM:
-
-    cd depends
-    make HOST=arm-linux-gnueabihf NO_QT=1
-    cd ..
-    ./configure --prefix=$PWD/depends/arm-linux-gnueabihf --enable-glibc-back-compat --enable-reduce-exports LDFLAGS=-static-libstdc++
-    make
-
-
-For further documentation on the depends system see [README.md](../depends/README.md) in the depends directory.
->>>>>>> 3e55b3a... [doc] added depends cross compile info

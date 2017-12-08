@@ -1,9 +1,9 @@
-// Copyright (c) 2011-2015 The Carboncoin Core developers
-// Distributed under the MIT software license, see the accompanying
+// Copyright (c) 2011-2013 The Bitcoin developers
+// Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef CARBONCOIN_QT_QVALIDATEDLINEEDIT_H
-#define CARBONCOIN_QT_QVALIDATEDLINEEDIT_H
+#ifndef QVALIDATEDLINEEDIT_H
+#define QVALIDATEDLINEEDIT_H
 
 #include <QLineEdit>
 
@@ -18,7 +18,6 @@ public:
     explicit QValidatedLineEdit(QWidget *parent);
     void clear();
     void setCheckValidator(const QValidator *v);
-    bool isValid();
 
 protected:
     void focusInEvent(QFocusEvent *evt);
@@ -28,16 +27,13 @@ private:
     bool valid;
     const QValidator *checkValidator;
 
-public Q_SLOTS:
+public slots:
     void setValid(bool valid);
     void setEnabled(bool enabled);
 
-Q_SIGNALS:
-    void validationDidChange(QValidatedLineEdit *validatedLineEdit);
-    
-private Q_SLOTS:
+private slots:
     void markValid();
     void checkValidity();
 };
 
-#endif // CARBONCOIN_QT_QVALIDATEDLINEEDIT_H
+#endif // QVALIDATEDLINEEDIT_H

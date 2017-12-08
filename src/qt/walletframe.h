@@ -1,16 +1,15 @@
-// Copyright (c) 2011-2015 The Carboncoin Core developers
-// Distributed under the MIT software license, see the accompanying
+// Copyright (c) 2011-2013 The Bitcoin developers
+// Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef CARBONCOIN_QT_WALLETFRAME_H
-#define CARBONCOIN_QT_WALLETFRAME_H
+#ifndef WALLETFRAME_H
+#define WALLETFRAME_H
 
 #include <QFrame>
 #include <QMap>
 
-class CarboncoinGUI;
+class BitcoinGUI;
 class ClientModel;
-class PlatformStyle;
 class SendCoinsRecipient;
 class WalletModel;
 class WalletView;
@@ -24,7 +23,7 @@ class WalletFrame : public QFrame
     Q_OBJECT
 
 public:
-    explicit WalletFrame(const PlatformStyle *platformStyle, CarboncoinGUI *_gui = 0);
+    explicit WalletFrame(BitcoinGUI *_gui = 0);
     ~WalletFrame();
 
     void setClientModel(ClientModel *clientModel);
@@ -40,17 +39,15 @@ public:
 
 private:
     QStackedWidget *walletStack;
-    CarboncoinGUI *gui;
+    BitcoinGUI *gui;
     ClientModel *clientModel;
     QMap<QString, WalletView*> mapWalletViews;
 
     bool bOutOfSync;
 
-    const PlatformStyle *platformStyle;
-
     WalletView *currentWalletView();
 
-public Q_SLOTS:
+public slots:
     /** Switch to overview (home) page */
     void gotoOverviewPage();
     /** Switch to history (transactions) page */
@@ -80,4 +77,4 @@ public Q_SLOTS:
     void usedReceivingAddresses();
 };
 
-#endif // CARBONCOIN_QT_WALLETFRAME_H
+#endif // WALLETFRAME_H

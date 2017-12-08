@@ -1,9 +1,9 @@
-// Copyright (c) 2011-2013 The Carboncoin Core developers
-// Distributed under the MIT software license, see the accompanying
+// Copyright (c) 2011-2013 The Bitcoin developers
+// Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef CARBONCOIN_QT_CSVMODELWRITER_H
-#define CARBONCOIN_QT_CSVMODELWRITER_H
+#ifndef CSVMODELWRITER_H
+#define CSVMODELWRITER_H
 
 #include <QList>
 #include <QObject>
@@ -43,4 +43,4 @@ private:
     QList<Column> columns;
 };
 
-#endif // CARBONCOIN_QT_CSVMODELWRITER_H
+#endif // CSVMODELWRITER_H

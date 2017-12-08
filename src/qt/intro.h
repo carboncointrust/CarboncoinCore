@@ -1,20 +1,18 @@
-// Copyright (c) 2011-2015 The Carboncoin Core developers
-// Distributed under the MIT software license, see the accompanying
+// Copyright (c) 2011-2013 The Bitcoin developers
+// Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef CARBONCOIN_QT_INTRO_H
-#define CARBONCOIN_QT_INTRO_H
+#ifndef INTRO_H
+#define INTRO_H
 
 #include <QDialog>
 #include <QMutex>
 #include <QThread>
 
-static const bool DEFAULT_CHOOSE_DATADIR = false;
-
 class FreespaceChecker;
 
 namespace Ui {
-    class Intro;
+class Intro;
 }
 
 /** Introduction screen (pre-GUI startup).
@@ -45,14 +43,14 @@ public:
      */
     static QString getDefaultDataDirectory();
 
-Q_SIGNALS:
+signals:
     void requestCheck();
     void stopThread();
 
-public Q_SLOTS:
+public slots:
     void setStatus(int status, const QString &message, quint64 bytesAvailable);
 
-private Q_SLOTS:
+private slots:
     void on_dataDirectory_textChanged(const QString &arg1);
     void on_ellipsisButton_clicked();
     void on_dataDirDefault_clicked();
@@ -72,4 +70,4 @@ private:
     friend class FreespaceChecker;
 };
 
-#endif // CARBONCOIN_QT_INTRO_H
+#endif // INTRO_H

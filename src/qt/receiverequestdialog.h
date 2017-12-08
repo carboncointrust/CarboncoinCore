@@ -1,9 +1,9 @@
-// Copyright (c) 2011-2015 The Carboncoin Core developers
-// Distributed under the MIT software license, see the accompanying
+// Copyright (c) 2011-2013 The Bitcoin developers
+// Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef CARBONCOIN_QT_RECEIVEREQUESTDIALOG_H
-#define CARBONCOIN_QT_RECEIVEREQUESTDIALOG_H
+#ifndef QRCODEDIALOG_H
+#define QRCODEDIALOG_H
 
 #include "walletmodel.h"
 
@@ -11,15 +11,10 @@
 #include <QImage>
 #include <QLabel>
 
-class OptionsModel;
-
 namespace Ui {
     class ReceiveRequestDialog;
 }
-
-QT_BEGIN_NAMESPACE
-class QMenu;
-QT_END_NAMESPACE
+class OptionsModel;
 
 /* Label widget for QR code. This image can be dragged, dropped, copied and saved
  * to disk.
@@ -32,16 +27,12 @@ public:
     explicit QRImageWidget(QWidget *parent = 0);
     QImage exportImage();
 
-public Q_SLOTS:
+public slots:
     void saveImage();
     void copyImage();
 
 protected:
     virtual void mousePressEvent(QMouseEvent *event);
-    virtual void contextMenuEvent(QContextMenuEvent *event);
-
-private:
-    QMenu *contextMenu;
 };
 
 class ReceiveRequestDialog : public QDialog
@@ -55,7 +46,7 @@ public:
     void setModel(OptionsModel *model);
     void setInfo(const SendCoinsRecipient &info);
 
-private Q_SLOTS:
+private slots:
     void on_btnCopyURI_clicked();
     void on_btnCopyAddress_clicked();
 
@@ -67,4 +58,4 @@ private:
     SendCoinsRecipient info;
 };
 
-#endif // CARBONCOIN_QT_RECEIVEREQUESTDIALOG_H
+#endif // QRCODEDIALOG_H

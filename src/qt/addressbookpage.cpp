@@ -1,27 +1,26 @@
-// Copyright (c) 2011-2015 The Carboncoin Core developers
-// Distributed under the MIT software license, see the accompanying
+// Copyright (c) 2011-2013 The Bitcoin developers
+// Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "config/carboncoin-config.h"
+#include "bitcoin-config.h"
 #endif
 
 #include "addressbookpage.h"
 #include "ui_addressbookpage.h"
 
 #include "addresstablemodel.h"
-#include "carboncoingui.h"
+#include "bitcoingui.h"
 #include "csvmodelwriter.h"
 #include "editaddressdialog.h"
 #include "guiutil.h"
-#include "platformstyle.h"
 
 #include <QIcon>
 #include <QMenu>
 #include <QMessageBox>
 #include <QSortFilterProxyModel>
 
-AddressBookPage::AddressBookPage(const PlatformStyle *platformStyle, Mode mode, Tabs tab, QWidget *parent) :
+AddressBookPage::AddressBookPage(Mode mode, Tabs tab, QWidget *parent) :
     QDialog(parent),
     ui(new Ui::AddressBookPage),
     model(0),
@@ -30,17 +29,12 @@ AddressBookPage::AddressBookPage(const PlatformStyle *platformStyle, Mode mode, 
 {
     ui->setupUi(this);
 
-    if (!platformStyle->getImagesOnButtons()) {
-        ui->newAddress->setIcon(QIcon());
-        ui->copyAddress->setIcon(QIcon());
-        ui->deleteAddress->setIcon(QIcon());
-        ui->exportButton->setIcon(QIcon());
-    } else {
-        ui->newAddress->setIcon(platformStyle->SingleColorIcon(":/icons/add"));
-        ui->copyAddress->setIcon(platformStyle->SingleColorIcon(":/icons/editcopy"));
-        ui->deleteAddress->setIcon(platformStyle->SingleColorIcon(":/icons/remove"));
-        ui->exportButton->setIcon(platformStyle->SingleColorIcon(":/icons/export"));
-    }
+#ifdef Q_OS_MAC // Icons on push buttons are very uncommon on Mac
+    ui->newAddress->setIcon(QIcon());
+    ui->copyAddress->setIcon(QIcon());
+    ui->deleteAddress->setIcon(QIcon());
+    ui->exportButton->setIcon(QIcon());
+#endif
 
     switch(mode)
     {
@@ -254,7 +248,8 @@ void AddressBookPage::done(int retval)
     // Figure out which address was selected, and return it
     QModelIndexList indexes = table->selectionModel()->selectedRows(AddressTableModel::Address);
 
-    Q_FOREACH (const QModelIndex& index, indexes) {
+    foreach (QModelIndex index, indexes)
+    {
         QVariant address = table->model()->data(index);
         returnValue = address.toString();
     }
@@ -287,7 +282,7 @@ void AddressBookPage::on_exportButton_clicked()
 
     if(!writer.write()) {
         QMessageBox::critical(this, tr("Exporting Failed"),
-            tr("There was an error trying to save the address list to %1. Please try again.").arg(filename));
+            tr("There was an error trying to save the address list to %1.").arg(filename));
     }
 }
 

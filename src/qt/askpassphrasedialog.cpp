@@ -1,5 +1,5 @@
-// Copyright (c) 2011-2015 The Carboncoin Core developers
-// Distributed under the MIT software license, see the accompanying
+// Copyright (c) 2011-2013 The Bitcoin developers
+// Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include "askpassphrasedialog.h"
@@ -8,7 +8,7 @@
 #include "guiconstants.h"
 #include "walletmodel.h"
 
-#include "support/allocators/secure.h"
+#include "allocators.h"
 
 #include <QKeyEvent>
 #include <QMessageBox>
@@ -23,10 +23,6 @@ AskPassphraseDialog::AskPassphraseDialog(Mode mode, QWidget *parent) :
 {
     ui->setupUi(this);
 
-    ui->passEdit1->setMinimumSize(ui->passEdit1->sizeHint());
-    ui->passEdit2->setMinimumSize(ui->passEdit2->sizeHint());
-    ui->passEdit3->setMinimumSize(ui->passEdit3->sizeHint());
-
     ui->passEdit1->setMaxLength(MAX_PASSPHRASE_SIZE);
     ui->passEdit2->setMaxLength(MAX_PASSPHRASE_SIZE);
     ui->passEdit3->setMaxLength(MAX_PASSPHRASE_SIZE);
@@ -39,9 +35,9 @@ AskPassphraseDialog::AskPassphraseDialog(Mode mode, QWidget *parent) :
     switch(mode)
     {
         case Encrypt: // Ask passphrase x2
-            ui->warningLabel->setText(tr("Enter the new passphrase to the wallet.<br/>Please use a passphrase of <b>ten or more random characters</b>, or <b>eight or more words</b>."));
             ui->passLabel1->hide();
             ui->passEdit1->hide();
+            ui->warningLabel->setText(tr("Enter the new passphrase to the wallet.<br/>Please use a passphrase of <b>10 or more random characters</b>, or <b>eight or more words</b>."));
             setWindowTitle(tr("Encrypt wallet"));
             break;
         case Unlock: // Ask passphrase
@@ -62,9 +58,10 @@ AskPassphraseDialog::AskPassphraseDialog(Mode mode, QWidget *parent) :
             break;
         case ChangePass: // Ask old passphrase + new passphrase x2
             setWindowTitle(tr("Change passphrase"));
-            ui->warningLabel->setText(tr("Enter the old passphrase and new passphrase to the wallet."));
+            ui->warningLabel->setText(tr("Enter the old and new passphrase to the wallet."));
             break;
     }
+
     textChanged();
     connect(ui->passEdit1, SIGNAL(textChanged(QString)), this, SLOT(textChanged()));
     connect(ui->passEdit2, SIGNAL(textChanged(QString)), this, SLOT(textChanged()));
@@ -108,7 +105,7 @@ void AskPassphraseDialog::accept()
             break;
         }
         QMessageBox::StandardButton retval = QMessageBox::question(this, tr("Confirm wallet encryption"),
-                 tr("Warning: If you encrypt your wallet and lose your passphrase, you will <b>LOSE ALL OF YOUR CARBONCOINS</b>!") + "<br><br>" + tr("Are you sure you wish to encrypt your wallet?"),
+                 tr("Warning: If you encrypt your wallet and lose your passphrase, you will <b>LOSE ALL OF YOUR BITCOINS</b>!") + "<br><br>" + tr("Are you sure you wish to encrypt your wallet?"),
                  QMessageBox::Yes|QMessageBox::Cancel,
                  QMessageBox::Cancel);
         if(retval == QMessageBox::Yes)
@@ -119,7 +116,7 @@ void AskPassphraseDialog::accept()
                 {
                     QMessageBox::warning(this, tr("Wallet encrypted"),
                                          "<qt>" +
-                                         tr("Carboncoin Core will close now to finish the encryption process. "
+                                         tr("Carboncoin will close now to finish the encryption process. "
                                          "Remember that encrypting your wallet cannot fully protect "
                                          "your carboncoins from being stolen by malware infecting your computer.") +
                                          "<br><br><b>" +

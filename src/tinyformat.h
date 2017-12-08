@@ -121,7 +121,6 @@ namespace tfm = tinyformat;
 #include <cassert>
 #include <iostream>
 #include <sstream>
-#include <stdexcept>
 
 #ifndef TINYFORMAT_ERROR
 #   define TINYFORMAT_ERROR(reason) assert(0 && reason)
@@ -1007,7 +1006,5 @@ TINYFORMAT_WRAP_FORMAT_N(16, returnType, funcName, funcDeclSuffix, bodyPrefix, s
 
 
 } // namespace tinyformat
-
-#define strprintf tfm::format
 
 #endif // TINYFORMAT_H_INCLUDED

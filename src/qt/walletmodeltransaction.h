@@ -1,9 +1,9 @@
-// Copyright (c) 2011-2013 The Carboncoin Core developers
-// Distributed under the MIT software license, see the accompanying
+// Copyright (c) 2011-2013 The Bitcoin developers
+// Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef CARBONCOIN_QT_WALLETMODELTRANSACTION_H
-#define CARBONCOIN_QT_WALLETMODELTRANSACTION_H
+#ifndef WALLETMODELTRANSACTION_H
+#define WALLETMODELTRANSACTION_H
 
 #include "walletmodel.h"
 
@@ -25,23 +25,20 @@ public:
     QList<SendCoinsRecipient> getRecipients();
 
     CWalletTx *getTransaction();
-    unsigned int getTransactionSize();
 
-    void setTransactionFee(const CAmount& newFee);
-    CAmount getTransactionFee();
+    void setTransactionFee(qint64 newFee);
+    qint64 getTransactionFee();
 
-    CAmount getTotalTransactionAmount();
+    qint64 getTotalTransactionAmount();
 
     void newPossibleKeyChange(CWallet *wallet);
     CReserveKey *getPossibleKeyChange();
 
-    void reassignAmounts(int nChangePosRet); // needed for the subtract-fee-from-amount feature
-
 private:
-    QList<SendCoinsRecipient> recipients;
+    const QList<SendCoinsRecipient> recipients;
     CWalletTx *walletTransaction;
     CReserveKey *keyChange;
-    CAmount fee;
+    qint64 fee;
 };
 
-#endif // CARBONCOIN_QT_WALLETMODELTRANSACTION_H
+#endif // WALLETMODELTRANSACTION_H

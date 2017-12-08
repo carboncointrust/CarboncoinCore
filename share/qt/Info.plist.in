@@ -3,7 +3,7 @@
 <plist version="0.9">
 <dict>
   <key>LSMinimumSystemVersion</key>
-  <string>10.7.0</string>
+  <string>10.6.0</string>
 
   <key>LSArchitecturePriority</key>
   <array>
@@ -11,31 +11,25 @@
   </array>
 
   <key>CFBundleIconFile</key>
-  <string>carboncoin.icns</string>
+  <string>bitcoin.icns</string>
 
   <key>CFBundlePackageType</key>
   <string>APPL</string>
 
   <key>CFBundleGetInfoString</key>
-  <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@.@CLIENT_VERSION_REVISION@, Copyright © 2009-@COPYRIGHT_YEAR@ The Carboncoin Core developers</string>
+  <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@, Copyright © 2009-@COPYRIGHT_YEAR@ The Carboncoin Core developers</string>
 
   <key>CFBundleShortVersionString</key>
-  <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@.@CLIENT_VERSION_REVISION@</string>
+  <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@</string>
 
   <key>CFBundleVersion</key>
-  <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@.@CLIENT_VERSION_REVISION@</string>
+  <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@</string>
 
   <key>CFBundleSignature</key>
   <string>????</string>
 
   <key>CFBundleExecutable</key>
   <string>Carboncoin-Qt</string>
-  
-  <key>CFBundleName</key>
-  <string>Carboncoin-Qt</string>
-
-  <key>LSHasLocalizedDisplayName</key>
-  <true/>
 
   <key>CFBundleIdentifier</key>
   <string>org.carboncoinfoundation.Carboncoin-Qt</string>
@@ -96,11 +90,5 @@
 
   <key>NSHighResolutionCapable</key>
     <string>True</string>
-
-  <key>LSAppNapIsDisabled</key>
-    <string>True</string>
-  
-  <key>LSApplicationCategoryType</key>
-    <string>public.app-category.finance</string>
 </dict>
 </plist>

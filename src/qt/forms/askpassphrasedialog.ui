@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>598</width>
-    <height>222</height>
+    <height>198</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -26,14 +26,8 @@
    <string>Passphrase Dialog</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
-   <property name="sizeConstraint">
-    <enum>QLayout::SetMinimumSize</enum>
-   </property>
    <item>
     <widget class="QLabel" name="warningLabel">
-     <property name="text">
-      <string notr="true">Placeholder text</string>
-     </property>
      <property name="textFormat">
       <enum>Qt::RichText</enum>
      </property>
@@ -44,9 +38,6 @@
    </item>
    <item>
     <layout class="QFormLayout" name="formLayout">
-     <property name="sizeConstraint">
-      <enum>QLayout::SetMinimumSize</enum>
-     </property>
      <property name="fieldGrowthPolicy">
       <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
      </property>

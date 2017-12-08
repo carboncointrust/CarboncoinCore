@@ -1,15 +1,10 @@
-// Copyright (c) 2012-2015 The Carboncoin Core developers
-// Distributed under the MIT software license, see the accompanying
-// file COPYING or http://www.opensource.org/licenses/mit-license.php.
+
 
 #include "util.h"
 
-#include "support/allocators/secure.h"
-#include "test/test_carboncoin.h"
-
 #include <boost/test/unit_test.hpp>
 
-BOOST_FIXTURE_TEST_SUITE(allocator_tests, BasicTestingSetup)
+BOOST_AUTO_TEST_SUITE(allocator_tests)
 
 // Dummy memory page locker for platform independent tests
 static const void *last_lock_addr, *last_unlock_addr;

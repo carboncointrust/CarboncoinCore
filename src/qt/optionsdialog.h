@@ -1,35 +1,19 @@
-// Copyright (c) 2011-2015 The Carboncoin Core developers
-// Distributed under the MIT software license, see the accompanying
+// Copyright (c) 2011-2013 The Bitcoin developers
+// Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef CARBONCOIN_QT_OPTIONSDIALOG_H
-#define CARBONCOIN_QT_OPTIONSDIALOG_H
+#ifndef OPTIONSDIALOG_H
+#define OPTIONSDIALOG_H
 
 #include <QDialog>
-#include <QValidator>
 
+class MonitoredDataMapper;
 class OptionsModel;
 class QValidatedLineEdit;
-
-QT_BEGIN_NAMESPACE
-class QDataWidgetMapper;
-QT_END_NAMESPACE
 
 namespace Ui {
 class OptionsDialog;
 }
-
-/** Proxy address widget validator, checks for a valid proxy address.
- */
-class ProxyAddressValidator : public QValidator
-{
-    Q_OBJECT
-
-public:
-    explicit ProxyAddressValidator(QObject *parent);
-
-    State validate(QString &input, int &pos) const;
-};
 
 /** Preferences dialog. */
 class OptionsDialog : public QDialog
@@ -37,13 +21,20 @@ class OptionsDialog : public QDialog
     Q_OBJECT
 
 public:
-    explicit OptionsDialog(QWidget *parent, bool enableWallet);
+    explicit OptionsDialog(QWidget *parent);
     ~OptionsDialog();
 
     void setModel(OptionsModel *model);
     void setMapper();
 
-private Q_SLOTS:
+protected:
+    bool eventFilter(QObject *object, QEvent *event);
+
+private slots:
+    /* enable OK button */
+    void enableOkButton();
+    /* disable OK button */
+    void disableOkButton();
     /* set OK button state (enabled / disabled) */
     void setOkButtonState(bool fState);
     void on_resetButton_clicked();
@@ -52,17 +43,17 @@ private Q_SLOTS:
 
     void showRestartWarning(bool fPersistent = false);
     void clearStatusLabel();
-    void updateProxyValidationState();
-    /* query the networks, for which the default proxy is used */
-    void updateDefaultProxyNets();
+    void updateDisplayUnit();
+    void doProxyIpChecks(QValidatedLineEdit *pUiProxyIp, int nProxyPort);
 
-Q_SIGNALS:
+signals:
     void proxyIpChecks(QValidatedLineEdit *pUiProxyIp, int nProxyPort);
 
 private:
     Ui::OptionsDialog *ui;
     OptionsModel *model;
-    QDataWidgetMapper *mapper;
+    MonitoredDataMapper *mapper;
+    bool fProxyIpValid;
 };
 
-#endif // CARBONCOIN_QT_OPTIONSDIALOG_H
+#endif // OPTIONSDIALOG_H

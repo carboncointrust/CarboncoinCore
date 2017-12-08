@@ -7,12 +7,12 @@ Fortunately, only four of the files in the existing project are affected by this
 Two new classes have been implemented in two new .h/.cpp file pairs, with much of the functionality that was previously
 implemented in the CarboncoinGUI class moved over to these new classes.
 
-The two existing files most affected, by far, are carboncoingui.h and carboncoingui.cpp, as the CarboncoinGUI class will require
+The two existing files most affected, by far, are bitcoingui.h and bitcoingui.cpp, as the CarboncoinGUI class will require
 some major retrofitting.
 
-Only requiring some minor changes is carboncoin.cpp.
+Only requiring some minor changes is bitcoin.cpp.
 
-Finally, two new headers and source files will have to be added to carboncoin-qt.pro.
+Finally, two new headers and source files will have to be added to bitcoin-qt.pro.
 
 Changes to class CarboncoinGUI
 ---------------------------
@@ -30,9 +30,9 @@ that takes the place of what used to be centralWidget in CarboncoinGUI. The purp
 refinements of the wallet controls with minimal need for further modifications to CarboncoinGUI, thus greatly simplifying
 merges while reducing the risk of breaking top-level stuff.
 
-Changes to carboncoin.cpp
+Changes to bitcoin.cpp
 ----------------------
-carboncoin.cpp is the entry point into carboncoin-qt, and as such, will require some minor modifications to provide hooks for
+bitcoin.cpp is the entry point into carboncoin-qt, and as such, will require some minor modifications to provide hooks for
 multiple wallet support. Most importantly will be the way it instantiates WalletModels and passes them to the
 singleton CarboncoinGUI instance called window. Formerly, CarboncoinGUI kept a pointer to a single instance of a WalletModel.
 The initial change required is very simple: rather than calling `window.setWalletModel(&walletModel);` we perform the

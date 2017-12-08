@@ -1,14 +1,14 @@
-// Copyright (c) 2011-2015 The Carboncoin Core developers
-// Distributed under the MIT software license, see the accompanying
+// Copyright (c) 2011-2013 The Bitcoin developers
+// Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef CARBONCOIN_QT_OPENURIDIALOG_H
-#define CARBONCOIN_QT_OPENURIDIALOG_H
+#ifndef OPENURIDIALOG_H
+#define OPENURIDIALOG_H
 
 #include <QDialog>
 
 namespace Ui {
-    class OpenURIDialog;
+class OpenURIDialog;
 }
 
 class OpenURIDialog : public QDialog
@@ -21,14 +21,14 @@ public:
 
     QString getURI();
 
-protected Q_SLOTS:
+protected slots:
     void accept();
 
-private Q_SLOTS:
+private slots:
     void on_selectFileButton_clicked();
 
 private:
     Ui::OpenURIDialog *ui;
 };
 
-#endif // CARBONCOIN_QT_OPENURIDIALOG_H
+#endif // OPENURIDIALOG_H

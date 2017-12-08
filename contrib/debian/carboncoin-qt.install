@@ -1,6 +1,0 @@
-usr/local/bin/carboncoin-qt usr/bin
-share/pixmaps/carboncoin32.xpm usr/share/pixmaps
-share/pixmaps/carboncoin16.xpm usr/share/pixmaps
-share/pixmaps/carboncoin128.png usr/share/pixmaps
-debian/carboncoin-qt.desktop usr/share/applications
-debian/carboncoin-qt.protocol usr/share/kde4/services/

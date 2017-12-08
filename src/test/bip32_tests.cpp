@@ -1,15 +1,9 @@
-// Copyright (c) 2013-2015 The Carboncoin Core developers
-// Distributed under the MIT software license, see the accompanying
-// file COPYING or http://www.opensource.org/licenses/mit-license.php.
-
 #include <boost/test/unit_test.hpp>
 
 #include "base58.h"
 #include "key.h"
 #include "uint256.h"
 #include "util.h"
-#include "utilstrencodings.h"
-#include "test/test_carboncoin.h"
 
 #include <string>
 #include <vector>
@@ -88,23 +82,12 @@ void RunTest(const TestVector &test) {
         unsigned char data[74];
         key.Encode(data);
         pubkey.Encode(data);
-
         // Test private key
-        CCarboncoinExtKey b58key; b58key.SetKey(key);
+        CBitcoinExtKey b58key; b58key.SetKey(key);
         BOOST_CHECK(b58key.ToString() == derive.prv);
-
-        CCarboncoinExtKey b58keyDecodeCheck(derive.prv);
-        CExtKey checkKey = b58keyDecodeCheck.GetKey();
-        assert(checkKey == key); //ensure a base58 decoded key also matches
-
         // Test public key
-        CCarboncoinExtPubKey b58pubkey; b58pubkey.SetKey(pubkey);
+        CBitcoinExtPubKey b58pubkey; b58pubkey.SetKey(pubkey);
         BOOST_CHECK(b58pubkey.ToString() == derive.pub);
-
-        CCarboncoinExtPubKey b58PubkeyDecodeCheck(derive.pub);
-        CExtPubKey checkPubKey = b58PubkeyDecodeCheck.GetKey();
-        assert(checkPubKey == pubkey); //ensure a base58 decoded pubkey also matches
-
         // Derive new keys
         CExtKey keyNew;
         BOOST_CHECK(key.Derive(keyNew, derive.nChild));
@@ -120,7 +103,7 @@ void RunTest(const TestVector &test) {
     }
 }
 
-BOOST_FIXTURE_TEST_SUITE(bip32_tests, BasicTestingSetup)
+BOOST_AUTO_TEST_SUITE(bip32_tests)
 
 BOOST_AUTO_TEST_CASE(bip32_test1) {
     RunTest(test1);

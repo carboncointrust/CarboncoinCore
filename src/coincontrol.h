@@ -1,23 +1,17 @@
-// Copyright (c) 2011-2015 The Carboncoin Core developers
-// Distributed under the MIT software license, see the accompanying
+// Copyright (c) 2011-2013 The Bitcoin developers
+// Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef CARBONCOIN_COINCONTROL_H
-#define CARBONCOIN_COINCONTROL_H
+#ifndef COINCONTROL_H
+#define COINCONTROL_H
 
-#include "primitives/transaction.h"
+#include "core.h"
 
 /** Coin Control Features. */
 class CCoinControl
 {
 public:
     CTxDestination destChange;
-    //! If false, allows unselected inputs, but requires all selected inputs be used
-    bool fAllowOtherInputs;
-    //! Includes watch only addresses which match the ISMINE_WATCH_SOLVABLE criteria
-    bool fAllowWatchOnly;
-    //! Minimum absolute fee (not per kilobyte)
-    CAmount nMinimumTotalFee;
 
     CCoinControl()
     {
@@ -27,10 +21,7 @@ public:
     void SetNull()
     {
         destChange = CNoDestination();
-        fAllowOtherInputs = false;
-        fAllowWatchOnly = false;
         setSelected.clear();
-        nMinimumTotalFee = 0;
     }
 
     bool HasSelected() const
@@ -44,12 +35,12 @@ public:
         return (setSelected.count(outpt) > 0);
     }
 
-    void Select(const COutPoint& output)
+    void Select(COutPoint& output)
     {
         setSelected.insert(output);
     }
 
-    void UnSelect(const COutPoint& output)
+    void UnSelect(COutPoint& output)
     {
         setSelected.erase(output);
     }
@@ -59,13 +50,14 @@ public:
         setSelected.clear();
     }
 
-    void ListSelected(std::vector<COutPoint>& vOutpoints) const
+    void ListSelected(std::vector<COutPoint>& vOutpoints)
     {
         vOutpoints.assign(setSelected.begin(), setSelected.end());
     }
 
 private:
     std::set<COutPoint> setSelected;
+
 };
 
-#endif // CARBONCOIN_COINCONTROL_H
+#endif // COINCONTROL_H

@@ -1,40 +1,35 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2015 The Carboncoin Core developers
-// Distributed under the MIT software license, see the accompanying
+// Copyright (c) 2009-2013 The Bitcoin developers
+// Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef CARBONCOIN_MINER_H
-#define CARBONCOIN_MINER_H
-
-#include "primitives/block.h"
+#ifndef BITCOIN_MINER_H
+#define BITCOIN_MINER_H
 
 #include <stdint.h>
 
+class CBlock;
 class CBlockIndex;
-class CChainParams;
+struct CBlockTemplate;
 class CReserveKey;
 class CScript;
 class CWallet;
-namespace Consensus { struct Params; };
-
-static const bool DEFAULT_GENERATE = false;
-static const int DEFAULT_GENERATE_THREADS = 1;
-
-static const bool DEFAULT_PRINTPRIORITY = false;
-
-struct CBlockTemplate
-{
-    CBlock block;
-    std::vector<CAmount> vTxFees;
-    std::vector<int64_t> vTxSigOps;
-};
 
 /** Run the miner threads */
-void GenerateCarboncoins(bool fGenerate, int nThreads, const CChainParams& chainparams);
+void GenerateBitcoins(bool fGenerate, CWallet* pwallet, int nThreads);
 /** Generate a new block, without valid proof-of-work */
-CBlockTemplate* CreateNewBlock(const CChainParams& chainparams, const CScript& scriptPubKeyIn);
+CBlockTemplate* CreateNewBlock(const CScript& scriptPubKeyIn);
+CBlockTemplate* CreateNewBlockWithKey(CReserveKey& reservekey);
 /** Modify the extranonce in a block */
-void IncrementExtraNonce(CBlock* pblock, const CBlockIndex* pindexPrev, unsigned int& nExtraNonce);
-int64_t UpdateTime(CBlockHeader* pblock, const Consensus::Params& consensusParams, const CBlockIndex* pindexPrev);
+void IncrementExtraNonce(CBlock* pblock, CBlockIndex* pindexPrev, unsigned int& nExtraNonce);
+/** Do mining precalculation */
+void FormatHashBuffers(CBlock* pblock, char* pmidstate, char* pdata, char* phash1);
+/** Check mined block */
+bool CheckWork(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey);
+/** Base sha256 mining transform */
+void SHA256Transform(void* pstate, void* pinput, const void* pinit);
 
-#endif // CARBONCOIN_MINER_H
+extern double dHashesPerSec;
+extern int64_t nHPSTimerStart;
+
+#endif // BITCOIN_MINER_H

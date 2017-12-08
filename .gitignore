@@ -4,38 +4,21 @@
 src/carboncoin
 src/carboncoind
 src/carboncoin-cli
-src/carboncoin-tx
 src/test/test_carboncoin
 src/qt/test/test_carboncoin-qt
 
-# autoreconf
 Makefile.in
 aclocal.m4
 autom4te.cache/
-build-aux/config.guess
-build-aux/config.sub
-build-aux/depcomp
-build-aux/install-sh
-build-aux/ltmain.sh
-build-aux/m4/libtool.m4
-build-aux/m4/lt~obsolete.m4
-build-aux/m4/ltoptions.m4
-build-aux/m4/ltsugar.m4
-build-aux/m4/ltversion.m4
-build-aux/missing
-build-aux/compile
-build-aux/test-driver
 config.log
 config.status
 configure
-libtool
-src/config/carboncoin-config.h
-src/config/carboncoin-config.h.in
-src/config/stamp-h1
+src/bitcoin-config.h
+src/bitcoin-config.h.in
+src/build-aux/
+src/stamp-h1
 share/setup.nsi
 share/qt/Info.plist
-
-src/univalue/gen
 
 src/qt/*.moc
 src/qt/moc_*.cpp
@@ -45,15 +28,12 @@ src/qt/test/moc*.cpp
 
 .deps
 .dirstamp
-.libs
 .*.swp
 *.*~*
 *.bak
 *.rej
 *.orig
-*.pyc
 *.o
-*.o-*
 *.patch
 .carboncoin
 *.a
@@ -67,10 +47,6 @@ src/qt/test/moc*.cpp
 *.json.h
 *.raw.h
 
-#libtool object files
-*.lo
-*.la
-
 # Compilation and Qt preprocessor part
 *.qm
 Makefile
@@ -80,10 +56,12 @@ Carboncoin-Qt.app
 # Unit-tests
 Makefile.test
 carboncoin-qt_test
-src/test/buildenv.py
 
 # Resources cpp
 qrc_*.cpp
+
+# Qt creator
+*.pro.user
 
 # Mac specific
 .DS_Store
@@ -91,7 +69,6 @@ build
 
 #lcov
 *.gcno
-*.gcda
 /*.info
 test_carboncoin.coverage/
 total.coverage/
@@ -101,16 +78,7 @@ coverage_percent.txt
 linux-coverage-build
 linux-build
 win32-build
-qa/pull-tester/run-carboncoind-for-test.sh
-qa/pull-tester/tests_config.py
-qa/pull-tester/cache/*
-qa/pull-tester/test.*/*
-qa/tmp
-cache/
-share/CarboncoindComparisonTool.jar
+qa/pull-tester/run-bitcoind-for-test.sh
+qa/pull-tester/build-tests.sh
 
 !src/leveldb*/Makefile
-
-/doc/doxygen/
-
-libcarboncoinconsensus.pc
