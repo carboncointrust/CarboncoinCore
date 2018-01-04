@@ -1,4 +1,4 @@
-TOR SUPPORT IN BITCOIN
+TOR SUPPORT IN CARBONCOIN
 ======================
 
 It is possible to run Carboncoin as a Tor hidden service, and connect to such services.

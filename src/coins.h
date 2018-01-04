@@ -2,8 +2,8 @@
 // Copyright (c) 2009-2013 The Carboncoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
-#ifndef BITCOIN_COINS_H
-#define BITCOIN_COINS_H
+#ifndef CARBONCOIN_COINS_H
+#define CARBONCOIN_COINS_H
 
 #include "core.h"
 #include "serialize.h"

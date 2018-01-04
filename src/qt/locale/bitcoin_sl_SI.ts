@@ -183,8 +183,8 @@
         <translation>Potrdi šifriranje denarnice</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation>Opozorilo: V primeru izgube gesla kriptirane denarnice, boš &lt;b&gt;IZGUBIL VSE SVOJE BITCOINE&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR CARBONCOINS&lt;/b&gt;!</source>
+        <translation>Opozorilo: V primeru izgube gesla kriptirane denarnice, boš &lt;b&gt;IZGUBIL VSE SVOJE CARBONCOINE&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>

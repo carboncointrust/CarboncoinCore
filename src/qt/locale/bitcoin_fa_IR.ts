@@ -504,7 +504,7 @@ Address: %4
     </message>
     <message>
         <source>Welcome to the Carboncoin RPC console.</source>
-        <translation>به کنسول آر.پی.سی. BITCOIN خوش آمدید</translation>
+        <translation>به کنسول آر.پی.سی. CARBONCOIN خوش آمدید</translation>
     </message>
     </context>
 <context>

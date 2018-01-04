@@ -12,11 +12,11 @@ endif
 
 bin_PROGRAMS =
 
-if BUILD_BITCOIND
+if BUILD_CARBONCOIND
   bin_PROGRAMS += carboncoind
 endif
 
-if BUILD_BITCOIN_CLI
+if BUILD_CARBONCOIN_CLI
   bin_PROGRAMS += carboncoin-cli
 endif
 
@@ -24,7 +24,7 @@ SUBDIRS = . $(BUILD_QT) $(BUILD_TEST)
 DIST_SUBDIRS = . qt test
 .PHONY: FORCE
 # carboncoin core #
-BITCOIN_CORE_H = \
+CARBONCOIN_CORE_H = \
   addrman.h \
   alert.h \
   allocators.h \
@@ -109,7 +109,7 @@ libcarboncoin_server_a_SOURCES = \
   txdb.cpp \
   txmempool.cpp \
   $(JSON_H) \
-  $(BITCOIN_CORE_H)
+  $(CARBONCOIN_CORE_H)
 
 libcarboncoin_wallet_a_SOURCES = \
   db.cpp \
@@ -118,7 +118,7 @@ libcarboncoin_wallet_a_SOURCES = \
   rpcwallet.cpp \
   wallet.cpp \
   walletdb.cpp \
-  $(BITCOIN_CORE_H)
+  $(CARBONCOIN_CORE_H)
 
 libcarboncoin_common_a_SOURCES = \
   base58.cpp \
@@ -134,7 +134,7 @@ libcarboncoin_common_a_SOURCES = \
   sync.cpp \
   util.cpp \
   version.cpp \
-  $(BITCOIN_CORE_H)
+  $(CARBONCOIN_CORE_H)
 
 if GLIBC_BACK_COMPAT
 libcarboncoin_common_a_SOURCES += compat/glibc_compat.cpp
@@ -143,7 +143,7 @@ endif
 
 libcarboncoin_cli_a_SOURCES = \
   rpcclient.cpp \
-  $(BITCOIN_CORE_H)
+  $(CARBONCOIN_CORE_H)
 
 nodist_libcarboncoin_common_a_SOURCES = $(top_srcdir)/src/obj/build.h
 #

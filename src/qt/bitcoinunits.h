@@ -2,8 +2,8 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINUNITS_H
-#define BITCOINUNITS_H
+#ifndef CARBONCOINUNITS_H
+#define CARBONCOINUNITS_H
 
 #include <QAbstractListModel>
 #include <QString>
@@ -72,4 +72,4 @@ private:
 };
 typedef CarboncoinUnits::Unit CarboncoinUnit;
 
-#endif // BITCOINUNITS_H
+#endif // CARBONCOINUNITS_H

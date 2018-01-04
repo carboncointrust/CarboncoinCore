@@ -3,8 +3,8 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef H_BITCOIN_SCRIPT
-#define H_BITCOIN_SCRIPT
+#ifndef H_CARBONCOIN_SCRIPT
+#define H_CARBONCOIN_SCRIPT
 
 #include "key.h"
 #include "util.h"

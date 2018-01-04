@@ -34,11 +34,11 @@ endif
 
 nodist_test_carboncoin_qt_SOURCES = $(TEST_QT_MOC_CPP)
 
-test_carboncoin_qt_LDADD = $(LIBBITCOINQT) $(LIBBITCOIN_SERVER)
+test_carboncoin_qt_LDADD = $(LIBCARBONCOINQT) $(LIBCARBONCOIN_SERVER)
 if ENABLE_WALLET
-test_carboncoin_qt_LDADD += $(LIBBITCOIN_WALLET)
+test_carboncoin_qt_LDADD += $(LIBCARBONCOIN_WALLET)
 endif
-test_carboncoin_qt_LDADD += $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBLEVELDB) \
+test_carboncoin_qt_LDADD += $(LIBCARBONCOIN_CLI) $(LIBCARBONCOIN_COMMON) $(LIBLEVELDB) \
   $(LIBMEMENV) $(BOOST_LIBS) $(QT_DBUS_LIBS) $(QT_TEST_LIBS) $(QT_LIBS) \
   $(QR_LIBS) $(PROTOBUF_LIBS) $(BDB_LIBS)
 test_carboncoin_qt_LDFLAGS = $(QT_LDFLAGS)

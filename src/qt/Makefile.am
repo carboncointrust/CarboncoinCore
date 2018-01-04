@@ -148,7 +148,7 @@ QT_MOC_CPP = \
   moc_walletmodel.cpp \
   moc_walletview.cpp
 
-BITCOIN_MM = \
+CARBONCOIN_MM = \
   macdockiconhandler.mm \
   macnotificationhandler.mm
 
@@ -165,7 +165,7 @@ PROTOBUF_CC = paymentrequest.pb.cc
 PROTOBUF_H = paymentrequest.pb.h
 PROTOBUF_PROTO = paymentrequest.proto
 
-BITCOIN_QT_H = \
+CARBONCOIN_QT_H = \
   addressbookpage.h \
   addresstablemodel.h \
   askpassphrasedialog.h \
@@ -260,7 +260,7 @@ RES_ICONS = \
   res/icons/tx_output.png \
   res/icons/tx_mined.png
 
-BITCOIN_QT_CPP = \
+CARBONCOIN_QT_CPP = \
   carboncoin.cpp \
   carboncoinaddressvalidator.cpp \
   carboncoinamountfield.cpp \
@@ -283,7 +283,7 @@ BITCOIN_QT_CPP = \
   winshutdownmonitor.cpp
 
 if ENABLE_WALLET
-BITCOIN_QT_CPP += \
+CARBONCOIN_QT_CPP += \
   addressbookpage.cpp \
   addresstablemodel.cpp \
   askpassphrasedialog.cpp \
@@ -319,11 +319,11 @@ RES_IMAGES = \
 
 RES_MOVIES = $(wildcard res/movies/spinner-*.png)
 
-BITCOIN_RC = res/carboncoin-qt-res.rc
+CARBONCOIN_RC = res/carboncoin-qt-res.rc
 
 libcarboncoinqt_a_CPPFLAGS = $(AM_CPPFLAGS) $(QT_INCLUDES) \
   -I$(top_srcdir)/src/qt/forms $(QT_DBUS_INCLUDES)
-libcarboncoinqt_a_SOURCES = $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(QT_FORMS_UI) \
+libcarboncoinqt_a_SOURCES = $(CARBONCOIN_QT_CPP) $(CARBONCOIN_QT_H) $(QT_FORMS_UI) \
   $(QT_QRC) $(QT_TS) $(PROTOBUF_PROTO) $(RES_ICONS) $(RES_IMAGES) $(RES_MOVIES)
 
 nodist_libcarboncoinqt_a_SOURCES = $(QT_MOC_CPP) $(QT_MOC) $(PROTOBUF_CC) \
@@ -341,16 +341,16 @@ carboncoin_qt_CPPFLAGS = $(AM_CPPFLAGS) $(QT_INCLUDES) \
   -I$(top_srcdir)/src/qt/forms
 carboncoin_qt_SOURCES = carboncoin.cpp
 if TARGET_DARWIN
-  carboncoin_qt_SOURCES += $(BITCOIN_MM)
+  carboncoin_qt_SOURCES += $(CARBONCOIN_MM)
 endif
 if TARGET_WINDOWS
-  carboncoin_qt_SOURCES += $(BITCOIN_RC)
+  carboncoin_qt_SOURCES += $(CARBONCOIN_RC)
 endif
-carboncoin_qt_LDADD = libcarboncoinqt.a $(LIBBITCOIN_SERVER)
+carboncoin_qt_LDADD = libcarboncoinqt.a $(LIBCARBONCOIN_SERVER)
 if ENABLE_WALLET
-carboncoin_qt_LDADD += $(LIBBITCOIN_WALLET)
+carboncoin_qt_LDADD += $(LIBCARBONCOIN_WALLET)
 endif
-carboncoin_qt_LDADD += $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBLEVELDB) $(LIBMEMENV) \
+carboncoin_qt_LDADD += $(LIBCARBONCOIN_CLI) $(LIBCARBONCOIN_COMMON) $(LIBLEVELDB) $(LIBMEMENV) \
   $(BOOST_LIBS) $(QT_LIBS) $(QT_DBUS_LIBS) $(QR_LIBS) $(PROTOBUF_LIBS) $(BDB_LIBS)
 carboncoin_qt_LDFLAGS = $(QT_LDFLAGS)
 
@@ -366,7 +366,7 @@ QT_QM=$(QT_TS:.ts=.qm)
 carboncoinstrings.cpp: FORCE
 	$(MAKE) -C $(top_srcdir)/src qt/carboncoinstrings.cpp
 
-translate: carboncoinstrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(BITCOIN_MM)
+translate: carboncoinstrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(CARBONCOIN_QT_CPP) $(CARBONCOIN_QT_H) $(CARBONCOIN_MM)
 	@test -n $(LUPDATE) || echo "lupdate is required for updating translations"
 	@QT_SELECT=$(QT_SELECT) $(LUPDATE) $^ -locations relative -no-obsolete -ts locale/carboncoin_en.ts
 

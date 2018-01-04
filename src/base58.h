@@ -11,8 +11,8 @@
 // - E-mail usually won't line-break if there's no punctuation to break at.
 // - Double-clicking selects the whole number as one word if it's all alphanumeric.
 //
-#ifndef BITCOIN_BASE58_H
-#define BITCOIN_BASE58_H
+#ifndef CARBONCOIN_BASE58_H
+#define CARBONCOIN_BASE58_H
 
 #include "chainparams.h"
 #include "key.h"
@@ -156,4 +156,4 @@ public:
 typedef CCarboncoinExtKeyBase<CExtKey, 74, CChainParams::EXT_SECRET_KEY> CCarboncoinExtKey;
 typedef CCarboncoinExtKeyBase<CExtPubKey, 74, CChainParams::EXT_PUBLIC_KEY> CCarboncoinExtPubKey;
 
-#endif // BITCOIN_BASE58_H
+#endif // CARBONCOIN_BASE58_H

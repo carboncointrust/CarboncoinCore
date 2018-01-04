@@ -2,8 +2,8 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINGUI_H
-#define BITCOINGUI_H
+#ifndef CARBONCOINGUI_H
+#define CARBONCOINGUI_H
 
 #if defined(HAVE_CONFIG_H)
 #include "carboncoin-config.h"
@@ -193,4 +193,4 @@ private slots:
     void detectShutdown();
 };
 
-#endif // BITCOINGUI_H
+#endif // CARBONCOINGUI_H

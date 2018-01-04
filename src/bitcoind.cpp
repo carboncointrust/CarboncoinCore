@@ -94,7 +94,7 @@ bool AppInit(int argc, char* argv[])
                   "  carboncoind [options] help                " + _("List commands") + "\n" +
                   "  carboncoind [options] help <command>      " + _("Get help for a command") + "\n";
 
-            strUsage += "\n" + HelpMessage(HMM_BITCOIND);
+            strUsage += "\n" + HelpMessage(HMM_CARBONCOIND);
             strUsage += "\n" + HelpMessageCli(false);
 
             fprintf(stdout, "%s", strUsage.c_str());
