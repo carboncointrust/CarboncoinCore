@@ -217,7 +217,7 @@ Tiu ĉi produkto enhavas erojn kreitajn de la "OpenSSL Project" por uzo en la "O
         <translation>La monujo estas ĉifrita</translation>
     </message>
     <message>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your carboncoins from being stolen by malware infecting your computer.</source>
         <translation>Bitmono nun fermiĝos por fini la ĉifradon. Memoru, ke eĉ ĉifrado ne protektas kontraŭ ĉiu atako, ekz. se viruso infektus vian komputilon.</translation>
     </message>
     <message>
@@ -424,8 +424,8 @@ Tiu ĉi produkto enhavas erojn kreitajn de la "OpenSSL Project" por uzo en la "O
         <translation>Kerno de Bitmono</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation>Peti pagon (kreas QR-kodojn kaj URI-ojn kun prefikso bitcoin:)</translation>
+        <source>Request payments (generates QR codes and carboncoin: URIs)</source>
+        <translation>Peti pagon (kreas QR-kodojn kaj URI-ojn kun prefikso carboncoin:)</translation>
     </message>
     <message>
         <source>&amp;About Bitcoin Core</source>
@@ -440,8 +440,8 @@ Tiu ĉi produkto enhavas erojn kreitajn de la "OpenSSL Project" por uzo en la "O
         <translation>Vidigi la liston de uzitaj ricevaj adresoj kaj etikedoj</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI or payment request</source>
-        <translation>Malfermi bitcoin:-URI-on aŭ pagpeton</translation>
+        <source>Open a carboncoin: URI or payment request</source>
+        <translation>Malfermi carboncoin:-URI-on aŭ pagpeton</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -1186,7 +1186,7 @@ Adreso: %4
         <translation>Eraro dum pagopeto</translation>
     </message>
     <message>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
+        <source>Cannot start carboncoin: click-to-pay handler</source>
         <translation>Ne eblas lanĉi la ilon 'klaki-por-pagi'</translation>
     </message>
     <message>
@@ -2344,7 +2344,7 @@ Adreso: %4
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>carboncoin-core</name>
     <message>
         <source>Usage:</source>
         <translation>Uzado:</translation>
@@ -2362,12 +2362,12 @@ Adreso: %4
         <translation>Agordoj:</translation>
     </message>
     <message>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>Specifi konfiguran dosieron (defaŭlte: bitcoin.conf)</translation>
+        <source>Specify configuration file (default: carboncoin.conf)</source>
+        <translation>Specifi konfiguran dosieron (defaŭlte: carboncoin.conf)</translation>
     </message>
     <message>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>Specifi pid-dosieron (defaŭlte: bitcoind.pid)</translation>
+        <source>Specify pid file (default: carboncoind.pid)</source>
+        <translation>Specifi pid-dosieron (defaŭlte: carboncoind.pid)</translation>
     </message>
     <message>
         <source>Specify data directory</source>
@@ -2425,7 +2425,7 @@ Adreso: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=carboncoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -2436,7 +2436,7 @@ for example: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com
         <translation>%s, vi devas specifi rpcpassword en la konfigura dosiero:
 %s
 Estas konsilinde uzi tiun ĉi aleatore kreitan pasvorton:
-rpcuser=bitcoinrpc
+rpcuser=carboncoinrpc
 rpcpassword=%s
 (ne utilas al vi memorigi tiun ĉi pasvorton)
 La salutnomo kaj la pasvorto estu nepre MALSAMAJ.
@@ -2646,8 +2646,8 @@ ekzemple: alertnotify=echo %%s | mail -s "Averto de Bitmono" admin@foo.com
         <translation>Specifi monujan dosieron (ene de dosierujo por datumoj)</translation>
     </message>
     <message>
-        <source>Usage (deprecated, use bitcoin-cli):</source>
-        <translation>Uzado (malaktuala, uzu anstataŭe bitcoin-cli):</translation>
+        <source>Usage (deprecated, use carboncoin-cli):</source>
+        <translation>Uzado (malaktuala, uzu anstataŭe carboncoin-cli):</translation>
     </message>
     <message>
         <source>Verifying blocks...</source>

@@ -4,7 +4,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "bitcoin-config.h"
+#include "carboncoin-config.h"
 #endif
 
 #include "init.h"
@@ -112,7 +112,7 @@ void Shutdown()
     TRY_LOCK(cs_Shutdown, lockShutdown);
     if (!lockShutdown) return;
 
-    RenameThread("bitcoin-shutoff");
+    RenameThread("carboncoin-shutoff");
     mempool.AddTransactionsUpdated(1);
     StopRPCThreads();
     ShutdownRPCMining();
@@ -196,7 +196,7 @@ std::string HelpMessage(HelpMessageMode hmm)
     strUsage += "  -blocknotify=<cmd>     " + _("Execute command when the best block changes (%s in cmd is replaced by block hash)") + "\n";
     strUsage += "  -checkblocks=<n>       " + _("How many blocks to check at startup (default: 288, 0 = all)") + "\n";
     strUsage += "  -checklevel=<n>        " + _("How thorough the block verification of -checkblocks is (0-4, default: 3)") + "\n";
-    strUsage += "  -conf=<file>           " + _("Specify configuration file (default: bitcoin.conf)") + "\n";
+    strUsage += "  -conf=<file>           " + _("Specify configuration file (default: carboncoin.conf)") + "\n";
     if (hmm == HMM_BITCOIND)
     {
 #if !defined(WIN32)
@@ -209,7 +209,7 @@ std::string HelpMessage(HelpMessageMode hmm)
     strUsage += "  -maxorphanblocks=<n>   " + strprintf(_("Keep at most <n> unconnectable blocks in memory (default: %u)"), DEFAULT_MAX_ORPHAN_BLOCKS) + "\n";
     strUsage += "  -maxorphantx=<n>       " + strprintf(_("Keep at most <n> unconnectable transactions in memory (default: %u)"), DEFAULT_MAX_ORPHAN_TRANSACTIONS) + "\n";
     strUsage += "  -par=<n>               " + strprintf(_("Set the number of script verification threads (%u to %d, 0 = auto, <0 = leave that many cores free, default: %d)"), -(int)boost::thread::hardware_concurrency(), MAX_SCRIPTCHECK_THREADS, DEFAULT_SCRIPTCHECK_THREADS) + "\n";
-    strUsage += "  -pid=<file>            " + _("Specify pid file (default: bitcoind.pid)") + "\n";
+    strUsage += "  -pid=<file>            " + _("Specify pid file (default: carboncoind.pid)") + "\n";
     strUsage += "  -reindex               " + _("Rebuild block chain index from current blk000??.dat files") + " " + _("on startup") + "\n";
     strUsage += "  -txindex               " + _("Maintain a full transaction index (default: 0)") + "\n";
 
@@ -340,7 +340,7 @@ struct CImportingNow
 
 void ThreadImport(std::vector<boost::filesystem::path> vImportFiles)
 {
-    RenameThread("bitcoin-loadblk");
+    RenameThread("carboncoin-loadblk");
 
     // -reindex
     if (fReindex) {
@@ -398,7 +398,7 @@ bool InitSanityCheck(void)
 {
     if(!ECC_InitSanityCheck()) {
         InitError("OpenSSL appears to lack support for elliptic curve cryptography. For more "
-                  "information, visit https://en.bitcoin.it/wiki/OpenSSL_and_EC_Libraries");
+                  "information, visit https://en.carboncoin.it/wiki/OpenSSL_and_EC_Libraries");
         return false;
     }
 
@@ -407,7 +407,7 @@ bool InitSanityCheck(void)
     return true;
 }
 
-/** Initialize bitcoin.
+/** Initialize carboncoin.
  *  @pre Parameters should be parsed and config file should be read.
  */
 bool AppInit2(boost::thread_group& threadGroup)

@@ -225,7 +225,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Гаманець зашифровано</translation>
     </message>
     <message>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your carboncoins from being stolen by malware infecting your computer.</source>
         <translation>Біткоін-клієнт буде закрито для завершення процесу шифрування. Пам'ятайте, що шифрування гаманця не може повністю захистити ваші біткоіни від крадіжки, у випадку якщо ваш комп'ютер буде інфіковано шкідливими програмами.</translation>
     </message>
     <message>
@@ -432,8 +432,8 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Bitcoin Core</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation>Створити запит платежу (генерує QR-код та bitcoin: URI)</translation>
+        <source>Request payments (generates QR codes and carboncoin: URIs)</source>
+        <translation>Створити запит платежу (генерує QR-код та carboncoin: URI)</translation>
     </message>
     <message>
         <source>&amp;About Bitcoin Core</source>
@@ -448,8 +448,8 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Показати список адрес і міток, що були використані для отримання</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI or payment request</source>
-        <translation>Відкрити bitcoin: URI чи запит платежу</translation>
+        <source>Open a carboncoin: URI or payment request</source>
+        <translation>Відкрити carboncoin: URI чи запит платежу</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -1286,8 +1286,8 @@ Address: %4
         <translation>Помилка запиту платежу</translation>
     </message>
     <message>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
-        <translation>Неможливо запустити bitcoin: обробник click-to-pay</translation>
+        <source>Cannot start carboncoin: click-to-pay handler</source>
+        <translation>Неможливо запустити carboncoin: обробник click-to-pay</translation>
     </message>
     <message>
         <source>Net manager warning</source>
@@ -1954,8 +1954,8 @@ Address: %4
         <translation>Введіть мітку для цієї адреси для додавання її в список використаних адрес</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
-        <translation>Повідомлення, що було додане до bitcoin:URI та буде збережено разом з транзакцією для довідки. Примітка: Це повідомлення не буде відправлено в мережу Bitcoin.</translation>
+        <source>A message that was attached to the carboncoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
+        <translation>Повідомлення, що було додане до carboncoin:URI та буде збережено разом з транзакцією для довідки. Примітка: Це повідомлення не буде відправлено в мережу Bitcoin.</translation>
     </message>
     <message>
         <source>This is an unverified payment request.</source>
@@ -2592,7 +2592,7 @@ Address: %4
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>carboncoin-core</name>
     <message>
         <source>Usage:</source>
         <translation>Використання:</translation>
@@ -2610,12 +2610,12 @@ Address: %4
         <translation>Параметри:</translation>
     </message>
     <message>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>Вкажіть файл конфігурації (типово: bitcoin.conf)</translation>
+        <source>Specify configuration file (default: carboncoin.conf)</source>
+        <translation>Вкажіть файл конфігурації (типово: carboncoin.conf)</translation>
     </message>
     <message>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>Вкажіть pid-файл (типово: bitcoind.pid)</translation>
+        <source>Specify pid file (default: carboncoind.pid)</source>
+        <translation>Вкажіть pid-файл (типово: carboncoind.pid)</translation>
     </message>
     <message>
         <source>Specify data directory</source>
@@ -2677,7 +2677,7 @@ Address: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=carboncoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -2688,7 +2688,7 @@ for example: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com
         <translation>%s, ви повинні встановити rpcpassword в файлі конфігурації:
 %s
 Рекомендується використати такий випадковий пароль:
-rpcuser=bitcoinrpc
+rpcuser=carboncoinrpc
 rpcpassword=%s
 (ви не повинні пам'ятати цей пароль)
 Ім’я користувача та пароль ПОВИННІ бути різними.
@@ -3022,8 +3022,8 @@ rpcpassword=%s
         <translation>Це призначено для інструментів регресивного тестування та розробки додатків.</translation>
     </message>
     <message>
-        <source>Usage (deprecated, use bitcoin-cli):</source>
-        <translation>Використання (застаріле, використовуйте bitcoin-cli):</translation>
+        <source>Usage (deprecated, use carboncoin-cli):</source>
+        <translation>Використання (застаріле, використовуйте carboncoin-cli):</translation>
     </message>
     <message>
         <source>Verifying blocks...</source>

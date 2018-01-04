@@ -203,8 +203,8 @@
         <translation>Cartera encriptada</translation>
     </message>
     <message>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>Bitcoin se cerrará para finalizar el proceso de encriptación. Recuerda que encriptar tu cartera no protege completamente a tus bitcoins de ser robadas por malware infectando tu computadora.</translation>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your carboncoins from being stolen by malware infecting your computer.</source>
+        <translation>Bitcoin se cerrará para finalizar el proceso de encriptación. Recuerda que encriptar tu cartera no protege completamente a tus carboncoins de ser robadas por malware infectando tu computadora.</translation>
     </message>
     <message>
         <source>Wallet encryption failed</source>
@@ -1154,7 +1154,7 @@
     </message>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>carboncoin-core</name>
     <message>
         <source>Usage:</source>
         <translation>Uso:</translation>

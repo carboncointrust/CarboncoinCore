@@ -226,7 +226,7 @@ Tämä ohjelma sisältää OpenSSL projektin OpenSSL työkalupakin (http://www.o
         <translation>Lompakko salattu</translation>
     </message>
     <message>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your carboncoins from being stolen by malware infecting your computer.</source>
         <translation>Bitcoin sulkeutuu lopettaakseen salausprosessin. Muista, että salattukaan lompakko ei täysin suojaa sitä haittaohjelmien aiheuttamilta varkauksilta.</translation>
     </message>
     <message>
@@ -433,8 +433,8 @@ Tämä ohjelma sisältää OpenSSL projektin OpenSSL työkalupakin (http://www.o
         <translation>Bitcoin-ydin</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation>Pyydä maksuja (Luo QR koodit ja bitcoin: URIt)</translation>
+        <source>Request payments (generates QR codes and carboncoin: URIs)</source>
+        <translation>Pyydä maksuja (Luo QR koodit ja carboncoin: URIt)</translation>
     </message>
     <message>
         <source>&amp;About Bitcoin Core</source>
@@ -449,8 +449,8 @@ Tämä ohjelma sisältää OpenSSL projektin OpenSSL työkalupakin (http://www.o
         <translation>Näytä vastaanottamiseen käytettyjen osoitteiden ja nimien lista</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI or payment request</source>
-        <translation>Avaa bitcoin: URI tai maksupyyntö</translation>
+        <source>Open a carboncoin: URI or payment request</source>
+        <translation>Avaa carboncoin: URI tai maksupyyntö</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -1157,11 +1157,11 @@ Osoite: %4</translation>
     </message>
     <message>
         <source>&amp;Unit to show amounts in:</source>
-        <translation>Yksikkö jona bitcoin-määrät näytetään</translation>
+        <translation>Yksikkö jona carboncoin-määrät näytetään</translation>
     </message>
     <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Valitse mitä yksikköä käytetään ensisijaisesti bitcoin-määrien näyttämiseen.</translation>
+        <translation>Valitse mitä yksikköä käytetään ensisijaisesti carboncoin-määrien näyttämiseen.</translation>
     </message>
     <message>
         <source>Whether to show Bitcoin addresses in the transaction list or not.</source>
@@ -1286,8 +1286,8 @@ Osoite: %4</translation>
         <translation>Maksupyyntövirhe</translation>
     </message>
     <message>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
-        <translation>Ei voida käynnistää bitcoin: klikkaa-maksu käsittelijää</translation>
+        <source>Cannot start carboncoin: click-to-pay handler</source>
+        <translation>Ei voida käynnistää carboncoin: klikkaa-maksu käsittelijää</translation>
     </message>
     <message>
         <source>Net manager warning</source>
@@ -1954,8 +1954,8 @@ Osoite: %4</translation>
         <translation>Aseta nimi tälle osoitteelle lisätäksesi sen käytettyjen osoitteiden listalle.</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
-        <translation>Viesti joka liitettiin bitcoin: URI:iin tallennetaan rahansiirtoon viitteeksi. Tätä viestiä ei lähetetä Bitcoin-verkkoon.</translation>
+        <source>A message that was attached to the carboncoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
+        <translation>Viesti joka liitettiin carboncoin: URI:iin tallennetaan rahansiirtoon viitteeksi. Tätä viestiä ei lähetetä Bitcoin-verkkoon.</translation>
     </message>
     <message>
         <source>This is an unverified payment request.</source>
@@ -2592,7 +2592,7 @@ Osoite: %4</translation>
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>carboncoin-core</name>
     <message>
         <source>Usage:</source>
         <translation>Käyttö:</translation>
@@ -2610,12 +2610,12 @@ Osoite: %4</translation>
         <translation>Asetukset:</translation>
     </message>
     <message>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>Määritä asetustiedosto (oletus: bitcoin.conf)</translation>
+        <source>Specify configuration file (default: carboncoin.conf)</source>
+        <translation>Määritä asetustiedosto (oletus: carboncoin.conf)</translation>
     </message>
     <message>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>Määritä pid-tiedosto (oletus: bitcoin.pid)</translation>
+        <source>Specify pid file (default: carboncoind.pid)</source>
+        <translation>Määritä pid-tiedosto (oletus: carboncoin.pid)</translation>
     </message>
     <message>
         <source>Specify data directory</source>
@@ -2677,7 +2677,7 @@ Osoite: %4</translation>
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=carboncoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -2688,7 +2688,7 @@ for example: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com
         <translation>%s, sinun tulee asettaa rpcpassword asetustietostossa:
 %s
 Suositellaan että käytät allaolevaa satunnaista salasanaa:
-rpcuser=bitcoinrpc
+rpcuser=carboncoinrpc
 rpcpassword=%s
 (sinun ei tarvitse muistaa tätä salasanaa)
 Tämän tunnuksen ja salasanan TULEE OLLA sama.
@@ -3022,8 +3022,8 @@ esimerkiksi: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com
         <translation>Tämä on tarkoitettu regression testityökaluille ja ohjelman kehittämiseen.</translation>
     </message>
     <message>
-        <source>Usage (deprecated, use bitcoin-cli):</source>
-        <translation>Käyttö (vanhentunut, käytä bitcoin-cli):</translation>
+        <source>Usage (deprecated, use carboncoin-cli):</source>
+        <translation>Käyttö (vanhentunut, käytä carboncoin-cli):</translation>
     </message>
     <message>
         <source>Verifying blocks...</source>

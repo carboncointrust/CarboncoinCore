@@ -7,7 +7,7 @@
 #include "ui_aboutdialog.h"
 #include "ui_helpmessagedialog.h"
 
-#include "bitcoingui.h"
+#include "carboncoingui.h"
 #include "clientmodel.h"
 #include "guiutil.h"
 
@@ -67,7 +67,7 @@ HelpMessageDialog::HelpMessageDialog(QWidget *parent) :
     header = tr("Bitcoin Core") + " " + tr("version") + " " +
         QString::fromStdString(FormatFullVersion()) + "\n\n" +
         tr("Usage:") + "\n" +
-        "  bitcoin-qt [" + tr("command-line options") + "]                     " + "\n";
+        "  carboncoin-qt [" + tr("command-line options") + "]                     " + "\n";
 
     coreOptions = QString::fromStdString(HelpMessage(HMM_BITCOIN_QT));
 
@@ -78,7 +78,7 @@ HelpMessageDialog::HelpMessageDialog(QWidget *parent) :
         "  -rootcertificates=<file>  " + tr("Set SSL root certificates for payment request (default: -system-)") + "\n" +
         "  -splash                   " + tr("Show splash screen on startup (default: 1)");
 
-    ui->helpMessageLabel->setFont(GUIUtil::bitcoinAddressFont());
+    ui->helpMessageLabel->setFont(GUIUtil::carboncoinAddressFont());
 
     // Set help message text
     ui->helpMessageLabel->setText(header + "\n" + coreOptions + "\n" + uiOptions);

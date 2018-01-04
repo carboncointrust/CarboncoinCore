@@ -326,7 +326,7 @@
     </message>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>carboncoin-core</name>
     <message>
         <source>This help message</source>
         <translation>یہ مدد کا پیغام</translation>

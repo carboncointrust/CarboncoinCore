@@ -221,7 +221,7 @@ MIT/X11 프로그램 라이선스에 따라 배포합니다. COPYING 또는 http
         <translation>지갑 암호화 완료</translation>
     </message>
     <message>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your carboncoins from being stolen by malware infecting your computer.</source>
         <translation>암호화 처리 과정을 끝내기 위해 비트코인을 종료합니다. 지갑 암호화는 컴퓨터로의 멀웨어 감염으로 인한 비트코인 도난을 완전히 방지할 수 없음을 기억하세요.</translation>
     </message>
     <message>
@@ -428,8 +428,8 @@ MIT/X11 프로그램 라이선스에 따라 배포합니다. COPYING 또는 http
         <translation>비트코인 코어</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation>지불 요청하기 (QR코드와 bitcoin: URI가 생성됩니다)</translation>
+        <source>Request payments (generates QR codes and carboncoin: URIs)</source>
+        <translation>지불 요청하기 (QR코드와 carboncoin: URI가 생성됩니다)</translation>
     </message>
     <message>
         <source>&amp;About Bitcoin Core</source>
@@ -444,8 +444,8 @@ MIT/X11 프로그램 라이선스에 따라 배포합니다. COPYING 또는 http
         <translation>한번 이상 사용된 받는 주소와 주소 제목의 목록을 보여줍니다.</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI or payment request</source>
-        <translation>bitcoin: URI 또는 지불요청 열기</translation>
+        <source>Open a carboncoin: URI or payment request</source>
+        <translation>carboncoin: URI 또는 지불요청 열기</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -1238,7 +1238,7 @@ Address: %4
         <translation>지불 요청 애러</translation>
     </message>
     <message>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
+        <source>Cannot start carboncoin: click-to-pay handler</source>
         <translation>비트코인을 시작할 수 없습니다: 지급제어기를 클릭하시오</translation>
     </message>
     <message>
@@ -1854,7 +1854,7 @@ Address: %4
         <translation>사용된 주소 목록에 새 주소를 추가하기 위해 제목을 입력합니다. </translation>
     </message>
     <message>
-        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
+        <source>A message that was attached to the carboncoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
         <translation>비트코인에 첨부된 메시지: 참고용으로 거래와 함께 저장될 URI. 메모: 이 메시지는 비트코인 네트워크로 전송되지 않습니다.</translation>
     </message>
     <message>
@@ -2492,7 +2492,7 @@ Address: %4
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>carboncoin-core</name>
     <message>
         <source>Usage:</source>
         <translation>사용법:</translation>
@@ -2510,12 +2510,12 @@ Address: %4
         <translation>옵션:</translation>
     </message>
     <message>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>설정파일 지정 (기본값: bitcoin.conf)</translation>
+        <source>Specify configuration file (default: carboncoin.conf)</source>
+        <translation>설정파일 지정 (기본값: carboncoin.conf)</translation>
     </message>
     <message>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>pid 파일 지정 (기본값: bitcoind.pid)</translation>
+        <source>Specify pid file (default: carboncoind.pid)</source>
+        <translation>pid 파일 지정 (기본값: carboncoind.pid)</translation>
     </message>
     <message>
         <source>Specify data directory</source>
@@ -2844,8 +2844,8 @@ Address: %4
         <translation>데이터 폴더 안에 지갑 파일을 선택하세요.</translation>
     </message>
     <message>
-        <source>Usage (deprecated, use bitcoin-cli):</source>
-        <translation>사용법 (오래되었습니다. bitcoin-cli를 사용하십시오):</translation>
+        <source>Usage (deprecated, use carboncoin-cli):</source>
+        <translation>사용법 (오래되었습니다. carboncoin-cli를 사용하십시오):</translation>
     </message>
     <message>
         <source>Verifying blocks...</source>

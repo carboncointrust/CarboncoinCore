@@ -225,7 +225,7 @@ Acest produs include programe dezvoltate de către Proiectul OpenSSL pentru a fi
         <translation>Portofel criptat</translation>
     </message>
     <message>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your carboncoins from being stolen by malware infecting your computer.</source>
         <translation>Bitcoin se va închide acum pentru a termina procesul de criptare. Ţineţi minte că criptarea portofelului nu vă poate proteja în totalitate de furtul monedelor de către programe dăunătoare care vă infectează calculatorul.</translation>
     </message>
     <message>
@@ -432,8 +432,8 @@ Acest produs include programe dezvoltate de către Proiectul OpenSSL pentru a fi
         <translation>Nucleul Bitcoin</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation>Cereţi plăţi (generează coduri QR şi bitcoin-uri: URls)</translation>
+        <source>Request payments (generates QR codes and carboncoin: URIs)</source>
+        <translation>Cereţi plăţi (generează coduri QR şi carboncoin-uri: URls)</translation>
     </message>
     <message>
         <source>&amp;About Bitcoin Core</source>
@@ -448,8 +448,8 @@ Acest produs include programe dezvoltate de către Proiectul OpenSSL pentru a fi
         <translation>Arată lista de adrese pentru primire şi etichetele</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI or payment request</source>
-        <translation>Deschidere bitcoin: o adresa URI sau o cerere de plată</translation>
+        <source>Open a carboncoin: URI or payment request</source>
+        <translation>Deschidere carboncoin: o adresa URI sau o cerere de plată</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -826,7 +826,7 @@ Adresa: %4
     </message>
     <message>
         <source>The entered address "%1" is not a valid Bitcoin address.</source>
-        <translation>Adresa introdusă "%1" nu este o adresă bitcoin validă.</translation>
+        <translation>Adresa introdusă "%1" nu este o adresă carboncoin validă.</translation>
     </message>
     <message>
         <source>Could not unlock wallet.</source>
@@ -1137,7 +1137,7 @@ Adresa: %4
     </message>
     <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Alegeţi subdiviziunea folosită la afişarea interfeţei şi la trimiterea de bitcoin.</translation>
+        <translation>Alegeţi subdiviziunea folosită la afişarea interfeţei şi la trimiterea de carboncoin.</translation>
     </message>
     <message>
         <source>Whether to show Bitcoin addresses in the transaction list or not.</source>
@@ -1185,7 +1185,7 @@ Adresa: %4
     </message>
     <message>
         <source>The supplied proxy address is invalid.</source>
-        <translation>Adresa bitcoin pe care aţi specificat-o nu este validă.</translation>
+        <translation>Adresa carboncoin pe care aţi specificat-o nu este validă.</translation>
     </message>
 </context>
 <context>
@@ -1262,8 +1262,8 @@ Adresa: %4
         <translation>Eroare la cererea de plată</translation>
     </message>
     <message>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
-        <translation>Nu poate porni bitcoin: manipulator clic-pentru-plată</translation>
+        <source>Cannot start carboncoin: click-to-pay handler</source>
+        <translation>Nu poate porni carboncoin: manipulator clic-pentru-plată</translation>
     </message>
     <message>
         <source>Net manager warning</source>
@@ -1468,7 +1468,7 @@ Adresa: %4
     </message>
     <message>
         <source>Welcome to the Bitcoin RPC console.</source>
-        <translation>Bun venit la consola bitcoin RPC.</translation>
+        <translation>Bun venit la consola carboncoin RPC.</translation>
     </message>
     <message>
         <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
@@ -1844,7 +1844,7 @@ Adresa: %4
     </message>
     <message>
         <source>Warning: Invalid Bitcoin address</source>
-        <translation>Atenţie: Adresa bitcoin nevalidă!</translation>
+        <translation>Atenţie: Adresa carboncoin nevalidă!</translation>
     </message>
     <message>
         <source>(no label)</source>
@@ -1930,8 +1930,8 @@ Adresa: %4
         <translation>Introduceţi eticheta pentru ca această adresa să fie introdusă în lista de adrese folosite</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
-        <translation>Un mesaj a fost ataşat la bitcoin: URI care va fi stocat cu tranzacţia pentru referinţa dvs. Notă: Acest mesaj nu va fi trimis către reţeaua bitcoin.</translation>
+        <source>A message that was attached to the carboncoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
+        <translation>Un mesaj a fost ataşat la carboncoin: URI care va fi stocat cu tranzacţia pentru referinţa dvs. Notă: Acest mesaj nu va fi trimis către reţeaua carboncoin.</translation>
     </message>
     <message>
         <source>This is an unverified payment request.</source>
@@ -2521,7 +2521,7 @@ Adresa: %4
     <name>WalletModel</name>
     <message>
         <source>Send Coins</source>
-        <translation>Trimitere bitcoin</translation>
+        <translation>Trimitere carboncoin</translation>
     </message>
 </context>
 <context>
@@ -2560,7 +2560,7 @@ Adresa: %4
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>carboncoin-core</name>
     <message>
         <source>Usage:</source>
         <translation>Uz:</translation>
@@ -2578,12 +2578,12 @@ Adresa: %4
         <translation>Opţiuni:</translation>
     </message>
     <message>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>Specificaţi fişierul de configurare (implicit: bitcoin.conf)</translation>
+        <source>Specify configuration file (default: carboncoin.conf)</source>
+        <translation>Specificaţi fişierul de configurare (implicit: carboncoin.conf)</translation>
     </message>
     <message>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>Specificaţi fişierul pid (implicit bitcoind.pid)</translation>
+        <source>Specify pid file (default: carboncoind.pid)</source>
+        <translation>Specificaţi fişierul pid (implicit carboncoind.pid)</translation>
     </message>
     <message>
         <source>Specify data directory</source>
@@ -2645,7 +2645,7 @@ Adresa: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=carboncoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -2656,7 +2656,7 @@ for example: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com
         <translation>%s trebuie să setaţi o parolă rpc în fişierul de configurare
 %s
 Este recomandat să folosiţi această parolă aleatoare:
-rpcuser=bitcoinrpc
+rpcuser=carboncoinrpc
 parola rpc=%s
 (nu este necesar ca să vă amintiţi această parolă)
 Numele de utilizator şi parola NU trebuie să fie la fel.
@@ -2991,8 +2991,8 @@ spre exemplu: alertnotify=echo %%s | mail -s "Alerta Bitcoin" admin@foo.com
         <translation>Este folosită pentru programe de testare a regresiei în algoritmi şi dezvoltare de alte aplicaţii.</translation>
     </message>
     <message>
-        <source>Usage (deprecated, use bitcoin-cli):</source>
-        <translation>Utilizare (învechită, folosiţi bitcoin-cli):</translation>
+        <source>Usage (deprecated, use carboncoin-cli):</source>
+        <translation>Utilizare (învechită, folosiţi carboncoin-cli):</translation>
     </message>
     <message>
         <source>Verifying blocks...</source>

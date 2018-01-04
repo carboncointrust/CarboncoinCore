@@ -224,6 +224,6 @@ Ce produit comprend des logiciels développés par le projet OpenSSL pour être 
     <name>WalletView</name>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>carboncoin-core</name>
     </context>
 </TS>

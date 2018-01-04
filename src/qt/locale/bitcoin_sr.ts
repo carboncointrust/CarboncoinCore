@@ -127,8 +127,8 @@
         <translation>Новчаник је шифрован</translation>
     </message>
     <message>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>Bitcoin će se sad zatvoriti da bi završio  proces enkripcije. Zapamti da enkripcija tvog novčanika ne može u potpunosti da zaštiti tvoje bitcoine da ne budu ukradeni od malawarea koji bi inficirao tvoj kompjuter.</translation>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your carboncoins from being stolen by malware infecting your computer.</source>
+        <translation>Bitcoin će se sad zatvoriti da bi završio  proces enkripcije. Zapamti da enkripcija tvog novčanika ne može u potpunosti da zaštiti tvoje carboncoine da ne budu ukradeni od malawarea koji bi inficirao tvoj kompjuter.</translation>
     </message>
     <message>
         <source>Wallet encryption failed</source>
@@ -219,11 +219,11 @@
     </message>
     <message>
         <source>Send coins to a Bitcoin address</source>
-        <translation>Пошаљите новац на bitcoin адресу</translation>
+        <translation>Пошаљите новац на carboncoin адресу</translation>
     </message>
     <message>
         <source>Modify configuration options for Bitcoin</source>
-        <translation>Изаберите могућности bitcoin-а</translation>
+        <translation>Изаберите могућности carboncoin-а</translation>
     </message>
     <message>
         <source>Change the passphrase used for wallet encryption</source>
@@ -802,7 +802,7 @@ Address: %4
     </message>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>carboncoin-core</name>
     <message>
         <source>Usage:</source>
         <translation>Korišćenje:</translation>
@@ -820,12 +820,12 @@ Address: %4
         <translation>Opcije</translation>
     </message>
     <message>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>Potvrdi željeni konfiguracioni fajl (podrazumevani:bitcoin.conf)</translation>
+        <source>Specify configuration file (default: carboncoin.conf)</source>
+        <translation>Potvrdi željeni konfiguracioni fajl (podrazumevani:carboncoin.conf)</translation>
     </message>
     <message>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>Konkretizuj pid fajl (podrazumevani: bitcoind.pid)</translation>
+        <source>Specify pid file (default: carboncoind.pid)</source>
+        <translation>Konkretizuj pid fajl (podrazumevani: carboncoind.pid)</translation>
     </message>
     <message>
         <source>Specify data directory</source>

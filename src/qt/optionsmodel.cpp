@@ -3,12 +3,12 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "bitcoin-config.h"
+#include "carboncoin-config.h"
 #endif
 
 #include "optionsmodel.h"
 
-#include "bitcoinunits.h"
+#include "carboncoinunits.h"
 #include "guiutil.h"
 
 #include "init.h"

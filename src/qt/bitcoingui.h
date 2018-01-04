@@ -6,7 +6,7 @@
 #define BITCOINGUI_H
 
 #if defined(HAVE_CONFIG_H)
-#include "bitcoin-config.h"
+#include "carboncoin-config.h"
 #endif
 
 #include <QMainWindow>
@@ -49,7 +49,7 @@ public:
 
 #ifdef ENABLE_WALLET
     /** Set the wallet model.
-        The wallet model represents a bitcoin wallet, and offers access to the list of transactions, address book and sending
+        The wallet model represents a carboncoin wallet, and offers access to the list of transactions, address book and sending
         functionality.
     */
     bool addWallet(const QString& name, WalletModel *walletModel);

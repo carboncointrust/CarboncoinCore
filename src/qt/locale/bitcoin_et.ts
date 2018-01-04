@@ -189,8 +189,8 @@ Toode sisaldab OpenSSL Projekti all toodetud tarkvara, mis on kasutamiseks OpenS
         <translation>Rahakott krüpteeritud</translation>
     </message>
     <message>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>Bitcoin sulgub krüpteeringu lõpetamiseks. Pea meeles, et rahakoti krüpteerimine ei välista bitcoinide vargust, kui sinu arvuti on nakatunud pahavaraga.</translation>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your carboncoins from being stolen by malware infecting your computer.</source>
+        <translation>Bitcoin sulgub krüpteeringu lõpetamiseks. Pea meeles, et rahakoti krüpteerimine ei välista carboncoinide vargust, kui sinu arvuti on nakatunud pahavaraga.</translation>
     </message>
     <message>
         <source>Wallet encryption failed</source>
@@ -877,7 +877,7 @@ Aadress: %4⏎</translation>
         <translation>URI ei suudeta parsida. Põhjuseks võib olla kehtetu Bitcoini aadress või vigased URI parameetrid.</translation>
     </message>
     <message>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
+        <source>Cannot start carboncoin: click-to-pay handler</source>
         <translation>Bitcoin ei käivitu: vajuta-maksa toiming</translation>
     </message>
     </context>
@@ -1771,7 +1771,7 @@ Aadress: %4⏎</translation>
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>carboncoin-core</name>
     <message>
         <source>Usage:</source>
         <translation>Kasutus:</translation>
@@ -1789,12 +1789,12 @@ Aadress: %4⏎</translation>
         <translation>Valikud:</translation>
     </message>
     <message>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>Täpsusta sätete fail (vaikimisi: bitcoin.conf)</translation>
+        <source>Specify configuration file (default: carboncoin.conf)</source>
+        <translation>Täpsusta sätete fail (vaikimisi: carboncoin.conf)</translation>
     </message>
     <message>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>Täpsusta PID fail (vaikimisi: bitcoin.pid)</translation>
+        <source>Specify pid file (default: carboncoind.pid)</source>
+        <translation>Täpsusta PID fail (vaikimisi: carboncoin.pid)</translation>
     </message>
     <message>
         <source>Specify data directory</source>
@@ -1852,7 +1852,7 @@ Aadress: %4⏎</translation>
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=carboncoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -1863,7 +1863,7 @@ for example: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com
         <translation>%s, sul tuleb rpcpassword määrata seadete failis:
 %s
 Soovitatav on kasutada järgmist juhuslikku parooli:
-rpcuser=bitcoinrpc
+rpcuser=carboncoinrpc
 rpcpassword=%s
 (seda parooli ei pea meeles pidama)
 Kasutajanimi ning parool EI TOHI kattuda.

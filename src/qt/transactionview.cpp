@@ -5,7 +5,7 @@
 #include "transactionview.h"
 
 #include "addresstablemodel.h"
-#include "bitcoinunits.h"
+#include "carboncoinunits.h"
 #include "csvmodelwriter.h"
 #include "editaddressdialog.h"
 #include "guiutil.h"

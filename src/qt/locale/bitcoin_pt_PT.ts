@@ -225,8 +225,8 @@ Este produto inclui software desenvolvido pelo Projecto OpenSSL para uso no Open
         <translation>Carteira encriptada</translation>
     </message>
     <message>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>O cliente Bitcoin irá agora ser fechado para terminar o processo de encriptação. Recorde que a encriptação da sua carteira não protegerá totalmente os seus bitcoins de serem roubados por programas maliciosos que infectem o seu computador.</translation>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your carboncoins from being stolen by malware infecting your computer.</source>
+        <translation>O cliente Bitcoin irá agora ser fechado para terminar o processo de encriptação. Recorde que a encriptação da sua carteira não protegerá totalmente os seus carboncoins de serem roubados por programas maliciosos que infectem o seu computador.</translation>
     </message>
     <message>
         <source>Wallet encryption failed</source>
@@ -345,11 +345,11 @@ Este produto inclui software desenvolvido pelo Projecto OpenSSL para uso no Open
     </message>
     <message>
         <source>Send coins to a Bitcoin address</source>
-        <translation>Enviar moedas para um endereço bitcoin</translation>
+        <translation>Enviar moedas para um endereço carboncoin</translation>
     </message>
     <message>
         <source>Modify configuration options for Bitcoin</source>
-        <translation>Modificar opções de configuração para bitcoin</translation>
+        <translation>Modificar opções de configuração para carboncoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -432,8 +432,8 @@ Este produto inclui software desenvolvido pelo Projecto OpenSSL para uso no Open
         <translation>Bitcoin Core</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation>Solicitar pagamentos (gera códigos QR e URIs bitcoin:)</translation>
+        <source>Request payments (generates QR codes and carboncoin: URIs)</source>
+        <translation>Solicitar pagamentos (gera códigos QR e URIs carboncoin:)</translation>
     </message>
     <message>
         <source>&amp;About Bitcoin Core</source>
@@ -448,8 +448,8 @@ Este produto inclui software desenvolvido pelo Projecto OpenSSL para uso no Open
         <translation>Mostrar a lista de rótulos e endereços de receção usados</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI or payment request</source>
-        <translation>Abrir URI bitcoin: ou pedido de pagamento</translation>
+        <source>Open a carboncoin: URI or payment request</source>
+        <translation>Abrir URI carboncoin: ou pedido de pagamento</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -845,7 +845,7 @@ Endereço: %4</translation>
     </message>
     <message>
         <source>The entered address "%1" is not a valid Bitcoin address.</source>
-        <translation>O endereço introduzido "%1" não é um endereço bitcoin válido.</translation>
+        <translation>O endereço introduzido "%1" não é um endereço carboncoin válido.</translation>
     </message>
     <message>
         <source>Could not unlock wallet.</source>
@@ -1097,7 +1097,7 @@ Endereço: %4</translation>
     </message>
     <message>
         <source>Automatically open the Bitcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Abrir a porta do cliente bitcoin automaticamente no seu router. Isto apenas funciona se o seu router suportar UPnP e este se encontrar ligado.</translation>
+        <translation>Abrir a porta do cliente carboncoin automaticamente no seu router. Isto apenas funciona se o seu router suportar UPnP e este se encontrar ligado.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1286,8 +1286,8 @@ Endereço: %4</translation>
         <translation>Erro de pedido de pagamento</translation>
     </message>
     <message>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
-        <translation>Impossível iniciar o controlador de bitcoin: click-to-pay</translation>
+        <source>Cannot start carboncoin: click-to-pay handler</source>
+        <translation>Impossível iniciar o controlador de carboncoin: click-to-pay</translation>
     </message>
     <message>
         <source>Net manager warning</source>
@@ -1946,8 +1946,8 @@ Endereço: %4</translation>
         <translation>Introduza um rótulo para este endereço para o adicionar à sua lista de endereços usados</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
-        <translation>Uma mensagem que estava anexada ao URI bitcoin: que será armazenada com a transação para sua referência. Nota: Esta mensagem não será enviada através da rede Bitcoin.</translation>
+        <source>A message that was attached to the carboncoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
+        <translation>Uma mensagem que estava anexada ao URI carboncoin: que será armazenada com a transação para sua referência. Nota: Esta mensagem não será enviada através da rede Bitcoin.</translation>
     </message>
     <message>
         <source>This is an unverified payment request.</source>
@@ -2584,7 +2584,7 @@ Endereço: %4</translation>
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>carboncoin-core</name>
     <message>
         <source>Usage:</source>
         <translation>Utilização:</translation>
@@ -2602,12 +2602,12 @@ Endereço: %4</translation>
         <translation>Opções:</translation>
     </message>
     <message>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>Especificar ficheiro de configuração (por defeito: bitcoin.conf)</translation>
+        <source>Specify configuration file (default: carboncoin.conf)</source>
+        <translation>Especificar ficheiro de configuração (por defeito: carboncoin.conf)</translation>
     </message>
     <message>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>Especificar ficheiro pid (por defeito: bitcoind.pid)</translation>
+        <source>Specify pid file (default: carboncoind.pid)</source>
+        <translation>Especificar ficheiro pid (por defeito: carboncoind.pid)</translation>
     </message>
     <message>
         <source>Specify data directory</source>
@@ -2665,7 +2665,7 @@ Endereço: %4</translation>
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=carboncoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -2676,7 +2676,7 @@ for example: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com
         <translation>%s, deverá definir uma rpcpassword no ficheiro de configuração:
 %s
 É recomendado que use a seguinte palavra-passe aleatória:
-rpcuser=bitcoinrpc
+rpcuser=carboncoinrpc
 rpcpassword=%s
 (não é necessário lembrar esta palavra-passe)
 O nome de utilizador e palavra-passe NÃO PODEM ser iguais.
@@ -2973,8 +2973,8 @@ por exemplo: alertnotify=echo %%s | mail -s "Alerta Bitcoin" admin@foo.com</tran
         <translation>Isto têm como fim a realização de testes de regressão para pools e desenvolvimento de aplicações.</translation>
     </message>
     <message>
-        <source>Usage (deprecated, use bitcoin-cli):</source>
-        <translation>Utilização (obsoleto, usar bitcoin-cli):</translation>
+        <source>Usage (deprecated, use carboncoin-cli):</source>
+        <translation>Utilização (obsoleto, usar carboncoin-cli):</translation>
     </message>
     <message>
         <source>Verifying blocks...</source>

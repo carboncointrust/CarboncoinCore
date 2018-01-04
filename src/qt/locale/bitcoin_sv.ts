@@ -226,7 +226,7 @@ Denna produkten innehåller mjukvara utvecklad av OpenSSL Project för användni
         <translation>Plånboken är krypterad</translation>
     </message>
     <message>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your carboncoins from being stolen by malware infecting your computer.</source>
         <translation>Programmet kommer nu att stänga ner för att färdigställa krypteringen. Tänk på att en krypterad plånbok inte skyddar mot stöld om din dator är infekterad med en keylogger.</translation>
     </message>
     <message>
@@ -433,8 +433,8 @@ Denna produkten innehåller mjukvara utvecklad av OpenSSL Project för användni
         <translation>Bitcoin Kärna</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation>Begär betalning (genererar QR-koder och bitcoin-URI)</translation>
+        <source>Request payments (generates QR codes and carboncoin: URIs)</source>
+        <translation>Begär betalning (genererar QR-koder och carboncoin-URI)</translation>
     </message>
     <message>
         <source>&amp;About Bitcoin Core</source>
@@ -449,8 +449,8 @@ Denna produkten innehåller mjukvara utvecklad av OpenSSL Project för användni
         <translation>Visa listan av använda mottagningsadresser och etiketter</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI or payment request</source>
-        <translation>Öppna en bitcoin: URI eller betalningsbegäran</translation>
+        <source>Open a carboncoin: URI or payment request</source>
+        <translation>Öppna en carboncoin: URI eller betalningsbegäran</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -1287,8 +1287,8 @@ Adress: %4
         <translation>Fel vid betalningsbegäran</translation>
     </message>
     <message>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
-        <translation>Kan inte starta bitcoin: klicka-och-betala handhavare</translation>
+        <source>Cannot start carboncoin: click-to-pay handler</source>
+        <translation>Kan inte starta carboncoin: klicka-och-betala handhavare</translation>
     </message>
     <message>
         <source>Net manager warning</source>
@@ -1951,8 +1951,8 @@ Adress: %4
         <translation>Ange en etikett för denna adress att adderas till listan över använda adresser</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
-        <translation>Ett meddelande som bifogades bitcoin-URI, vilket lagras med transaktionen som referens. NB: Meddelandet kommer inte att sändas över Bitcoinnätverket.</translation>
+        <source>A message that was attached to the carboncoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
+        <translation>Ett meddelande som bifogades carboncoin-URI, vilket lagras med transaktionen som referens. NB: Meddelandet kommer inte att sändas över Bitcoinnätverket.</translation>
     </message>
     <message>
         <source>This is an unverified payment request.</source>
@@ -2589,7 +2589,7 @@ Adress: %4
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>carboncoin-core</name>
     <message>
         <source>Usage:</source>
         <translation>Användning:</translation>
@@ -2607,12 +2607,12 @@ Adress: %4
         <translation>Inställningar:</translation>
     </message>
     <message>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>Ange konfigurationsfil (förvalt: bitcoin.conf)</translation>
+        <source>Specify configuration file (default: carboncoin.conf)</source>
+        <translation>Ange konfigurationsfil (förvalt: carboncoin.conf)</translation>
     </message>
     <message>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>Ange pid fil (förvalt: bitcoind.pid)</translation>
+        <source>Specify pid file (default: carboncoind.pid)</source>
+        <translation>Ange pid fil (förvalt: carboncoind.pid)</translation>
     </message>
     <message>
         <source>Specify data directory</source>
@@ -2674,7 +2674,7 @@ Adress: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=carboncoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -2685,7 +2685,7 @@ for example: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com
         <translation>%s, du behöver sätta ett rpclösensord i konfigurationsfilen:
 %s
 Det är rekommenderat att använda följande slumpade lösenord:
-rpcuser=bitcoinrpc
+rpcuser=carboncoinrpc
 rpcpassword=%s
 (du behöver inte komma ihåg lösenordet)
 Användarnamnet och lösenordet FÅR INTE bara detsamma.
@@ -2728,7 +2728,7 @@ till exempel: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com
     </message>
     <message>
         <source>Error: This transaction requires a transaction fee of at least %s because of its amount, complexity, or use of recently received funds!</source>
-        <translation>Fel: Denna transaktion kräver en transaktionsavgift på minst %s på grund av dess storlek, komplexitet, eller användning av senast mottagna bitcoins!</translation>
+        <translation>Fel: Denna transaktion kräver en transaktionsavgift på minst %s på grund av dess storlek, komplexitet, eller användning av senast mottagna carboncoins!</translation>
     </message>
     <message>
         <source>Execute command when a wallet transaction changes (%s in cmd is replaced by TxID)</source>
@@ -3019,8 +3019,8 @@ till exempel: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com
         <translation>Detta är avsett för regressionstestningsverktyg och applikationsutveckling.</translation>
     </message>
     <message>
-        <source>Usage (deprecated, use bitcoin-cli):</source>
-        <translation>Användning (föråldrat, använd bitcoin-cli):</translation>
+        <source>Usage (deprecated, use carboncoin-cli):</source>
+        <translation>Användning (föråldrat, använd carboncoin-cli):</translation>
     </message>
     <message>
         <source>Verifying blocks...</source>
@@ -3336,7 +3336,7 @@ till exempel: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com
     </message>
     <message>
         <source>Insufficient funds</source>
-        <translation>Otillräckligt med bitcoins</translation>
+        <translation>Otillräckligt med carboncoins</translation>
     </message>
     <message>
         <source>Loading block index...</source>

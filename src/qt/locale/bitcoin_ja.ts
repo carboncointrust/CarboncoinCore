@@ -221,7 +221,7 @@ MIT/X11 ソフトウェア ライセンスの下で配布されています。�
         <translation>ウォレットは暗号化されました</translation>
     </message>
     <message>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your carboncoins from being stolen by malware infecting your computer.</source>
         <translation>Bitcoin は暗号化プロセスを終了するために今すぐ終了します。あなたのコンピュータがマルウェアに感染してコインを盗まれることもあるので、暗号化してもあなたのウォレットを完全に保護できないことを覚えていてください。</translation>
     </message>
     <message>
@@ -428,8 +428,8 @@ MIT/X11 ソフトウェア ライセンスの下で配布されています。�
         <translation>Bitcoin のコア</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation>支払いを要求する (QRコードとbitcoin:ではじまるURIを生成する)</translation>
+        <source>Request payments (generates QR codes and carboncoin: URIs)</source>
+        <translation>支払いを要求する (QRコードとcarboncoin:ではじまるURIを生成する)</translation>
     </message>
     <message>
         <source>&amp;About Bitcoin Core</source>
@@ -444,8 +444,8 @@ MIT/X11 ソフトウェア ライセンスの下で配布されています。�
         <translation>支払いを受け取るアドレスとラベルのリストを表示する</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI or payment request</source>
-        <translation>bitcoin: URIまたは支払いリクエストを開く</translation>
+        <source>Open a carboncoin: URI or payment request</source>
+        <translation>carboncoin: URIまたは支払いリクエストを開く</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -1247,7 +1247,7 @@ Address: %4
         <translation>支払いのリクエストのエラーです</translation>
     </message>
     <message>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
+        <source>Cannot start carboncoin: click-to-pay handler</source>
         <translation>Bitcoin を起動できません: click-to-pay handler</translation>
     </message>
     <message>
@@ -1883,8 +1883,8 @@ Address: %4
         <translation>このアドレスに対するラベルを入力することで、使用済みアドレスの一覧に追加することができます</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
-        <translation>bitcoin: URIに添付されていたメッセージです。これは参照用としてトランザクションとともに保存されます。注意：このメッセージはBitcoinネットワークを通して送信されるわけではありません。</translation>
+        <source>A message that was attached to the carboncoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
+        <translation>carboncoin: URIに添付されていたメッセージです。これは参照用としてトランザクションとともに保存されます。注意：このメッセージはBitcoinネットワークを通して送信されるわけではありません。</translation>
     </message>
     <message>
         <source>This is an unverified payment request.</source>
@@ -2521,7 +2521,7 @@ Address: %4
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>carboncoin-core</name>
     <message>
         <source>Usage:</source>
         <translation>使用法:</translation>
@@ -2539,12 +2539,12 @@ Address: %4
         <translation>オプション:</translation>
     </message>
     <message>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>設定ファイルの指定 (初期値: bitcoin.conf)</translation>
+        <source>Specify configuration file (default: carboncoin.conf)</source>
+        <translation>設定ファイルの指定 (初期値: carboncoin.conf)</translation>
     </message>
     <message>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>pid ファイルの指定 (初期値: bitcoind.pid)</translation>
+        <source>Specify pid file (default: carboncoind.pid)</source>
+        <translation>pid ファイルの指定 (初期値: carboncoind.pid)</translation>
     </message>
     <message>
         <source>Specify data directory</source>
@@ -2606,7 +2606,7 @@ Address: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=carboncoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -2617,7 +2617,7 @@ for example: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com
         <translation>%s, rpcpassword を設定ファイルで設定してください:
 %s
 下記のランダムなパスワードの使用を推奨します:
-rpcuser=bitcoinrpc
+rpcuser=carboncoinrpc
 rpcpassword=%s
 (このパスワードを覚える必要はありません)
 ユーザー名とパスワードが同じであってはいけません。

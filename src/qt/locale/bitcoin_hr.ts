@@ -199,8 +199,8 @@
         <translation>Novčanik šifriran</translation>
     </message>
     <message>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>Bitcoin će se sada zatvoriti kako bi dovršio postupak šifriranja. Zapamtite da šifriranje vašeg novčanika ne može u potpunosti zaštititi vaše bitcoine od krađe preko zloćudnog softvera koji bi bio na vašem računalu.</translation>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your carboncoins from being stolen by malware infecting your computer.</source>
+        <translation>Bitcoin će se sada zatvoriti kako bi dovršio postupak šifriranja. Zapamtite da šifriranje vašeg novčanika ne može u potpunosti zaštititi vaše carboncoine od krađe preko zloćudnog softvera koji bi bio na vašem računalu.</translation>
     </message>
     <message>
         <source>Wallet encryption failed</source>
@@ -319,11 +319,11 @@
     </message>
     <message>
         <source>Send coins to a Bitcoin address</source>
-        <translation>Slanje novca na bitcoin adresu</translation>
+        <translation>Slanje novca na carboncoin adresu</translation>
     </message>
     <message>
         <source>Modify configuration options for Bitcoin</source>
-        <translation>Promijeni postavke konfiguracije za bitcoin</translation>
+        <translation>Promijeni postavke konfiguracije za carboncoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -406,8 +406,8 @@
         <translation>Bitcoin Jezgra</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation>Zatraži uplate (Stvara QR kodove i bitcoin: URIje)</translation>
+        <source>Request payments (generates QR codes and carboncoin: URIs)</source>
+        <translation>Zatraži uplate (Stvara QR kodove i carboncoin: URIje)</translation>
     </message>
     <message>
         <source>&amp;About Bitcoin Core</source>
@@ -560,7 +560,7 @@ Adresa:%4
     </message>
     <message>
         <source>The entered address "%1" is not a valid Bitcoin address.</source>
-        <translation>Upisana adresa "%1" nije valjana bitcoin adresa.</translation>
+        <translation>Upisana adresa "%1" nije valjana carboncoin adresa.</translation>
     </message>
     <message>
         <source>Could not unlock wallet.</source>
@@ -699,7 +699,7 @@ Adresa:%4
     </message>
     <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Izaberite željeni najmanji dio bitcoina koji će biti prikazan u sučelju i koji će se koristiti za plaćanje.</translation>
+        <translation>Izaberite željeni najmanji dio carboncoina koji će biti prikazan u sučelju i koji će se koristiti za plaćanje.</translation>
     </message>
     <message>
         <source>&amp;Display addresses in transaction list</source>
@@ -1450,7 +1450,7 @@ Adresa:%4
     </message>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>carboncoin-core</name>
     <message>
         <source>Usage:</source>
         <translation>Upotreba:</translation>
@@ -1468,12 +1468,12 @@ Adresa:%4
         <translation>Postavke:</translation>
     </message>
     <message>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>Odredi konfiguracijsku datoteku (ugrađeni izbor: bitcoin.conf)</translation>
+        <source>Specify configuration file (default: carboncoin.conf)</source>
+        <translation>Odredi konfiguracijsku datoteku (ugrađeni izbor: carboncoin.conf)</translation>
     </message>
     <message>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>Odredi proces ID datoteku (ugrađeni izbor: bitcoin.pid)</translation>
+        <source>Specify pid file (default: carboncoind.pid)</source>
+        <translation>Odredi proces ID datoteku (ugrađeni izbor: carboncoin.pid)</translation>
     </message>
     <message>
         <source>Specify data directory</source>

@@ -225,7 +225,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>钱包已加密</translation>
     </message>
     <message>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your carboncoins from being stolen by malware infecting your computer.</source>
         <translation>比特币客户端将关闭软件以完成加密过程。请您谨记：钱包加密并不是万能的，电脑中毒等原因仍可能导致您的比特币意外丢失。</translation>
     </message>
     <message>
@@ -432,8 +432,8 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>比特币核心</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation>请求支付（生成二维码和 bitcoin: URI）</translation>
+        <source>Request payments (generates QR codes and carboncoin: URIs)</source>
+        <translation>请求支付（生成二维码和 carboncoin: URI）</translation>
     </message>
     <message>
         <source>&amp;About Bitcoin Core</source>
@@ -448,7 +448,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>显示用过的接收地址和标签的列表</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI or payment request</source>
+        <source>Open a carboncoin: URI or payment request</source>
         <translation>打开一个比特币：URI 或支付请求</translation>
     </message>
     <message>
@@ -1287,7 +1287,7 @@ Address: %4
         <translation>支付请求出错</translation>
     </message>
     <message>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
+        <source>Cannot start carboncoin: click-to-pay handler</source>
         <translation>暂时无法启动比特币：点击支付功能</translation>
     </message>
     <message>
@@ -1955,8 +1955,8 @@ Address: %4
         <translation>请为此地址输入一个标签以将它加入用过的地址列表</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
-        <translation>bitcoin:URI 附带的备注信息，将会和交易一起存储，备查。 注意：该消息不会通过比特币网络传输。</translation>
+        <source>A message that was attached to the carboncoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
+        <translation>carboncoin:URI 附带的备注信息，将会和交易一起存储，备查。 注意：该消息不会通过比特币网络传输。</translation>
     </message>
     <message>
         <source>This is an unverified payment request.</source>
@@ -2593,7 +2593,7 @@ Address: %4
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>carboncoin-core</name>
     <message>
         <source>Usage:</source>
         <translation>使用：</translation>
@@ -2614,13 +2614,13 @@ Address: %4
 </translation>
     </message>
     <message>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>指定配置文件 (默认为 bitcoin.conf)
+        <source>Specify configuration file (default: carboncoin.conf)</source>
+        <translation>指定配置文件 (默认为 carboncoin.conf)
 </translation>
     </message>
     <message>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>指定 pid 文件 (默认为 bitcoind.pid)
+        <source>Specify pid file (default: carboncoind.pid)</source>
+        <translation>指定 pid 文件 (默认为 carboncoind.pid)
 </translation>
     </message>
     <message>
@@ -2688,7 +2688,7 @@ Address: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=carboncoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -2699,7 +2699,7 @@ for example: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com
         <translation>%s, 您必须在配置文件设置rpcpassword:
  %s
 建议您使用下面的随机密码:
-rpcuser=bitcoinrpc
+rpcuser=carboncoinrpc
 rpcpassword=%s
 (您无需记住此密码)
 用户名和密码 必! 须! 不一样。
@@ -3033,8 +3033,8 @@ rpcpassword=%s
         <translation>这是用于回归测试和应用开发目的。</translation>
     </message>
     <message>
-        <source>Usage (deprecated, use bitcoin-cli):</source>
-        <translation>用法（不推荐，请使用 bitcoin-cli）：</translation>
+        <source>Usage (deprecated, use carboncoin-cli):</source>
+        <translation>用法（不推荐，请使用 carboncoin-cli）：</translation>
     </message>
     <message>
         <source>Verifying blocks...</source>

@@ -217,8 +217,8 @@ Este produto inclúe software desenvolvido polo OpenSSL Project para o uso no Op
         <translation>Moedeiro encriptado</translation>
     </message>
     <message>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>Bitcoin se pechará agora para rematar o proceso de encriptación. Lembra que encriptar o teu moedeiro non protexe totalmente os teus bitcoins de ser robados por malware que infecte o teu ordenador.</translation>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your carboncoins from being stolen by malware infecting your computer.</source>
+        <translation>Bitcoin se pechará agora para rematar o proceso de encriptación. Lembra que encriptar o teu moedeiro non protexe totalmente os teus carboncoins de ser robados por malware que infecte o teu ordenador.</translation>
     </message>
     <message>
         <source>Wallet encryption failed</source>
@@ -408,8 +408,8 @@ Este produto inclúe software desenvolvido polo OpenSSL Project para o uso no Op
         <translation>Core de Bitcoin</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation>Solicitar pagos (xenera códigos QR e bitcoin: URIs)</translation>
+        <source>Request payments (generates QR codes and carboncoin: URIs)</source>
+        <translation>Solicitar pagos (xenera códigos QR e carboncoin: URIs)</translation>
     </message>
     <message>
         <source>&amp;About Bitcoin Core</source>
@@ -424,8 +424,8 @@ Este produto inclúe software desenvolvido polo OpenSSL Project para o uso no Op
         <translation>Amosar a listaxe de etiquetas e direccións para recibir empregadas</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI or payment request</source>
-        <translation>Abrir un bitcoin: URI ou solicitude de pago</translation>
+        <source>Open a carboncoin: URI or payment request</source>
+        <translation>Abrir un carboncoin: URI ou solicitude de pago</translation>
     </message>
     <message>
         <source>Bitcoin client</source>
@@ -2176,7 +2176,7 @@ Dirección: %4
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>carboncoin-core</name>
     <message>
         <source>Usage:</source>
         <translation>Emprego:</translation>
@@ -2194,12 +2194,12 @@ Dirección: %4
         <translation>Opcións:</translation>
     </message>
     <message>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>Especificar arquivo de configuración (por defecto: bitcoin.conf)</translation>
+        <source>Specify configuration file (default: carboncoin.conf)</source>
+        <translation>Especificar arquivo de configuración (por defecto: carboncoin.conf)</translation>
     </message>
     <message>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>Especificar arquivo de pid (por defecto: bitcoind.pid)</translation>
+        <source>Specify pid file (default: carboncoind.pid)</source>
+        <translation>Especificar arquivo de pid (por defecto: carboncoind.pid)</translation>
     </message>
     <message>
         <source>Specify data directory</source>
@@ -2257,7 +2257,7 @@ Dirección: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=carboncoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -2268,7 +2268,7 @@ for example: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com
         <translation>%s, debes fixar unha rpcpassword no arquivo de configuración:
 %s
 Reoméndase usar o seguinte contrasinal aleatorio:
-rpcuser=bitcoinrpc
+rpcuser=carboncoinrpc
 rpcpassword=%s
 (non precisas lembrar este contrasinal)
 O nome do usuario e o contrasinal DEBEN NON ser o mesmo.
@@ -2474,8 +2474,8 @@ por exemplo: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com
         <translation>Especificar arquivo do moedeiro (dentro do directorio de datos)</translation>
     </message>
     <message>
-        <source>Usage (deprecated, use bitcoin-cli):</source>
-        <translation>Emprego (desaconsellado, usar bitcoin-cli)</translation>
+        <source>Usage (deprecated, use carboncoin-cli):</source>
+        <translation>Emprego (desaconsellado, usar carboncoin-cli)</translation>
     </message>
     <message>
         <source>Verifying blocks...</source>

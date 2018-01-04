@@ -104,7 +104,7 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     </message>
     <message>
         <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Dit zijn uw Bitcoinadressen om betalingen mee te verzenden. Check altijd het bedrag en het ontvangende adres voordat u uw bitcoins verzendt.</translation>
+        <translation>Dit zijn uw Bitcoinadressen om betalingen mee te verzenden. Check altijd het bedrag en het ontvangende adres voordat u uw carboncoins verzendt.</translation>
     </message>
     <message>
         <source>These are your Bitcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
@@ -225,8 +225,8 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
         <translation>Portemonnee versleuteld</translation>
     </message>
     <message>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>Bitcoin zal nu afsluiten om het versleutelingsproces te voltooien. Onthoud dat het versleutelen van uw portemonnee u niet volledig kan beschermen: Malware kan uw computer infecteren en uw bitcoins stelen.</translation>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your carboncoins from being stolen by malware infecting your computer.</source>
+        <translation>Bitcoin zal nu afsluiten om het versleutelingsproces te voltooien. Onthoud dat het versleutelen van uw portemonnee u niet volledig kan beschermen: Malware kan uw computer infecteren en uw carboncoins stelen.</translation>
     </message>
     <message>
         <source>Wallet encryption failed</source>
@@ -432,8 +432,8 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
         <translation>Bitcoin Kern</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation>Vraag betaling aan (genereert QR codes en bitcoin: URIs)</translation>
+        <source>Request payments (generates QR codes and carboncoin: URIs)</source>
+        <translation>Vraag betaling aan (genereert QR codes en carboncoin: URIs)</translation>
     </message>
     <message>
         <source>&amp;About Bitcoin Core</source>
@@ -448,8 +448,8 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
         <translation>Toon de lijst met gebruikte ontvangst adressen en labels</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI or payment request</source>
-        <translation>Open een bitcoin: URI of betalingsverzoek</translation>
+        <source>Open a carboncoin: URI or payment request</source>
+        <translation>Open een carboncoin: URI of betalingsverzoek</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -1286,8 +1286,8 @@ Adres: %4
         <translation>Fout bij betalingsverzoek</translation>
     </message>
     <message>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
-        <translation>Kan bitcoin niet starten: click-to-pay handler</translation>
+        <source>Cannot start carboncoin: click-to-pay handler</source>
+        <translation>Kan carboncoin niet starten: click-to-pay handler</translation>
     </message>
     <message>
         <source>Net manager warning</source>
@@ -1954,8 +1954,8 @@ Adres: %4
         <translation>Vul een label voor dit adres in om het aan de lijst met gebruikte adressen toe te voegen</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
-        <translation>Een bericht dat werd toegevoegd aan de bitcoin: URI dewelke wordt opgeslagen met de transactie ter referentie. Opmerking: Dit bericht zal niet worden verzonden over het Bitcoin netwerk.</translation>
+        <source>A message that was attached to the carboncoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
+        <translation>Een bericht dat werd toegevoegd aan de carboncoin: URI dewelke wordt opgeslagen met de transactie ter referentie. Opmerking: Dit bericht zal niet worden verzonden over het Bitcoin netwerk.</translation>
     </message>
     <message>
         <source>This is an unverified payment request.</source>
@@ -2592,7 +2592,7 @@ Adres: %4
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>carboncoin-core</name>
     <message>
         <source>Usage:</source>
         <translation>Gebruik:</translation>
@@ -2610,13 +2610,13 @@ Adres: %4
         <translation>Opties:</translation>
     </message>
     <message>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>Specificeer configuratiebestand (standaard: bitcoin.conf)
+        <source>Specify configuration file (default: carboncoin.conf)</source>
+        <translation>Specificeer configuratiebestand (standaard: carboncoin.conf)
 </translation>
     </message>
     <message>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>Specificeer pid-bestand (standaard: bitcoind.pid)
+        <source>Specify pid file (default: carboncoind.pid)</source>
+        <translation>Specificeer pid-bestand (standaard: carboncoind.pid)
 </translation>
     </message>
     <message>
@@ -2679,7 +2679,7 @@ Adres: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=carboncoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -2689,7 +2689,7 @@ for example: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com
 </source>
         <translation>%s, u moet een RPC-wachtwoord instellen in het configuratiebestand: %s
 U wordt aangeraden het volgende willekeurige wachtwoord te gebruiken:
-rpcuser=bitcoinrpc
+rpcuser=carboncoinrpc
 rpcpassword=%s
 (u hoeft dit wachtwoord niet te onthouden)
 De gebruikersnaam en wachtwoord mogen niet hetzelfde zijn.
@@ -3022,7 +3022,7 @@ bijvoorbeeld: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com</tran
         <translation>Dit is bedoeld voor regressie test toepassingen en applicatie onwikkeling.</translation>
     </message>
     <message>
-        <source>Usage (deprecated, use bitcoin-cli):</source>
+        <source>Usage (deprecated, use carboncoin-cli):</source>
         <translation>Gebruik (vervangen; gebruik Bitcoin-cli);</translation>
     </message>
     <message>

@@ -187,8 +187,8 @@ Ing produktung ini atin yang makayabeng software a gewa dareng OpenSSL Project p
         <translation>Me-encrypt ne ing wallet</translation>
     </message>
     <message>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>Ing Bitcoin ngeni magsara ya ban ayari ing proseso ning pamag-encrypt. Tandanan yu king pamag-encrypt wallet, ali nala aprotektan king kabuuan reng bitcoins yu kareng malware a kasalunsungan atiu kareng computer yu.</translation>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your carboncoins from being stolen by malware infecting your computer.</source>
+        <translation>Ing Bitcoin ngeni magsara ya ban ayari ing proseso ning pamag-encrypt. Tandanan yu king pamag-encrypt wallet, ali nala aprotektan king kabuuan reng carboncoins yu kareng malware a kasalunsungan atiu kareng computer yu.</translation>
     </message>
     <message>
         <source>Wallet encryption failed</source>
@@ -1494,7 +1494,7 @@ Address: %4
     <name>WalletView</name>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>carboncoin-core</name>
     <message>
         <source>Usage:</source>
         <translation>Pamanggamit:</translation>
@@ -1512,12 +1512,12 @@ Address: %4
         <translation>Pipamilian:</translation>
     </message>
     <message>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>Pilinan ing configuration file(default: bitcoin.conf)</translation>
+        <source>Specify configuration file (default: carboncoin.conf)</source>
+        <translation>Pilinan ing configuration file(default: carboncoin.conf)</translation>
     </message>
     <message>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>Pilinan ing pid file(default: bitcoind.pid)</translation>
+        <source>Specify pid file (default: carboncoind.pid)</source>
+        <translation>Pilinan ing pid file(default: carboncoind.pid)</translation>
     </message>
     <message>
         <source>Specify data directory</source>

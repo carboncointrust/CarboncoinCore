@@ -6,7 +6,7 @@
 #include "ui_coincontroldialog.h"
 
 #include "addresstablemodel.h"
-#include "bitcoinunits.h"
+#include "carboncoinunits.h"
 #include "guiutil.h"
 #include "init.h"
 #include "optionsmodel.h"
@@ -704,7 +704,7 @@ void CoinControlDialog::updateView()
             {
                 sAddress = CBitcoinAddress(outputAddress).ToString().c_str();
 
-                // if listMode or change => show bitcoin address. In tree mode, address is not shown again for direct wallet address outputs
+                // if listMode or change => show carboncoin address. In tree mode, address is not shown again for direct wallet address outputs
                 if (!treeMode || (!(sAddress == sWalletAddress)))
                     itemOutput->setText(COLUMN_ADDRESS, sAddress);
 

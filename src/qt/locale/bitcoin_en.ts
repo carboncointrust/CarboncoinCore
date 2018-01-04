@@ -282,8 +282,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-56"/>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</translation>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your carboncoins from being stolen by malware infecting your computer.</source>
+        <translation>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your carboncoins from being stolen by malware infecting your computer.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -330,7 +330,7 @@ This product includes software developed by the OpenSSL Project for use in the O
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <location filename="../bitcoingui.cpp" line="+294"/>
+        <location filename="../carboncoingui.cpp" line="+294"/>
         <source>Sign &amp;message...</source>
         <translation>Sign &amp;message...</translation>
     </message>
@@ -549,7 +549,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+162"/>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
+        <source>Request payments (generates QR codes and carboncoin: URIs)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -570,7 +570,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+3"/>
-        <source>Open a bitcoin: URI or payment request</source>
+        <source>Open a carboncoin: URI or payment request</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -724,7 +724,7 @@ Address: %4
         <translation>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../bitcoin.cpp" line="+447"/>
+        <location filename="../carboncoin.cpp" line="+447"/>
         <source>A fatal error occurred. Bitcoin can no longer continue safely and will quit.</source>
         <translation>A fatal error occurred. Bitcoin can no longer continue safely and will quit.</translation>
     </message>
@@ -1639,7 +1639,7 @@ Address: %4
     </message>
     <message>
         <location line="-353"/>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
+        <source>Cannot start carboncoin: click-to-pay handler</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1706,7 +1706,7 @@ Address: %4
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../bitcoin.cpp" line="+71"/>
+        <location filename="../carboncoin.cpp" line="+71"/>
         <location line="+7"/>
         <location line="+13"/>
         <source>Bitcoin</source>
@@ -2494,7 +2494,7 @@ Address: %4
     </message>
     <message>
         <location line="+33"/>
-        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
+        <source>A message that was attached to the carboncoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3318,9 +3318,9 @@ Address: %4
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>carboncoin-core</name>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="+262"/>
+        <location filename="../carboncoinstrings.cpp" line="+262"/>
         <source>Usage:</source>
         <translation>Usage:</translation>
     </message>
@@ -3341,13 +3341,13 @@ Address: %4
     </message>
     <message>
         <location line="+32"/>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>Specify configuration file (default: bitcoin.conf)</translation>
+        <source>Specify configuration file (default: carboncoin.conf)</source>
+        <translation>Specify configuration file (default: carboncoin.conf)</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>Specify pid file (default: bitcoind.pid)</translation>
+        <source>Specify pid file (default: carboncoind.pid)</source>
+        <translation>Specify pid file (default: carboncoind.pid)</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -3424,7 +3424,7 @@ Address: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=carboncoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -3435,7 +3435,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
         <translation>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=carboncoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -3851,7 +3851,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+10"/>
-        <source>Usage (deprecated, use bitcoin-cli):</source>
+        <source>Usage (deprecated, use carboncoin-cli):</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

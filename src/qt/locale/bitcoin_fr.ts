@@ -225,7 +225,7 @@ Ce produit comprend des logiciels développés par le projet OpenSSL afin d'êtr
         <translation>Portefeuille chiffré</translation>
     </message>
     <message>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your carboncoins from being stolen by malware infecting your computer.</source>
         <translation>Bitcoin va à présent se fermer pour terminer le chiffrement. N'oubliez pas que le chiffrement de votre portefeuille n'est pas une protection totale contre le vol par des logiciels malveillants qui infecteraient votre ordinateur.</translation>
     </message>
     <message>
@@ -432,8 +432,8 @@ Ce produit comprend des logiciels développés par le projet OpenSSL afin d'êtr
         <translation>Bitcoin Core</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation>Demander des paiements (génère des codes QR et des URIs bitcoin:)</translation>
+        <source>Request payments (generates QR codes and carboncoin: URIs)</source>
+        <translation>Demander des paiements (génère des codes QR et des URIs carboncoin:)</translation>
     </message>
     <message>
         <source>&amp;About Bitcoin Core</source>
@@ -448,8 +448,8 @@ Ce produit comprend des logiciels développés par le projet OpenSSL afin d'êtr
         <translation>Afficher la liste d'adresses de réception et d'étiquettes utilisées</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI or payment request</source>
-        <translation>Ouvrir un URI bitcoin: ou une demande de paiement</translation>
+        <source>Open a carboncoin: URI or payment request</source>
+        <translation>Ouvrir un URI carboncoin: ou une demande de paiement</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -1282,8 +1282,8 @@ Adresse : %4
         <translation>Erreur de demande de paiement</translation>
     </message>
     <message>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
-        <translation>Impossible de démarrer le gestionnaire de cliquer-pour-payer bitcoin :</translation>
+        <source>Cannot start carboncoin: click-to-pay handler</source>
+        <translation>Impossible de démarrer le gestionnaire de cliquer-pour-payer carboncoin :</translation>
     </message>
     <message>
         <source>Net manager warning</source>
@@ -1950,7 +1950,7 @@ Adresse : %4
         <translation>Saisir une étiquette pour cette adresse afin de l'ajouter à la liste d'adresses utilisées</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
+        <source>A message that was attached to the carboncoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
         <translation>Un message qui était joint à l'URI Bitcoin et qui sera stocké avec la transaction pour référence. Note : ce message ne sera pas envoyé par le réseau Bitcoin.</translation>
     </message>
     <message>
@@ -2588,7 +2588,7 @@ Adresse : %4
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>carboncoin-core</name>
     <message>
         <source>Usage:</source>
         <translation>Utilisation :</translation>
@@ -2606,12 +2606,12 @@ Adresse : %4
         <translation>Options :</translation>
     </message>
     <message>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>Spécifier le fichier de configuration (par défaut : bitcoin.conf)</translation>
+        <source>Specify configuration file (default: carboncoin.conf)</source>
+        <translation>Spécifier le fichier de configuration (par défaut : carboncoin.conf)</translation>
     </message>
     <message>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>Spécifier le fichier pid (par défaut : bitcoind.pid)</translation>
+        <source>Specify pid file (default: carboncoind.pid)</source>
+        <translation>Spécifier le fichier pid (par défaut : carboncoind.pid)</translation>
     </message>
     <message>
         <source>Specify data directory</source>
@@ -2673,7 +2673,7 @@ Adresse : %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=carboncoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -2684,7 +2684,7 @@ for example: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com
         <translation>%s, vous devez définir un mot de passe rpc dans le fichier de configuration : 
 %s
 Il vous est conseillé d'utiliser le mot de passe aléatoire suivant :
-rpcuser=bitcoinrpc
+rpcuser=carboncoinrpc
 rpcpassword=%s
 (vous n'avez pas besoin de retenir ce mot de passe)
 Le nom d'utilisateur et le mot de passe NE DOIVENT PAS être identiques.
@@ -3018,8 +3018,8 @@ par exemple : alertnotify=echo %%s | mail -s "Alerte Bitcoin" admin@foo.com
         <translation>Ceci est à l'intention des outils de test de régression et du développement applicatif.</translation>
     </message>
     <message>
-        <source>Usage (deprecated, use bitcoin-cli):</source>
-        <translation>Utilisation (obsolète, utiliser bitcoin-cli) :</translation>
+        <source>Usage (deprecated, use carboncoin-cli):</source>
+        <translation>Utilisation (obsolète, utiliser carboncoin-cli) :</translation>
     </message>
     <message>
         <source>Verifying blocks...</source>

@@ -76,8 +76,8 @@ Bitcoin
 -------
 MSYS shell:
 
-	cd \bitcoin
+	cd \carboncoin
 	sh autogen.sh
 	sh configure
 	mingw32-make
-	strip bitcoind.exe
+	strip carboncoind.exe

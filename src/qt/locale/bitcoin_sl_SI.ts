@@ -199,7 +199,7 @@
         <translation>Denarnica šifrirana</translation>
     </message>
     <message>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your carboncoins from being stolen by malware infecting your computer.</source>
         <translation>Bitcoin se bo zaprl, da bi dokončal proces šifriranja. Zapomnite si, da šifriranje vaše denarnice ne more popolnoma zaščititi pred krajami zlonamernih programov, ki bi lahko bili nameščeni na vašem računalniku.</translation>
     </message>
     <message>
@@ -406,7 +406,7 @@
         <translation>Prikaži seznam uporabljenih sprejemnih naslovov in oznak</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI or payment request</source>
+        <source>Open a carboncoin: URI or payment request</source>
         <translation>Odpri Bitcoin: URI ali zahteva o plačilu</translation>
     </message>
     <message>
@@ -415,7 +415,7 @@
     </message>
     <message numerus="yes">
         <source>%n active connection(s) to Bitcoin network</source>
-        <translation><numerusform>%n aktivna povezava v bitcoin omrežje</numerusform><numerusform>%n aktivni povezavi v bitcoin omrežje</numerusform><numerusform>%n aktivnih povezav v bitcoin omrežje</numerusform><numerusform>%n aktivnih povezav v bitcoin omrežje</numerusform></translation>
+        <translation><numerusform>%n aktivna povezava v carboncoin omrežje</numerusform><numerusform>%n aktivni povezavi v carboncoin omrežje</numerusform><numerusform>%n aktivnih povezav v carboncoin omrežje</numerusform><numerusform>%n aktivnih povezav v carboncoin omrežje</numerusform></translation>
     </message>
     <message numerus="yes">
         <source>%n hour(s)</source>
@@ -1108,7 +1108,7 @@ Naslov: %4
     </message>
     <message>
         <source>Enter a Bitcoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>Vnesite bitcoin naslov (npr.: 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <translation>Vnesite carboncoin naslov (npr.: 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
     </message>
 </context>
 <context>
@@ -1619,7 +1619,7 @@ Naslov: %4
     </message>
     <message>
         <source>Enter a Bitcoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>Vnesite bitcoin naslov (npr.: 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <translation>Vnesite carboncoin naslov (npr.: 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
     </message>
     <message>
         <source>Click "Sign Message" to generate signature</source>
@@ -2066,7 +2066,7 @@ Naslov: %4
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>carboncoin-core</name>
     <message>
         <source>Usage:</source>
         <translation>Uporaba:</translation>
@@ -2084,12 +2084,12 @@ Naslov: %4
         <translation>Možnosti:</translation>
     </message>
     <message>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>Določi datoteko z nastavitvami (privzeta: bitcoin.conf)</translation>
+        <source>Specify configuration file (default: carboncoin.conf)</source>
+        <translation>Določi datoteko z nastavitvami (privzeta: carboncoin.conf)</translation>
     </message>
     <message>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>Določi pid datoteko (privzeta: bitcoin.pid)</translation>
+        <source>Specify pid file (default: carboncoind.pid)</source>
+        <translation>Določi pid datoteko (privzeta: carboncoin.pid)</translation>
     </message>
     <message>
         <source>Specify data directory</source>

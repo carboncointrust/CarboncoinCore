@@ -225,7 +225,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Портфейлът е шифриран</translation>
     </message>
     <message>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your carboncoins from being stolen by malware infecting your computer.</source>
         <translation>Биткоин сега ще се самозатвори, за да завърши процеса на шифриране. Запомнете, че шифрирането на вашия портефейл не може напълно да предпази вашите монети от кражба чрез зловреден софтуер, инфектирал Вашия компютър</translation>
     </message>
     <message>
@@ -424,7 +424,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Биткойн ядро</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
+        <source>Request payments (generates QR codes and carboncoin: URIs)</source>
         <translation>Изискване на плащания(генерира QR кодове и биткойн: URIs)</translation>
     </message>
     <message>
@@ -2276,7 +2276,7 @@ Address: %4
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>carboncoin-core</name>
     <message>
         <source>Usage:</source>
         <translation>Използване:</translation>
@@ -2294,12 +2294,12 @@ Address: %4
         <translation>Опции:</translation>
     </message>
     <message>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>Задаване на файл с настройки (по подразбиране bitcoin.conf)</translation>
+        <source>Specify configuration file (default: carboncoin.conf)</source>
+        <translation>Задаване на файл с настройки (по подразбиране carboncoin.conf)</translation>
     </message>
     <message>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>Назовете pid файл ( по подразбиране:bitcoin.pid)</translation>
+        <source>Specify pid file (default: carboncoind.pid)</source>
+        <translation>Назовете pid файл ( по подразбиране:carboncoin.pid)</translation>
     </message>
     <message>
         <source>Specify data directory</source>

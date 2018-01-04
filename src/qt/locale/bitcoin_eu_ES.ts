@@ -710,7 +710,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>carboncoin-core</name>
     <message>
         <source>List commands</source>
         <translation>Komandoen lista</translation>
@@ -724,12 +724,12 @@
         <translation>Aukerak</translation>
     </message>
     <message>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>Ezarpen fitxategia aukeratu (berezkoa: bitcoin.conf)</translation>
+        <source>Specify configuration file (default: carboncoin.conf)</source>
+        <translation>Ezarpen fitxategia aukeratu (berezkoa: carboncoin.conf)</translation>
     </message>
     <message>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>pid fitxategia aukeratu (berezkoa: bitcoind.pid)</translation>
+        <source>Specify pid file (default: carboncoind.pid)</source>
+        <translation>pid fitxategia aukeratu (berezkoa: carboncoind.pid)</translation>
     </message>
     <message>
         <source>This help message</source>

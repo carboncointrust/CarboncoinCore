@@ -5,84 +5,84 @@ AM_CPPFLAGS += -I$(top_srcdir)/src \
   -I$(top_builddir)/src/qt/forms \
   $(PROTOBUF_CFLAGS) \
   $(QR_CFLAGS)
-bin_PROGRAMS = bitcoin-qt
-noinst_LIBRARIES = libbitcoinqt.a
+bin_PROGRAMS = carboncoin-qt
+noinst_LIBRARIES = libcarboncoinqt.a
 SUBDIRS = . $(BUILD_TEST_QT)
 DIST_SUBDIRS = . test
 
-# bitcoin qt core #
+# carboncoin qt core #
 QT_TS = \
-  locale/bitcoin_ach.ts \
-  locale/bitcoin_af_ZA.ts \
-  locale/bitcoin_ar.ts \
-  locale/bitcoin_be_BY.ts \
-  locale/bitcoin_bg.ts \
-  locale/bitcoin_bs.ts \
-  locale/bitcoin_ca_ES.ts \
-  locale/bitcoin_ca.ts \
-  locale/bitcoin_ca@valencia.ts \
-  locale/bitcoin_cmn.ts \
-  locale/bitcoin_cs.ts \
-  locale/bitcoin_cy.ts \
-  locale/bitcoin_da.ts \
-  locale/bitcoin_de.ts \
-  locale/bitcoin_el_GR.ts \
-  locale/bitcoin_en.ts \
-  locale/bitcoin_eo.ts \
-  locale/bitcoin_es_CL.ts \
-  locale/bitcoin_es_DO.ts \
-  locale/bitcoin_es_MX.ts \
-  locale/bitcoin_es.ts \
-  locale/bitcoin_es_UY.ts \
-  locale/bitcoin_et.ts \
-  locale/bitcoin_eu_ES.ts \
-  locale/bitcoin_fa_IR.ts \
-  locale/bitcoin_fa.ts \
-  locale/bitcoin_fi.ts \
-  locale/bitcoin_fr_CA.ts \
-  locale/bitcoin_fr.ts \
-  locale/bitcoin_gl.ts \
-  locale/bitcoin_gu_IN.ts \
-  locale/bitcoin_he.ts \
-  locale/bitcoin_hi_IN.ts \
-  locale/bitcoin_hr.ts \
-  locale/bitcoin_hu.ts \
-  locale/bitcoin_id_ID.ts \
-  locale/bitcoin_it.ts \
-  locale/bitcoin_ja.ts \
-  locale/bitcoin_ka.ts \
-  locale/bitcoin_kk_KZ.ts \
-  locale/bitcoin_ko_KR.ts \
-  locale/bitcoin_ky.ts \
-  locale/bitcoin_la.ts \
-  locale/bitcoin_lt.ts \
-  locale/bitcoin_lv_LV.ts \
-  locale/bitcoin_mn.ts \
-  locale/bitcoin_ms_MY.ts \
-  locale/bitcoin_nb.ts \
-  locale/bitcoin_nl.ts \
-  locale/bitcoin_pam.ts \
-  locale/bitcoin_pl.ts \
-  locale/bitcoin_pt_BR.ts \
-  locale/bitcoin_pt_PT.ts \
-  locale/bitcoin_ro_RO.ts \
-  locale/bitcoin_ru.ts \
-  locale/bitcoin_sah.ts \
-  locale/bitcoin_sk.ts \
-  locale/bitcoin_sl_SI.ts \
-  locale/bitcoin_sq.ts \
-  locale/bitcoin_sr.ts \
-  locale/bitcoin_sv.ts \
-  locale/bitcoin_th_TH.ts \
-  locale/bitcoin_tr.ts \
-  locale/bitcoin_uk.ts \
-  locale/bitcoin_ur_PK.ts \
-  locale/bitcoin_uz@Cyrl.ts \
-  locale/bitcoin_vi.ts \
-  locale/bitcoin_vi_VN.ts \
-  locale/bitcoin_zh_CN.ts \
-  locale/bitcoin_zh_HK.ts \
-  locale/bitcoin_zh_TW.ts
+  locale/carboncoin_ach.ts \
+  locale/carboncoin_af_ZA.ts \
+  locale/carboncoin_ar.ts \
+  locale/carboncoin_be_BY.ts \
+  locale/carboncoin_bg.ts \
+  locale/carboncoin_bs.ts \
+  locale/carboncoin_ca_ES.ts \
+  locale/carboncoin_ca.ts \
+  locale/carboncoin_ca@valencia.ts \
+  locale/carboncoin_cmn.ts \
+  locale/carboncoin_cs.ts \
+  locale/carboncoin_cy.ts \
+  locale/carboncoin_da.ts \
+  locale/carboncoin_de.ts \
+  locale/carboncoin_el_GR.ts \
+  locale/carboncoin_en.ts \
+  locale/carboncoin_eo.ts \
+  locale/carboncoin_es_CL.ts \
+  locale/carboncoin_es_DO.ts \
+  locale/carboncoin_es_MX.ts \
+  locale/carboncoin_es.ts \
+  locale/carboncoin_es_UY.ts \
+  locale/carboncoin_et.ts \
+  locale/carboncoin_eu_ES.ts \
+  locale/carboncoin_fa_IR.ts \
+  locale/carboncoin_fa.ts \
+  locale/carboncoin_fi.ts \
+  locale/carboncoin_fr_CA.ts \
+  locale/carboncoin_fr.ts \
+  locale/carboncoin_gl.ts \
+  locale/carboncoin_gu_IN.ts \
+  locale/carboncoin_he.ts \
+  locale/carboncoin_hi_IN.ts \
+  locale/carboncoin_hr.ts \
+  locale/carboncoin_hu.ts \
+  locale/carboncoin_id_ID.ts \
+  locale/carboncoin_it.ts \
+  locale/carboncoin_ja.ts \
+  locale/carboncoin_ka.ts \
+  locale/carboncoin_kk_KZ.ts \
+  locale/carboncoin_ko_KR.ts \
+  locale/carboncoin_ky.ts \
+  locale/carboncoin_la.ts \
+  locale/carboncoin_lt.ts \
+  locale/carboncoin_lv_LV.ts \
+  locale/carboncoin_mn.ts \
+  locale/carboncoin_ms_MY.ts \
+  locale/carboncoin_nb.ts \
+  locale/carboncoin_nl.ts \
+  locale/carboncoin_pam.ts \
+  locale/carboncoin_pl.ts \
+  locale/carboncoin_pt_BR.ts \
+  locale/carboncoin_pt_PT.ts \
+  locale/carboncoin_ro_RO.ts \
+  locale/carboncoin_ru.ts \
+  locale/carboncoin_sah.ts \
+  locale/carboncoin_sk.ts \
+  locale/carboncoin_sl_SI.ts \
+  locale/carboncoin_sq.ts \
+  locale/carboncoin_sr.ts \
+  locale/carboncoin_sv.ts \
+  locale/carboncoin_th_TH.ts \
+  locale/carboncoin_tr.ts \
+  locale/carboncoin_uk.ts \
+  locale/carboncoin_ur_PK.ts \
+  locale/carboncoin_uz@Cyrl.ts \
+  locale/carboncoin_vi.ts \
+  locale/carboncoin_vi_VN.ts \
+  locale/carboncoin_zh_CN.ts \
+  locale/carboncoin_zh_HK.ts \
+  locale/carboncoin_zh_TW.ts
 
 QT_FORMS_UI = \
   forms/aboutdialog.ui \
@@ -107,10 +107,10 @@ QT_MOC_CPP = \
   moc_addressbookpage.cpp \
   moc_addresstablemodel.cpp \
   moc_askpassphrasedialog.cpp \
-  moc_bitcoinaddressvalidator.cpp \
-  moc_bitcoinamountfield.cpp \
-  moc_bitcoingui.cpp \
-  moc_bitcoinunits.cpp \
+  moc_carboncoinaddressvalidator.cpp \
+  moc_carboncoinamountfield.cpp \
+  moc_carboncoingui.cpp \
+  moc_carboncoinunits.cpp \
   moc_clientmodel.cpp \
   moc_coincontroldialog.cpp \
   moc_coincontroltreewidget.cpp \
@@ -153,13 +153,13 @@ BITCOIN_MM = \
   macnotificationhandler.mm
 
 QT_MOC = \
-  bitcoin.moc \
+  carboncoin.moc \
   intro.moc \
   overviewpage.moc \
   rpcconsole.moc
 
-QT_QRC_CPP = qrc_bitcoin.cpp
-QT_QRC = bitcoin.qrc
+QT_QRC_CPP = qrc_carboncoin.cpp
+QT_QRC = carboncoin.qrc
 
 PROTOBUF_CC = paymentrequest.pb.cc
 PROTOBUF_H = paymentrequest.pb.h
@@ -169,10 +169,10 @@ BITCOIN_QT_H = \
   addressbookpage.h \
   addresstablemodel.h \
   askpassphrasedialog.h \
-  bitcoinaddressvalidator.h \
-  bitcoinamountfield.h \
-  bitcoingui.h \
-  bitcoinunits.h \
+  carboncoinaddressvalidator.h \
+  carboncoinamountfield.h \
+  carboncoingui.h \
+  carboncoinunits.h \
   clientmodel.h \
   coincontroldialog.h \
   coincontroltreewidget.h \
@@ -218,10 +218,10 @@ BITCOIN_QT_H = \
 RES_ICONS = \
   res/icons/add.png \
   res/icons/address-book.png \
-  res/icons/bitcoin.ico \
-  res/icons/bitcoin.png \
-  res/icons/bitcoin_testnet.ico \
-  res/icons/bitcoin_testnet.png \
+  res/icons/carboncoin.ico \
+  res/icons/carboncoin.png \
+  res/icons/carboncoin_testnet.ico \
+  res/icons/carboncoin_testnet.png \
   res/icons/clock1.png \
   res/icons/clock2.png \
   res/icons/clock3.png \
@@ -261,11 +261,11 @@ RES_ICONS = \
   res/icons/tx_mined.png
 
 BITCOIN_QT_CPP = \
-  bitcoin.cpp \
-  bitcoinaddressvalidator.cpp \
-  bitcoinamountfield.cpp \
-  bitcoingui.cpp \
-  bitcoinunits.cpp \
+  carboncoin.cpp \
+  carboncoinaddressvalidator.cpp \
+  carboncoinamountfield.cpp \
+  carboncoingui.cpp \
+  carboncoinunits.cpp \
   clientmodel.cpp \
   csvmodelwriter.cpp \
   guiutil.cpp \
@@ -319,40 +319,40 @@ RES_IMAGES = \
 
 RES_MOVIES = $(wildcard res/movies/spinner-*.png)
 
-BITCOIN_RC = res/bitcoin-qt-res.rc
+BITCOIN_RC = res/carboncoin-qt-res.rc
 
-libbitcoinqt_a_CPPFLAGS = $(AM_CPPFLAGS) $(QT_INCLUDES) \
+libcarboncoinqt_a_CPPFLAGS = $(AM_CPPFLAGS) $(QT_INCLUDES) \
   -I$(top_srcdir)/src/qt/forms $(QT_DBUS_INCLUDES)
-libbitcoinqt_a_SOURCES = $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(QT_FORMS_UI) \
+libcarboncoinqt_a_SOURCES = $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(QT_FORMS_UI) \
   $(QT_QRC) $(QT_TS) $(PROTOBUF_PROTO) $(RES_ICONS) $(RES_IMAGES) $(RES_MOVIES)
 
-nodist_libbitcoinqt_a_SOURCES = $(QT_MOC_CPP) $(QT_MOC) $(PROTOBUF_CC) \
+nodist_libcarboncoinqt_a_SOURCES = $(QT_MOC_CPP) $(QT_MOC) $(PROTOBUF_CC) \
   $(PROTOBUF_H) $(QT_QRC_CPP)
 
-BUILT_SOURCES = $(nodist_libbitcoinqt_a_SOURCES)
+BUILT_SOURCES = $(nodist_libcarboncoinqt_a_SOURCES)
 
 #Generating these with a half-written protobuf header leads to wacky results.
 #This makes sure it's done.
 $(QT_MOC): $(PROTOBUF_H)
 $(QT_MOC_CPP): $(PROTOBUF_H)
 
-# bitcoin-qt binary #
-bitcoin_qt_CPPFLAGS = $(AM_CPPFLAGS) $(QT_INCLUDES) \
+# carboncoin-qt binary #
+carboncoin_qt_CPPFLAGS = $(AM_CPPFLAGS) $(QT_INCLUDES) \
   -I$(top_srcdir)/src/qt/forms
-bitcoin_qt_SOURCES = bitcoin.cpp
+carboncoin_qt_SOURCES = carboncoin.cpp
 if TARGET_DARWIN
-  bitcoin_qt_SOURCES += $(BITCOIN_MM)
+  carboncoin_qt_SOURCES += $(BITCOIN_MM)
 endif
 if TARGET_WINDOWS
-  bitcoin_qt_SOURCES += $(BITCOIN_RC)
+  carboncoin_qt_SOURCES += $(BITCOIN_RC)
 endif
-bitcoin_qt_LDADD = libbitcoinqt.a $(LIBBITCOIN_SERVER)
+carboncoin_qt_LDADD = libcarboncoinqt.a $(LIBBITCOIN_SERVER)
 if ENABLE_WALLET
-bitcoin_qt_LDADD += $(LIBBITCOIN_WALLET)
+carboncoin_qt_LDADD += $(LIBBITCOIN_WALLET)
 endif
-bitcoin_qt_LDADD += $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBLEVELDB) $(LIBMEMENV) \
+carboncoin_qt_LDADD += $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBLEVELDB) $(LIBMEMENV) \
   $(BOOST_LIBS) $(QT_LIBS) $(QT_DBUS_LIBS) $(QR_LIBS) $(PROTOBUF_LIBS) $(BDB_LIBS)
-bitcoin_qt_LDFLAGS = $(QT_LDFLAGS)
+carboncoin_qt_LDFLAGS = $(QT_LDFLAGS)
 
 # forms/foo.h -> forms/ui_foo.h
 QT_FORMS_H=$(join $(dir $(QT_FORMS_UI)),$(addprefix ui_, $(notdir $(QT_FORMS_UI:.ui=.h))))
@@ -363,15 +363,15 @@ QT_QM=$(QT_TS:.ts=.qm)
 .PHONY: FORCE
 .SECONDARY: $(QT_QM)
 
-bitcoinstrings.cpp: FORCE
-	$(MAKE) -C $(top_srcdir)/src qt/bitcoinstrings.cpp
+carboncoinstrings.cpp: FORCE
+	$(MAKE) -C $(top_srcdir)/src qt/carboncoinstrings.cpp
 
-translate: bitcoinstrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(BITCOIN_MM)
+translate: carboncoinstrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(BITCOIN_MM)
 	@test -n $(LUPDATE) || echo "lupdate is required for updating translations"
-	@QT_SELECT=$(QT_SELECT) $(LUPDATE) $^ -locations relative -no-obsolete -ts locale/bitcoin_en.ts
+	@QT_SELECT=$(QT_SELECT) $(LUPDATE) $^ -locations relative -no-obsolete -ts locale/carboncoin_en.ts
 
 $(QT_QRC_CPP): $(QT_QRC) $(QT_QM) $(QT_FORMS_H) $(RES_ICONS) $(RES_IMAGES) $(RES_MOVIES) $(PROTOBUF_H)
-	@cd $(abs_srcdir); test -f $(RCC) && QT_SELECT=$(QT_SELECT) $(RCC) -name bitcoin -o $(abs_builddir)/$@ $< || \
+	@cd $(abs_srcdir); test -f $(RCC) && QT_SELECT=$(QT_SELECT) $(RCC) -name carboncoin -o $(abs_builddir)/$@ $< || \
 	  echo error: could not build $@
 	$(SED) -e '/^\*\*.*Created:/d' $@ > $@.n && mv $@{.n,}
 	$(SED) -e '/^\*\*.*by:/d' $@  > $@.n && mv $@{.n,}

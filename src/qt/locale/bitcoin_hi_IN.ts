@@ -879,7 +879,7 @@ Address: %4
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>carboncoin-core</name>
     <message>
         <source>Usage:</source>
         <translation>खपत :</translation>
@@ -897,12 +897,12 @@ Address: %4
         <translation>विकल्प:</translation>
     </message>
     <message>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>configuraion की फाइल का विवरण दें (default: bitcoin.conf)</translation>
+        <source>Specify configuration file (default: carboncoin.conf)</source>
+        <translation>configuraion की फाइल का विवरण दें (default: carboncoin.conf)</translation>
     </message>
     <message>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>pid फाइल का विवरण दें (default: bitcoin.pid)</translation>
+        <source>Specify pid file (default: carboncoind.pid)</source>
+        <translation>pid फाइल का विवरण दें (default: carboncoin.pid)</translation>
     </message>
     <message>
         <source>Specify data directory</source>

@@ -225,8 +225,8 @@ Tento výrobok obsahuje sofvér, ktorý vyvynul OpenSSL Project pre použitie v 
         <translation>Peňaženka zašifrovaná</translation>
     </message>
     <message>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>Bitcoin sa teraz ukončí pre dokončenie procesu šifrovania. Pamätaj že šifrovanie peňaženky Ťa nemôže úplne ochrániť pred kráďežou bitcoinov pomocou škodlivého software.</translation>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your carboncoins from being stolen by malware infecting your computer.</source>
+        <translation>Bitcoin sa teraz ukončí pre dokončenie procesu šifrovania. Pamätaj že šifrovanie peňaženky Ťa nemôže úplne ochrániť pred kráďežou carboncoinov pomocou škodlivého software.</translation>
     </message>
     <message>
         <source>Wallet encryption failed</source>
@@ -345,11 +345,11 @@ Tento výrobok obsahuje sofvér, ktorý vyvynul OpenSSL Project pre použitie v 
     </message>
     <message>
         <source>Send coins to a Bitcoin address</source>
-        <translation>Poslať bitcoins na adresu</translation>
+        <translation>Poslať carboncoins na adresu</translation>
     </message>
     <message>
         <source>Modify configuration options for Bitcoin</source>
-        <translation>Upraviť možnosti nastavenia pre bitcoin</translation>
+        <translation>Upraviť možnosti nastavenia pre carboncoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -432,8 +432,8 @@ Tento výrobok obsahuje sofvér, ktorý vyvynul OpenSSL Project pre použitie v 
         <translation>Jadro Bitcoin</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation>Vyžiadať platbu (vygeneruje QR kód a bitcoin: URI)</translation>
+        <source>Request payments (generates QR codes and carboncoin: URIs)</source>
+        <translation>Vyžiadať platbu (vygeneruje QR kód a carboncoin: URI)</translation>
     </message>
     <message>
         <source>&amp;About Bitcoin Core</source>
@@ -448,8 +448,8 @@ Tento výrobok obsahuje sofvér, ktorý vyvynul OpenSSL Project pre použitie v 
         <translation>Zobraziť zoznam použitých prijímacích adries a ich popisov</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI or payment request</source>
-        <translation>Otvoriť bitcoin URI alebo výzvu k platbe</translation>
+        <source>Open a carboncoin: URI or payment request</source>
+        <translation>Otvoriť carboncoin URI alebo výzvu k platbe</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -841,7 +841,7 @@ Adresa: %4</translation>
     </message>
     <message>
         <source>The entered address "%1" is not a valid Bitcoin address.</source>
-        <translation>Vložená adresa "%1" nieje platnou adresou bitcoin.</translation>
+        <translation>Vložená adresa "%1" nieje platnou adresou carboncoin.</translation>
     </message>
     <message>
         <source>Could not unlock wallet.</source>
@@ -1156,7 +1156,7 @@ Adresa: %4</translation>
     </message>
     <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Zvoľte ako deliť bitcoin pri zobrazovaní pri platbách a užívateľskom rozhraní.</translation>
+        <translation>Zvoľte ako deliť carboncoin pri zobrazovaní pri platbách a užívateľskom rozhraní.</translation>
     </message>
     <message>
         <source>Whether to show Bitcoin addresses in the transaction list or not.</source>
@@ -1281,8 +1281,8 @@ Adresa: %4</translation>
         <translation>Chyba pri vyžiadaní platby</translation>
     </message>
     <message>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
-        <translation>Nedá sa spustiť obslužný program bitcoin: click-to-pay zaplatiť kliknutím</translation>
+        <source>Cannot start carboncoin: click-to-pay handler</source>
+        <translation>Nedá sa spustiť obslužný program carboncoin: click-to-pay zaplatiť kliknutím</translation>
     </message>
     <message>
         <source>Net manager warning</source>
@@ -1787,7 +1787,7 @@ Adresa: %4</translation>
     </message>
     <message>
         <source>Confirm send coins</source>
-        <translation>Potvrdiť odoslanie bitcoins</translation>
+        <translation>Potvrdiť odoslanie carboncoins</translation>
     </message>
     <message>
         <source>%1 to %2</source>
@@ -1949,8 +1949,8 @@ Adresa: %4</translation>
         <translation>Vložte popis pre túto adresu aby sa uložila do zoznamu použitých adries</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
-        <translation>Správa ktorá bola pripojená k bitcoin: URI a ktorá bude uložená s transakcou pre Vaše potreby. Poznámka: Táto správa nebude poslaná cez sieť Bitcoin.</translation>
+        <source>A message that was attached to the carboncoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
+        <translation>Správa ktorá bola pripojená k carboncoin: URI a ktorá bude uložená s transakcou pre Vaše potreby. Poznámka: Táto správa nebude poslaná cez sieť Bitcoin.</translation>
     </message>
     <message>
         <source>This is an unverified payment request.</source>
@@ -2579,7 +2579,7 @@ Adresa: %4</translation>
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>carboncoin-core</name>
     <message>
         <source>Usage:</source>
         <translation>Použitie:</translation>
@@ -2597,12 +2597,12 @@ Adresa: %4</translation>
         <translation>Možnosti:</translation>
     </message>
     <message>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>Určiť súbor s nastaveniami (predvolené: bitcoin.conf)</translation>
+        <source>Specify configuration file (default: carboncoin.conf)</source>
+        <translation>Určiť súbor s nastaveniami (predvolené: carboncoin.conf)</translation>
     </message>
     <message>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>Určiť súbor pid (predvolené: bitcoind.pid)</translation>
+        <source>Specify pid file (default: carboncoind.pid)</source>
+        <translation>Určiť súbor pid (predvolené: carboncoind.pid)</translation>
     </message>
     <message>
         <source>Specify data directory</source>
@@ -2664,7 +2664,7 @@ Adresa: %4</translation>
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=carboncoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -2675,7 +2675,7 @@ for example: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com
         <translation>%s, musíte nastaviť rpcpassword heslo v súbore nastavení:
 %s
 Odporúča sa používať nasledujúce náhodné heslo:
-rpcuser=bitcoinrpc
+rpcuser=carboncoinrpc
 rpcpassword=%s
 (nemusíte si pamätať toto heslo)
 Užívateľské meno a heslo NESMÚ byť rovnaké.
@@ -2750,7 +2750,7 @@ napríklad: alertnotify=echo %%s | mail -s "Bitcoin Výstraha" admin@foo.com
     </message>
     <message>
         <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>
-        <translation>Toto je pred-testovacia verzia - použitie je na vlastné riziko - nepoužívajte na tvorbu bitcoin ani obchodovanie.</translation>
+        <translation>Toto je pred-testovacia verzia - použitie je na vlastné riziko - nepoužívajte na tvorbu carboncoin ani obchodovanie.</translation>
     </message>
     <message>
         <source>Unable to bind to %s on this computer. Bitcoin Core is probably already running.</source>
@@ -2936,7 +2936,7 @@ The network does not appear to fully agree! Some miners appear to be experiencin
     </message>
     <message>
         <source>Find peers using DNS lookup (default: 1 unless -connect)</source>
-        <translation>Nájsť počítače v bitcoin sieti použitím DNS vyhľadávania (predvolené: 1 okrem -connect)</translation>
+        <translation>Nájsť počítače v carboncoin sieti použitím DNS vyhľadávania (predvolené: 1 okrem -connect)</translation>
     </message>
     <message>
         <source>Force safe mode (default: 0)</source>
@@ -3011,8 +3011,8 @@ The network does not appear to fully agree! Some miners appear to be experiencin
         <translation>Toto je mienené nástrojom pre regresné testovania a vývoj programu.</translation>
     </message>
     <message>
-        <source>Usage (deprecated, use bitcoin-cli):</source>
-        <translation>Použitie (neodporúča sa, použite bitcoin-cli):</translation>
+        <source>Usage (deprecated, use carboncoin-cli):</source>
+        <translation>Použitie (neodporúča sa, použite carboncoin-cli):</translation>
     </message>
     <message>
         <source>Verifying blocks...</source>

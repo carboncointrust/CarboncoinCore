@@ -4,5 +4,5 @@ This is a 'getwork' CPU mining client for Bitcoin. It is pure-python, and theref
 
 ### Other Resources ###
 
-- [BitcoinTalk Thread](https://bitcointalk.org/index.php?topic=3546.0)
+- [BitcoinTalk Thread](https://carboncointalk.org/index.php?topic=3546.0)
 - [Jgarzik Repo](https://github.com/jgarzik/pyminer)

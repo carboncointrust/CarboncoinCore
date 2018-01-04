@@ -180,8 +180,8 @@ Platinama pagal MIT/X11 licenciją, kurią rasite faile COPYING arba http://www.
         <translation>Piniginė užšifruota</translation>
     </message>
     <message>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>Bitcoin dabar užsidarys šifravimo proceso pabaigai. Atminkite, kad piniginės šifravimas negali pilnai apsaugoti bitcoinų vagysčių kai tinkle esančios kenkėjiškos programos patenka į jūsų kompiuterį.</translation>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your carboncoins from being stolen by malware infecting your computer.</source>
+        <translation>Bitcoin dabar užsidarys šifravimo proceso pabaigai. Atminkite, kad piniginės šifravimas negali pilnai apsaugoti carboncoinų vagysčių kai tinkle esančios kenkėjiškos programos patenka į jūsų kompiuterį.</translation>
     </message>
     <message>
         <source>Wallet encryption failed</source>
@@ -300,7 +300,7 @@ Platinama pagal MIT/X11 licenciją, kurią rasite faile COPYING arba http://www.
     </message>
     <message>
         <source>Modify configuration options for Bitcoin</source>
-        <translation>Keisti bitcoin konfigūracijos galimybes</translation>
+        <translation>Keisti carboncoin konfigūracijos galimybes</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -1686,7 +1686,7 @@ Adresas: %4</translation>
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>carboncoin-core</name>
     <message>
         <source>Usage:</source>
         <translation>Naudojimas:</translation>
@@ -1704,12 +1704,12 @@ Adresas: %4</translation>
         <translation>Parinktys:</translation>
     </message>
     <message>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>Nurodyti konfigūracijos failą (pagal nutylėjimąt: bitcoin.conf)</translation>
+        <source>Specify configuration file (default: carboncoin.conf)</source>
+        <translation>Nurodyti konfigūracijos failą (pagal nutylėjimąt: carboncoin.conf)</translation>
     </message>
     <message>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>Nurodyti pid failą (pagal nutylėjimą: bitcoind.pid)</translation>
+        <source>Specify pid file (default: carboncoind.pid)</source>
+        <translation>Nurodyti pid failą (pagal nutylėjimą: carboncoind.pid)</translation>
     </message>
     <message>
         <source>Specify data directory</source>

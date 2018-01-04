@@ -220,8 +220,8 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
         <translation>Monedero cifrado</translation>
     </message>
     <message>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>Bitcoin se cerrará para finalizar el proceso de cifrado. Recuerde que el cifrado de su monedero no puede proteger totalmente sus bitcoins de robo por malware que infecte su sistema.</translation>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your carboncoins from being stolen by malware infecting your computer.</source>
+        <translation>Bitcoin se cerrará para finalizar el proceso de cifrado. Recuerde que el cifrado de su monedero no puede proteger totalmente sus carboncoins de robo por malware que infecte su sistema.</translation>
     </message>
     <message>
         <source>Wallet encryption failed</source>
@@ -427,7 +427,7 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
         <translation>Núcleo de Bitcoin</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
+        <source>Request payments (generates QR codes and carboncoin: URIs)</source>
         <translation>Solicitar pagos (genera codigo QR y URL's de Bitcoin)</translation>
     </message>
     <message>
@@ -443,8 +443,8 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
         <translation>Muestra la lista de direcciones de recepción y etiquetas</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI or payment request</source>
-        <translation>Abrir un bitcoin: URI o petición de pago</translation>
+        <source>Open a carboncoin: URI or payment request</source>
+        <translation>Abrir un carboncoin: URI o petición de pago</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -1205,8 +1205,8 @@ Dirección: %4
         <translation>Error en petición de pago</translation>
     </message>
     <message>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
-        <translation>No se pudo iniciar bitcoin: manejador de pago-al-clic</translation>
+        <source>Cannot start carboncoin: click-to-pay handler</source>
+        <translation>No se pudo iniciar carboncoin: manejador de pago-al-clic</translation>
     </message>
     <message>
         <source>Unverified payment requests to custom payment scripts are unsupported.</source>
@@ -2411,7 +2411,7 @@ Dirección: %4
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>carboncoin-core</name>
     <message>
         <source>Usage:</source>
         <translation>Uso:</translation>
@@ -2432,13 +2432,13 @@ Dirección: %4
 </translation>
     </message>
     <message>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>Especificar archivo de configuración (predeterminado: bitcoin.conf)
+        <source>Specify configuration file (default: carboncoin.conf)</source>
+        <translation>Especificar archivo de configuración (predeterminado: carboncoin.conf)
 </translation>
     </message>
     <message>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>Especificar archivo pid (predeterminado: bitcoin.pid)
+        <source>Specify pid file (default: carboncoind.pid)</source>
+        <translation>Especificar archivo pid (predeterminado: carboncoin.pid)
 </translation>
     </message>
     <message>
@@ -2500,7 +2500,7 @@ Dirección: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=carboncoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -2511,7 +2511,7 @@ for example: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com
         <translation>%s, debe establecer un valor rpcpassword en el archivo de configuración:
 %s
 Se recomienda utilizar la siguiente contraseña aleatoria:
-rpcuser=bitcoinrpc
+rpcuser=carboncoinrpc
 rpcpassword=%s
 (no es necesario recordar esta contraseña)
 El nombre de usuario y la contraseña DEBEN NO ser iguales.
@@ -2753,8 +2753,8 @@ Por ejemplo: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com
         <translation>Especificar archivo de monedero (dentro del directorio de datos)</translation>
     </message>
     <message>
-        <source>Usage (deprecated, use bitcoin-cli):</source>
-        <translation>Uso (desaconsejado, usar bitcoin-cli)</translation>
+        <source>Usage (deprecated, use carboncoin-cli):</source>
+        <translation>Uso (desaconsejado, usar carboncoin-cli)</translation>
     </message>
     <message>
         <source>Verifying blocks...</source>

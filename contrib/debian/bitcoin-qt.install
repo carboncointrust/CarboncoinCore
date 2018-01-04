@@ -1,6 +1,6 @@
-usr/local/bin/bitcoin-qt usr/bin
-share/pixmaps/bitcoin32.xpm usr/share/pixmaps
-share/pixmaps/bitcoin16.xpm usr/share/pixmaps
-share/pixmaps/bitcoin128.png usr/share/pixmaps
-debian/bitcoin-qt.desktop usr/share/applications
-debian/bitcoin-qt.protocol usr/share/kde4/services/
+usr/local/bin/carboncoin-qt usr/bin
+share/pixmaps/carboncoin32.xpm usr/share/pixmaps
+share/pixmaps/carboncoin16.xpm usr/share/pixmaps
+share/pixmaps/carboncoin128.png usr/share/pixmaps
+debian/carboncoin-qt.desktop usr/share/applications
+debian/carboncoin-qt.protocol usr/share/kde4/services/

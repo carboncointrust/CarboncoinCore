@@ -176,7 +176,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>کیف پول رمزنگاری شد</translation>
     </message>
     <message>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your carboncoins from being stolen by malware infecting your computer.</source>
         <translation>بیت‌کوین هم اکنون بسته می‌شود تا فرایند رمزگذاری را تمام کند. به خاطر داشته باشید که رمزگذاری کردن کیف پول‌تان نمی‌تواند به طور کامل بیت‌کوین‌های شما را در برابر دزدیده شدن توسط بدافزارهایی که احتمالاً رایانهٔ شما را آلوده می‌کنند، محافظت نماید.</translation>
     </message>
     <message>
@@ -873,7 +873,7 @@ Address: %4
         <translation>نشانی اینترنتی قابل تجزیه و تحلیل نیست! دلیل این وضعیت ممکن است یک نشانی نامعتبر بیت‌کوین و یا پارامترهای ناهنجار در URI بوده باشد.</translation>
     </message>
     <message>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
+        <source>Cannot start carboncoin: click-to-pay handler</source>
         <translation>نمی‌توان بیت‌کوین را اجرا کرد: کنترل‌کنندهٔ کلیک-و-پرداخت</translation>
     </message>
     </context>
@@ -1715,7 +1715,7 @@ Address: %4
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>carboncoin-core</name>
     <message>
         <source>Usage:</source>
         <translation>استفاده:</translation>
@@ -1733,12 +1733,12 @@ Address: %4
         <translation>گزینه‌ها:</translation>
     </message>
     <message>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>مشخص کردن فایل پیکربندی (پیش‌فرض: bitcoin.conf)</translation>
+        <source>Specify configuration file (default: carboncoin.conf)</source>
+        <translation>مشخص کردن فایل پیکربندی (پیش‌فرض: carboncoin.conf)</translation>
     </message>
     <message>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>مشخص کردن فایل شناسهٔ پردازش - pid - (پیش‌فرض: bitcoin.pid)</translation>
+        <source>Specify pid file (default: carboncoind.pid)</source>
+        <translation>مشخص کردن فایل شناسهٔ پردازش - pid - (پیش‌فرض: carboncoin.pid)</translation>
     </message>
     <message>
         <source>Specify data directory</source>
@@ -1818,7 +1818,7 @@ Address: %4
     </message>
     <message>
         <source>Warning: Please check that your computer's date and time are correct! If your clock is wrong Bitcoin will not work properly.</source>
-        <translation>هشدار: لطفا زمان و تاریخ رایانه خود را تصحیح نمایید! اگر ساعت رایانه شما اشتباه باشد bitcoin ممکن است صحیح کار نکند</translation>
+        <translation>هشدار: لطفا زمان و تاریخ رایانه خود را تصحیح نمایید! اگر ساعت رایانه شما اشتباه باشد carboncoin ممکن است صحیح کار نکند</translation>
     </message>
     <message>
         <source>Block creation options:</source>
@@ -1938,7 +1938,7 @@ Address: %4
     </message>
     <message>
         <source>SSL options: (see the Bitcoin Wiki for SSL setup instructions)</source>
-        <translation>گزینه ssl (به ویکیbitcoin برای راهنمای راه اندازی ssl مراجعه شود)</translation>
+        <translation>گزینه ssl (به ویکیcarboncoin برای راهنمای راه اندازی ssl مراجعه شود)</translation>
     </message>
     <message>
         <source>Send trace/debug info to console instead of debug.log file</source>

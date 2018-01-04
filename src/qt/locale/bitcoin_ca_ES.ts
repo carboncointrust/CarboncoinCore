@@ -225,8 +225,8 @@ Aquest producte inclou programari desenvolupat pel projecte OpenSSL per a l'ús 
         <translation>Moneder encriptat</translation>
     </message>
     <message>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>Bitcoin es tancarà ara per acabar el procés d'encriptació. Recordeu que encriptar el moneder no protegeix completament els bitcoins de ser robats per programari maliciós instal·lat a l'ordinador.</translation>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your carboncoins from being stolen by malware infecting your computer.</source>
+        <translation>Bitcoin es tancarà ara per acabar el procés d'encriptació. Recordeu que encriptar el moneder no protegeix completament els carboncoins de ser robats per programari maliciós instal·lat a l'ordinador.</translation>
     </message>
     <message>
         <source>Wallet encryption failed</source>
@@ -349,7 +349,7 @@ Aquest producte inclou programari desenvolupat pel projecte OpenSSL per a l'ús 
     </message>
     <message>
         <source>Modify configuration options for Bitcoin</source>
-        <translation>Modifica les opcions de configuració per bitcoin</translation>
+        <translation>Modifica les opcions de configuració per carboncoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -432,8 +432,8 @@ Aquest producte inclou programari desenvolupat pel projecte OpenSSL per a l'ús 
         <translation>Bitcoin Core</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation>Sol·licita pagaments (genera codis QR i bitcoin: URI)</translation>
+        <source>Request payments (generates QR codes and carboncoin: URIs)</source>
+        <translation>Sol·licita pagaments (genera codis QR i carboncoin: URI)</translation>
     </message>
     <message>
         <source>&amp;About Bitcoin Core</source>
@@ -448,8 +448,8 @@ Aquest producte inclou programari desenvolupat pel projecte OpenSSL per a l'ús 
         <translation>Mostra la llista d'adreces de recepció i etiquetes utilitzades</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI or payment request</source>
-        <translation>Obre una bitcoin: sol·licitud d'URI o pagament</translation>
+        <source>Open a carboncoin: URI or payment request</source>
+        <translation>Obre una carboncoin: sol·licitud d'URI o pagament</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -1282,8 +1282,8 @@ Address: %4
         <translation>Error en la sol·licitud de pagament</translation>
     </message>
     <message>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
-        <translation>No es pot iniciar bitcoin: gestor clica-per-pagar</translation>
+        <source>Cannot start carboncoin: click-to-pay handler</source>
+        <translation>No es pot iniciar carboncoin: gestor clica-per-pagar</translation>
     </message>
     <message>
         <source>Net manager warning</source>
@@ -1950,8 +1950,8 @@ Address: %4
         <translation>Introduïu una etiqueta per a aquesta adreça per afegir-la a la llista d'adreces utilitzades</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
-        <translation>Un missatge que s'ha adjuntat al bitcoin: URI que s'emmagatzemarà amb la transacció per a la vostra referència. Nota: el missatge no s'enviarà a través de la xarxa Bitcoin.</translation>
+        <source>A message that was attached to the carboncoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
+        <translation>Un missatge que s'ha adjuntat al carboncoin: URI que s'emmagatzemarà amb la transacció per a la vostra referència. Nota: el missatge no s'enviarà a través de la xarxa Bitcoin.</translation>
     </message>
     <message>
         <source>This is an unverified payment request.</source>
@@ -2588,7 +2588,7 @@ Address: %4
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>carboncoin-core</name>
     <message>
         <source>Usage:</source>
         <translation>Ús:</translation>
@@ -2606,12 +2606,12 @@ Address: %4
         <translation>Opcions:</translation>
     </message>
     <message>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>Especifica un fitxer de configuració (per defecte: bitcoin.conf)</translation>
+        <source>Specify configuration file (default: carboncoin.conf)</source>
+        <translation>Especifica un fitxer de configuració (per defecte: carboncoin.conf)</translation>
     </message>
     <message>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>Especifica un fitxer pid (per defecte: bitcoind.pid)</translation>
+        <source>Specify pid file (default: carboncoind.pid)</source>
+        <translation>Especifica un fitxer pid (per defecte: carboncoind.pid)</translation>
     </message>
     <message>
         <source>Specify data directory</source>
@@ -2673,7 +2673,7 @@ Address: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=carboncoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -2684,7 +2684,7 @@ for example: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com
         <translation>%s, heu de establir una contrasenya RPC al fitxer de configuració: %s
 
 Es recomana que useu la següent contrasenya aleatòria:
-rpcuser=bitcoinrpc
+rpcuser=carboncoinrpc
 rpcpassword=%s
 (no necesiteu recordar aquesta contrasenya)
 El nom d'usuari i la contrasenya NO HAN de ser els mateixos.
@@ -3018,8 +3018,8 @@ per exemple: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com
         <translation>Això es així per a eines de proves de regressió per al desenvolupament d'aplicacions.</translation>
     </message>
     <message>
-        <source>Usage (deprecated, use bitcoin-cli):</source>
-        <translation>Ús (obsolet, feu servir bitcoin-cli):</translation>
+        <source>Usage (deprecated, use carboncoin-cli):</source>
+        <translation>Ús (obsolet, feu servir carboncoin-cli):</translation>
     </message>
     <message>
         <source>Verifying blocks...</source>

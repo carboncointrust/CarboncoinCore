@@ -22,7 +22,7 @@ namespace Ui {
     class SendCoinsDialog;
 }
 
-/** Dialog for sending bitcoins */
+/** Dialog for sending carboncoins */
 class SendCoinsDialog : public QDialog
 {
     Q_OBJECT

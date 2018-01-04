@@ -225,8 +225,8 @@ MIT/X11 дастурий таъминот лицензияси остида та
         <translation>Ҳамёни кодланган</translation>
     </message>
     <message>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>Bitcoin кодлаш жараёнини тугатиш учун ёпилади. Ёдда сақланг: ҳамёнингизни кодлаш компьютерингизни зарарлаган зарарли дастурлар томонидан bitcoin тангаларингизни ўғирланишидан тўлиқ ҳимоя қила олмайди.</translation>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your carboncoins from being stolen by malware infecting your computer.</source>
+        <translation>Bitcoin кодлаш жараёнини тугатиш учун ёпилади. Ёдда сақланг: ҳамёнингизни кодлаш компьютерингизни зарарлаган зарарли дастурлар томонидан carboncoin тангаларингизни ўғирланишидан тўлиқ ҳимоя қила олмайди.</translation>
     </message>
     <message>
         <source>Wallet encryption failed</source>
@@ -432,8 +432,8 @@ MIT/X11 дастурий таъминот лицензияси остида та
         <translation>Bitcoin Core</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation>Тўловлар (QR кодлари ва bitcoin ёрдамида яратишлар: URI’лар) сўраш</translation>
+        <source>Request payments (generates QR codes and carboncoin: URIs)</source>
+        <translation>Тўловлар (QR кодлари ва carboncoin ёрдамида яратишлар: URI’лар) сўраш</translation>
     </message>
     <message>
         <source>&amp;About Bitcoin Core</source>
@@ -448,7 +448,7 @@ MIT/X11 дастурий таъминот лицензияси остида та
         <translation>Фойдаланилган қабул қилинган манзиллар ва ёрлиқлар рўйхатини кўрсатиш</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI or payment request</source>
+        <source>Open a carboncoin: URI or payment request</source>
         <translation>Bitcoin’ни очиш: URI ёки тўлов сўрови</translation>
     </message>
     <message>
@@ -1888,7 +1888,7 @@ Address: %4
     </message>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>carboncoin-core</name>
     <message>
         <source>Usage:</source>
         <translation>Фойдаланиш:</translation>
@@ -1906,12 +1906,12 @@ Address: %4
         <translation>Танламалар:</translation>
     </message>
     <message>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>Мослаш файлини кўрсатинг (default: bitcoin.conf)</translation>
+        <source>Specify configuration file (default: carboncoin.conf)</source>
+        <translation>Мослаш файлини кўрсатинг (default: carboncoin.conf)</translation>
     </message>
     <message>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>pid файлини кўрсатинг (default: bitcoind.pid)</translation>
+        <source>Specify pid file (default: carboncoind.pid)</source>
+        <translation>pid файлини кўрсатинг (default: carboncoind.pid)</translation>
     </message>
     <message>
         <source>Specify data directory</source>

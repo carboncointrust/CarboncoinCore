@@ -217,8 +217,8 @@ Produk ini termasuk software yang dibangun oleh Proyek OpenSSL untuk Toolkit Ope
         <translation>Dompet terenkripsi</translation>
     </message>
     <message>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>Bitcoin akan menutup untuk menyelesaikan proses enkripsi. Ingat bahwa dengan mengenkripsi dompet Anda tidak sepenuhnya melindungi bitcoin Anda dari perangkat lunak berbahaya yang menginfeksi komputer Anda.</translation>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your carboncoins from being stolen by malware infecting your computer.</source>
+        <translation>Bitcoin akan menutup untuk menyelesaikan proses enkripsi. Ingat bahwa dengan mengenkripsi dompet Anda tidak sepenuhnya melindungi carboncoin Anda dari perangkat lunak berbahaya yang menginfeksi komputer Anda.</translation>
     </message>
     <message>
         <source>Wallet encryption failed</source>
@@ -420,8 +420,8 @@ Produk ini termasuk software yang dibangun oleh Proyek OpenSSL untuk Toolkit Ope
         <translation>Bitcoin Core</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation>Permintaan pembayaran (membangkitkan kode QR dan bitcoin: URIs)</translation>
+        <source>Request payments (generates QR codes and carboncoin: URIs)</source>
+        <translation>Permintaan pembayaran (membangkitkan kode QR dan carboncoin: URIs)</translation>
     </message>
     <message>
         <source>&amp;About Bitcoin Core</source>
@@ -436,8 +436,8 @@ Produk ini termasuk software yang dibangun oleh Proyek OpenSSL untuk Toolkit Ope
         <translation>Tampilkan daftar alamat dan label yang diterima</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI or payment request</source>
-        <translation>Buka URI bitcoin: atau permintaan pembayaran</translation>
+        <source>Open a carboncoin: URI or payment request</source>
+        <translation>Buka URI carboncoin: atau permintaan pembayaran</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -2464,7 +2464,7 @@ Alamat: %4
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>carboncoin-core</name>
     <message>
         <source>Usage:</source>
         <translation>Penggunaan:</translation>
@@ -2482,12 +2482,12 @@ Alamat: %4
         <translation>Pilihan:</translation>
     </message>
     <message>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>Tentukan berkas konfigurasi (standar: bitcoin.conf)</translation>
+        <source>Specify configuration file (default: carboncoin.conf)</source>
+        <translation>Tentukan berkas konfigurasi (standar: carboncoin.conf)</translation>
     </message>
     <message>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>Tentukan berkas pid (standar: bitcoind.pid)</translation>
+        <source>Specify pid file (default: carboncoind.pid)</source>
+        <translation>Tentukan berkas pid (standar: carboncoind.pid)</translation>
     </message>
     <message>
         <source>Specify data directory</source>

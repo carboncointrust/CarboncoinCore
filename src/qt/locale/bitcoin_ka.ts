@@ -221,7 +221,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>საფულე დაშიფრულია</translation>
     </message>
     <message>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your carboncoins from being stolen by malware infecting your computer.</source>
         <translation>ახლა Bitcoin დაიხურება დაშიფრვის პროცესის დასასრულებლად. გაითვალისწინეთ, რომ დაშიფრვა სრულად ვერ დაიცავს თქვენს ბითქოინებს თქვენს კომპიუტერში შემოპარული მავნე პროგრამების საშუალებით დატაცებისაგან.</translation>
     </message>
     <message>
@@ -428,8 +428,8 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Bitcoin Core</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation>გადახდის მოთხოვნა (შეიქმნება QR-კოდები და bitcoin: ბმულები)</translation>
+        <source>Request payments (generates QR codes and carboncoin: URIs)</source>
+        <translation>გადახდის მოთხოვნა (შეიქმნება QR-კოდები და carboncoin: ბმულები)</translation>
     </message>
     <message>
         <source>&amp;About Bitcoin Core</source>
@@ -444,8 +444,8 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>გამოყენებული მიღების მისამართებისა და ნიშნულების სიის ჩვენება</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI or payment request</source>
-        <translation>bitcoin: URI-ის ან გადახდის მოთხოვნის გახსნა</translation>
+        <source>Open a carboncoin: URI or payment request</source>
+        <translation>carboncoin: URI-ის ან გადახდის მოთხოვნის გახსნა</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -1250,8 +1250,8 @@ Address: %4
         <translation>გადახდის მოთხოვნის შეცდომა</translation>
     </message>
     <message>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
-        <translation>ვერ გაიშვა bitcoin: click-to-pay</translation>
+        <source>Cannot start carboncoin: click-to-pay handler</source>
+        <translation>ვერ გაიშვა carboncoin: click-to-pay</translation>
     </message>
     <message>
         <source>Net manager warning</source>
@@ -1906,7 +1906,7 @@ Address: %4
         <translation>შეიყვანეთ ამ მისამართის ნიშნული გამოყენებული მისამართების სიაში დასამატებლად</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
+        <source>A message that was attached to the carboncoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
         <translation>მესიჯი, რომელიც თან ერთვის მონეტებს:  URI, რომელიც შეინახება ტრანსაქციასთან ერთად თქვენთვის. შენიშვნა: მესიჯი არ გაყვება გადახდას ბითქოინის ქსელში.</translation>
     </message>
     <message>
@@ -2544,7 +2544,7 @@ Address: %4
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>carboncoin-core</name>
     <message>
         <source>Usage:</source>
         <translation>გამოყენება:</translation>
@@ -2562,12 +2562,12 @@ Address: %4
         <translation>ოპციები:</translation>
     </message>
     <message>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>მიუთითეთ საკონფიგურაციო ფაილი (ნაგულისხმევია: bitcoin.conf)</translation>
+        <source>Specify configuration file (default: carboncoin.conf)</source>
+        <translation>მიუთითეთ საკონფიგურაციო ფაილი (ნაგულისხმევია: carboncoin.conf)</translation>
     </message>
     <message>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>მიუთითეთ pid ფაილი (ნაგულისხმევია: bitcoind.pid)</translation>
+        <source>Specify pid file (default: carboncoind.pid)</source>
+        <translation>მიუთითეთ pid ფაილი (ნაგულისხმევია: carboncoind.pid)</translation>
     </message>
     <message>
         <source>Specify data directory</source>
@@ -2625,7 +2625,7 @@ Address: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=carboncoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -2636,7 +2636,7 @@ for example: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com
         <translation>%s, მიუთითეთ rpcpassword საკონფიგურაციო ფაილში:
 %s
 რეკომენდებულია შემდეგი შემთხვევითი პაროლი:
-rpcuser=bitcoinrpc
+rpcuser=carboncoinrpc
 rpcpassword=%s
 (ამის დამახსოვრება არ გჭირდებათ)
 სახელი და პაროლი ერთმანეთს არ უნდა ემთხვეოდეს.
@@ -2898,8 +2898,8 @@ rpcpassword=%s
         <translation>გამოიყენება რეგრესული ტესტირების ინსტრუმენტებისა და პროგრამების შემუშავებისას.</translation>
     </message>
     <message>
-        <source>Usage (deprecated, use bitcoin-cli):</source>
-        <translation>გამოყენება (მოძველებულია, გამოიყენეთ bitcoin-cli):</translation>
+        <source>Usage (deprecated, use carboncoin-cli):</source>
+        <translation>გამოყენება (მოძველებულია, გამოიყენეთ carboncoin-cli):</translation>
     </message>
     <message>
         <source>Verifying blocks...</source>

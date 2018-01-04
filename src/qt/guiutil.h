@@ -34,13 +34,13 @@ namespace GUIUtil
     QString dateTimeStr(qint64 nTime);
 
     // Render Bitcoin addresses in monospace font
-    QFont bitcoinAddressFont();
+    QFont carboncoinAddressFont();
 
     // Set up widgets for address and amounts
     void setupAddressWidget(QValidatedLineEdit *widget, QWidget *parent);
     void setupAmountWidget(QLineEdit *widget, QWidget *parent);
 
-    // Parse "bitcoin:" URI into recipient object, return true on successful parsing
+    // Parse "carboncoin:" URI into recipient object, return true on successful parsing
     bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out);
     bool parseBitcoinURI(QString uri, SendCoinsRecipient *out);
     QString formatBitcoinURI(const SendCoinsRecipient &info);

@@ -160,7 +160,7 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
         <translation>Cassidile cifratum</translation>
     </message>
     <message>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your carboncoins from being stolen by malware infecting your computer.</source>
         <translation>Bitcoin iam desinet ut finiat actionem cifrandi.  Memento cassidile cifrare non posse cuncte curare ne tui nummi clepantur ab malis programatibus in tuo computatro.</translation>
     </message>
     <message>
@@ -773,7 +773,7 @@ Inscriptio: %4
         <translation>URI intellegi non posse!  Huius causa possit inscriptionem Bitcoin non validam aut URI parametra maleformata.</translation>
     </message>
     <message>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
+        <source>Cannot start carboncoin: click-to-pay handler</source>
         <translation>Bitcoin incipere non potest: cliccare-ad-pensandum handler</translation>
     </message>
     </context>
@@ -1587,7 +1587,7 @@ Inscriptio: %4
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>carboncoin-core</name>
     <message>
         <source>Usage:</source>
         <translation>Usus:</translation>
@@ -1605,12 +1605,12 @@ Inscriptio: %4
         <translation>Optiones:</translation>
     </message>
     <message>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>Specifica configurationis plicam (praedefinitum: bitcoin.conf)</translation>
+        <source>Specify configuration file (default: carboncoin.conf)</source>
+        <translation>Specifica configurationis plicam (praedefinitum: carboncoin.conf)</translation>
     </message>
     <message>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>Specifica pid plicam (praedefinitum: bitcoin.pid)</translation>
+        <source>Specify pid file (default: carboncoind.pid)</source>
+        <translation>Specifica pid plicam (praedefinitum: carboncoin.pid)</translation>
     </message>
     <message>
         <source>Specify data directory</source>
@@ -1668,7 +1668,7 @@ Inscriptio: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=carboncoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -1679,7 +1679,7 @@ for example: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com
         <translation>%s, necesse est te rpcpassword constituere in plica configurationis:
 %s
 Hortatur te hanc fortuitam tesseram uti:
-rpcuser=bitcoinrpc
+rpcuser=carboncoinrpc
 rpcpassword=%s
 (non est necesse te hanc tesseram meminisse)
 Nomen usoris et tessera eadem esse NON POSSUNT.

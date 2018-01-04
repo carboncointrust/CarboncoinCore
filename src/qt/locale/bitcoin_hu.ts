@@ -107,7 +107,7 @@ Ez a termék az OpenSSL Project által lett kifejlesztve az OpenSSL Toolkit (htt
     </message>
     <message>
         <source>These are your Bitcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Ezekkel a címekkel fogadhatsz bitcoint. Ajánlott minden tranzakciónál egy új fogadó címet használni.</translation>
+        <translation>Ezekkel a címekkel fogadhatsz carboncoint. Ajánlott minden tranzakciónál egy új fogadó címet használni.</translation>
     </message>
     <message>
         <source>Copy &amp;Label</source>
@@ -220,7 +220,7 @@ Ez a termék az OpenSSL Project által lett kifejlesztve az OpenSSL Toolkit (htt
         <translation>Tárca kódolva</translation>
     </message>
     <message>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your carboncoins from being stolen by malware infecting your computer.</source>
         <translation>Bitcoin will close now to finish the encryption process. Ne feledd, hogy a tárca titkosítása sem nyújt teljes védelmet az adathalász programok fertőzésével szemben.</translation>
     </message>
     <message>
@@ -427,8 +427,8 @@ Ez a termék az OpenSSL Project által lett kifejlesztve az OpenSSL Toolkit (htt
         <translation>Bitcoin Core</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation>Kifizetési kérelem (QR-kódot és "bitcoin:" azonosítót (URI-t) hoz létre)</translation>
+        <source>Request payments (generates QR codes and carboncoin: URIs)</source>
+        <translation>Kifizetési kérelem (QR-kódot és "carboncoin:" azonosítót (URI-t) hoz létre)</translation>
     </message>
     <message>
         <source>&amp;About Bitcoin Core</source>
@@ -443,8 +443,8 @@ Ez a termék az OpenSSL Project által lett kifejlesztve az OpenSSL Toolkit (htt
         <translation>A használt fogadó címek és címkék megtekintése</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI or payment request</source>
-        <translation>"bitcoin:" URI azonosító vagy fizetési kérelem megnyitása</translation>
+        <source>Open a carboncoin: URI or payment request</source>
+        <translation>"carboncoin:" URI azonosító vagy fizetési kérelem megnyitása</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -1162,8 +1162,8 @@ Cím: %4
         <translation>URI kezelés</translation>
     </message>
     <message>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
-        <translation>A bitcoint nem lehet elindítani: click-to-pay handler</translation>
+        <source>Cannot start carboncoin: click-to-pay handler</source>
+        <translation>A carboncoint nem lehet elindítani: click-to-pay handler</translation>
     </message>
     </context>
 <context>
@@ -1540,7 +1540,7 @@ Cím: %4
     </message>
     <message>
         <source>The amount exceeds your balance.</source>
-        <translation>Nincs ennyi bitcoin az egyenlegeden.</translation>
+        <translation>Nincs ennyi carboncoin az egyenlegeden.</translation>
     </message>
     <message>
         <source>The total exceeds your balance when the %1 transaction fee is included.</source>
@@ -2113,7 +2113,7 @@ Cím: %4
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>carboncoin-core</name>
     <message>
         <source>Usage:</source>
         <translation>Használat:</translation>
@@ -2134,13 +2134,13 @@ Cím: %4
 </translation>
     </message>
     <message>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>Konfigurációs fájl (alapértelmezett: bitcoin.conf)
+        <source>Specify configuration file (default: carboncoin.conf)</source>
+        <translation>Konfigurációs fájl (alapértelmezett: carboncoin.conf)
 </translation>
     </message>
     <message>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>pid-fájl (alapértelmezett: bitcoind.pid)
+        <source>Specify pid file (default: carboncoind.pid)</source>
+        <translation>pid-fájl (alapértelmezett: carboncoind.pid)
 </translation>
     </message>
     <message>
@@ -2527,7 +2527,7 @@ Cím: %4
     </message>
     <message>
         <source>Insufficient funds</source>
-        <translation>Nincs elég bitcoinod.</translation>
+        <translation>Nincs elég carboncoinod.</translation>
     </message>
     <message>
         <source>Loading block index...</source>

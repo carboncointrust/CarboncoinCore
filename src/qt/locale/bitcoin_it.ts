@@ -84,11 +84,11 @@ Questo prodotto include software sviluppato dal progetto OpenSSL per l'uso del T
     </message>
     <message>
         <source>Choose the address to send coins to</source>
-        <translation>Scegli l'indirizzo a cui inviare bitcoin</translation>
+        <translation>Scegli l'indirizzo a cui inviare carboncoin</translation>
     </message>
     <message>
         <source>Choose the address to receive coins with</source>
-        <translation>Scegli l'indirizzo con cui ricevere bitcoin</translation>
+        <translation>Scegli l'indirizzo con cui ricevere carboncoin</translation>
     </message>
     <message>
         <source>C&amp;hoose</source>
@@ -104,11 +104,11 @@ Questo prodotto include software sviluppato dal progetto OpenSSL per l'uso del T
     </message>
     <message>
         <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Questo è un elenco di indirizzi bitcoin a cui puoi inviare pagamenti. Controlla sempre l'importo e l'indirizzo del beneficiario prima di inviare bitcoin.</translation>
+        <translation>Questo è un elenco di indirizzi carboncoin a cui puoi inviare pagamenti. Controlla sempre l'importo e l'indirizzo del beneficiario prima di inviare carboncoin.</translation>
     </message>
     <message>
         <source>These are your Bitcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Questi sono i tuoi indirizzi bitcoin che puoi usare per ricevere pagamenti. Si raccomanda di generare un nuovo indirizzo per ogni transazione.</translation>
+        <translation>Questi sono i tuoi indirizzi carboncoin che puoi usare per ricevere pagamenti. Si raccomanda di generare un nuovo indirizzo per ogni transazione.</translation>
     </message>
     <message>
         <source>Copy &amp;Label</source>
@@ -225,7 +225,7 @@ Questo prodotto include software sviluppato dal progetto OpenSSL per l'uso del T
         <translation>Portamonete cifrato</translation>
     </message>
     <message>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your carboncoins from being stolen by malware infecting your computer.</source>
         <translation>Bitcoin si chiuderà per portare a termine il processo di cifratura. Ricorda che cifrare il tuo portamonete non può fornire una protezione totale contro i furti causati da infezioni malware.</translation>
     </message>
     <message>
@@ -345,11 +345,11 @@ Questo prodotto include software sviluppato dal progetto OpenSSL per l'uso del T
     </message>
     <message>
         <source>Send coins to a Bitcoin address</source>
-        <translation>Invia monete ad un indirizzo bitcoin</translation>
+        <translation>Invia monete ad un indirizzo carboncoin</translation>
     </message>
     <message>
         <source>Modify configuration options for Bitcoin</source>
-        <translation>Modifica opzioni di configurazione per bitcoin</translation>
+        <translation>Modifica opzioni di configurazione per carboncoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -401,11 +401,11 @@ Questo prodotto include software sviluppato dal progetto OpenSSL per l'uso del T
     </message>
     <message>
         <source>Sign messages with your Bitcoin addresses to prove you own them</source>
-        <translation>Firma i messaggi con il tuo indirizzo bitcoin per dimostrarne il possesso</translation>
+        <translation>Firma i messaggi con il tuo indirizzo carboncoin per dimostrarne il possesso</translation>
     </message>
     <message>
         <source>Verify messages to ensure they were signed with specified Bitcoin addresses</source>
-        <translation>Verifica i messaggi per accertare che siano stati firmati con gli indirizzi bitcoin specificati</translation>
+        <translation>Verifica i messaggi per accertare che siano stati firmati con gli indirizzi carboncoin specificati</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -432,8 +432,8 @@ Questo prodotto include software sviluppato dal progetto OpenSSL per l'uso del T
         <translation>Bitcoin Core</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation>Richiedi pagamenti (genera codici QR e bitcoin: URI)</translation>
+        <source>Request payments (generates QR codes and carboncoin: URIs)</source>
+        <translation>Richiedi pagamenti (genera codici QR e carboncoin: URI)</translation>
     </message>
     <message>
         <source>&amp;About Bitcoin Core</source>
@@ -448,7 +448,7 @@ Questo prodotto include software sviluppato dal progetto OpenSSL per l'uso del T
         <translation>Mostra la lista degli indirizzi di ricezione utilizzati</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI or payment request</source>
+        <source>Open a carboncoin: URI or payment request</source>
         <translation>Apri un URI o una richiesta di pagamento</translation>
     </message>
     <message>
@@ -847,7 +847,7 @@ Indirizzo: %4
     </message>
     <message>
         <source>The entered address "%1" is not a valid Bitcoin address.</source>
-        <translation>L'indirizzo inserito "%1" non è un indirizzo bitcoin valido.</translation>
+        <translation>L'indirizzo inserito "%1" non è un indirizzo carboncoin valido.</translation>
     </message>
     <message>
         <source>Could not unlock wallet.</source>
@@ -1288,8 +1288,8 @@ Più URL vengono separati da una barra verticale |.</translation>
         <translation>Errore di richiesta di pagamento</translation>
     </message>
     <message>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
-        <translation>Impossibile avviare bitcoin: gestore click-to-pay</translation>
+        <source>Cannot start carboncoin: click-to-pay handler</source>
+        <translation>Impossibile avviare carboncoin: gestore click-to-pay</translation>
     </message>
     <message>
         <source>Net manager warning</source>
@@ -1758,7 +1758,7 @@ Più URL vengono separati da una barra verticale |.</translation>
     </message>
     <message>
         <source>If this is activated, but the change address is empty or invalid, change will be sent to a newly generated address.</source>
-        <translation>Se questo è abilitato e l'indirizzo per il resto è vuoto o invalido, il resto sarà inviato ad un nuovo indirizzo bitcoin generato appositamente.</translation>
+        <translation>Se questo è abilitato e l'indirizzo per il resto è vuoto o invalido, il resto sarà inviato ad un nuovo indirizzo carboncoin generato appositamente.</translation>
     </message>
     <message>
         <source>Custom change address</source>
@@ -1794,7 +1794,7 @@ Più URL vengono separati da una barra verticale |.</translation>
     </message>
     <message>
         <source>Confirm send coins</source>
-        <translation>Conferma l'invio di bitcoin</translation>
+        <translation>Conferma l'invio di carboncoin</translation>
     </message>
     <message>
         <source>%1 to %2</source>
@@ -1858,7 +1858,7 @@ Più URL vengono separati da una barra verticale |.</translation>
     </message>
     <message>
         <source>Duplicate address found, can only send to each address once per send operation.</source>
-        <translation>Rilevato un indirizzo duplicato, è possibile inviare bitcoin una sola volta agli indirizzi durante un'operazione di invio.</translation>
+        <translation>Rilevato un indirizzo duplicato, è possibile inviare carboncoin una sola volta agli indirizzi durante un'operazione di invio.</translation>
     </message>
     <message>
         <source>Transaction creation failed!</source>
@@ -1866,7 +1866,7 @@ Più URL vengono separati da una barra verticale |.</translation>
     </message>
     <message>
         <source>The transaction was rejected! This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>La transazione è stata rifiutata! Questo può accadere se alcuni bitcoin nel tuo portamonete sono già stati spesi, ad esempio se hai utilizzato una copia del file wallet.dat per spendere bitcoin e questi non sono stati considerati spesi dal portamonete corrente.</translation>
+        <translation>La transazione è stata rifiutata! Questo può accadere se alcuni carboncoin nel tuo portamonete sono già stati spesi, ad esempio se hai utilizzato una copia del file wallet.dat per spendere carboncoin e questi non sono stati considerati spesi dal portamonete corrente.</translation>
     </message>
     <message>
         <source>Warning: Invalid Bitcoin address</source>
@@ -1956,8 +1956,8 @@ Più URL vengono separati da una barra verticale |.</translation>
         <translation>Inserisci un'etichetta per questo indirizzo per aggiungerlo alla lista degli indirizzi utilizzati</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
-        <translation>Messaggio incluso nel bitcoin URI e che sarà memorizzato con la transazione per vostro riferimento. Nota: Questo messaggio non sarà inviato attraverso la rete Bitcoin.</translation>
+        <source>A message that was attached to the carboncoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
+        <translation>Messaggio incluso nel carboncoin URI e che sarà memorizzato con la transazione per vostro riferimento. Nota: Questo messaggio non sarà inviato attraverso la rete Bitcoin.</translation>
     </message>
     <message>
         <source>This is an unverified payment request.</source>
@@ -2087,7 +2087,7 @@ Più URL vengono separati da una barra verticale |.</translation>
     </message>
     <message>
         <source>The entered address does not refer to a key.</source>
-        <translation>L'indirizzo bitcoin inserito non è associato a nessuna chiave.</translation>
+        <translation>L'indirizzo carboncoin inserito non è associato a nessuna chiave.</translation>
     </message>
     <message>
         <source>Wallet unlock was cancelled.</source>
@@ -2248,7 +2248,7 @@ Più URL vengono separati da una barra verticale |.</translation>
     </message>
     <message>
         <source>Generated coins must mature %1 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to "not accepted" and it won't be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation>È necessario attendere %1 blocchi prima che i bitcoin generati possano essere spesi. Quando è stato generato questo blocco, è stato trasmesso alla rete in modo da poter essere aggiunto alla block chain. Se l'inserimento avrà esito negativo il suo stato sarà modificato in "non accettato" e risulterà non spendibile. Questo può occasionalmente accadere se un altro nodo genera un blocco entro pochi secondi dal tuo.</translation>
+        <translation>È necessario attendere %1 blocchi prima che i carboncoin generati possano essere spesi. Quando è stato generato questo blocco, è stato trasmesso alla rete in modo da poter essere aggiunto alla block chain. Se l'inserimento avrà esito negativo il suo stato sarà modificato in "non accettato" e risulterà non spendibile. Questo può occasionalmente accadere se un altro nodo genera un blocco entro pochi secondi dal tuo.</translation>
     </message>
     <message>
         <source>Debug information</source>
@@ -2594,7 +2594,7 @@ Più URL vengono separati da una barra verticale |.</translation>
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>carboncoin-core</name>
     <message>
         <source>Usage:</source>
         <translation>Utilizzo:</translation>
@@ -2612,12 +2612,12 @@ Più URL vengono separati da una barra verticale |.</translation>
         <translation>Opzioni:</translation>
     </message>
     <message>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>Specifica il file di configurazione (predefinito: bitcoin.conf)</translation>
+        <source>Specify configuration file (default: carboncoin.conf)</source>
+        <translation>Specifica il file di configurazione (predefinito: carboncoin.conf)</translation>
     </message>
     <message>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>Specifica il file pid (predefinito: bitcoind.pid)</translation>
+        <source>Specify pid file (default: carboncoind.pid)</source>
+        <translation>Specifica il file pid (predefinito: carboncoind.pid)</translation>
     </message>
     <message>
         <source>Specify data directory</source>
@@ -2679,7 +2679,7 @@ Più URL vengono separati da una barra verticale |.</translation>
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=carboncoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -2690,7 +2690,7 @@ for example: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com
         <translation>%s, devi impostare una rpcpassword nel file di configurazione:
 %s
 Si raccomanda l'uso della seguente password generata casualmente:
-rpcuser=bitcoinrpc
+rpcuser=carboncoinrpc
 rpcpassword=%s
 (non serve ricordare questa password)
 Il nome utente e la password NON DEVONO essere uguali.
@@ -2729,7 +2729,7 @@ ad esempio: alertnotify=echo %%s | mail -s "Allarme Bitcoin" admin@foo.com
     </message>
     <message>
         <source>Error: The transaction was rejected! This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>Errore: la transazione è stata rifiutata! Questo può accadere se alcuni bitcoin nel tuo portamonete sono già stati spesi, ad esempio se hai utilizzato una copia del file wallet.dat per spendere bitcoin e questi non sono stati considerati spesi dal portamonete corrente.</translation>
+        <translation>Errore: la transazione è stata rifiutata! Questo può accadere se alcuni carboncoin nel tuo portamonete sono già stati spesi, ad esempio se hai utilizzato una copia del file wallet.dat per spendere carboncoin e questi non sono stati considerati spesi dal portamonete corrente.</translation>
     </message>
     <message>
         <source>Error: This transaction requires a transaction fee of at least %s because of its amount, complexity, or use of recently received funds!</source>
@@ -2929,7 +2929,7 @@ ad esempio: alertnotify=echo %%s | mail -s "Allarme Bitcoin" admin@foo.com
     </message>
     <message>
         <source>Failed to write to coin database</source>
-        <translation>Scrittura nel database dei bitcoin fallita</translation>
+        <translation>Scrittura nel database dei carboncoin fallita</translation>
     </message>
     <message>
         <source>Failed to write transaction index</source>
@@ -3024,8 +3024,8 @@ ad esempio: alertnotify=echo %%s | mail -s "Allarme Bitcoin" admin@foo.com
         <translation>Questo è previsto per l'uso con test di regressione e per lo sviluppo di applicazioni.</translation>
     </message>
     <message>
-        <source>Usage (deprecated, use bitcoin-cli):</source>
-        <translation>Usage (deprecato, usare bitcoin-cli):</translation>
+        <source>Usage (deprecated, use carboncoin-cli):</source>
+        <translation>Usage (deprecato, usare carboncoin-cli):</translation>
     </message>
     <message>
         <source>Verifying blocks...</source>

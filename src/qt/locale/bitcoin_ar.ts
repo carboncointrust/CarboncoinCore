@@ -214,7 +214,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>محفظة مشفرة</translation>
     </message>
     <message>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your carboncoins from being stolen by malware infecting your computer.</source>
         <translation>بتكوين سوف يغلق الآن لإنهاء عملية التشفير. تذكر أن التشفير لا يستطيع حماية محفظتك تمامًا من السرقة من خلال البرمجيات الخبيثة التي تصيب جهازك </translation>
     </message>
     <message>
@@ -338,7 +338,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <source>Modify configuration options for Bitcoin</source>
-        <translation>تعديل إعدادات bitcoin</translation>
+        <translation>تعديل إعدادات carboncoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -406,7 +406,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <source>&amp;About Bitcoin Core</source>
-        <translation>حول bitcoin core</translation>
+        <translation>حول carboncoin core</translation>
     </message>
     <message>
         <source>Bitcoin client</source>
@@ -1681,7 +1681,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>carboncoin-core</name>
     <message>
         <source>Usage:</source>
         <translation>المستخدم</translation>

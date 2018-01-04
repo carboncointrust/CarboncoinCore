@@ -1,7 +1,7 @@
 Bitcoin Core integration/staging tree
 =====================================
 
-http://www.bitcoin.org
+http://www.carboncoin.org
 
 Copyright (c) 2009-2015 Bitcoin Core Developers
 
@@ -15,7 +15,7 @@ out collectively by the network. Bitcoin Core is the name of open source
 software which enables the use of this currency.
 
 For more information, as well as an immediately useable, binary version of
-the Bitcoin Core software, see http://www.bitcoin.org/en/download.
+the Bitcoin Core software, see http://www.carboncoin.org/en/download.
 
 License
 -------
@@ -34,7 +34,7 @@ development team members simply pulls it.
 
 If it is a *more complicated or potentially controversial* change, then the patch
 submitter will be asked to start a discussion (if they haven't already) on the
-[mailing list](http://sourceforge.net/mailarchive/forum.php?forum_name=bitcoin-development).
+[mailing list](http://sourceforge.net/mailarchive/forum.php?forum_name=carboncoin-development).
 
 The patch will be accepted if there is broad consensus that it is a good thing.
 Developers should expect to rework and resubmit patches if the code doesn't
@@ -42,7 +42,7 @@ match the project's coding conventions (see [doc/coding.md](doc/coding.md)) or a
 controversial.
 
 The `master` branch is regularly built and tested, but is not guaranteed to be
-completely stable. [Tags](https://github.com/bitcoin/bitcoin/tags) are created
+completely stable. [Tags](https://github.com/carboncoin/carboncoin/tags) are created
 regularly to indicate new official, stable release versions of Bitcoin.
 
 Testing
@@ -68,13 +68,13 @@ for the build/test scripts.
 
 Large changes should have a test plan, and should be tested by somebody other
 than the developer who wrote the code.
-See https://github.com/bitcoin/QA/ for how to create a test plan.
+See https://github.com/carboncoin/QA/ for how to create a test plan.
 
 Translations
 ------------
 
 Changes to translations as well as new translations can be submitted to
-[Bitcoin Core's Transifex page](https://www.transifex.com/projects/p/bitcoin/).
+[Bitcoin Core's Transifex page](https://www.transifex.com/projects/p/carboncoin/).
 
 Periodically the translations are pulled from Transifex and merged into the git repository. See the
 [translation process](doc/translation_process.md) for details on how this works.
@@ -103,7 +103,7 @@ to see it.
 
 **testnet and regtest modes**
 
-Run with the -testnet option to run with "play bitcoins" on the test network, if you
+Run with the -testnet option to run with "play carboncoins" on the test network, if you
 are testing multi-machine code that needs to operate across the internet.
 
 If you are testing something that can run on one machine, run with the -regtest option.

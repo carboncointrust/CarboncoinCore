@@ -201,7 +201,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Гаманец зашыфраваны</translation>
     </message>
     <message>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your carboncoins from being stolen by malware infecting your computer.</source>
         <translation>Bitcoin зачыняецца дзеля завяршэння працэсса шыфравання. Памятайце, што шыфраванне гаманца цалкам абараняе вашыя сродкі ад скрадання шкоднымі праграмамі якія могуць пранікнуць у ваш камп'ютар.</translation>
     </message>
     <message>
@@ -960,7 +960,7 @@ Address: %4
     </message>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>carboncoin-core</name>
     <message>
         <source>Usage:</source>
         <translation>Ужыванне:</translation>
@@ -978,12 +978,12 @@ Address: %4
         <translation>Опцыі:</translation>
     </message>
     <message>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>Вызначыць канфігурацыйны файл (зыходна: bitcoin.conf)</translation>
+        <source>Specify configuration file (default: carboncoin.conf)</source>
+        <translation>Вызначыць канфігурацыйны файл (зыходна: carboncoin.conf)</translation>
     </message>
     <message>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>Вызначыць pid-файл (зыходна: bitcoind.pid)</translation>
+        <source>Specify pid file (default: carboncoind.pid)</source>
+        <translation>Вызначыць pid-файл (зыходна: carboncoind.pid)</translation>
     </message>
     <message>
         <source>Specify data directory</source>

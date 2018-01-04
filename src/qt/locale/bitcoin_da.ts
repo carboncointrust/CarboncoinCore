@@ -84,11 +84,11 @@ Produktet indeholder software som er udviklet af OpenSSL Project til brug i Open
     </message>
     <message>
         <source>Choose the address to send coins to</source>
-        <translation>Vælg adresse at sende bitcoins til</translation>
+        <translation>Vælg adresse at sende carboncoins til</translation>
     </message>
     <message>
         <source>Choose the address to receive coins with</source>
-        <translation>Vælg adresse at modtage bitcoins med</translation>
+        <translation>Vælg adresse at modtage carboncoins med</translation>
     </message>
     <message>
         <source>C&amp;hoose</source>
@@ -104,7 +104,7 @@ Produktet indeholder software som er udviklet af OpenSSL Project til brug i Open
     </message>
     <message>
         <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Disse er dine Bitcoin-adresser for at sende betalinger. Tjek altid beløb og modtageradresse, inden du sender bitcoins.</translation>
+        <translation>Disse er dine Bitcoin-adresser for at sende betalinger. Tjek altid beløb og modtageradresse, inden du sender carboncoins.</translation>
     </message>
     <message>
         <source>These are your Bitcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
@@ -225,8 +225,8 @@ Produktet indeholder software som er udviklet af OpenSSL Project til brug i Open
         <translation>Tegnebog krypteret</translation>
     </message>
     <message>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>Bitcoin vil nu lukke for at gennemføre krypteringsprocessen. Husk på, at kryptering af din tegnebog vil ikke beskytte dine bitcoins fuldt ud mod at blive stjålet af malware på din computer.</translation>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your carboncoins from being stolen by malware infecting your computer.</source>
+        <translation>Bitcoin vil nu lukke for at gennemføre krypteringsprocessen. Husk på, at kryptering af din tegnebog vil ikke beskytte dine carboncoins fuldt ud mod at blive stjålet af malware på din computer.</translation>
     </message>
     <message>
         <source>Wallet encryption failed</source>
@@ -345,7 +345,7 @@ Produktet indeholder software som er udviklet af OpenSSL Project til brug i Open
     </message>
     <message>
         <source>Send coins to a Bitcoin address</source>
-        <translation>Send bitcoins til en Bitcoin-adresse</translation>
+        <translation>Send carboncoins til en Bitcoin-adresse</translation>
     </message>
     <message>
         <source>Modify configuration options for Bitcoin</source>
@@ -432,8 +432,8 @@ Produktet indeholder software som er udviklet af OpenSSL Project til brug i Open
         <translation>Bitcoin Core</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation>Forespørg betalinger (genererer QR-koder og "bitcoin:"-URI'er)</translation>
+        <source>Request payments (generates QR codes and carboncoin: URIs)</source>
+        <translation>Forespørg betalinger (genererer QR-koder og "carboncoin:"-URI'er)</translation>
     </message>
     <message>
         <source>&amp;About Bitcoin Core</source>
@@ -448,8 +448,8 @@ Produktet indeholder software som er udviklet af OpenSSL Project til brug i Open
         <translation>Vis listen over brugte modtagelsesadresser og -mærkater</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI or payment request</source>
-        <translation>Åbn en "bitcoin:"-URI eller betalingsforespørgsel</translation>
+        <source>Open a carboncoin: URI or payment request</source>
+        <translation>Åbn en "carboncoin:"-URI eller betalingsforespørgsel</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -1161,7 +1161,7 @@ Adresse: %4
     </message>
     <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Vælg standard for underopdeling af enhed, som skal vises i brugergrænsefladen og ved afsendelse af bitcoins.</translation>
+        <translation>Vælg standard for underopdeling af enhed, som skal vises i brugergrænsefladen og ved afsendelse af carboncoins.</translation>
     </message>
     <message>
         <source>Whether to show Bitcoin addresses in the transaction list or not.</source>
@@ -1286,8 +1286,8 @@ Adresse: %4
         <translation>Fejl i betalingsforespørgsel</translation>
     </message>
     <message>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
-        <translation>Kan ikke starte bitcoin: click-to-pay-håndtering</translation>
+        <source>Cannot start carboncoin: click-to-pay handler</source>
+        <translation>Kan ikke starte carboncoin: click-to-pay-håndtering</translation>
     </message>
     <message>
         <source>Net manager warning</source>
@@ -1704,7 +1704,7 @@ Adresse: %4
     <name>SendCoinsDialog</name>
     <message>
         <source>Send Coins</source>
-        <translation>Send bitcoins</translation>
+        <translation>Send carboncoins</translation>
     </message>
     <message>
         <source>Coin Control Features</source>
@@ -1792,7 +1792,7 @@ Adresse: %4
     </message>
     <message>
         <source>Confirm send coins</source>
-        <translation>Bekræft afsendelse af bitcoins</translation>
+        <translation>Bekræft afsendelse af carboncoins</translation>
     </message>
     <message>
         <source>%1 to %2</source>
@@ -1864,7 +1864,7 @@ Adresse: %4
     </message>
     <message>
         <source>The transaction was rejected! This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>Transaktionen blev afvist! Dette kan ske, hvis nogle af dine bitcoins i din tegnebog allerede er brugt, som hvis du brugte en kopi af wallet.dat og dine bitcoins er blevet brugt i kopien, men ikke er markeret som brugt her.</translation>
+        <translation>Transaktionen blev afvist! Dette kan ske, hvis nogle af dine carboncoins i din tegnebog allerede er brugt, som hvis du brugte en kopi af wallet.dat og dine carboncoins er blevet brugt i kopien, men ikke er markeret som brugt her.</translation>
     </message>
     <message>
         <source>Warning: Invalid Bitcoin address</source>
@@ -1954,7 +1954,7 @@ Adresse: %4
         <translation>Indtast et mærkat for denne adresse for at føje den til listen over brugte adresser</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
+        <source>A message that was attached to the carboncoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
         <translation>En besked, som blev føjet til "bitcon:"-URI'en, som vil gemmes med transaktionen til din reference. Bemærk: Denne besked vil ikke blive sendt over Bitcoin-netværket.</translation>
     </message>
     <message>
@@ -2246,7 +2246,7 @@ Adresse: %4
     </message>
     <message>
         <source>Generated coins must mature %1 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to "not accepted" and it won't be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation>Udvundne bitcoins skal modne %1 blokke, før de kan bruges. Da du genererede denne blok, blev den udsendt til netværket for at blive føjet til blokkæden. Hvis det ikke lykkes at få den i kæden, vil dens tilstand ændres til "ikke accepteret", og den vil ikke kunne bruges. Dette kan ske nu og da, hvis en anden knude udvinder en blok inden for nogle få sekunder fra din.</translation>
+        <translation>Udvundne carboncoins skal modne %1 blokke, før de kan bruges. Da du genererede denne blok, blev den udsendt til netværket for at blive føjet til blokkæden. Hvis det ikke lykkes at få den i kæden, vil dens tilstand ændres til "ikke accepteret", og den vil ikke kunne bruges. Dette kan ske nu og da, hvis en anden knude udvinder en blok inden for nogle få sekunder fra din.</translation>
     </message>
     <message>
         <source>Debug information</source>
@@ -2553,7 +2553,7 @@ Adresse: %4
     <name>WalletModel</name>
     <message>
         <source>Send Coins</source>
-        <translation>Send bitcoins</translation>
+        <translation>Send carboncoins</translation>
     </message>
 </context>
 <context>
@@ -2592,7 +2592,7 @@ Adresse: %4
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>carboncoin-core</name>
     <message>
         <source>Usage:</source>
         <translation>Anvendelse:</translation>
@@ -2610,12 +2610,12 @@ Adresse: %4
         <translation>Indstillinger:</translation>
     </message>
     <message>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>Angiv konfigurationsfil (standard: bitcoin.conf)</translation>
+        <source>Specify configuration file (default: carboncoin.conf)</source>
+        <translation>Angiv konfigurationsfil (standard: carboncoin.conf)</translation>
     </message>
     <message>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>Angiv pid-fil (default: bitcoind.pid)</translation>
+        <source>Specify pid file (default: carboncoind.pid)</source>
+        <translation>Angiv pid-fil (default: carboncoind.pid)</translation>
     </message>
     <message>
         <source>Specify data directory</source>
@@ -2677,7 +2677,7 @@ Adresse: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=carboncoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -2688,7 +2688,7 @@ for example: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com
         <translation>%s, du skal angive en RPC-adgangskode i konfigurationsfilen:
 %s
 Det anbefales, at du bruger nedenstående, tilfældige adgangskode:
-rpcuser=bitcoinrpc
+rpcuser=carboncoinrpc
 rpcpassword=%s
 (du behøver ikke huske denne adgangskode)
 Brugernavnet og adgangskode MÅ IKKE være det samme.
@@ -2727,11 +2727,11 @@ fx: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com
     </message>
     <message>
         <source>Error: The transaction was rejected! This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>Fejl: Transaktionen blev afvist. Dette kan ske, hvis nogle af dine bitcoins i din tegnebog allerede er brugt, som hvis du brugte en kopi af wallet.dat og dine bitcoins er blevet brugt i kopien, men ikke er markeret som brugt her.</translation>
+        <translation>Fejl: Transaktionen blev afvist. Dette kan ske, hvis nogle af dine carboncoins i din tegnebog allerede er brugt, som hvis du brugte en kopi af wallet.dat og dine carboncoins er blevet brugt i kopien, men ikke er markeret som brugt her.</translation>
     </message>
     <message>
         <source>Error: This transaction requires a transaction fee of at least %s because of its amount, complexity, or use of recently received funds!</source>
-        <translation>Fejl: Denne transaktion kræver et transaktionsgebyr på minimum %s pga. dens beløb, kompleksitet eller anvendelse af nyligt modtagne bitcoins!</translation>
+        <translation>Fejl: Denne transaktion kræver et transaktionsgebyr på minimum %s pga. dens beløb, kompleksitet eller anvendelse af nyligt modtagne carboncoins!</translation>
     </message>
     <message>
         <source>Execute command when a wallet transaction changes (%s in cmd is replaced by TxID)</source>
@@ -2927,7 +2927,7 @@ fx: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com
     </message>
     <message>
         <source>Failed to write to coin database</source>
-        <translation>Skrivning af bitcoin-database mislykkedes</translation>
+        <translation>Skrivning af carboncoin-database mislykkedes</translation>
     </message>
     <message>
         <source>Failed to write transaction index</source>
@@ -2955,7 +2955,7 @@ fx: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com
     </message>
     <message>
         <source>Generate coins (default: 0)</source>
-        <translation>Generér bitcoins (standard: 0)</translation>
+        <translation>Generér carboncoins (standard: 0)</translation>
     </message>
     <message>
         <source>How many blocks to check at startup (default: 288, 0 = all)</source>
@@ -3022,8 +3022,8 @@ fx: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com
         <translation>This is intended for regression testing tools and app development.</translation>
     </message>
     <message>
-        <source>Usage (deprecated, use bitcoin-cli):</source>
-        <translation>Brug (forældet, brug bitcoin-cli):</translation>
+        <source>Usage (deprecated, use carboncoin-cli):</source>
+        <translation>Brug (forældet, brug carboncoin-cli):</translation>
     </message>
     <message>
         <source>Verifying blocks...</source>

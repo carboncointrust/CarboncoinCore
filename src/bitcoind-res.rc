@@ -20,10 +20,10 @@ BEGIN
             VALUE "CompanyName",        "Bitcoin"
             VALUE "FileDescription",    "Bitcoind (OSS daemon/client for Bitcoin)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "bitcoind"
+            VALUE "InternalName",       "carboncoind"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "bitcoind.exe"
+            VALUE "OriginalFilename",   "carboncoind.exe"
             VALUE "ProductName",        "Bitcoind"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END

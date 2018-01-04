@@ -221,7 +221,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>הארנק הוצפן</translation>
     </message>
     <message>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your carboncoins from being stolen by malware infecting your computer.</source>
         <translation>ביטקוין ייסגר עכשיו כדי להשלים את תהליך ההצפנה. זכור שהצפנת הארנק שלך אינו יכול להגן באופן מלא על הביטקוינים שלך מתוכנות זדוניות המושתלות על המחשב.</translation>
     </message>
     <message>
@@ -428,8 +428,8 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>ליבת ביטקוין</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation>בקש תשלומים (מייצר קודיי QR וסכימות URI של :bitcoin)</translation>
+        <source>Request payments (generates QR codes and carboncoin: URIs)</source>
+        <translation>בקש תשלומים (מייצר קודיי QR וסכימות URI של :carboncoin)</translation>
     </message>
     <message>
         <source>&amp;About Bitcoin Core</source>
@@ -444,7 +444,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>הצג את רשימת הכתובות והתויות המשומשות</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI or payment request</source>
+        <source>Open a carboncoin: URI or payment request</source>
         <translation>פתח ביטקוין: URI או בקשת תשלום</translation>
     </message>
     <message>
@@ -1249,7 +1249,7 @@ Address: %4
         <translation>שגיאה בבקשת תשלום</translation>
     </message>
     <message>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
+        <source>Cannot start carboncoin: click-to-pay handler</source>
         <translation>לא ניתן להתחיל את ביטקוין: מפעיל לחץ-לתשלום </translation>
     </message>
     <message>
@@ -1889,7 +1889,7 @@ Address: %4
         <translation>הקלד תווית עבור כתובת זו בכדי להוסיף אותה לרשימת הכתובות בשימוש</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
+        <source>A message that was attached to the carboncoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
         <translation>הודעה שצורפה לביטקוין: כתובת שתאוחסן בהעברה לצורך מעקב מצדך. לתשומת לבך: הודעה זו לא תישלח ברשת הביטקוין.</translation>
     </message>
     <message>
@@ -2519,7 +2519,7 @@ Address: %4
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>carboncoin-core</name>
     <message>
         <source>Usage:</source>
         <translation>שימוש:</translation>
@@ -2537,12 +2537,12 @@ Address: %4
         <translation>אפשרויות:</translation>
     </message>
     <message>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>ציין קובץ הגדרות (ברירת מחדל: bitcoin.conf)</translation>
+        <source>Specify configuration file (default: carboncoin.conf)</source>
+        <translation>ציין קובץ הגדרות (ברירת מחדל: carboncoin.conf)</translation>
     </message>
     <message>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>ציין קובץ pid (ברירת מחדל: bitcoind.pid)</translation>
+        <source>Specify pid file (default: carboncoind.pid)</source>
+        <translation>ציין קובץ pid (ברירת מחדל: carboncoind.pid)</translation>
     </message>
     <message>
         <source>Specify data directory</source>
@@ -2600,7 +2600,7 @@ Address: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=carboncoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -2611,7 +2611,7 @@ for example: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com
         <translation>%s, עליך לקבוע סיסמת RPC בקובץ הקונפיגורציה:
  %s
 מומלץ להשתמש בסיסמא האקראית הבאה:
-rpcuser=bitcoinrpc
+rpcuser=carboncoinrpc
 rpcpassword=%s
 (אין צורך לזכור את הסיסמה)
 אסור ששם המשתמש והסיסמא יהיו זהים.
@@ -2897,8 +2897,8 @@ rpcpassword=%s
         <translation>תכונה זו מיועדת לכלי בדיקות נסיגה ופיתוח יישומים.</translation>
     </message>
     <message>
-        <source>Usage (deprecated, use bitcoin-cli):</source>
-        <translation>שימוש (מיושן, השתמש ב bitcoin-cli):</translation>
+        <source>Usage (deprecated, use carboncoin-cli):</source>
+        <translation>שימוש (מיושן, השתמש ב carboncoin-cli):</translation>
     </message>
     <message>
         <source>Verifying blocks...</source>

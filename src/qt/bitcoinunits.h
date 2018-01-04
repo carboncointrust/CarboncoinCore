@@ -19,7 +19,7 @@ public:
     explicit BitcoinUnits(QObject *parent);
 
     /** Bitcoin units.
-      @note Source: https://en.bitcoin.it/wiki/Units . Please add only sensible ones
+      @note Source: https://en.carboncoin.it/wiki/Units . Please add only sensible ones
      */
     enum Unit
     {

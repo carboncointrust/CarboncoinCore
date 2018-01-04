@@ -168,8 +168,8 @@ Eric Young (eay@cryptsoft.com) y UPnP software escrito por Thomas Bernard.</tran
         <translation>Billetera codificada</translation>
     </message>
     <message>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>Bitcoin se cerrará para finalizar el proceso de encriptación. Recuerde que encriptar su billetera no protegera completatamente sus bitcoins de ser robados por malware que infecte su computador</translation>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your carboncoins from being stolen by malware infecting your computer.</source>
+        <translation>Bitcoin se cerrará para finalizar el proceso de encriptación. Recuerde que encriptar su billetera no protegera completatamente sus carboncoins de ser robados por malware que infecte su computador</translation>
     </message>
     <message>
         <source>Wallet encryption failed</source>
@@ -272,11 +272,11 @@ Eric Young (eay@cryptsoft.com) y UPnP software escrito por Thomas Bernard.</tran
     </message>
     <message>
         <source>Send coins to a Bitcoin address</source>
-        <translation>Enviar monedas a una dirección bitcoin</translation>
+        <translation>Enviar monedas a una dirección carboncoin</translation>
     </message>
     <message>
         <source>Modify configuration options for Bitcoin</source>
-        <translation>Modifica las opciones de configuración de bitcoin</translation>
+        <translation>Modifica las opciones de configuración de carboncoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -340,7 +340,7 @@ Eric Young (eay@cryptsoft.com) y UPnP software escrito por Thomas Bernard.</tran
     </message>
     <message>
         <source>Bitcoin Core</source>
-        <translation>bitcoin core</translation>
+        <translation>carboncoin core</translation>
     </message>
     <message>
         <source>Bitcoin client</source>
@@ -530,7 +530,7 @@ Dirección: %4</translation>
     <name>HelpMessageDialog</name>
     <message>
         <source>Bitcoin Core</source>
-        <translation>bitcoin core</translation>
+        <translation>carboncoin core</translation>
     </message>
     <message>
         <source>version</source>
@@ -1060,7 +1060,7 @@ Dirección: %4</translation>
     <name>SplashScreen</name>
     <message>
         <source>Bitcoin Core</source>
-        <translation>bitcoin core</translation>
+        <translation>carboncoin core</translation>
     </message>
     <message>
         <source>[testnet]</source>
@@ -1416,7 +1416,7 @@ Dirección: %4</translation>
     </message>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>carboncoin-core</name>
     <message>
         <source>Usage:</source>
         <translation>Uso:</translation>
@@ -1437,13 +1437,13 @@ Dirección: %4</translation>
 </translation>
     </message>
     <message>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>Especifica archivo de configuración (predeterminado: bitcoin.conf)
+        <source>Specify configuration file (default: carboncoin.conf)</source>
+        <translation>Especifica archivo de configuración (predeterminado: carboncoin.conf)
 </translation>
     </message>
     <message>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>Especifica archivo pid (predeterminado: bitcoin.pid)
+        <source>Specify pid file (default: carboncoind.pid)</source>
+        <translation>Especifica archivo pid (predeterminado: carboncoin.pid)
 </translation>
     </message>
     <message>

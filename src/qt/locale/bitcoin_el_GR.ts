@@ -226,8 +226,8 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Κρυπτογραφημενο πορτοφολι</translation>
     </message>
     <message>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>Το Bitcoin θα κλεισει τώρα για να τελειώσει την διαδικασία κρυπτογραφησης. Θυμησου ότι κρυπτογραφώντας το πορτοφολι σου δεν μπορείς να προστατέψεις πλήρως τα bitcoins σου από κλοπή στην περίπτωση όπου μολυνθεί ο υπολογιστής σου με κακόβουλο λογισμικό.</translation>
+        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your carboncoins from being stolen by malware infecting your computer.</source>
+        <translation>Το Bitcoin θα κλεισει τώρα για να τελειώσει την διαδικασία κρυπτογραφησης. Θυμησου ότι κρυπτογραφώντας το πορτοφολι σου δεν μπορείς να προστατέψεις πλήρως τα carboncoins σου από κλοπή στην περίπτωση όπου μολυνθεί ο υπολογιστής σου με κακόβουλο λογισμικό.</translation>
     </message>
     <message>
         <source>Wallet encryption failed</source>
@@ -346,7 +346,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <source>Send coins to a Bitcoin address</source>
-        <translation>Στείλε νομίσματα σε μια διεύθυνση bitcoin</translation>
+        <translation>Στείλε νομίσματα σε μια διεύθυνση carboncoin</translation>
     </message>
     <message>
         <source>Modify configuration options for Bitcoin</source>
@@ -433,8 +433,8 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Bitcoin Core</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation>Αίτηση πληρωμών (δημιουργεί QR codes και διευθύνσεις bitcoin: )</translation>
+        <source>Request payments (generates QR codes and carboncoin: URIs)</source>
+        <translation>Αίτηση πληρωμών (δημιουργεί QR codes και διευθύνσεις carboncoin: )</translation>
     </message>
     <message>
         <source>&amp;About Bitcoin Core</source>
@@ -449,8 +449,8 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Προβολή της λίστας των χρησιμοποιημένων διευθύνσεων και ετικετών λήψεως</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI or payment request</source>
-        <translation>Άνοιγμα bitcoin: URI αίτησης πληρωμής</translation>
+        <source>Open a carboncoin: URI or payment request</source>
+        <translation>Άνοιγμα carboncoin: URI αίτησης πληρωμής</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -1265,7 +1265,7 @@ Address: %4
         <translation>Σφάλμα αιτήματος πληρωμής</translation>
     </message>
     <message>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
+        <source>Cannot start carboncoin: click-to-pay handler</source>
         <translation>Δεν είναι δυνατή η εκκίνηση του Bitcoin: click-to-pay handler</translation>
     </message>
     <message>
@@ -2447,7 +2447,7 @@ Address: %4
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>carboncoin-core</name>
     <message>
         <source>Usage:</source>
         <translation>Χρήση:</translation>
@@ -2465,12 +2465,12 @@ Address: %4
         <translation>Επιλογές:</translation>
     </message>
     <message>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>Ορίστε αρχείο ρυθμίσεων (προεπιλογή: bitcoin.conf)</translation>
+        <source>Specify configuration file (default: carboncoin.conf)</source>
+        <translation>Ορίστε αρχείο ρυθμίσεων (προεπιλογή: carboncoin.conf)</translation>
     </message>
     <message>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>Ορίστε αρχείο pid (προεπιλογή: bitcoind.pid)</translation>
+        <source>Specify pid file (default: carboncoind.pid)</source>
+        <translation>Ορίστε αρχείο pid (προεπιλογή: carboncoind.pid)</translation>
     </message>
     <message>
         <source>Specify data directory</source>
@@ -2528,7 +2528,7 @@ Address: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=carboncoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -2539,7 +2539,7 @@ for example: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com
         <translation>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=carboncoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -2738,7 +2738,7 @@ for example: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com
         <translation>Επιλέξτε αρχείο πορτοφολιού (μέσα απο κατάλογο δεδομένων)</translation>
     </message>
     <message>
-        <source>Usage (deprecated, use bitcoin-cli):</source>
+        <source>Usage (deprecated, use carboncoin-cli):</source>
         <translation>Χρήση (ξεπερασμένο, χρησιμοποιήστε Bitcoin-CLI):</translation>
     </message>
     <message>

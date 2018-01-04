@@ -23,8 +23,8 @@ fi
 
 set -f
 
-BITCOIND=${1}/bitcoind
-CLI=${1}/bitcoin-cli
+BITCOIND=${1}/carboncoind
+CLI=${1}/carboncoin-cli
 
 DIR="${BASH_SOURCE%/*}"
 SENDANDWAIT="${DIR}/send.sh"
