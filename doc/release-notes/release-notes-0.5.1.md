@@ -1,5 +1,5 @@
-Bitcoin version 0.5.1 is now available for download at:
-http://sourceforge.net/projects/carboncoin/files/Bitcoin/carboncoin-0.5.1/
+Carboncoin version 0.5.1 is now available for download at:
+http://sourceforge.net/projects/carboncoin/files/Carboncoin/carboncoin-0.5.1/
 
 This is a bugfix-only release.
 

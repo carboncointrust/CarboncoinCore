@@ -96,7 +96,7 @@
     </message>
     </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>CarboncoinGUI</name>
     <message>
         <source>&amp;Transactions</source>
         <translation>&amp;Транзакциялар</translation>
@@ -118,7 +118,7 @@
         <translation>Құпия сөзді өзгерту</translation>
     </message>
     <message>
-        <source>Bitcoin</source>
+        <source>Carboncoin</source>
         <translation>Биткоин</translation>
     </message>
     <message>
@@ -252,7 +252,7 @@
 <context>
     <name>Intro</name>
     <message>
-        <source>Bitcoin</source>
+        <source>Carboncoin</source>
         <translation>Биткоин</translation>
     </message>
     <message>
@@ -279,7 +279,7 @@
 <context>
     <name>QObject</name>
     <message>
-        <source>Bitcoin</source>
+        <source>Carboncoin</source>
         <translation>Биткоин</translation>
     </message>
     </context>

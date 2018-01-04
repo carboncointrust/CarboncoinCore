@@ -142,6 +142,6 @@ Threads
 
 - ThreadRPCServer : Remote procedure call handler, listens on port 8332 for connections and services them.
 
-- BitcoinMiner : Generates carboncoins (if wallet is enabled).
+- CarboncoinMiner : Generates carboncoins (if wallet is enabled).
 
 - Shutdown : Does an orderly shutdown of everything.

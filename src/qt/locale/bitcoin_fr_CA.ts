@@ -90,7 +90,7 @@ Ce produit comprend des logiciels développés par le projet OpenSSL pour être 
     </message>
     </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>CarboncoinGUI</name>
     </context>
 <context>
     <name>ClientModel</name>

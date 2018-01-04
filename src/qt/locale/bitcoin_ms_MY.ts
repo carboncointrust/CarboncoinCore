@@ -64,7 +64,7 @@
     <name>AskPassphraseDialog</name>
     </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>CarboncoinGUI</name>
     <message>
         <source>&amp;Options...</source>
         <translation>Pilihan</translation>

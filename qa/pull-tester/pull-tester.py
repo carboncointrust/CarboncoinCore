@@ -1,5 +1,5 @@
 #!/usr/bin/python
-# Copyright (c) 2013 The Bitcoin Core developers
+# Copyright (c) 2013 The Carboncoin Core developers
 # Distributed under the MIT/X11 software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 #
@@ -62,7 +62,7 @@ def commentOn(commentUrl, success, inMerge, needTests, linkUrl):
 This test script verifies pulls every time they are updated. It, however, dies sometimes and fails to test properly.  If you are waiting on a test, please check timestamps to verify that the test.log is moving at http://jenkins.bluematt.me/pull-tester/current/
 Contact BlueMatt on freenode if something looks broken."""
 
-    # Remove old BitcoinPullTester comments (I'm being lazy and not paginating here)
+    # Remove old CarboncoinPullTester comments (I'm being lazy and not paginating here)
     recentcomments = requests.get(commentUrl+"?sort=created&direction=desc",
                                   auth=(os.environ['GITHUB_USER'], os.environ["GITHUB_AUTH_TOKEN"])).json
     for comment in recentcomments:
@@ -122,7 +122,7 @@ def testpull(number, comment_url, clone_url, commit):
     run("chown -R ${BUILD_USER}:${BUILD_GROUP} ${CHROOT_COPY}/${OUT_DIR}", fail_hard=False)
 
     script = os.environ["BUILD_PATH"]+"/qa/pull-tester/pull-tester.sh"
-    script += " ${BUILD_PATH} ${MINGW_DEPS_DIR} ${SCRIPTS_DIR}/BitcoindComparisonTool_jar/BitcoindComparisonTool.jar 0 6 ${OUT_DIR}"
+    script += " ${BUILD_PATH} ${MINGW_DEPS_DIR} ${SCRIPTS_DIR}/CarboncoindComparisonTool_jar/CarboncoindComparisonTool.jar 0 6 ${OUT_DIR}"
     returncode = run("chroot ${CHROOT_COPY} sudo -u ${BUILD_USER} -H timeout ${TEST_TIMEOUT} "+script,
                      fail_hard=False, stdout=out, stderr=out)
 

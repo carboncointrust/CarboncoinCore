@@ -1,9 +1,9 @@
 Gitian building
 ================
 
-*Setup instructions for a gitian build of Bitcoin using a Debian VM or physical system.*
+*Setup instructions for a gitian build of Carboncoin using a Debian VM or physical system.*
 
-Gitian is the deterministic build process that is used to build the Bitcoin
+Gitian is the deterministic build process that is used to build the Carboncoin
 Core executables [1]. It provides a way to be reasonably sure that the
 executables are really built from source on github. It also makes sure that
 the same, tested dependencies are used and statically built into the executable.
@@ -29,7 +29,7 @@ Table of Contents
 - [Installing gitian](#installing-gitian)
 - [Setting up gitian images](#setting-up-gitian-images)
 - [Getting and building the inputs](#getting-and-building-the-inputs)
-- [Building Bitcoin](#building-carboncoin)
+- [Building Carboncoin](#building-carboncoin)
 - [Building an alternative repository](#building-an-alternative-repository)
 - [Signing externally](#signing-externally)
 - [Uploading signatures](#uploading-signatures)
@@ -332,10 +332,10 @@ tail -f var/install.log
 tail -f var/build.log
 ```
 
-Building Bitcoin
+Building Carboncoin
 ----------------
 
-To build Bitcoin (for Linux and/or Windows) just follow the steps under 'perform
+To build Carboncoin (for Linux and/or Windows) just follow the steps under 'perform
 gitian builds' in [doc/release-process.md](release-process.md) in the carboncoin repository.
 
 Output from `gbuild` will look something like

@@ -88,7 +88,7 @@
     </message>
     </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>CarboncoinGUI</name>
     <message>
         <source>Error</source>
         <translation>نقص</translation>

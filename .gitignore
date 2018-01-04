@@ -52,7 +52,7 @@ src/qt/test/moc*.cpp
 *.qm
 Makefile
 carboncoin-qt
-Bitcoin-Qt.app
+Carboncoin-Qt.app
 
 # Unit-tests
 Makefile.test

@@ -1,5 +1,5 @@
-Building Bitcoin
+Building Carboncoin
 
 See doc/build-*.md for instructions on building carboncoind,
 the intended-for-services, no-graphical-interface, reference
-implementation of Bitcoin.
+implementation of Carboncoin.

@@ -121,7 +121,7 @@ Release Process
         ./bin/gbuild --commit carboncoin=v${VERSION} ../carboncoin/contrib/gitian-descriptors/gitian-osx-carboncoin.yml
         ./bin/gsign --signer $SIGNER --release ${VERSION}-osx --destination ../gitian.sigs/ ../carboncoin/contrib/gitian-descriptors/gitian-osx-carboncoin.yml
 	pushd build/out
-	mv Bitcoin-Qt.dmg ../../../
+	mv Carboncoin-Qt.dmg ../../../
 	popd
 	popd
 
@@ -129,7 +129,7 @@ Release Process
 
   1. linux 32-bit and 64-bit binaries + source (carboncoin-${VERSION}-linux-gitian.zip)
   2. windows 32-bit and 64-bit binaries + installer + source (carboncoin-${VERSION}-win-gitian.zip)
-  3. OSX installer (Bitcoin-Qt.dmg)
+  3. OSX installer (Carboncoin-Qt.dmg)
   4. Gitian signatures (in gitian.sigs/${VERSION}[-win|-osx]/(your gitian key)/
 
 repackage gitian builds for release as stand-alone zip/tar/installer exe
@@ -149,7 +149,7 @@ repackage gitian builds for release as stand-alone zip/tar/installer exe
 
 **Mac OS X .dmg:**
 
-	mv Bitcoin-Qt.dmg carboncoin-${VERSION}-osx.dmg
+	mv Carboncoin-Qt.dmg carboncoin-${VERSION}-osx.dmg
 
 ###Next steps:
 
@@ -201,11 +201,11 @@ Hash: SHA256
 
   - Release sticky on carboncointalk: https://carboncointalk.org/index.php?board=1.0
 
-  - Bitcoin-development mailing list
+  - Carboncoin-development mailing list
 
   - Update title of #carboncoin on Freenode IRC
 
-  - Optionally reddit /r/Bitcoin, ... but this will usually sort out itself
+  - Optionally reddit /r/Carboncoin, ... but this will usually sort out itself
 
 - Notify BlueMatt so that he can start building [https://launchpad.net/~carboncoin/+archive/ubuntu/carboncoin](the PPAs)
 

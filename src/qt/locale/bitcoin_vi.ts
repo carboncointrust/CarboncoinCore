@@ -44,7 +44,7 @@
     <name>AskPassphraseDialog</name>
     </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>CarboncoinGUI</name>
     </context>
 <context>
     <name>ClientModel</name>

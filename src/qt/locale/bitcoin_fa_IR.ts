@@ -115,8 +115,8 @@
         <translation>تایید رمزگذاری</translation>
     </message>
     <message>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your carboncoins from being stolen by malware infecting your computer.</source>
-        <translation>Bitcoin برای اتمام فرایند رمزگذاری بسته خواهد شد. به خاطر داشته باشید که رمزگذاری WALLET شما،  کامپیوتر شما را از آلودگی به بدافزارها مصون نمی دارد.</translation>
+        <source>Carboncoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your carboncoins from being stolen by malware infecting your computer.</source>
+        <translation>Carboncoin برای اتمام فرایند رمزگذاری بسته خواهد شد. به خاطر داشته باشید که رمزگذاری WALLET شما،  کامپیوتر شما را از آلودگی به بدافزارها مصون نمی دارد.</translation>
     </message>
     <message>
         <source>Wallet encryption failed</source>
@@ -144,7 +144,7 @@
     </message>
     </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>CarboncoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>امضا و پیام</translation>
@@ -178,8 +178,8 @@
         <translation>از "درخواست نامه"/ application خارج شو</translation>
     </message>
     <message>
-        <source>Show information about Bitcoin</source>
-        <translation>اطلاعات در مورد Bitcoin را نشان بده</translation>
+        <source>Show information about Carboncoin</source>
+        <translation>اطلاعات در مورد Carboncoin را نشان بده</translation>
     </message>
     <message>
         <source>About &amp;Qt</source>
@@ -206,8 +206,8 @@
         <translation>تغییر رمز/پَس فرِیز</translation>
     </message>
     <message>
-        <source>Modify configuration options for Bitcoin</source>
-        <translation>اصلاح انتخابها برای پیکربندی Bitcoin</translation>
+        <source>Modify configuration options for Carboncoin</source>
+        <translation>اصلاح انتخابها برای پیکربندی Carboncoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -218,7 +218,7 @@
         <translation>رمز مربوط به رمزگذاریِ wallet را تغییر دهید</translation>
     </message>
     <message>
-        <source>Bitcoin</source>
+        <source>Carboncoin</source>
         <translation>carboncoin</translation>
     </message>
     <message>
@@ -254,7 +254,7 @@
         <translation>[testnet]</translation>
     </message>
     <message>
-        <source>Bitcoin client</source>
+        <source>Carboncoin client</source>
         <translation>مشتری carboncoin</translation>
     </message>
     <message>
@@ -373,7 +373,7 @@ Address: %4
         <translation>ویرایش حساب ارسال کننده</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Bitcoin address.</source>
+        <source>The entered address "%1" is not a valid Carboncoin address.</source>
         <translation>آدرس وارد شده "%1" یک آدرس صحیح برای carboncoin نسشت</translation>
     </message>
     <message>
@@ -402,7 +402,7 @@ Address: %4
 <context>
     <name>Intro</name>
     <message>
-        <source>Bitcoin</source>
+        <source>Carboncoin</source>
         <translation>carboncoin</translation>
     </message>
     <message>
@@ -443,7 +443,7 @@ Address: %4
         <translation>فرم</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Bitcoin network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Carboncoin network after a connection is established, but this process has not completed yet.</source>
         <translation>اطلاعات نمایش داده شده ممکن است روزآمد نباشد. wallet شما به صورت خودکار بعد از برقراری اتصال با شبکه carboncoin به روز می شود اما این فرایند هنوز تکمیل نشده است.</translation>
     </message>
     <message>
@@ -465,11 +465,11 @@ Address: %4
 <context>
     <name>QObject</name>
     <message>
-        <source>Bitcoin</source>
+        <source>Carboncoin</source>
         <translation>carboncoin</translation>
     </message>
     <message>
-        <source>Enter a Bitcoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
+        <source>Enter a Carboncoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
         <translation>یک آدرس carboncoin وارد کنید (مثال 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
     </message>
 </context>
@@ -503,7 +503,7 @@ Address: %4
         <translation>تعداد زنجیره های حاضر</translation>
     </message>
     <message>
-        <source>Welcome to the Bitcoin RPC console.</source>
+        <source>Welcome to the Carboncoin RPC console.</source>
         <translation>به کنسول آر.پی.سی. BITCOIN خوش آمدید</translation>
     </message>
     </context>
@@ -684,7 +684,7 @@ Address: %4
         <translation>یک آدرس carboncoin وارد کنید (مثال 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
     </message>
     <message>
-        <source>Enter a Bitcoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
+        <source>Enter a Carboncoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
         <translation>یک آدرس carboncoin وارد کنید (مثال 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
     </message>
     </context>
@@ -1107,12 +1107,12 @@ Address: %4
         <translation>خطا در هنگام لود شدن wallet.dat: Wallet corrupted</translation>
     </message>
     <message>
-        <source>Error loading wallet.dat: Wallet requires newer version of Bitcoin</source>
+        <source>Error loading wallet.dat: Wallet requires newer version of Carboncoin</source>
         <translation>خطا در هنگام لود شدن wallet.dat.  به نسخه جدید Bitocin برای wallet نیاز است.</translation>
     </message>
     <message>
-        <source>Wallet needed to be rewritten: restart Bitcoin to complete</source>
-        <translation>wallet نیاز به بازنویسی دارد. Bitcoin را برای تکمیل عملیات دوباره اجرا کنید.</translation>
+        <source>Wallet needed to be rewritten: restart Carboncoin to complete</source>
+        <translation>wallet نیاز به بازنویسی دارد. Carboncoin را برای تکمیل عملیات دوباره اجرا کنید.</translation>
     </message>
     <message>
         <source>Error loading wallet.dat</source>

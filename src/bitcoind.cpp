@@ -1,5 +1,5 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2013 The Bitcoin developers
+// Copyright (c) 2009-2013 The Carboncoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -20,8 +20,8 @@
  *
  * \section intro_sec Introduction
  *
- * This is the developer documentation of the reference client for an experimental new digital currency called Bitcoin (http://www.carboncoin.org/),
- * which enables instant payments to anyone, anywhere in the world. Bitcoin uses peer-to-peer technology to operate
+ * This is the developer documentation of the reference client for an experimental new digital currency called Carboncoin (http://www.carboncoin.org/),
+ * which enables instant payments to anyone, anywhere in the world. Carboncoin uses peer-to-peer technology to operate
  * with no central authority: managing transactions and issuing money are carried out collectively by the network.
  *
  * The software is a community-driven open source project, released under the MIT license.
@@ -86,11 +86,11 @@ bool AppInit(int argc, char* argv[])
         if (mapArgs.count("-?") || mapArgs.count("--help"))
         {
             // First part of help message is specific to carboncoind / RPC client
-            std::string strUsage = _("Bitcoin Core Daemon") + " " + _("version") + " " + FormatFullVersion() + "\n\n" +
+            std::string strUsage = _("Carboncoin Core Daemon") + " " + _("version") + " " + FormatFullVersion() + "\n\n" +
                 _("Usage:") + "\n" +
-                  "  carboncoind [options]                     " + _("Start Bitcoin Core Daemon") + "\n" +
+                  "  carboncoind [options]                     " + _("Start Carboncoin Core Daemon") + "\n" +
                 _("Usage (deprecated, use carboncoin-cli):") + "\n" +
-                  "  carboncoind [options] <command> [params]  " + _("Send command to Bitcoin Core") + "\n" +
+                  "  carboncoind [options] <command> [params]  " + _("Send command to Carboncoin Core") + "\n" +
                   "  carboncoind [options] help                " + _("List commands") + "\n" +
                   "  carboncoind [options] help <command>      " + _("Get help for a command") + "\n";
 
@@ -116,7 +116,7 @@ bool AppInit(int argc, char* argv[])
         fDaemon = GetBoolArg("-daemon", false);
         if (fDaemon)
         {
-            fprintf(stdout, "Bitcoin server starting\n");
+            fprintf(stdout, "Carboncoin server starting\n");
 
             // Daemonize
             pid_t pid = fork();

@@ -123,7 +123,7 @@ AC_DEFUN([BITCOIN_QT_CONFIGURE],[
 
 
   dnl enable qt support
-  AC_MSG_CHECKING(whether to build Bitcoin Core GUI)
+  AC_MSG_CHECKING(whether to build Carboncoin Core GUI)
   BITCOIN_QT_CHECK([
     carboncoin_enable_qt=yes
     carboncoin_enable_qt_test=yes
