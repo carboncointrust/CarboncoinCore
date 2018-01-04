@@ -30,9 +30,9 @@ SendCoinsEntry::SendCoinsEntry(QWidget *parent) :
     ui->addAsLabel->setPlaceholderText(tr("Enter a label for this address to add it to your address book"));
 #endif
 
-    // normal carboncoin address field
+    // normal bitcoin address field
     GUIUtil::setupAddressWidget(ui->payTo, this);
-    // just a label for displaying carboncoin address(es)
+    // just a label for displaying bitcoin address(es)
     ui->payTo_is->setFont(GUIUtil::bitcoinAddressFont());
 }
 
@@ -98,7 +98,7 @@ void SendCoinsEntry::clear()
     ui->memoTextLabel_s->clear();
     ui->payAmount_s->clear();
 
-    // update the display unit, to not use the default ("CARBON")
+    // update the display unit, to not use the default ("BTC")
     updateDisplayUnit();
 }
 
@@ -195,8 +195,10 @@ void SendCoinsEntry::setValue(const SendCoinsRecipient &value)
         ui->messageTextLabel->setVisible(!recipient.message.isEmpty());
         ui->messageLabel->setVisible(!recipient.message.isEmpty());
 
-        ui->payTo->setText(recipient.address);
-        ui->addAsLabel->setText(recipient.label);
+        ui->addAsLabel->clear();
+        ui->payTo->setText(recipient.address); // this may set a label from addressbook
+        if (!recipient.label.isEmpty()) // if a label had been set from the addressbook, dont overwrite with an empty label
+            ui->addAsLabel->setText(recipient.label);
         ui->payAmount->setValue(recipient.amount);
     }
 }

@@ -1,4 +1,8 @@
 #!/usr/bin/python
+# Copyright (c) 2013 The Bitcoin Core developers
+# Distributed under the MIT/X11 software license, see the accompanying
+# file COPYING or http://www.opensource.org/licenses/mit-license.php.
+#
 import json
 from urllib import urlopen
 import requests
@@ -148,17 +152,17 @@ if "GITHUB_USER" not in os.environ or "GITHUB_AUTH_TOKEN" not in os.environ:
     print("GITHUB_USER and/or GITHUB_AUTH_TOKEN environment variables not set")
     sys.exit(1)
 
-environ_default("CLONE_URL", "https://github.com/carboncoin/carboncoin.git")
+environ_default("CLONE_URL", "https://github.com/bitcoin/bitcoin.git")
 environ_default("MINGW_DEPS_DIR", "/mnt/w32deps")
 environ_default("SCRIPTS_DIR", "/mnt/test-scripts")
 environ_default("CHROOT_COPY", "/mnt/chroot-tmp")
 environ_default("CHROOT_MASTER", "/mnt/chroot")
 environ_default("OUT_DIR", "/mnt/out")
-environ_default("BUILD_PATH", "/mnt/carboncoin")
+environ_default("BUILD_PATH", "/mnt/bitcoin")
 os.environ["BUILD_DIR"] = os.environ["CHROOT_COPY"] + os.environ["BUILD_PATH"]
 environ_default("RESULTS_DIR", "/mnt/www/pull-tester")
 environ_default("RESULTS_URL", "http://jenkins.bluematt.me/pull-tester/")
-environ_default("GITHUB_REPO", "carboncoin/carboncoin")
+environ_default("GITHUB_REPO", "bitcoin/bitcoin")
 environ_default("TESTED_DB", "/mnt/commits-tested.txt")
 environ_default("BUILD_USER", "matt")
 environ_default("BUILD_GROUP", "matt")

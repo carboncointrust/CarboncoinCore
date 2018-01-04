@@ -26,7 +26,7 @@ AboutDialog::AboutDialog(QWidget *parent) :
     ui->setupUi(this);
 
     // Set current copyright year
-    ui->copyrightLabel->setText(tr("Copyright") + QString(" &copy; 2009-%1 ").arg(COPYRIGHT_YEAR) + tr("The Carboncoin Core developers"));
+    ui->copyrightLabel->setText(tr("Copyright") + QString(" &copy; 2009-%1 ").arg(COPYRIGHT_YEAR) + tr("The Bitcoin Core developers"));
 }
 
 void AboutDialog::setModel(ClientModel *model)
@@ -38,9 +38,9 @@ void AboutDialog::setModel(ClientModel *model)
          * 32 and 64 bit builds. On other architectures, 32/64 bit may be more ambigious.
          */
 #if defined(__x86_64__)
-        version += tr(" (%1-bit)").arg(64);
+        version += " " + tr("(%1-bit)").arg(64);
 #elif defined(__i386__ )
-        version += tr(" (%1-bit)").arg(32);
+        version += " " + tr("(%1-bit)").arg(32);
 #endif
         ui->versionLabel->setText(version);
     }
@@ -64,18 +64,19 @@ HelpMessageDialog::HelpMessageDialog(QWidget *parent) :
     ui->setupUi(this);
     GUIUtil::restoreWindowGeometry("nHelpMessageDialogWindow", this->size(), this);
 
-    header = tr("Carboncoin Core") + " " + tr("version") + " " +
+    header = tr("Bitcoin Core") + " " + tr("version") + " " +
         QString::fromStdString(FormatFullVersion()) + "\n\n" +
         tr("Usage:") + "\n" +
-        "  carboncoin-qt [" + tr("command-line options") + "]                     " + "\n";
+        "  bitcoin-qt [" + tr("command-line options") + "]                     " + "\n";
 
     coreOptions = QString::fromStdString(HelpMessage(HMM_BITCOIN_QT));
 
     uiOptions = tr("UI options") + ":\n" +
-        "  -lang=<lang>           " + tr("Set language, for example \"de_DE\" (default: system locale)") + "\n" +
-        "  -min                   " + tr("Start minimized") + "\n" +
-        "  -splash                " + tr("Show splash screen on startup (default: 1)") + "\n" +
-        "  -choosedatadir         " + tr("Choose data directory on startup (default: 0)");
+        "  -choosedatadir            " + tr("Choose data directory on startup (default: 0)") + "\n" +
+        "  -lang=<lang>              " + tr("Set language, for example \"de_DE\" (default: system locale)") + "\n" +
+        "  -min                      " + tr("Start minimized") + "\n" +
+        "  -rootcertificates=<file>  " + tr("Set SSL root certificates for payment request (default: -system-)") + "\n" +
+        "  -splash                   " + tr("Show splash screen on startup (default: 1)");
 
     ui->helpMessageLabel->setFont(GUIUtil::bitcoinAddressFont());
 
@@ -123,7 +124,7 @@ void ShutdownWindow::showShutdownWindow(BitcoinGUI *window)
     QWidget *shutdownWindow = new QWidget();
     QVBoxLayout *layout = new QVBoxLayout();
     layout->addWidget(new QLabel(
-        tr("Carboncoin Core is shutting down...") + "<br /><br />" +
+        tr("Bitcoin Core is shutting down...") + "<br /><br />" +
         tr("Do not shut down the computer until this window disappears.")));
     shutdownWindow->setLayout(layout);
 

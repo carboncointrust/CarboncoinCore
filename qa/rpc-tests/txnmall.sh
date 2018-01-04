@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Copyright (c) 2014 The Bitcoin Core developers
+# Distributed under the MIT/X11 software license, see the accompanying
+# file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 # Test proper accounting with malleable transactions
 
@@ -10,8 +13,8 @@ fi
 
 set -f
 
-BITCOIND=${1}/carboncoind
-CLI=${1}/carboncoin-cli
+BITCOIND=${1}/bitcoind
+CLI=${1}/bitcoin-cli
 
 DIR="${BASH_SOURCE%/*}"
 SENDANDWAIT="${DIR}/send.sh"
@@ -89,7 +92,7 @@ B2ADDRESS=$( $CLI $B2ARGS getaccountaddress "from1" )
 
 # Have B1 create two transactions; second will
 # spend change from first, since B1 starts with only a single
-# 50 carboncoin output:
+# 50 bitcoin output:
 $CLI $B1ARGS move "" "foo" 10.0 > /dev/null
 $CLI $B1ARGS move "" "bar" 10.0 > /dev/null
 TXID1=$( $CLI $B1ARGS sendfrom foo $B2ADDRESS 1.0 0)
@@ -126,7 +129,7 @@ $CLI $B2ARGS addnode 127.0.0.1:11000 onetry
 $CLI $B2ARGS setgenerate true 1
 WaitBlocks
 
-# B1 should have 49 CARBON; the 2 CARBON send is
+# B1 should have 49 BTC; the 2 BTC send is
 # conflicted, and should not count in
 # balances.
 CheckBalance "$B1ARGS" 49
@@ -134,7 +137,7 @@ CheckBalance "$B1ARGS" 49 "*"
 CheckBalance "$B1ARGS" 9 "foo"
 CheckBalance "$B1ARGS" 10 "bar"
 
-# B2 should have 51 CARBON
+# B2 should have 51 BTC
 CheckBalance "$B2ARGS" 51
 CheckBalance "$B2ARGS" 1 "from1"
 

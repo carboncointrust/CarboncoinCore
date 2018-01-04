@@ -92,7 +92,7 @@ public:
     )
 };
 
-/** Interface to Carboncoin wallet from Qt view code. */
+/** Interface to Bitcoin wallet from Qt view code. */
 class WalletModel : public QObject
 {
     Q_OBJECT
@@ -236,6 +236,9 @@ signals:
 
     // Coins sent: from wallet, to recipient, in (serialized) transaction:
     void coinsSent(CWallet* wallet, SendCoinsRecipient recipient, QByteArray transaction);
+
+    // Show progress dialog e.g. for rescan
+    void showProgress(const QString &title, int nProgress);
 
 public slots:
     /* Wallet status might have changed */

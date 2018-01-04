@@ -1,6 +1,6 @@
 [Protocol]
-exec=carboncoin-qt '%u'
-protocol=carboncoin
+exec=bitcoin-qt '%u'
+protocol=bitcoin
 input=none
 output=none
 helper=true

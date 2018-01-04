@@ -1,3 +1,7 @@
+// Copyright (c) 2011-2014 The Bitcoin Core developers
+// Distributed under the MIT/X11 software license, see the accompanying
+// file COPYING or http://www.opensource.org/licenses/mit-license.php.
+
 //
 // Unit tests for denial-of-service detection/prevention code
 //
@@ -19,9 +23,9 @@
 #include <boost/test/unit_test.hpp>
 
 // Tests this internal-to-main.cpp method:
-extern bool AddOrphanTx(const CTransaction& tx);
+extern bool AddOrphanTx(const CTransaction& tx, NodeId peer);
+extern void EraseOrphansFor(NodeId peer);
 extern unsigned int LimitOrphanTxSize(unsigned int nMaxOrphans);
-extern void Misbehaving(NodeId nodeid, int howmuch);
 extern std::map<uint256, CTransaction> mapOrphanTransactions;
 extern std::map<uint256, std::set<uint256> > mapOrphanTransactionsByPrev;
 
@@ -114,7 +118,7 @@ BOOST_AUTO_TEST_CASE(DoS_checknbits)
 {
     using namespace boost::assign; // for 'map_list_of()'
 
-    // Timestamps,nBits from the carboncoin block chain.
+    // Timestamps,nBits from the bitcoin block chain.
     // These are the block-chain checkpoint blocks
     typedef std::map<int64_t, unsigned int> BlockData;
     BlockData chainData =
@@ -174,7 +178,7 @@ BOOST_AUTO_TEST_CASE(DoS_mapOrphans)
         tx.vout[0].nValue = 1*CENT;
         tx.vout[0].scriptPubKey.SetDestination(key.GetPubKey().GetID());
 
-        AddOrphanTx(tx);
+        AddOrphanTx(tx, i);
     }
 
     // ... and 50 that depend on other orphans:
@@ -191,7 +195,7 @@ BOOST_AUTO_TEST_CASE(DoS_mapOrphans)
         tx.vout[0].scriptPubKey.SetDestination(key.GetPubKey().GetID());
         SignSignature(keystore, txPrev, tx, 0);
 
-        AddOrphanTx(tx);
+        AddOrphanTx(tx, i);
     }
 
     // This really-big orphan should be ignored:
@@ -215,7 +219,15 @@ BOOST_AUTO_TEST_CASE(DoS_mapOrphans)
         for (unsigned int j = 1; j < tx.vin.size(); j++)
             tx.vin[j].scriptSig = tx.vin[0].scriptSig;
 
-        BOOST_CHECK(!AddOrphanTx(tx));
+        BOOST_CHECK(!AddOrphanTx(tx, i));
+    }
+
+    // Test EraseOrphansFor:
+    for (NodeId i = 0; i < 3; i++)
+    {
+        size_t sizeBefore = mapOrphanTransactions.size();
+        EraseOrphansFor(i);
+        BOOST_CHECK(mapOrphanTransactions.size() < sizeBefore);
     }
 
     // Test LimitOrphanTxSize() function:
@@ -252,7 +264,7 @@ BOOST_AUTO_TEST_CASE(DoS_checkSig)
         tx.vout[0].nValue = 1*CENT;
         tx.vout[0].scriptPubKey.SetDestination(key.GetPubKey().GetID());
 
-        AddOrphanTx(tx);
+        AddOrphanTx(tx, 0);
     }
 
     // Create a transaction that depends on orphans:

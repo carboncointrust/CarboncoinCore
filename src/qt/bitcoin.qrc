@@ -1,6 +1,6 @@
 <!DOCTYPE RCC><RCC version="1.0">
     <qresource prefix="/icons">
-        <file alias="carboncoin">res/icons/bitcoin.png</file>
+        <file alias="bitcoin">res/icons/bitcoin.png</file>
         <file alias="address-book">res/icons/address-book.png</file>
         <file alias="quit">res/icons/quit.png</file>
         <file alias="send">res/icons/send.png</file>
@@ -23,7 +23,7 @@
         <file alias="editpaste">res/icons/editpaste.png</file>
         <file alias="editcopy">res/icons/editcopy.png</file>
         <file alias="add">res/icons/add.png</file>
-        <file alias="carboncoin_testnet">res/icons/bitcoin_testnet.png</file>
+        <file alias="bitcoin_testnet">res/icons/bitcoin_testnet.png</file>
         <file alias="toolbar_testnet">res/icons/toolbar_testnet.png</file>
         <file alias="edit">res/icons/edit.png</file>
         <file alias="history">res/icons/history.png</file>
@@ -98,7 +98,6 @@
         <file alias="cs">locale/bitcoin_cs.qm</file>
         <file alias="cy">locale/bitcoin_cy.qm</file>
         <file alias="da">locale/bitcoin_da.qm</file>
-        <file alias="de_AT">locale/bitcoin_de_AT.qm</file>
         <file alias="de">locale/bitcoin_de.qm</file>
         <file alias="el_GR">locale/bitcoin_el_GR.qm</file>
         <file alias="en">locale/bitcoin_en.qm</file>
@@ -131,6 +130,7 @@
         <file alias="la">locale/bitcoin_la.qm</file>
         <file alias="lt">locale/bitcoin_lt.qm</file>
         <file alias="lv_LV">locale/bitcoin_lv_LV.qm</file>
+        <file alias="mn">locale/bitcoin_mn.qm</file>
         <file alias="ms_MY">locale/bitcoin_ms_MY.qm</file>
         <file alias="nb">locale/bitcoin_nb.qm</file>
         <file alias="nl">locale/bitcoin_nl.qm</file>

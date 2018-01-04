@@ -7,7 +7,6 @@
 #define BITCOIN_CORE_H
 
 #include "script.h"
-#include "scrypt.h"
 #include "serialize.h"
 #include "uint256.h"
 
@@ -16,7 +15,7 @@
 class CTransaction;
 
 /** No amount larger than this (in satoshi) is valid */
-static const int64_t MAX_MONEY = 16000000000 * COIN;
+static const int64_t MAX_MONEY = 21000000 * COIN;
 inline bool MoneyRange(int64_t nValue) { return (nValue >= 0 && nValue <= MAX_MONEY); }
 
 /** An outpoint - a combination of a transaction hash and an index n into its vout */
@@ -346,7 +345,7 @@ class CBlockHeader
 {
 public:
     // header
-    static const int CURRENT_VERSION=2;
+    static const int CURRENT_VERSION=3;
     int nVersion;
     uint256 hashPrevBlock;
     uint256 hashMerkleRoot;
@@ -386,13 +385,6 @@ public:
     }
 
     uint256 GetHash() const;
-
-    uint256 GetPoWHash() const
-    {
-        uint256 thash;
-        scrypt_1024_1_1_256(BEGIN(nVersion), BEGIN(thash));
-        return thash;
-    }
 
     int64_t GetBlockTime() const
     {

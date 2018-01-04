@@ -3,27 +3,27 @@ include Makefile.include
 AM_CPPFLAGS += -I$(builddir)
 
 noinst_LIBRARIES = \
-  libcarboncoin_server.a \
-  libcarboncoin_common.a \
-  libcarboncoin_cli.a
+  libbitcoin_server.a \
+  libbitcoin_common.a \
+  libbitcoin_cli.a
 if ENABLE_WALLET
-noinst_LIBRARIES += libcarboncoin_wallet.a
+noinst_LIBRARIES += libbitcoin_wallet.a
 endif
 
 bin_PROGRAMS =
 
 if BUILD_BITCOIND
-  bin_PROGRAMS += carboncoind
+  bin_PROGRAMS += bitcoind
 endif
 
 if BUILD_BITCOIN_CLI
-  bin_PROGRAMS += carboncoin-cli
+  bin_PROGRAMS += bitcoin-cli
 endif
 
 SUBDIRS = . $(BUILD_QT) $(BUILD_TEST)
 DIST_SUBDIRS = . qt test
 .PHONY: FORCE
-# carboncoin core #
+# bitcoin core #
 BITCOIN_CORE_H = \
   addrman.h \
   alert.h \
@@ -57,7 +57,6 @@ BITCOIN_CORE_H = \
   rpcprotocol.h \
   rpcserver.h \
   script.h \
-  scrypt.h \
   serialize.h \
   sync.h \
   threadsafety.h \
@@ -88,12 +87,10 @@ obj/build.h: FORCE
 	  $(abs_top_srcdir)
 version.o: obj/build.h
 
-libcarboncoin_server_a_SOURCES = \
+libbitcoin_server_a_SOURCES = \
   addrman.cpp \
   alert.cpp \
-  rpcserver.cpp \
   bloom.cpp \
-  chainparams.cpp \
   checkpoints.cpp \
   coins.cpp \
   init.cpp \
@@ -108,12 +105,13 @@ libcarboncoin_server_a_SOURCES = \
   rpcmisc.cpp \
   rpcnet.cpp \
   rpcrawtransaction.cpp \
+  rpcserver.cpp \
   txdb.cpp \
   txmempool.cpp \
   $(JSON_H) \
   $(BITCOIN_CORE_H)
 
-libcarboncoin_wallet_a_SOURCES = \
+libbitcoin_wallet_a_SOURCES = \
   db.cpp \
   crypter.cpp \
   rpcdump.cpp \
@@ -122,7 +120,8 @@ libcarboncoin_wallet_a_SOURCES = \
   walletdb.cpp \
   $(BITCOIN_CORE_H)
 
-libcarboncoin_common_a_SOURCES = \
+libbitcoin_common_a_SOURCES = \
+  base58.cpp \
   allocators.cpp \
   chainparams.cpp \
   core.cpp \
@@ -132,49 +131,53 @@ libcarboncoin_common_a_SOURCES = \
   protocol.cpp \
   rpcprotocol.cpp \
   script.cpp \
-  scrypt.cpp \
   sync.cpp \
   util.cpp \
   version.cpp \
   $(BITCOIN_CORE_H)
 
-libcarboncoin_cli_a_SOURCES = \
+if GLIBC_BACK_COMPAT
+libbitcoin_common_a_SOURCES += compat/glibc_compat.cpp
+libbitcoin_common_a_SOURCES += compat/glibcxx_compat.cpp
+endif
+
+libbitcoin_cli_a_SOURCES = \
   rpcclient.cpp \
   $(BITCOIN_CORE_H)
 
-nodist_libcarboncoin_common_a_SOURCES = $(top_srcdir)/src/obj/build.h
+nodist_libbitcoin_common_a_SOURCES = $(top_srcdir)/src/obj/build.h
 #
 
-# carboncoind binary #
-carboncoind_LDADD = \
-  libcarboncoin_server.a \
-  libcarboncoin_cli.a \
-  libcarboncoin_common.a \
+# bitcoind binary #
+bitcoind_LDADD = \
+  libbitcoin_server.a \
+  libbitcoin_cli.a \
+  libbitcoin_common.a \
   $(LIBLEVELDB) \
   $(LIBMEMENV)
 if ENABLE_WALLET
-carboncoind_LDADD += libcarboncoin_wallet.a
+bitcoind_LDADD += libbitcoin_wallet.a
 endif
-carboncoind_SOURCES = bitcoind.cpp
+bitcoind_SOURCES = bitcoind.cpp
 #
 
 if TARGET_WINDOWS
-carboncoind_SOURCES += bitcoind-res.rc
+bitcoind_SOURCES += bitcoind-res.rc
 endif
 
 AM_CPPFLAGS += $(BDB_CPPFLAGS)
-carboncoind_LDADD += $(BOOST_LIBS) $(BDB_LIBS)
+bitcoind_LDADD += $(BOOST_LIBS) $(BDB_LIBS)
 
-# carboncoin-cli binary #
-carboncoin_cli_LDADD = \
-  libcarboncoin_cli.a \
-  libcarboncoin_common.a \
+# bitcoin-cli binary #
+bitcoin_cli_LDADD = \
+  libbitcoin_cli.a \
+  libbitcoin_common.a \
   $(BOOST_LIBS)
-carboncoin_cli_SOURCES = bitcoin-cli.cpp
+bitcoin_cli_SOURCES = bitcoin-cli.cpp
 #
 
 if TARGET_WINDOWS
-carboncoin_cli_SOURCES += bitcoin-cli-res.rc
+bitcoin_cli_SOURCES += bitcoin-cli-res.rc
 endif
 
 # NOTE: This dependency is not strictly necessary, but without it make may try to build both in parallel, which breaks the LevelDB build system in a race
@@ -185,7 +188,7 @@ leveldb/%.a:
 	  CC="$(CC)" PLATFORM=$(TARGET_OS) AR="$(AR)" $(LEVELDB_TARGET_FLAGS) \
 	  OPT="$(CXXFLAGS) $(CPPFLAGS)"
 
-qt/bitcoinstrings.cpp: $(libcarboncoin_server_a_SOURCES) $(libcarboncoin_common_a_SOURCES) $(libcarboncoin_cli_a_SOURCES)
+qt/bitcoinstrings.cpp: $(libbitcoin_server_a_SOURCES) $(libbitcoin_common_a_SOURCES) $(libbitcoin_cli_a_SOURCES)
 	@test -n $(XGETTEXT) || echo "xgettext is required for updating translations"
 	@cd $(top_srcdir); XGETTEXT=$(XGETTEXT) share/qt/extract_strings_qt.py
 

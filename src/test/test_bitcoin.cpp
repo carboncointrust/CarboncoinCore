@@ -1,4 +1,8 @@
-#define BOOST_TEST_MODULE Carboncoin Test Suite
+// Copyright (c) 2011-2013 The Bitcoin Core developers
+// Distributed under the MIT/X11 software license, see the accompanying
+// file COPYING or http://www.opensource.org/licenses/mit-license.php.
+
+#define BOOST_TEST_MODULE Bitcoin Test Suite
 
 
 
@@ -31,7 +35,7 @@ struct TestingSetup {
 #ifdef ENABLE_WALLET
         bitdb.MakeMock();
 #endif
-        pathTemp = GetTempPath() / strprintf("test_carboncoin_%lu_%i", (unsigned long)GetTime(), (int)(GetRand(100000)));
+        pathTemp = GetTempPath() / strprintf("test_bitcoin_%lu_%i", (unsigned long)GetTime(), (int)(GetRand(100000)));
         boost::filesystem::create_directories(pathTemp);
         mapArgs["-datadir"] = pathTemp.string();
         pblocktree = new CBlockTreeDB(1 << 20, true);
@@ -78,5 +82,10 @@ void Shutdown(void* parg)
 void StartShutdown()
 {
   exit(0);
+}
+
+bool ShutdownRequested()
+{
+  return false;
 }
 

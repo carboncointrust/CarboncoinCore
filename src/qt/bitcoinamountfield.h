@@ -12,7 +12,7 @@ class QDoubleSpinBox;
 class QValueComboBox;
 QT_END_NAMESPACE
 
-/** Widget for entering carboncoin amounts.
+/** Widget for entering bitcoin amounts.
   */
 class BitcoinAmountField: public QWidget
 {

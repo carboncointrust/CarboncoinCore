@@ -12,11 +12,11 @@ AM_CPPFLAGS =  $(INCLUDES) \
 AM_CPPFLAGS += $(LEVELDB_CPPFLAGS)
 AM_LDFLAGS = $(PTHREAD_CFLAGS)
 
-LIBBITCOIN_SERVER=$(top_builddir)/src/libcarboncoin_server.a
-LIBBITCOIN_WALLET=$(top_builddir)/src/libcarboncoin_wallet.a
-LIBBITCOIN_COMMON=$(top_builddir)/src/libcarboncoin_common.a
-LIBBITCOIN_CLI=$(top_builddir)/src/libcarboncoin_cli.a
-LIBBITCOINQT=$(top_builddir)/src/qt/libcarboncoinqt.a
+LIBBITCOIN_SERVER=$(top_builddir)/src/libbitcoin_server.a
+LIBBITCOIN_WALLET=$(top_builddir)/src/libbitcoin_wallet.a
+LIBBITCOIN_COMMON=$(top_builddir)/src/libbitcoin_common.a
+LIBBITCOIN_CLI=$(top_builddir)/src/libbitcoin_cli.a
+LIBBITCOINQT=$(top_builddir)/src/qt/libbitcoinqt.a
 
 $(LIBBITCOIN):
 	$(MAKE) -C $(top_builddir)/src $(@F)
@@ -40,18 +40,18 @@ $(LIBBITCOINQT):
 ui_%.h: %.ui
 	@test -d $(abs_builddir)/$(@D) || $(MKDIR_P) $(abs_builddir)/$(@D)
 	@test -f $(UIC) && QT_SELECT=$(QT_SELECT) $(UIC) -o $(abs_builddir)/$@ $(abs_srcdir)/$< || echo error: could not build $(abs_builddir)/$@
-	$(SED) -i.bak -e '/^\*\*.*Created:/d' $(abs_builddir)/$@ && rm $(abs_builddir)/$@.bak
-	$(SED) -i.bak -e '/^\*\*.*by:/d' $(abs_builddir)/$@ && rm $(abs_builddir)/$@.bak
+	$(SED) -e '/^\*\*.*Created:/d' $(abs_builddir)/$@ > $(abs_builddir)/$@.n && mv $(abs_builddir)/$@{.n,}
+	$(SED) -e '/^\*\*.*by:/d' $(abs_builddir)/$@ > $(abs_builddir)/$@.n && mv $(abs_builddir)/$@{.n,}
 
 %.moc: %.cpp
 	QT_SELECT=$(QT_SELECT) $(MOC) $(QT_INCLUDES) $(MOC_DEFS) -o $@ $<
-	$(SED) -i.bak -e '/^\*\*.*Created:/d' $@ && rm $@.bak
-	$(SED) -i.bak -e '/^\*\*.*by:/d' $@ && rm $@.bak
+	$(SED) -e '/^\*\*.*Created:/d' $@ > $@.n && mv $@{.n,}
+	$(SED) -e '/^\*\*.*by:/d' $@ > $@.n && mv $@{.n,}
 
 moc_%.cpp: %.h
 	QT_SELECT=$(QT_SELECT) $(MOC) $(QT_INCLUDES) $(MOC_DEFS) -o $@ $<
-	$(SED) -i.bak -e '/^\*\*.*Created:/d' $@ && rm $@.bak
-	$(SED) -i.bak -e '/^\*\*.*by:/d' $@ && rm $@.bak
+	$(SED) -e '/^\*\*.*Created:/d' $@ > $@.n && mv $@{.n,}
+	$(SED) -e '/^\*\*.*by:/d' $@ > $@.n && mv $@{.n,}
 
 %.qm: %.ts
 	@test -d $(abs_builddir)/$(@D) || $(MKDIR_P) $(abs_builddir)/$(@D)

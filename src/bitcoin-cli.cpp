@@ -27,7 +27,12 @@ static bool AppInitRPC(int argc, char* argv[])
         fprintf(stderr, "Error: Specified data directory \"%s\" does not exist.\n", mapArgs["-datadir"].c_str());
         return false;
     }
-    ReadConfigFile(mapArgs, mapMultiArgs);
+    try {
+        ReadConfigFile(mapArgs, mapMultiArgs);
+    } catch(std::exception &e) {
+        fprintf(stderr,"Error reading configuration file: %s\n", e.what());
+        return false;
+    }
     // Check for -testnet or -regtest parameter (TestNet() calls are only valid after this clause)
     if (!SelectParamsFromCommandLine()) {
         fprintf(stderr, "Error: Invalid combination of -regtest and -testnet.\n");
@@ -37,11 +42,11 @@ static bool AppInitRPC(int argc, char* argv[])
     if (argc<2 || mapArgs.count("-?") || mapArgs.count("--help"))
     {
         // First part of help message is specific to RPC client
-        std::string strUsage = _("Carboncoin RPC client version") + " " + FormatFullVersion() + "\n\n" +
+        std::string strUsage = _("Bitcoin Core RPC client version") + " " + FormatFullVersion() + "\n\n" +
             _("Usage:") + "\n" +
-              "  carboncoin-cli [options] <command> [params]  " + _("Send command to Carboncoin server") + "\n" +
-              "  carboncoin-cli [options] help                " + _("List commands") + "\n" +
-              "  carboncoin-cli [options] help <command>      " + _("Get help for a command") + "\n";
+              "  bitcoin-cli [options] <command> [params]  " + _("Send command to Bitcoin Core") + "\n" +
+              "  bitcoin-cli [options] help                " + _("List commands") + "\n" +
+              "  bitcoin-cli [options] help <command>      " + _("Get help for a command") + "\n";
 
         strUsage += "\n" + HelpMessageCli(true);
 
@@ -53,6 +58,8 @@ static bool AppInitRPC(int argc, char* argv[])
 
 int main(int argc, char* argv[])
 {
+    SetupEnvironment();
+
     try
     {
         if(!AppInitRPC(argc, argv))

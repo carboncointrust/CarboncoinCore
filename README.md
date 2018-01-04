@@ -1,26 +1,26 @@
-Carboncoin Core integration/staging tree
+Bitcoin Core integration/staging tree
 =====================================
 
 http://www.bitcoin.org
 
-Copyright (c) 2009-2013 Carboncoin Core Developers
+Copyright (c) 2009-2015 Bitcoin Core Developers
 
-What is Carboncoin?
+What is Bitcoin?
 ----------------
 
-Carboncoin is an experimental new digital currency that enables instant payments to
-anyone, anywhere in the world. Carboncoin uses peer-to-peer technology to operate
+Bitcoin is an experimental new digital currency that enables instant payments to
+anyone, anywhere in the world. Bitcoin uses peer-to-peer technology to operate
 with no central authority: managing transactions and issuing money are carried
-out collectively by the network. Carboncoin Core is the name of open source
+out collectively by the network. Bitcoin Core is the name of open source
 software which enables the use of this currency.
 
 For more information, as well as an immediately useable, binary version of
-the Carboncoin Core software, see http://www.bitcoin.org/en/download.
+the Bitcoin Core software, see http://www.bitcoin.org/en/download.
 
 License
 -------
 
-Carboncoin Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
+Bitcoin Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
 information or see http://opensource.org/licenses/MIT.
 
 Development process
@@ -29,7 +29,7 @@ Development process
 Developers work in their own trees, then submit pull requests when they think
 their feature or bug fix is ready.
 
-If it is a simple/trivial/non-controversial change, then one of the Carboncoin
+If it is a simple/trivial/non-controversial change, then one of the Bitcoin
 development team members simply pulls it.
 
 If it is a *more complicated or potentially controversial* change, then the patch
@@ -43,7 +43,7 @@ controversial.
 
 The `master` branch is regularly built and tested, but is not guaranteed to be
 completely stable. [Tags](https://github.com/bitcoin/bitcoin/tags) are created
-regularly to indicate new official, stable release versions of Carboncoin.
+regularly to indicate new official, stable release versions of Bitcoin.
 
 Testing
 -------
@@ -69,3 +69,50 @@ for the build/test scripts.
 Large changes should have a test plan, and should be tested by somebody other
 than the developer who wrote the code.
 See https://github.com/bitcoin/QA/ for how to create a test plan.
+
+Translations
+------------
+
+Changes to translations as well as new translations can be submitted to
+[Bitcoin Core's Transifex page](https://www.transifex.com/projects/p/bitcoin/).
+
+Periodically the translations are pulled from Transifex and merged into the git repository. See the
+[translation process](doc/translation_process.md) for details on how this works.
+
+**Important**: We do not accept translation changes as github pull request because the next
+pull from Transifex would automatically overwrite them again.
+
+Development tips and tricks
+---------------------------
+
+**compiling for debugging**
+
+Run configure with the --enable-debug option, then make. Or run configure with
+CXXFLAGS="-g -ggdb -O0" or whatever debug flags you need.
+
+**debug.log**
+
+If the code is behaving strangely, take a look in the debug.log file in the data directory;
+error and debugging message are written there.
+
+The -debug=... command-line option controls debugging; running with just -debug will turn
+on all categories (and give you a very large debug.log file).
+
+The Qt code routes qDebug() output to debug.log under category "qt": run with -debug=qt
+to see it.
+
+**testnet and regtest modes**
+
+Run with the -testnet option to run with "play bitcoins" on the test network, if you
+are testing multi-machine code that needs to operate across the internet.
+
+If you are testing something that can run on one machine, run with the -regtest option.
+In regression test mode blocks can be created on-demand; see qa/rpc-tests/ for tests
+that run in -regest mode.
+
+**DEBUG_LOCKORDER**
+
+Bitcoin Core is a multithreaded application, and deadlocks or other multithreading bugs
+can be very difficult to track down. Compiling with -DDEBUG_LOCKORDER (configure
+CXXFLAGS="-DDEBUG_LOCKORDER -g") inserts run-time checks to keep track of what locks
+are held, and adds warning to the debug.log file if inconsistencies are detected.

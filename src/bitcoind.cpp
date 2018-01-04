@@ -20,8 +20,8 @@
  *
  * \section intro_sec Introduction
  *
- * This is the developer documentation of the reference client for an experimental new digital currency called Carboncoin (http://www.bitcoin.org/),
- * which enables instant payments to anyone, anywhere in the world. Carboncoin uses peer-to-peer technology to operate
+ * This is the developer documentation of the reference client for an experimental new digital currency called Bitcoin (http://www.bitcoin.org/),
+ * which enables instant payments to anyone, anywhere in the world. Bitcoin uses peer-to-peer technology to operate
  * with no central authority: managing transactions and issuing money are carried out collectively by the network.
  *
  * The software is a community-driven open source project, released under the MIT license.
@@ -63,14 +63,20 @@ bool AppInit(int argc, char* argv[])
         //
         // Parameters
         //
-        // If Qt is used, parameters/carboncoin.conf are parsed in qt/bitcoin.cpp's main()
+        // If Qt is used, parameters/bitcoin.conf are parsed in qt/bitcoin.cpp's main()
         ParseParameters(argc, argv);
         if (!boost::filesystem::is_directory(GetDataDir(false)))
         {
             fprintf(stderr, "Error: Specified data directory \"%s\" does not exist.\n", mapArgs["-datadir"].c_str());
             return false;
         }
-        ReadConfigFile(mapArgs, mapMultiArgs);
+        try
+        {
+            ReadConfigFile(mapArgs, mapMultiArgs);
+        } catch(std::exception &e) {
+            fprintf(stderr,"Error reading configuration file: %s\n", e.what());
+            return false;
+        }
         // Check for -testnet or -regtest parameter (TestNet() calls are only valid after this clause)
         if (!SelectParamsFromCommandLine()) {
             fprintf(stderr, "Error: Invalid combination of -regtest and -testnet.\n");
@@ -79,14 +85,14 @@ bool AppInit(int argc, char* argv[])
 
         if (mapArgs.count("-?") || mapArgs.count("--help"))
         {
-            // First part of help message is specific to carboncoind / RPC client
-            std::string strUsage = _("Carboncoin Core Daemon") + " " + _("version") + " " + FormatFullVersion() + "\n\n" +
+            // First part of help message is specific to bitcoind / RPC client
+            std::string strUsage = _("Bitcoin Core Daemon") + " " + _("version") + " " + FormatFullVersion() + "\n\n" +
                 _("Usage:") + "\n" +
-                  "  carboncoind [options]                     " + _("Start Carboncoin server") + "\n" +
-                _("Usage (deprecated, use carboncoin-cli):") + "\n" +
-                  "  carboncoind [options] <command> [params]  " + _("Send command to Carboncoin server") + "\n" +
-                  "  carboncoind [options] help                " + _("List commands") + "\n" +
-                  "  carboncoind [options] help <command>      " + _("Get help for a command") + "\n";
+                  "  bitcoind [options]                     " + _("Start Bitcoin Core Daemon") + "\n" +
+                _("Usage (deprecated, use bitcoin-cli):") + "\n" +
+                  "  bitcoind [options] <command> [params]  " + _("Send command to Bitcoin Core") + "\n" +
+                  "  bitcoind [options] help                " + _("List commands") + "\n" +
+                  "  bitcoind [options] help <command>      " + _("Get help for a command") + "\n";
 
             strUsage += "\n" + HelpMessage(HMM_BITCOIND);
             strUsage += "\n" + HelpMessageCli(false);
@@ -98,7 +104,7 @@ bool AppInit(int argc, char* argv[])
         // Command-line RPC
         bool fCommandLine = false;
         for (int i = 1; i < argc; i++)
-            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "carboncoin:"))
+            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "bitcoin:"))
                 fCommandLine = true;
 
         if (fCommandLine)
@@ -110,7 +116,7 @@ bool AppInit(int argc, char* argv[])
         fDaemon = GetBoolArg("-daemon", false);
         if (fDaemon)
         {
-            fprintf(stdout, "Carboncoin server starting\n");
+            fprintf(stdout, "Bitcoin server starting\n");
 
             // Daemonize
             pid_t pid = fork();
@@ -166,9 +172,11 @@ bool AppInit(int argc, char* argv[])
 
 int main(int argc, char* argv[])
 {
+    SetupEnvironment();
+
     bool fRet = false;
 
-    // Connect carboncoind signal handlers
+    // Connect bitcoind signal handlers
     noui_connect();
 
     fRet = AppInit(argc, argv);

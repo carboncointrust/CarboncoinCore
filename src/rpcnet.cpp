@@ -10,11 +10,6 @@
 #include "protocol.h"
 #include "sync.h"
 #include "util.h"
-#include "alert.h"
-#ifdef ENABLE_WALLET
-#include "init.h" // for getinfo
-#include "wallet.h" // for getinfo
-#endif
 
 #include <boost/foreach.hpp>
 #include "json/json_spirit_value.h"
@@ -121,11 +116,11 @@ Value getpeerinfo(const Array& params, bool fHelp)
         if (!(stats.addrLocal.empty()))
             obj.push_back(Pair("addrlocal", stats.addrLocal));
         obj.push_back(Pair("services", strprintf("%08x", stats.nServices)));
-        obj.push_back(Pair("lastsend", (boost::int64_t)stats.nLastSend));
-        obj.push_back(Pair("lastrecv", (boost::int64_t)stats.nLastRecv));
-        obj.push_back(Pair("bytessent", (boost::int64_t)stats.nSendBytes));
-        obj.push_back(Pair("bytesrecv", (boost::int64_t)stats.nRecvBytes));
-        obj.push_back(Pair("conntime", (boost::int64_t)stats.nTimeConnected));
+        obj.push_back(Pair("lastsend", stats.nLastSend));
+        obj.push_back(Pair("lastrecv", stats.nLastRecv));
+        obj.push_back(Pair("bytessent", stats.nSendBytes));
+        obj.push_back(Pair("bytesrecv", stats.nRecvBytes));
+        obj.push_back(Pair("conntime", stats.nTimeConnected));
         obj.push_back(Pair("pingtime", stats.dPingTime));
         if (stats.dPingWait > 0.0)
             obj.push_back(Pair("pingwait", stats.dPingWait));
@@ -139,8 +134,7 @@ Value getpeerinfo(const Array& params, bool fHelp)
         if (fStateStats) {
             obj.push_back(Pair("banscore", statestats.nMisbehavior));
         }
-        if (stats.fSyncNode)
-            obj.push_back(Pair("syncnode", true));
+        obj.push_back(Pair("syncnode", stats.fSyncNode));
 
         ret.push_back(obj);
     }
@@ -217,7 +211,7 @@ Value getaddednodeinfo(const Array& params, bool fHelp)
             "    \"connected\" : true|false,          (boolean) If connected\n"
             "    \"addresses\" : [\n"
             "       {\n"
-            "         \"address\" : \"192.168.0.201:8333\",  (string) The carboncoin server host and port\n"
+            "         \"address\" : \"192.168.0.201:8333\",  (string) The bitcoin server host and port\n"
             "         \"connected\" : \"outbound\"           (string) connection, inbound or outbound\n"
             "       }\n"
             "       ,...\n"
@@ -334,174 +328,59 @@ Value getnettotals(const Array& params, bool fHelp)
        );
 
     Object obj;
-    obj.push_back(Pair("totalbytesrecv", static_cast< boost::uint64_t>(CNode::GetTotalBytesRecv())));
-    obj.push_back(Pair("totalbytessent", static_cast<boost::uint64_t>(CNode::GetTotalBytesSent())));
-    obj.push_back(Pair("timemillis", static_cast<boost::int64_t>(GetTimeMillis())));
+    obj.push_back(Pair("totalbytesrecv", CNode::GetTotalBytesRecv()));
+    obj.push_back(Pair("totalbytessent", CNode::GetTotalBytesSent()));
+    obj.push_back(Pair("timemillis", GetTimeMillis()));
     return obj;
 }
 
-Value sendalert(const Array& params, bool fHelp)
-{
-    if (fHelp || params.size() < 6)
-        throw runtime_error(
-                            "sendalert <message> <privatekey> <minver> <maxver> <priority> <id> [cancelupto]\n"
-                            "<message> is the alert text message\n"
-                            "<privatekey> is base58 hex string of alert master private key\n"
-                            "<minver> is the minimum applicable internal client version\n"
-                            "<maxver> is the maximum applicable internal client version\n"
-                            "<priority> is integer priority number\n"
-                            "<id> is the alert id\n"
-                            "[cancelupto] cancels all alert id's up to this number\n"
-                            "Returns true or false.");
-
-    // Prepare the alert message
-    CAlert alert;
-    alert.strStatusBar = params[0].get_str();
-    alert.nMinVer = params[2].get_int();
-    alert.nMaxVer = params[3].get_int();
-    alert.nPriority = params[4].get_int();
-    alert.nID = params[5].get_int();
-    if (params.size() > 6)
-        alert.nCancel = params[6].get_int();
-    alert.nVersion = PROTOCOL_VERSION;
-    alert.nRelayUntil = GetAdjustedTime() + 365*24*60*60;
-    alert.nExpiration = GetAdjustedTime() + 365*24*60*60;
-
-    CDataStream sMsg(SER_NETWORK, PROTOCOL_VERSION);
-    sMsg << (CUnsignedAlert)alert;
-    alert.vchMsg = vector<unsigned char>(sMsg.begin(), sMsg.end());
-
-    // Prepare master key and sign alert message
-    CBitcoinSecret vchSecret;
-    if (!vchSecret.SetString(params[1].get_str()))
-        throw runtime_error("Invalid alert master key");
-
-    CKey key = vchSecret.GetKey();
-    if (!key.Sign(Hash(alert.vchMsg.begin(), alert.vchMsg.end()), alert.vchSig))
-        throw runtime_error(
-                            "Unable to sign alert, check alert master key?\n");
-
-    // Process alert
-    if(!alert.ProcessAlert())
-        throw runtime_error(
-                            "Failed to process alert.\n");
-
-    // Relay alert
-    {
-        LOCK(cs_vNodes);
-        BOOST_FOREACH(CNode* pnode, vNodes)
-        alert.RelayTo(pnode);
-    }
-
-    Object result;
-    result.push_back(Pair("strStatusBar", alert.strStatusBar));
-    result.push_back(Pair("nVersion", alert.nVersion));
-    result.push_back(Pair("nMinVer", alert.nMinVer));
-    result.push_back(Pair("nMaxVer", alert.nMaxVer));
-    result.push_back(Pair("nPriority", alert.nPriority));
-    result.push_back(Pair("nID", alert.nID));
-    if (alert.nCancel > 0)
-        result.push_back(Pair("nCancel", alert.nCancel));
-    return result;
-}
-
-Value getcheckpoint(const Array& params, bool fHelp)
+Value getnetworkinfo(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() != 0)
         throw runtime_error(
-                            "getcheckpoint\n"
-                            "Show info of synchronized checkpoint.\n");
+            "getnetworkinfo\n"
+            "Returns an object containing various state info regarding P2P networking.\n"
+            "\nResult:\n"
+            "{\n"
+            "  \"version\": xxxxx,           (numeric) the server version\n"
+            "  \"protocolversion\": xxxxx,   (numeric) the protocol version\n"
+            "  \"timeoffset\": xxxxx,        (numeric) the time offset\n"
+            "  \"connections\": xxxxx,       (numeric) the number of connections\n"
+            "  \"proxy\": \"host:port\",     (string, optional) the proxy used by the server\n"
+            "  \"relayfee\": x.xxxx,         (numeric) minimum relay fee for non-free transactions in btc/kb\n"
+            "  \"localaddresses\": [,        (array) list of local addresses\n"
+            "    \"address\": \"xxxx\",      (string) network address\n"
+            "    \"port\": xxx,              (numeric) network port\n"
+            "    \"score\": xxx              (numeric) relative score\n"
+            "  ]\n"
+            "}\n"
+            "\nExamples:\n"
+            + HelpExampleCli("getnetworkinfo", "")
+            + HelpExampleRpc("getnetworkinfo", "")
+        );
 
-    Object result;
-    CBlockIndex* pindexCheckpoint;
+    proxyType proxy;
+    GetProxy(NET_IPV4, proxy);
 
-    result.push_back(Pair("synccheckpoint", hashSyncCheckpoint.ToString().c_str()));
-    if (mapBlockIndex.count(hashSyncCheckpoint))
+    Object obj;
+    obj.push_back(Pair("version",       (int)CLIENT_VERSION));
+    obj.push_back(Pair("protocolversion",(int)PROTOCOL_VERSION));
+    obj.push_back(Pair("timeoffset",    GetTimeOffset()));
+    obj.push_back(Pair("connections",   (int)vNodes.size()));
+    obj.push_back(Pair("proxy",         (proxy.first.IsValid() ? proxy.first.ToStringIPPort() : string())));
+    obj.push_back(Pair("relayfee",      ValueFromAmount(CTransaction::nMinRelayTxFee)));
+    Array localAddresses;
     {
-        pindexCheckpoint = mapBlockIndex[hashSyncCheckpoint];
-        result.push_back(Pair("height", pindexCheckpoint->nHeight));
-        result.push_back(Pair("timestamp", (boost::int64_t) pindexCheckpoint->GetBlockTime()));
+        LOCK(cs_mapLocalHost);
+        BOOST_FOREACH(const PAIRTYPE(CNetAddr, LocalServiceInfo) &item, mapLocalHost)
+        {
+            Object rec;
+            rec.push_back(Pair("address", item.first.ToString()));
+            rec.push_back(Pair("port", item.second.nPort));
+            rec.push_back(Pair("score", item.second.nScore));
+            localAddresses.push_back(rec);
+        }
     }
-    result.push_back(Pair("subscribemode", IsSyncCheckpointEnforced()? "enforce" : "advisory"));
-    if (mapArgs.count("-checkpointkey"))
-        result.push_back(Pair("checkpointmaster", true));
-
-    return result;
-}
-
-Value sendcheckpoint(const Array& params, bool fHelp)
-{
-    if (fHelp || params.size() != 1)
-        throw runtime_error(
-                            "sendcheckpoint <blockhash>\n"
-                            "Send a synchronized checkpoint.\n");
-
-    if (!mapArgs.count("-checkpointkey") || CSyncCheckpoint::strMasterPrivKey.empty())
-        throw runtime_error("Not a checkpointmaster node, first set checkpointkey in configuration and restart client. ");
-
-    std::string strHash = params[0].get_str();
-    uint256 hash(strHash);
-
-    if (!SendSyncCheckpoint(hash))
-        throw runtime_error("Failed to send checkpoint, check log. ");
-
-    Object result;
-    CBlockIndex* pindexCheckpoint;
-
-    result.push_back(Pair("synccheckpoint", hashSyncCheckpoint.ToString().c_str()));
-    if (mapBlockIndex.count(hashSyncCheckpoint))
-    {
-        pindexCheckpoint = mapBlockIndex[hashSyncCheckpoint];
-        result.push_back(Pair("height", pindexCheckpoint->nHeight));
-        result.push_back(Pair("timestamp", (boost::int64_t) pindexCheckpoint->GetBlockTime()));
-    }
-    result.push_back(Pair("subscribemode", IsSyncCheckpointEnforced()? "enforce" : "advisory"));
-    if (mapArgs.count("-checkpointkey"))
-        result.push_back(Pair("checkpointmaster", true));
-
-    return result;
-}
-
-Value enforcecheckpoint(const Array& params, bool fHelp)
-{
-    if (fHelp || params.size() != 1)
-        throw runtime_error(
-                            "enforcecheckpoint <enforce>\n"
-                            "<enforce> is true or false to enable or disable enforcement of broadcasted checkpoints by developer.");
-
-    bool fEnforceCheckpoint = params[0].get_bool();
-    if (mapArgs.count("-checkpointkey") && !fEnforceCheckpoint)
-        throw runtime_error(
-                            "checkpoint master node must enforce synchronized checkpoints.");
-    mapArgs["-checkpointenforce"] = (fEnforceCheckpoint ? "1" : "0");
-    return Value::null;
-}
-
-Value makekeypair(const Array& params, bool fHelp)
-{
-    if (fHelp || params.size() > 1)
-        throw runtime_error(
-                            "makekeypair [prefix]\n"
-                            "Make a public/private key pair.\n"
-                            "[prefix] is optional preferred prefix for the public key.\n");
-
-    string strPrefix = "";
-    if (params.size() > 0)
-        strPrefix = params[0].get_str();
-
-    CKey key;
-    int nCount = 0;
-    do
-    {
-        key.MakeNewKey(false);
-        nCount++;
-    } while (nCount < 10000 && strPrefix != HexStr(key.GetPubKey()).substr(0, strPrefix.size()));
-
-    if (strPrefix != HexStr(key.GetPubKey()).substr(0, strPrefix.size()))
-        return Value::null;
-
-    Object result;
-    result.push_back(Pair("PublicKey", HexStr(key.GetPubKey())));
-    result.push_back(Pair("PrivateKey", CBitcoinSecret(key).ToString()));
-    return result;
+    obj.push_back(Pair("localaddresses", localAddresses));
+    return obj;
 }

@@ -17,7 +17,6 @@
 #include <boost/foreach.hpp>
 #include <boost/iostreams/concepts.hpp>
 #include <boost/iostreams/stream.hpp>
-#include <boost/lexical_cast.hpp>
 #include <boost/shared_ptr.hpp>
 #include "json/json_spirit_writer_template.h"
 
@@ -37,7 +36,7 @@ string HTTPPost(const string& strMsg, const map<string,string>& mapRequestHeader
 {
     ostringstream s;
     s << "POST / HTTP/1.1\r\n"
-      << "User-Agent: carboncoin-json-rpc/" << FormatFullVersion() << "\r\n"
+      << "User-Agent: bitcoin-json-rpc/" << FormatFullVersion() << "\r\n"
       << "Host: 127.0.0.1\r\n"
       << "Content-Type: application/json\r\n"
       << "Content-Length: " << strMsg.size() << "\r\n"
@@ -52,15 +51,7 @@ string HTTPPost(const string& strMsg, const map<string,string>& mapRequestHeader
 
 static string rfc1123Time()
 {
-    char buffer[64];
-    time_t now;
-    time(&now);
-    struct tm* now_gmt = gmtime(&now);
-    string locale(setlocale(LC_TIME, NULL));
-    setlocale(LC_TIME, "C"); // we want POSIX (aka "C") weekday/month strings
-    strftime(buffer, sizeof(buffer), "%a, %d %b %Y %H:%M:%S +0000", now_gmt);
-    setlocale(LC_TIME, locale.c_str());
-    return string(buffer);
+    return DateTimeStrFormat("%a, %d %b %Y %H:%M:%S +0000", GetTime());
 }
 
 string HTTPReply(int nStatus, const string& strMsg, bool keepalive)
@@ -68,7 +59,7 @@ string HTTPReply(int nStatus, const string& strMsg, bool keepalive)
     if (nStatus == HTTP_UNAUTHORIZED)
         return strprintf("HTTP/1.0 401 Authorization Required\r\n"
             "Date: %s\r\n"
-            "Server: carboncoin-json-rpc/%s\r\n"
+            "Server: bitcoin-json-rpc/%s\r\n"
             "WWW-Authenticate: Basic realm=\"jsonrpc\"\r\n"
             "Content-Type: text/html\r\n"
             "Content-Length: 296\r\n"
@@ -93,9 +84,9 @@ string HTTPReply(int nStatus, const string& strMsg, bool keepalive)
             "HTTP/1.1 %d %s\r\n"
             "Date: %s\r\n"
             "Connection: %s\r\n"
-            "Content-Length: %"PRIszu"\r\n"
+            "Content-Length: %u\r\n"
             "Content-Type: application/json\r\n"
-            "Server: carboncoin-json-rpc/%s\r\n"
+            "Server: bitcoin-json-rpc/%s\r\n"
             "\r\n"
             "%s",
         nStatus,
@@ -217,12 +208,12 @@ int ReadHTTPMessage(std::basic_istream<char>& stream, map<string,
 }
 
 //
-// JSON-RPC protocol.  Carboncoin speaks version 1.0 for maximum compatibility,
+// JSON-RPC protocol.  Bitcoin speaks version 1.0 for maximum compatibility,
 // but uses JSON-RPC 1.1/2.0 standards for parts of the 1.0 standard that were
 // unspecified (HTTP errors and contents of 'error').
 //
 // 1.0 spec: http://json-rpc.org/wiki/specification
-// 1.2 spec: http://groups.google.com/group/json-rpc/web/json-rpc-over-http
+// 1.2 spec: http://jsonrpc.org/historical/json-rpc-over-http.html
 // http://www.codeproject.com/KB/recipes/JSON_Spirit.aspx
 //
 
