@@ -1,5 +1,5 @@
 from distutils.core import setup
-setup(name='btcspendfrom',
+setup(name='carbonspendfrom',
       version='1.0',
       description='Command-line utility for carboncoin "coin control"',
       author='Gavin Andresen',
