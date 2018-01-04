@@ -151,7 +151,7 @@ bool parseCarboncoinURI(const QUrl &uri, SendCoinsRecipient *out)
         {
             if(!i->second.isEmpty())
             {
-                if(!CarboncoinUnits::parse(CarboncoinUnits::BTC, i->second, &rv.amount))
+                if(!CarboncoinUnits::parse(CarboncoinUnits::CARBON, i->second, &rv.amount))
                 {
                     return false;
                 }
@@ -190,7 +190,7 @@ QString formatCarboncoinURI(const SendCoinsRecipient &info)
 
     if (info.amount)
     {
-        ret += QString("?amount=%1").arg(CarboncoinUnits::format(CarboncoinUnits::BTC, info.amount));
+        ret += QString("?amount=%1").arg(CarboncoinUnits::format(CarboncoinUnits::CARBON, info.amount));
         paramCount++;
     }
 

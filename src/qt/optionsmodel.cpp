@@ -56,7 +56,7 @@ void OptionsModel::Init()
 
     // Display
     if (!settings.contains("nDisplayUnit"))
-        settings.setValue("nDisplayUnit", CarboncoinUnits::BTC);
+        settings.setValue("nDisplayUnit", CarboncoinUnits::CARBON);
     nDisplayUnit = settings.value("nDisplayUnit").toInt();
 
     if (!settings.contains("bDisplayAddresses"))

@@ -15,9 +15,9 @@ CarboncoinUnits::CarboncoinUnits(QObject *parent):
 QList<CarboncoinUnits::Unit> CarboncoinUnits::availableUnits()
 {
     QList<CarboncoinUnits::Unit> unitlist;
-    unitlist.append(BTC);
-    unitlist.append(mBTC);
-    unitlist.append(uBTC);
+    unitlist.append(CARBON);
+    unitlist.append(mCARBON);
+    unitlist.append(uCARBON);
     return unitlist;
 }
 
@@ -25,9 +25,9 @@ bool CarboncoinUnits::valid(int unit)
 {
     switch(unit)
     {
-    case BTC:
-    case mBTC:
-    case uBTC:
+    case CARBON:
+    case mCARBON:
+    case uCARBON:
         return true;
     default:
         return false;
@@ -38,9 +38,9 @@ QString CarboncoinUnits::name(int unit)
 {
     switch(unit)
     {
-    case BTC: return QString("BTC");
-    case mBTC: return QString("mBTC");
-    case uBTC: return QString::fromUtf8("μBTC");
+    case CARBON: return QString("CARBON");
+    case mCARBON: return QString("mCARBON");
+    case uCARBON: return QString::fromUtf8("μCARBON");
     default: return QString("???");
     }
 }
@@ -49,9 +49,9 @@ QString CarboncoinUnits::description(int unit)
 {
     switch(unit)
     {
-    case BTC: return QString("Carboncoins");
-    case mBTC: return QString("Milli-Carboncoins (1 / 1,000)");
-    case uBTC: return QString("Micro-Carboncoins (1 / 1,000,000)");
+    case CARBON: return QString("Carboncoins");
+    case mCARBON: return QString("Milli-Carboncoins (1 / 1,000)");
+    case uCARBON: return QString("Micro-Carboncoins (1 / 1,000,000)");
     default: return QString("???");
     }
 }
@@ -60,9 +60,9 @@ qint64 CarboncoinUnits::factor(int unit)
 {
     switch(unit)
     {
-    case BTC:  return 100000000;
-    case mBTC: return 100000;
-    case uBTC: return 100;
+    case CARBON:  return 100000000;
+    case mCARBON: return 100000;
+    case uCARBON: return 100;
     default:   return 100000000;
     }
 }
@@ -71,9 +71,9 @@ qint64 CarboncoinUnits::maxAmount(int unit)
 {
     switch(unit)
     {
-    case BTC:  return Q_INT64_C(21000000);
-    case mBTC: return Q_INT64_C(21000000000);
-    case uBTC: return Q_INT64_C(21000000000000);
+    case CARBON:  return Q_INT64_C(21000000);
+    case mCARBON: return Q_INT64_C(21000000000);
+    case uCARBON: return Q_INT64_C(21000000000000);
     default:   return 0;
     }
 }
@@ -82,9 +82,9 @@ int CarboncoinUnits::amountDigits(int unit)
 {
     switch(unit)
     {
-    case BTC: return 8; // 21,000,000 (# digits, without commas)
-    case mBTC: return 11; // 21,000,000,000
-    case uBTC: return 14; // 21,000,000,000,000
+    case CARBON: return 8; // 21,000,000 (# digits, without commas)
+    case mCARBON: return 11; // 21,000,000,000
+    case uCARBON: return 14; // 21,000,000,000,000
     default: return 0;
     }
 }
@@ -93,9 +93,9 @@ int CarboncoinUnits::decimals(int unit)
 {
     switch(unit)
     {
-    case BTC: return 8;
-    case mBTC: return 5;
-    case uBTC: return 2;
+    case CARBON: return 8;
+    case mCARBON: return 5;
+    case uCARBON: return 2;
     default: return 0;
     }
 }

@@ -23,9 +23,9 @@ public:
      */
     enum Unit
     {
-        BTC,
-        mBTC,
-        uBTC
+        CARBON,
+        mCARBON,
+        uCARBON
     };
 
     //! @name Static API
