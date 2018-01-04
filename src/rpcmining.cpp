@@ -390,6 +390,7 @@ Value getwork(const Array& params, bool fHelp)
         CBlock* pblock = mapNewBlock[pdata->hashMerkleRoot].first;
 
         pblock->nTime = pdata->nTime;
+        pblock->nBits = pdata->nBits;
         pblock->nNonce = pdata->nNonce;
         pblock->vtx[0].vin[0].scriptSig = mapNewBlock[pdata->hashMerkleRoot].second;
         pblock->hashMerkleRoot = pblock->BuildMerkleTree();

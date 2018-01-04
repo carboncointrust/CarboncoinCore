@@ -217,6 +217,13 @@ uint256 CBlockHeader::GetHash() const
     return Hash(BEGIN(nVersion), END(nNonce));
 }
 
+uint256 CBlock::GetPoWHash() const
+{
+    uint256 thash;
+    scrypt_1024_1_1_256(BEGIN(nVersion), BEGIN(thash));
+    return thash;
+}
+
 uint256 CBlock::BuildMerkleTree() const
 {
     vMerkleTree.clear();
@@ -269,8 +276,9 @@ uint256 CBlock::CheckMerkleBranch(uint256 hash, const std::vector<uint256>& vMer
 
 void CBlock::print() const
 {
-    LogPrintf("CBlock(hash=%s, ver=%d, hashPrevBlock=%s, hashMerkleRoot=%s, nTime=%u, nBits=%08x, nNonce=%u, vtx=%u)\n",
+    LogPrintf("CBlock(hash=%s, POW=%s, ver=%d, hashPrevBlock=%s, hashMerkleRoot=%s, nTime=%u, nBits=%08x, nNonce=%u, vtx=%u)\n",
         GetHash().ToString(),
+        GetPoWHash().ToString(),
         nVersion,
         hashPrevBlock.ToString(),
         hashMerkleRoot.ToString(),

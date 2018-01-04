@@ -406,6 +406,14 @@ const signed char p_util_hexdigit[256] =
   -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
   -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1, };
 
+long hex2long(const char* psz)
+{
+    long ret = 0;
+    while (*psz && ret >= 0)
+        ret = (ret << 4) | (long)p_util_hexdigit[(unsigned char)*psz++];
+    return ret;
+}
+
 bool IsHex(const string& str)
 {
     BOOST_FOREACH(char c, str)
@@ -1257,7 +1265,7 @@ void AddTimeData(const CNetAddr& ip, int64_t nTime)
         int64_t nMedian = vTimeOffsets.median();
         std::vector<int64_t> vSorted = vTimeOffsets.sorted();
         // Only let other nodes change our time by so much
-        if (abs64(nMedian) < 70 * 60)
+        if (abs64(nMedian) < 35 * 60)
         {
             nTimeOffset = nMedian;
         }
