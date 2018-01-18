@@ -1,9 +1,9 @@
 Carboncoin Core integration/staging tree
 =====================================
 
-http://www.carboncoin.org
+http://www.carboncoin.cc
 
-Copyright (c) 2009-2015 Carboncoin Core Developers
+Copyright (c) 2009-2018 Carboncoin Core Developers
 
 What is Carboncoin?
 ----------------
@@ -15,7 +15,7 @@ out collectively by the network. Carboncoin Core is the name of open source
 software which enables the use of this currency.
 
 For more information, as well as an immediately useable, binary version of
-the Carboncoin Core software, see http://www.carboncoin.org/en/download.
+the Carboncoin Core software, see https://carboncoin.cc/#wallets.
 
 License
 -------
